@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos
 {
-    public partial class frmMenu : Form
+    public partial class frmGestionDeDiscos : Form
     {
-        public frmMenu()
+        public frmGestionDeDiscos()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

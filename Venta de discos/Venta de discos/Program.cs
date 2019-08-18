@@ -16,7 +16,7 @@ namespace Venta_de_discos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMenu());
         }
     }
 }

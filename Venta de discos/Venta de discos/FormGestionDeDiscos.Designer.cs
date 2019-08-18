@@ -35,7 +35,7 @@
             // 
             // btnCargarDisco
             // 
-            this.btnCargarDisco.Location = new System.Drawing.Point(103, 59);
+            this.btnCargarDisco.Location = new System.Drawing.Point(92, 59);
             this.btnCargarDisco.Name = "btnCargarDisco";
             this.btnCargarDisco.Size = new System.Drawing.Size(116, 23);
             this.btnCargarDisco.TabIndex = 3;
@@ -44,7 +44,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(103, 117);
+            this.button1.Location = new System.Drawing.Point(92, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 23);
             this.button1.TabIndex = 4;
@@ -53,7 +53,7 @@
             // 
             // btnSalirGDD
             // 
-            this.btnSalirGDD.Location = new System.Drawing.Point(256, 226);
+            this.btnSalirGDD.Location = new System.Drawing.Point(112, 126);
             this.btnSalirGDD.Name = "btnSalirGDD";
             this.btnSalirGDD.Size = new System.Drawing.Size(75, 23);
             this.btnSalirGDD.TabIndex = 5;
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 261);
+            this.ClientSize = new System.Drawing.Size(287, 212);
             this.Controls.Add(this.btnSalirGDD);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCargarDisco);

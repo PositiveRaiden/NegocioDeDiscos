@@ -21,5 +21,11 @@ namespace Venta_de_discos
         {
             this.Close();
         }
+
+        private void btnBuscarDisco_Click(object sender, EventArgs e)
+        {
+            BuscarDiscoCliente frmBuscar = new BuscarDiscoCliente();
+            frmBuscar.ShowDialog();
+        }
     }
 }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos
 {
-    public partial class frmVentaDeDiscos : Form
+    public partial class VentaDeDiscos : Form
     {
-        public frmVentaDeDiscos()
+        public VentaDeDiscos()
         {
             InitializeComponent();
         }
+
     }
 }

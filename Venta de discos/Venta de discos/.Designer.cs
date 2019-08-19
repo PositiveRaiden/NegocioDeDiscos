@@ -91,6 +91,7 @@
             this.btnBuscarDisco.TabIndex = 5;
             this.btnBuscarDisco.Text = "Buscar Disco";
             this.btnBuscarDisco.UseVisualStyleBackColor = true;
+            this.btnBuscarDisco.Click += new System.EventHandler(this.btnBuscarDisco_Click);
             // 
             // frmMenu
             // 

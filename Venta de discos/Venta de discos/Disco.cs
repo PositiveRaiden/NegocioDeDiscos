@@ -53,7 +53,7 @@ namespace Venta_de_discos
         public int Precio
         {
             get { return precio; }
-            set { añoEdicion = value; }
+            set { precio = value; }
         }
 
 

@@ -79,12 +79,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(15, 117);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(460, 153);
+            this.dataGridView1.Size = new System.Drawing.Size(518, 153);
             this.dataGridView1.TabIndex = 4;
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(507, 117);
+            this.btnAñadir.Location = new System.Drawing.Point(558, 117);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(75, 23);
             this.btnAñadir.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(507, 160);
+            this.btnEliminar.Location = new System.Drawing.Point(558, 160);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 6;
@@ -102,7 +102,7 @@
             // 
             // btnFacturar
             // 
-            this.btnFacturar.Location = new System.Drawing.Point(507, 203);
+            this.btnFacturar.Location = new System.Drawing.Point(558, 203);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(75, 23);
             this.btnFacturar.TabIndex = 7;
@@ -111,7 +111,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(507, 246);
+            this.btnSalir.Location = new System.Drawing.Point(558, 246);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 8;
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 335);
+            this.ClientSize = new System.Drawing.Size(655, 335);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);

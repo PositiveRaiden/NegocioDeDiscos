@@ -32,9 +32,6 @@
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnFacturar = new System.Windows.Forms.Button();
@@ -71,7 +68,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(423, 35);
+            this.lblFecha.Location = new System.Drawing.Point(438, 24);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(37, 13);
             this.lblFecha.TabIndex = 3;
@@ -84,32 +81,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(460, 153);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(426, 85);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(48, 23);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(320, 88);
-            this.txtCodigo.MaxLength = 10;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 3;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(274, 91);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigo.TabIndex = 5;
-            this.lblCodigo.Text = "Código";
             // 
             // btnAñadir
             // 
@@ -235,9 +206,6 @@
             this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAñadir);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblNumeroDocumento);
@@ -257,9 +225,6 @@
         private System.Windows.Forms.Label lblNumeroDocumento;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnFacturar;

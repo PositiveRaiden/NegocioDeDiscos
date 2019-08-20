@@ -27,5 +27,17 @@ namespace Venta_de_discos
             BuscarDiscoCliente frmBuscar = new BuscarDiscoCliente();
             frmBuscar.ShowDialog();
         }
+
+        private void btnVentaDeDiscos_Click(object sender, EventArgs e)
+        {
+            VentaDeDiscos frmVentas = new VentaDeDiscos();
+            frmVentas.ShowDialog();
+
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

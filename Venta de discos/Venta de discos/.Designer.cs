@@ -41,7 +41,7 @@
             this.btnSalirMenu.Location = new System.Drawing.Point(336, 226);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnSalirMenu.TabIndex = 0;
+            this.btnSalirMenu.TabIndex = 4;
             this.btnSalirMenu.Text = "Salir";
             this.btnSalirMenu.UseVisualStyleBackColor = true;
             this.btnSalirMenu.Click += new System.EventHandler(this.button1_Click);
@@ -61,7 +61,7 @@
             this.btnCargarDisco.Location = new System.Drawing.Point(123, 124);
             this.btnCargarDisco.Name = "btnCargarDisco";
             this.btnCargarDisco.Size = new System.Drawing.Size(134, 23);
-            this.btnCargarDisco.TabIndex = 2;
+            this.btnCargarDisco.TabIndex = 1;
             this.btnCargarDisco.Text = "Cargar Disco";
             this.btnCargarDisco.UseVisualStyleBackColor = true;
             // 
@@ -79,16 +79,17 @@
             this.btnVentaDeDiscos.Location = new System.Drawing.Point(123, 153);
             this.btnVentaDeDiscos.Name = "btnVentaDeDiscos";
             this.btnVentaDeDiscos.Size = new System.Drawing.Size(134, 23);
-            this.btnVentaDeDiscos.TabIndex = 4;
+            this.btnVentaDeDiscos.TabIndex = 2;
             this.btnVentaDeDiscos.Text = "Generar venta";
             this.btnVentaDeDiscos.UseVisualStyleBackColor = true;
+            this.btnVentaDeDiscos.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
             // 
             // btnBuscarDisco
             // 
             this.btnBuscarDisco.Location = new System.Drawing.Point(123, 95);
             this.btnBuscarDisco.Name = "btnBuscarDisco";
             this.btnBuscarDisco.Size = new System.Drawing.Size(134, 23);
-            this.btnBuscarDisco.TabIndex = 5;
+            this.btnBuscarDisco.TabIndex = 0;
             this.btnBuscarDisco.Text = "Buscar Disco";
             this.btnBuscarDisco.UseVisualStyleBackColor = true;
             this.btnBuscarDisco.Click += new System.EventHandler(this.btnBuscarDisco_Click);
@@ -106,6 +107,7 @@
             this.Controls.Add(this.btnSalirMenu);
             this.Name = "frmMenu";
             this.Text = "Menú gestión negocio de discos";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

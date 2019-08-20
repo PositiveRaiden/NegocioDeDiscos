@@ -39,7 +39,7 @@
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(215, 20);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(241, 20);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarCliente.TabIndex = 7;
@@ -48,7 +48,7 @@
             // 
             // TxtBuscarCliente
             // 
-            this.TxtBuscarCliente.Location = new System.Drawing.Point(97, 22);
+            this.TxtBuscarCliente.Location = new System.Drawing.Point(125, 22);
             this.TxtBuscarCliente.Name = "TxtBuscarCliente";
             this.TxtBuscarCliente.Size = new System.Drawing.Size(100, 20);
             this.TxtBuscarCliente.TabIndex = 6;
@@ -56,11 +56,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 25);
+            this.label1.Location = new System.Drawing.Point(35, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "DNI";
+            this.label1.Text = "Numero Doc";
             // 
             // dataGridView1
             // 

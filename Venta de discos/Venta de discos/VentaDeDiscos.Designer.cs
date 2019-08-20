@@ -62,11 +62,11 @@
             // lblNumeroDocumento
             // 
             this.lblNumeroDocumento.AutoSize = true;
-            this.lblNumeroDocumento.Location = new System.Drawing.Point(49, 49);
+            this.lblNumeroDocumento.Location = new System.Drawing.Point(21, 49);
             this.lblNumeroDocumento.Name = "lblNumeroDocumento";
-            this.lblNumeroDocumento.Size = new System.Drawing.Size(44, 13);
+            this.lblNumeroDocumento.Size = new System.Drawing.Size(67, 13);
             this.lblNumeroDocumento.TabIndex = 1;
-            this.lblNumeroDocumento.Text = "Número";
+            this.lblNumeroDocumento.Text = "Número Doc";
             // 
             // lblFecha
             // 

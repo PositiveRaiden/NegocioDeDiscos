@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos
 {
-    public partial class BuscarDiscoCliente : Form
+    public partial class AgregarCliente : Form
     {
-        public BuscarDiscoCliente()
+        public AgregarCliente()
         {
             InitializeComponent();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

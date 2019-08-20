@@ -44,6 +44,9 @@
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,9 +175,9 @@
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 23);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 18);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(91, 36);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(91, 25);
             this.btnBuscarCliente.TabIndex = 2;
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
@@ -188,11 +191,41 @@
             this.cmbTipoDocumento.Size = new System.Drawing.Size(122, 21);
             this.cmbTipoDocumento.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(326, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Nuevo Cliente";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Cliente";
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(104, 74);
+            this.txtCliente.MaxLength = 10;
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
+            this.txtCliente.Size = new System.Drawing.Size(122, 20);
+            this.txtCliente.TabIndex = 16;
+            // 
             // VentaDeDiscos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 335);
+            this.Controls.Add(this.txtCliente);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbTipoDocumento);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.txtNumeroDocumento);
@@ -236,5 +269,8 @@
         private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.ComboBox cmbTipoDocumento;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCliente;
     }
 }

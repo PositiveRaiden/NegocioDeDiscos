@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombreCliente = new System.Windows.Forms.Label();
-            this.lblNumeroDocumento = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAñadir = new System.Windows.Forms.Button();
@@ -38,37 +36,19 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.lblNumeroDocumento = new System.Windows.Forms.Label();
+            this.lblNombreCliente = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblNombreCliente
-            // 
-            this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(7, 23);
-            this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(86, 13);
-            this.lblNombreCliente.TabIndex = 0;
-            this.lblNombreCliente.Text = "Tipo Documento";
-            // 
-            // lblNumeroDocumento
-            // 
-            this.lblNumeroDocumento.AutoSize = true;
-            this.lblNumeroDocumento.Location = new System.Drawing.Point(49, 49);
-            this.lblNumeroDocumento.Name = "lblNumeroDocumento";
-            this.lblNumeroDocumento.Size = new System.Drawing.Size(44, 13);
-            this.lblNumeroDocumento.TabIndex = 1;
-            this.lblNumeroDocumento.Text = "Número";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(438, 24);
+            this.lblFecha.Location = new System.Drawing.Point(342, 9);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(37, 13);
             this.lblFecha.TabIndex = 3;
@@ -136,70 +116,71 @@
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 13;
             // 
-            // txtNumeroDocumento
-            // 
-            this.txtNumeroDocumento.Location = new System.Drawing.Point(104, 46);
-            this.txtNumeroDocumento.MaxLength = 10;
-            this.txtNumeroDocumento.Name = "txtNumeroDocumento";
-            this.txtNumeroDocumento.Size = new System.Drawing.Size(122, 20);
-            this.txtNumeroDocumento.TabIndex = 1;
-            // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(232, 18);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(345, 86);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(91, 25);
             this.btnBuscarCliente.TabIndex = 2;
             this.btnBuscarCliente.Text = "Buscar Cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             // 
-            // cmbTipoDocumento
-            // 
-            this.cmbTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoDocumento.FormattingEnabled = true;
-            this.cmbTipoDocumento.Location = new System.Drawing.Point(104, 20);
-            this.cmbTipoDocumento.Name = "cmbTipoDocumento";
-            this.cmbTipoDocumento.Size = new System.Drawing.Size(122, 21);
-            this.cmbTipoDocumento.TabIndex = 0;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(326, 19);
+            this.button1.Location = new System.Drawing.Point(442, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 23);
             this.button1.TabIndex = 14;
             this.button1.Text = "Nuevo Cliente";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // cmbTipoDocumento
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Cliente";
+            this.cmbTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoDocumento.FormattingEnabled = true;
+            this.cmbTipoDocumento.Location = new System.Drawing.Point(112, 18);
+            this.cmbTipoDocumento.Name = "cmbTipoDocumento";
+            this.cmbTipoDocumento.Size = new System.Drawing.Size(122, 21);
+            this.cmbTipoDocumento.TabIndex = 17;
             // 
-            // txtCliente
+            // lblNumeroDocumento
             // 
-            this.txtCliente.Location = new System.Drawing.Point(104, 74);
-            this.txtCliente.MaxLength = 10;
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(122, 20);
-            this.txtCliente.TabIndex = 16;
+            this.lblNumeroDocumento.AutoSize = true;
+            this.lblNumeroDocumento.Location = new System.Drawing.Point(57, 50);
+            this.lblNumeroDocumento.Name = "lblNumeroDocumento";
+            this.lblNumeroDocumento.Size = new System.Drawing.Size(44, 13);
+            this.lblNumeroDocumento.TabIndex = 20;
+            this.lblNumeroDocumento.Text = "Número";
+            // 
+            // lblNombreCliente
+            // 
+            this.lblNombreCliente.AutoSize = true;
+            this.lblNombreCliente.Location = new System.Drawing.Point(15, 21);
+            this.lblNombreCliente.Name = "lblNombreCliente";
+            this.lblNombreCliente.Size = new System.Drawing.Size(86, 13);
+            this.lblNombreCliente.TabIndex = 18;
+            this.lblNombreCliente.Text = "Tipo Documento";
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(112, 47);
+            this.txtLocalidad.MaxLength = 10;
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.ReadOnly = true;
+            this.txtLocalidad.Size = new System.Drawing.Size(122, 20);
+            this.txtLocalidad.TabIndex = 38;
             // 
             // VentaDeDiscos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 335);
-            this.Controls.Add(this.txtCliente);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.cmbTipoDocumento);
+            this.Controls.Add(this.lblNumeroDocumento);
+            this.Controls.Add(this.lblNombreCliente);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuscarCliente);
-            this.Controls.Add(this.txtNumeroDocumento);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnSalir);
@@ -208,8 +189,6 @@
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblNumeroDocumento);
-            this.Controls.Add(this.lblNombreCliente);
             this.Name = "VentaDeDiscos";
             this.Text = "Generar Venta";
             this.Load += new System.EventHandler(this.VentaDeDiscos_Load);
@@ -220,9 +199,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNombreCliente;
-        private System.Windows.Forms.Label lblNumeroDocumento;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAñadir;
@@ -231,11 +207,11 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCliente;
+        private System.Windows.Forms.ComboBox cmbTipoDocumento;
+        private System.Windows.Forms.Label lblNumeroDocumento;
+        private System.Windows.Forms.Label lblNombreCliente;
+        private System.Windows.Forms.TextBox txtLocalidad;
     }
 }

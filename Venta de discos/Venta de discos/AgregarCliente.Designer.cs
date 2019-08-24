@@ -43,6 +43,8 @@
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.lblBarrio = new System.Windows.Forms.Label();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +86,7 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(372, 321);
+            this.btnCargar.Location = new System.Drawing.Point(372, 313);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(75, 23);
             this.btnCargar.TabIndex = 22;
@@ -138,7 +140,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(678, 321);
+            this.btnSalir.Location = new System.Drawing.Point(678, 313);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 32;
@@ -156,7 +158,7 @@
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(49, 240);
+            this.lblBarrio.Location = new System.Drawing.Point(49, 239);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(34, 13);
             this.lblBarrio.TabIndex = 34;
@@ -170,11 +172,31 @@
             this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
             this.cmbBarrio.TabIndex = 35;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Localidad:";
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(159, 267);
+            this.txtLocalidad.MaxLength = 10;
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.ReadOnly = true;
+            this.txtLocalidad.Size = new System.Drawing.Size(100, 20);
+            this.txtLocalidad.TabIndex = 37;
+            // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 393);
+            this.Controls.Add(this.txtLocalidad);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.lblBarrio);
             this.Controls.Add(this.cmbTipoDoc);
@@ -215,5 +237,7 @@
         private System.Windows.Forms.ComboBox cmbTipoDoc;
         private System.Windows.Forms.Label lblBarrio;
         private System.Windows.Forms.ComboBox cmbBarrio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLocalidad;
     }
 }

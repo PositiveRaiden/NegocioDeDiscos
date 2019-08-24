@@ -72,18 +72,18 @@
     </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="Disco.cs" />
+    <Compile Include="Informes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes.Designer.cs">
+      <DependentUpon>Informes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuGestion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
       <DependentUpon>MenuGestion.cs</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informes.Designer.cs">
-      <DependentUpon>Informes.cs</DependentUpon>
     </Compile>
     <Compile Include="VentaDeDiscos.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,11 @@
     <EmbeddedResource Include="BuscarDisco.resx">
       <DependentUpon>BuscarDisco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuGestion.resx">
-      <DependentUpon>MenuGestion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Informes.resx">
       <DependentUpon>Informes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGestion.resx">
+      <DependentUpon>MenuGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentaDeDiscos.resx">
       <DependentUpon>VentaDeDiscos.cs</DependentUpon>

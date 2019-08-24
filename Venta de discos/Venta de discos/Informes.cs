@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos
 {
-    public partial class frmInformes : Form
+    public partial class Informes : Form
     {
-        public frmInformes()
+        public Informes()
         {
             InitializeComponent();
         }

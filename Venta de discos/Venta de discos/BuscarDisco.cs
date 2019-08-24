@@ -26,5 +26,10 @@ namespace Venta_de_discos
         {
 
         }
+
+        private void BuscarDisco_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace Venta_de_discos
         {
             BuscarDisco frmBuscar = new BuscarDisco();
             frmBuscar.ShowDialog();
+
         }
 
         private void btnVentaDeDiscos_Click(object sender, EventArgs e)

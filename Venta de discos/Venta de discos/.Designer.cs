@@ -106,7 +106,7 @@
             this.Controls.Add(this.lblOpciones);
             this.Controls.Add(this.btnSalirMenu);
             this.Name = "frmMenu";
-            this.Text = "Menú gestión negocio de discos";
+            this.Text = "Menú Gestión Negocio de Discos";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBuscarDisco = new System.Windows.Forms.TextBox();
+            this.lblIntrprete = new System.Windows.Forms.Label();
             this.btnBuscarDisco = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cmbInterprete = new System.Windows.Forms.ComboBox();
             this.btnAñadirDisco = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,22 +45,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(677, 249);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label1
+            // lblIntrprete
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Intérprete";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtBuscarDisco
-            // 
-            this.txtBuscarDisco.Location = new System.Drawing.Point(130, 24);
-            this.txtBuscarDisco.Name = "txtBuscarDisco";
-            this.txtBuscarDisco.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscarDisco.TabIndex = 2;
+            this.lblIntrprete.AutoSize = true;
+            this.lblIntrprete.Location = new System.Drawing.Point(72, 27);
+            this.lblIntrprete.Name = "lblIntrprete";
+            this.lblIntrprete.Size = new System.Drawing.Size(52, 13);
+            this.lblIntrprete.TabIndex = 1;
+            this.lblIntrprete.Text = "Intérprete";
+            this.lblIntrprete.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnBuscarDisco
             // 
@@ -83,46 +74,37 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cmbInterprete
+            // 
+            this.cmbInterprete.FormattingEnabled = true;
+            this.cmbInterprete.Location = new System.Drawing.Point(127, 22);
+            this.cmbInterprete.Name = "cmbInterprete";
+            this.cmbInterprete.Size = new System.Drawing.Size(103, 21);
+            this.cmbInterprete.TabIndex = 17;
+            // 
             // btnAñadirDisco
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(216, 328);
+            this.btnAñadirDisco.Location = new System.Drawing.Point(596, 328);
             this.btnAñadirDisco.Name = "btnAñadirDisco";
             this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
             this.btnAñadirDisco.TabIndex = 5;
             this.btnAñadirDisco.Text = "Añadir Disco";
             this.btnAñadirDisco.UseVisualStyleBackColor = true;
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(127, 328);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(83, 20);
-            this.textBox7.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 333);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Cantidad";
-            // 
             // BuscarDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 380);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbInterprete);
             this.Controls.Add(this.btnAñadirDisco);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnBuscarDisco);
-            this.Controls.Add(this.txtBuscarDisco);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblIntrprete);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BuscarDisco";
-            this.Text = "BuscarDisco";
+            this.Text = "Buscar Discos ";
+            this.Load += new System.EventHandler(this.BuscarDisco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,12 +114,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBuscarDisco;
+        private System.Windows.Forms.Label lblIntrprete;
         private System.Windows.Forms.Button btnBuscarDisco;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cmbInterprete;
         private System.Windows.Forms.Button btnAñadirDisco;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label6;
     }
 }

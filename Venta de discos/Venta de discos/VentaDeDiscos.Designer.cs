@@ -48,7 +48,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(342, 9);
+            this.lblFecha.Location = new System.Drawing.Point(477, 18);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(37, 13);
             this.lblFecha.TabIndex = 3;
@@ -118,7 +118,7 @@
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(345, 86);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(255, 15);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(91, 25);
             this.btnBuscarCliente.TabIndex = 2;
@@ -127,7 +127,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(442, 86);
+            this.button1.Location = new System.Drawing.Point(361, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 23);
             this.button1.TabIndex = 14;

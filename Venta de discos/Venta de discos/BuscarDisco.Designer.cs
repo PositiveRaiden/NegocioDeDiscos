@@ -50,22 +50,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 25);
+            this.label1.Location = new System.Drawing.Point(72, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Intérprete";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtBuscarDisco
             // 
-            this.txtBuscarDisco.Location = new System.Drawing.Point(134, 25);
+            this.txtBuscarDisco.Location = new System.Drawing.Point(130, 24);
             this.txtBuscarDisco.Name = "txtBuscarDisco";
             this.txtBuscarDisco.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarDisco.TabIndex = 2;
             // 
             // btnBuscarDisco
             // 
-            this.btnBuscarDisco.Location = new System.Drawing.Point(252, 23);
+            this.btnBuscarDisco.Location = new System.Drawing.Point(236, 22);
             this.btnBuscarDisco.Name = "btnBuscarDisco";
             this.btnBuscarDisco.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarDisco.TabIndex = 3;
@@ -74,7 +75,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(677, 331);
+            this.btnSalir.Location = new System.Drawing.Point(677, 328);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 4;
@@ -84,7 +85,7 @@
             // 
             // btnAñadirDisco
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(584, 331);
+            this.btnAñadirDisco.Location = new System.Drawing.Point(216, 328);
             this.btnAñadirDisco.Name = "btnAñadirDisco";
             this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
             this.btnAñadirDisco.TabIndex = 5;
@@ -93,15 +94,15 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(467, 334);
+            this.textBox7.Location = new System.Drawing.Point(127, 328);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.Size = new System.Drawing.Size(83, 20);
             this.textBox7.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(394, 337);
+            this.label6.Location = new System.Drawing.Point(72, 333);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 15;

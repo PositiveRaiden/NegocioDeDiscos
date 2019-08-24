@@ -50,7 +50,7 @@
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(12, 23);
+            this.lblNombreCliente.Location = new System.Drawing.Point(7, 23);
             this.lblNombreCliente.Name = "lblNombreCliente";
             this.lblNombreCliente.Size = new System.Drawing.Size(86, 13);
             this.lblNombreCliente.TabIndex = 0;
@@ -59,11 +59,11 @@
             // lblNumeroDocumento
             // 
             this.lblNumeroDocumento.AutoSize = true;
-            this.lblNumeroDocumento.Location = new System.Drawing.Point(21, 49);
+            this.lblNumeroDocumento.Location = new System.Drawing.Point(49, 49);
             this.lblNumeroDocumento.Name = "lblNumeroDocumento";
-            this.lblNumeroDocumento.Size = new System.Drawing.Size(67, 13);
+            this.lblNumeroDocumento.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroDocumento.TabIndex = 1;
-            this.lblNumeroDocumento.Text = "Número Doc";
+            this.lblNumeroDocumento.Text = "Número";
             // 
             // lblFecha
             // 
@@ -174,7 +174,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 77);
+            this.label1.Location = new System.Drawing.Point(54, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 15;

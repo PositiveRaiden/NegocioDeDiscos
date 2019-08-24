@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtnNombre = new System.Windows.Forms.TextBox();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
-            this.txtTipoDoc = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblNumeroDoc = new System.Windows.Forms.Label();
+            this.lblTipoDoc = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
+            this.lblBarrio = new System.Windows.Forms.Label();
+            this.cmbBarrio = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,30 +54,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(381, 178);
             this.dataGridView1.TabIndex = 31;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(159, 265);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtEmail.TabIndex = 30;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(159, 239);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefono.TabIndex = 29;
-            // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(159, 212);
+            this.txtDireccion.Location = new System.Drawing.Point(159, 211);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 28;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(159, 188);
+            this.txtApellido.Location = new System.Drawing.Point(159, 186);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 27;
@@ -93,26 +77,10 @@
             // 
             // txtNumDoc
             // 
-            this.txtNumDoc.Location = new System.Drawing.Point(159, 134);
+            this.txtNumDoc.Location = new System.Drawing.Point(159, 136);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumDoc.TabIndex = 25;
-            // 
-            // txtTipoDoc
-            // 
-            this.txtTipoDoc.Location = new System.Drawing.Point(159, 107);
-            this.txtTipoDoc.Name = "txtTipoDoc";
-            this.txtTipoDoc.Size = new System.Drawing.Size(100, 20);
-            this.txtTipoDoc.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Telefono";
             // 
             // btnCargar
             // 
@@ -123,59 +91,50 @@
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblCalle
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 268);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Email";
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(49, 214);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(30, 13);
+            this.lblCalle.TabIndex = 20;
+            this.lblCalle.Text = "Calle";
             // 
-            // label5
+            // lblApellido
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 215);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Direccion";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(49, 188);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 19;
+            this.lblApellido.Text = "Apellido";
             // 
-            // label4
+            // lblNombre
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 191);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Apellido";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(49, 162);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 18;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label3
+            // lblNumeroDoc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Nombre";
+            this.lblNumeroDoc.AutoSize = true;
+            this.lblNumeroDoc.Location = new System.Drawing.Point(49, 136);
+            this.lblNumeroDoc.Name = "lblNumeroDoc";
+            this.lblNumeroDoc.Size = new System.Drawing.Size(44, 13);
+            this.lblNumeroDoc.TabIndex = 17;
+            this.lblNumeroDoc.Text = "Número";
             // 
-            // label2
+            // lblTipoDoc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Numero Doc";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Tipo Doc";
+            this.lblTipoDoc.AutoSize = true;
+            this.lblTipoDoc.Location = new System.Drawing.Point(49, 110);
+            this.lblTipoDoc.Name = "lblTipoDoc";
+            this.lblTipoDoc.Size = new System.Drawing.Size(86, 13);
+            this.lblTipoDoc.TabIndex = 16;
+            this.lblTipoDoc.Text = "Tipo Documento";
             // 
             // btnSalir
             // 
@@ -186,30 +145,53 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // cmbTipoDoc
+            // 
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(159, 110);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.Size = new System.Drawing.Size(100, 21);
+            this.cmbTipoDoc.TabIndex = 33;
+            // 
+            // lblBarrio
+            // 
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Location = new System.Drawing.Point(49, 240);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(34, 13);
+            this.lblBarrio.TabIndex = 34;
+            this.lblBarrio.Text = "Barrio";
+            // 
+            // cmbBarrio
+            // 
+            this.cmbBarrio.FormattingEnabled = true;
+            this.cmbBarrio.Location = new System.Drawing.Point(159, 236);
+            this.cmbBarrio.Name = "cmbBarrio";
+            this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
+            this.cmbBarrio.TabIndex = 35;
+            // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbBarrio);
+            this.Controls.Add(this.lblBarrio);
+            this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtnNombre);
             this.Controls.Add(this.txtNumDoc);
-            this.Controls.Add(this.txtTipoDoc);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCargar);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCalle);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblNumeroDoc);
+            this.Controls.Add(this.lblTipoDoc);
             this.Name = "AgregarCliente";
-            this.Text = "AgregarCliente";
+            this.Text = "Agregar Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,21 +201,19 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtnNombre;
         private System.Windows.Forms.TextBox txtNumDoc;
-        private System.Windows.Forms.TextBox txtTipoDoc;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCalle;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblNumeroDoc;
+        private System.Windows.Forms.Label lblTipoDoc;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cmbTipoDoc;
+        private System.Windows.Forms.Label lblBarrio;
+        private System.Windows.Forms.ComboBox cmbBarrio;
     }
 }

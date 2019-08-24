@@ -21,5 +21,10 @@ namespace Venta_de_discos
         {
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

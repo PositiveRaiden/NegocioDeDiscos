@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="acceso_BD.cs" />
     <Compile Include="AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>

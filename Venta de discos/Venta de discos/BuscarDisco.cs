@@ -46,7 +46,7 @@ namespace Venta_de_discos
         }
         private void CargarDiscos()
         {
-            dataGridView1.Rows.Clear();
+            //dataGridView1.Rows.Clear();
             var discos = disc.ObtenerDiscos();
             dataGridView1.DataSource = discos;
             //var discos = disc.ObtenerDiscos().Rows;
@@ -73,7 +73,16 @@ namespace Venta_de_discos
         private void btnBuscarDisco_Click(object sender, EventArgs e)
         {
 
-            //actualizarDiscosSegunFiltro()
+            ActualizarDiscosSegunFiltroInterprete();
+        }
+
+        private void ActualizarDiscosSegunFiltroInterprete()
+        {
+            //dataGridView1.Rows.Clear();
+            var valor = cmbInterprete.SelectedValue;
+            var discos = disc.ObtenerDiscosPorFiltroInterprete(valor.ToString());
+            dataGridView1.DataSource = discos;
+
         }
 
         private void btnAñadirDisco_Click(object sender, EventArgs e)

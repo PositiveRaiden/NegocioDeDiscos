@@ -28,5 +28,10 @@ namespace Venta_de_discos
             string sqltxt = "SELECT * FROM Disco";
             return _BD.consulta(sqltxt);
         }
+        public DataTable ObtenerDiscosPorFiltroInterprete(string interpreteId)
+        {
+            string sqltxt = "SELECT * FROM Disco where id_interprete="+ interpreteId;
+            return _BD.consulta(sqltxt);
+        }
     }
 }

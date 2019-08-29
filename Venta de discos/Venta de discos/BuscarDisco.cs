@@ -12,12 +12,12 @@ namespace Venta_de_discos
 {
     public partial class BuscarDisco : Form
     {
-        discoRepertorio disc; 
+        DiscosRepositorio disc; 
 
         public BuscarDisco()
         {
             InitializeComponent();
-            disc = new discoRepertorio();
+            disc = new DiscosRepositorio();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -32,6 +32,7 @@ namespace Venta_de_discos
 
         private void BuscarDisco_Load(object sender, EventArgs e)
         {
+            CargarDiscos();
             CargarComboInterprete();
 
         }
@@ -43,11 +44,35 @@ namespace Venta_de_discos
             cmbInterprete.ValueMember = "id";
             cmbInterprete.DisplayMember = "nombre";
         }
+        private void CargarDiscos()
+        {
+            dataGridView1.Rows.Clear();
+            var discos = disc.ObtenerDiscos().Rows;
+            foreach (DataRow disco in discos)
+            {
+                if (disco.HasErrors)
+                    continue; // no corto el ciclo
+                var fila = new string[] {
+                    disco.ItemArray[0].ToString(),
+                    disco.ItemArray[1].ToString(),
+                    disco.ItemArray[2].ToString(),
+                    disco.ItemArray[3].ToString(),
+                    disco.ItemArray[4].ToString(),
+                    disco.ItemArray[5].ToString(),
+                    disco.ItemArray[6].ToString(),
+                    disco.ItemArray[7].ToString()
+
+
+                };
+
+                dataGridView1.Rows.Add(fila);
+            }
+        }
 
         private void btnBuscarDisco_Click(object sender, EventArgs e)
         {
 
-            //actualizarDiscos()
+            //actualizarDiscosSegunFiltro()
         }
     }
 }

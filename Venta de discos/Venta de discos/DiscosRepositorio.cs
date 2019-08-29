@@ -8,10 +8,11 @@ using System.Data;
 namespace Venta_de_discos
 {
 
-    class discoRepertorio
+    class DiscosRepositorio
     {
         private acceso_BD _BD;
-        public void DiscoRepertorio()
+
+        public DiscosRepositorio()
         {
             _BD = new acceso_BD();
         }
@@ -19,6 +20,12 @@ namespace Venta_de_discos
         public DataTable ObtenerInterprete()
         {
             string sqltxt = "select * FROM Interprete";
+            return _BD.consulta(sqltxt);
+        }
+
+        public DataTable ObtenerDiscos()
+        {
+            string sqltxt = "select * FROM Disco";
             return _BD.consulta(sqltxt);
         }
     }

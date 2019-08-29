@@ -32,9 +32,9 @@ namespace Venta_de_discos
 
         private void BuscarDisco_Load(object sender, EventArgs e)
         {
-            CargarDiscos();
-            CargarComboInterprete();
 
+            CargarComboInterprete();
+            CargarDiscos();
         }
 
         private void CargarComboInterprete()
@@ -47,26 +47,27 @@ namespace Venta_de_discos
         private void CargarDiscos()
         {
             dataGridView1.Rows.Clear();
-            var discos = disc.ObtenerDiscos().Rows;
-            foreach (DataRow disco in discos)
-            {
-                if (disco.HasErrors)
-                    continue; // no corto el ciclo
-                var fila = new string[] {
-                    disco.ItemArray[0].ToString(),
-                    disco.ItemArray[1].ToString(),
-                    disco.ItemArray[2].ToString(),
-                    disco.ItemArray[3].ToString(),
-                    disco.ItemArray[4].ToString(),
-                    disco.ItemArray[5].ToString(),
-                    disco.ItemArray[6].ToString(),
-                    disco.ItemArray[7].ToString()
+            var discos = disc.ObtenerDiscos();
+            dataGridView1.DataSource = discos;
+            //var discos = disc.ObtenerDiscos().Rows;
+            //foreach (DataRow disco in discos)
+            //{
+            //    if (disco.HasErrors)
+            //        continue; // no corto el ciclo
+            //    var fila = new string[] {
+            //        disco.ItemArray[0].ToString(),
+            //        disco.ItemArray[1].ToString(),
+            //        disco.ItemArray[2].ToString(),
+            //        disco.ItemArray[3].ToString(),
+            //        disco.ItemArray[4].ToString(),
+            //        disco.ItemArray[5].ToString(),
+            //        disco.ItemArray[6].ToString(),
+            //        disco.ItemArray[6].ToString()
 
+            //    };
 
-                };
-
-                dataGridView1.Rows.Add(fila);
-            }
+            //    dataGridView1.Rows.Add(fila);
+            //}
         }
 
         private void btnBuscarDisco_Click(object sender, EventArgs e)

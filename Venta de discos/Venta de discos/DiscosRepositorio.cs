@@ -19,13 +19,13 @@ namespace Venta_de_discos
 
         public DataTable ObtenerInterprete()
         {
-            string sqltxt = "select * FROM Interprete";
+            string sqltxt = "SELECT * FROM Interprete";
             return _BD.consulta(sqltxt);
         }
 
         public DataTable ObtenerDiscos()
         {
-            string sqltxt = "select * FROM Disco";
+            string sqltxt = "SELECT * FROM Disco";
             return _BD.consulta(sqltxt);
         }
     }

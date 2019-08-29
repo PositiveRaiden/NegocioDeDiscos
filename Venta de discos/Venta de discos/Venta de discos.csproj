@@ -74,6 +74,12 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Disco.cs" />
     <Compile Include="DiscosRepositorio.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informes.cs">
       <SubType>Form</SubType>
     </Compile>

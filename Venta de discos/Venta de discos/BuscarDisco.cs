@@ -75,5 +75,12 @@ namespace Venta_de_discos
 
             //actualizarDiscosSegunFiltro()
         }
+
+        private void btnAñadirDisco_Click(object sender, EventArgs e)
+        {
+            var ventana = new AgregarDisco();
+            ventana.ShowDialog();
+            
+        }
     }
 }

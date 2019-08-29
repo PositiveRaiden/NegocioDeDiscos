@@ -15,9 +15,9 @@ namespace Venta_de_discos
         private string selloDiscografico;
         private int añoEdicion;
         private int precio;
+        private int cantidad;
 
-
-        public Disco(string interprete, string nombreAlbum, string genero, string selloDiscografico, int añoEdicion, int precio)
+        public Disco(string interprete, string nombreAlbum, string genero, string selloDiscografico, int añoEdicion, int precio, int cantidad)
         {
             this.interprete = interprete;
             this.nombreAlbum = nombreAlbum;
@@ -25,6 +25,7 @@ namespace Venta_de_discos
             this.selloDiscografico = selloDiscografico;
             this.añoEdicion = añoEdicion;
             this.precio = precio;
+            this.cantidad = cantidad;
 
 
         }
@@ -59,6 +60,12 @@ namespace Venta_de_discos
             get { return precio; }
             set { precio = value; }
         }
+        public int Cantidad
+        {
+            get { return cantidad; }
+            set { cantidad = value; }
+        }
+
 
 
 

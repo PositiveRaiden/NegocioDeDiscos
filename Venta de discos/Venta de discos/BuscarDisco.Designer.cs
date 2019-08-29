@@ -91,6 +91,7 @@
             this.btnAñadirDisco.TabIndex = 5;
             this.btnAñadirDisco.Text = "Añadir Disco";
             this.btnAñadirDisco.UseVisualStyleBackColor = true;
+            this.btnAñadirDisco.Click += new System.EventHandler(this.btnAñadirDisco_Click);
             // 
             // BuscarDisco
             // 

@@ -21,5 +21,21 @@ namespace Venta_de_discos
         {
 
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            
+            string nombreAlbum  = txtNombreAlbum.Text;
+            string interprete = cmbInterprete.SelectedValue.ToString();
+            string genero = cmbGenero.SelectedValue.ToString();
+            string sello = cmbSello.SelectedValue.ToString();
+            int año = int.Parse(txtAñoEdicion.Text);
+            int precio = int.Parse(txtPrecio.Text);
+            int cantidad = int.Parse(txtCantidad.Text);
+
+            Disco disco = new Disco(interprete, nombreAlbum, interprete, sello, año,precio,cantidad);
+
+
+        }
     }
 }

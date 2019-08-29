@@ -35,13 +35,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtNombreAlbum = new System.Windows.Forms.TextBox();
+            this.txtAñoEdicion = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.cmbSello = new System.Windows.Forms.ComboBox();
             this.cmbInterprete = new System.Windows.Forms.ComboBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -101,6 +101,7 @@
             this.btnCargar.TabIndex = 6;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // label7
             // 
@@ -111,26 +112,26 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Año Edición";
             // 
-            // textBox3
+            // txtNombreAlbum
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtNombreAlbum.Location = new System.Drawing.Point(187, 81);
+            this.txtNombreAlbum.Name = "txtNombreAlbum";
+            this.txtNombreAlbum.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreAlbum.TabIndex = 10;
             // 
-            // textBox6
+            // txtAñoEdicion
             // 
-            this.textBox6.Location = new System.Drawing.Point(187, 188);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtAñoEdicion.Location = new System.Drawing.Point(187, 188);
+            this.txtAñoEdicion.Name = "txtAñoEdicion";
+            this.txtAñoEdicion.Size = new System.Drawing.Size(100, 20);
+            this.txtAñoEdicion.TabIndex = 13;
             // 
-            // textBox7
+            // txtCantidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(187, 214);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 14;
+            this.txtCantidad.Location = new System.Drawing.Point(187, 214);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 14;
             // 
             // dataGridView1
             // 
@@ -149,21 +150,21 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbGenero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(187, 134);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 34;
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Location = new System.Drawing.Point(187, 134);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(100, 21);
+            this.cmbGenero.TabIndex = 34;
             // 
-            // comboBox2
+            // cmbSello
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(187, 161);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 35;
+            this.cmbSello.FormattingEnabled = true;
+            this.cmbSello.Location = new System.Drawing.Point(187, 161);
+            this.cmbSello.Name = "cmbSello";
+            this.cmbSello.Size = new System.Drawing.Size(100, 21);
+            this.cmbSello.TabIndex = 35;
             // 
             // cmbInterprete
             // 
@@ -197,13 +198,13 @@
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.cmbInterprete);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbSello);
+            this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.txtAñoEdicion);
+            this.Controls.Add(this.txtNombreAlbum);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.label6);
@@ -228,13 +229,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNombreAlbum;
+        private System.Windows.Forms.TextBox txtAñoEdicion;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbGenero;
+        private System.Windows.Forms.ComboBox cmbSello;
         private System.Windows.Forms.ComboBox cmbInterprete;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtPrecio;

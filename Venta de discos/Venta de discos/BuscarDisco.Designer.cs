@@ -63,6 +63,7 @@
             this.btnBuscarDisco.TabIndex = 3;
             this.btnBuscarDisco.Text = "Buscar";
             this.btnBuscarDisco.UseVisualStyleBackColor = true;
+            this.btnBuscarDisco.Click += new System.EventHandler(this.btnBuscarDisco_Click);
             // 
             // btnSalir
             // 

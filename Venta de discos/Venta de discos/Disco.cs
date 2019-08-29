@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Venta_de_discos
 {
     class Disco
     {
-        string interprete;
-        string nombreAlbum;
-        string genero;
-        string selloDiscografico;
-        int añoEdicion;
-        int precio;
+        private string interprete;
+        private string nombreAlbum;
+        private string genero;
+        private string selloDiscografico;
+        private int añoEdicion;
+        private int precio;
+
 
         public Disco(string interprete, string nombreAlbum, string genero, string selloDiscografico, int añoEdicion, int precio)
         {
@@ -23,6 +25,8 @@ namespace Venta_de_discos
             this.selloDiscografico = selloDiscografico;
             this.añoEdicion = añoEdicion;
             this.precio = precio;
+
+
         }
 
         public string Interprete

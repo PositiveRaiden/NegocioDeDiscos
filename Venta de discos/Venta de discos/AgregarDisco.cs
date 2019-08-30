@@ -36,11 +36,14 @@ namespace Venta_de_discos
             //Disco disco = new Disco(interprete, nombreAlbum, interprete, sello, año,precio,cantidad);
 
             Disco disco = new Disco();
-            disco.NombreAlbum = txtNombreAlbum.Text;
+            disco.nombreAlbum = txtNombreAlbum.Text;
 
-            if(disco.NombreAlbum is null)
+            if(!disco.NombreAlbumValido())
             {
                 errorProvider1.SetError(txtNombreAlbum, "Error");
+                txtNombreAlbum.Text = "";
+                txtNombreAlbum.Focus();
+                return;
             }
 
 

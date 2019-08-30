@@ -8,64 +8,82 @@ namespace Venta_de_discos
 {
     class Cliente
     {
-        string tipoDoc;
-        int numDoc;
-        string nombre;
-        string apellido;
-        string direccion;
-        int telefono;
-        string email;
 
-        public Cliente(string tipoDoc,int numDoc, string nombre, string apellido, string direccion, int telefono, string email)
+        public string tipoDoc { get; set; }
+        public int numDoc { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string direccion { get; set; }
+        public int telefono { get; set; }
+        public string email { get; set; }
+
+        public Cliente()
         {
-            this.tipoDoc = tipoDoc;
-            this.numDoc = numDoc;
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.direccion = direccion;
-            this.telefono = telefono;
-            this.email = email;
+
         }
 
-        public string TipoDoc
-        {
-            get { return tipoDoc; }
-            set { tipoDoc = value; }
-        }
 
-        public int NumDoc
-        {
-            get { return numDoc; }
-            set { numDoc = value; }
-        }
 
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
-        public string Apellido
-        {
-            get { return apellido; }
-            set { apellido = value; }
-        }
+        //TRABAJANDO CON ATRIBUTOS PRIVADOS
 
-        public string Direccion
-        {
-            get { return direccion; }
-            set { direccion = value; }
-        }
+        //string tipoDoc;
+        //int numDoc;
+        //string nombre;
+        //string apellido;
+        //string direccion;
+        //int telefono;
+        //string email;
 
-        public int Telefono
-        {
-            get { return telefono; }
-            set { telefono = value; }
-        }
+        //public Cliente(string tipoDoc,int numDoc, string nombre, string apellido, string direccion, int telefono, string email)
+        //{
+        //    this.tipoDoc = tipoDoc;
+        //    this.numDoc = numDoc;
+        //    this.nombre = nombre;
+        //    this.apellido = apellido;
+        //    this.direccion = direccion;
+        //    this.telefono = telefono;
+        //    this.email = email;
+        //}
 
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
+        //public string TipoDoc
+        //{
+        //    get { return tipoDoc; }
+        //    set { tipoDoc = value; }
+        //}
+
+        //public int NumDoc
+        //{
+        //    get { return numDoc; }
+        //    set { numDoc = value; }
+        //}
+
+        //public string Nombre
+        //{
+        //    get { return nombre; }
+        //    set { nombre = value; }
+        //}
+        //public string Apellido
+        //{
+        //    get { return apellido; }
+        //    set { apellido = value; }
+        //}
+
+        //public string Direccion
+        //{
+        //    get { return direccion; }
+        //    set { direccion = value; }
+        //}
+
+        //public int Telefono
+        //{
+        //    get { return telefono; }
+        //    set { telefono = value; }
+        //}
+
+        //public string Email
+        //{
+        //    get { return email; }
+        //    set { email = value; }
+        //}
     }
 }

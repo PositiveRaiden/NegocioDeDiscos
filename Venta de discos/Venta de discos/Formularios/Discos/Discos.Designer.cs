@@ -34,13 +34,15 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.cmbInterprete = new System.Windows.Forms.ComboBox();
             this.btnAñadirDisco = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(75, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(75, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(677, 249);
             this.dataGridView1.TabIndex = 0;
@@ -85,19 +87,39 @@
             // 
             // btnAñadirDisco
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(596, 328);
+            this.btnAñadirDisco.Location = new System.Drawing.Point(508, 32);
             this.btnAñadirDisco.Name = "btnAñadirDisco";
             this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
             this.btnAñadirDisco.TabIndex = 5;
-            this.btnAñadirDisco.Text = "Añadir Disco";
+            this.btnAñadirDisco.Text = "Nuevo";
             this.btnAñadirDisco.UseVisualStyleBackColor = true;
             this.btnAñadirDisco.Click += new System.EventHandler(this.btnAñadirDisco_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(589, 32);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 18;
+            this.btnModificar.Text = "Modificar Disco";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(670, 32);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 19;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // BuscarDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 380);
+            this.ClientSize = new System.Drawing.Size(839, 436);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.cmbInterprete);
             this.Controls.Add(this.btnAñadirDisco);
             this.Controls.Add(this.btnSalir);
@@ -121,5 +143,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ComboBox cmbInterprete;
         private System.Windows.Forms.Button btnAñadirDisco;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

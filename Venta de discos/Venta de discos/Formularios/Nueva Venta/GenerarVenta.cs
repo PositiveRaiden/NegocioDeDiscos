@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos
 {
-    public partial class VentaDeDiscos : Form
+    public partial class GenerarVenta : Form
     {
-        public VentaDeDiscos()
+        public GenerarVenta()
         {
             InitializeComponent();
         }

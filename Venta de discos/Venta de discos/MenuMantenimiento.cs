@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos
 {
-    public partial class Form1 : Form
+    public partial class MenuMantenimiento : Form
     {
-        public Form1()
+        public MenuMantenimiento()
         {
             InitializeComponent();
+        }
+
+        private void btnBuscarDisco_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBuscarDisco_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

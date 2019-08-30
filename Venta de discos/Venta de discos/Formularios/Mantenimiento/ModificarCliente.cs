@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Venta_de_discos
+namespace Venta_de_discos.Formularios.Mantenimiento
 {
-    public partial class Informes : Form
+    public partial class ModificarCliente : Form
     {
-        public Informes()
+        public ModificarCliente()
         {
             InitializeComponent();
         }

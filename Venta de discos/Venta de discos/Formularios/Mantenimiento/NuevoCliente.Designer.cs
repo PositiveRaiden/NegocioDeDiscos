@@ -1,6 +1,6 @@
 ﻿namespace Venta_de_discos
 {
-    partial class AgregarCliente
+    partial class NuevoCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtnNombre = new System.Windows.Forms.TextBox();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
-            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.lblCalle = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -45,16 +44,7 @@
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtLocalidad = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(369, 57);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(381, 178);
-            this.dataGridView1.TabIndex = 31;
             // 
             // txtDireccion
             // 
@@ -84,14 +74,14 @@
             this.txtNumDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumDoc.TabIndex = 25;
             // 
-            // btnCargar
+            // btnAceptar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(369, 263);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 22;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Location = new System.Drawing.Point(233, 263);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 22;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // lblCalle
             // 
@@ -140,7 +130,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(675, 263);
+            this.btnSalir.Location = new System.Drawing.Point(314, 263);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 32;
@@ -194,19 +184,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 327);
+            this.ClientSize = new System.Drawing.Size(409, 296);
             this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.lblBarrio);
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtnNombre);
             this.Controls.Add(this.txtNumDoc);
-            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
@@ -214,20 +203,17 @@
             this.Controls.Add(this.lblTipoDoc);
             this.Name = "AgregarCliente";
             this.Text = "Agregar Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtnNombre;
         private System.Windows.Forms.TextBox txtNumDoc;
-        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblCalle;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;

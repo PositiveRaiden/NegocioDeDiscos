@@ -1,6 +1,6 @@
 ﻿namespace Venta_de_discos
 {
-    partial class VentaDeDiscos
+    partial class GenerarVenta
     {
         /// <summary>
         /// Required designer variable.

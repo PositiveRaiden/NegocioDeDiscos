@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Venta_de_discos
+namespace Venta_de_discos.Formularios.Discos
 {
-    public partial class AgregarCliente : Form
+    public partial class ModificarDisco : Form
     {
-        public AgregarCliente()
+        public ModificarDisco()
         {
             InitializeComponent();
         }

@@ -34,12 +34,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombreAlbum = new System.Windows.Forms.TextBox();
             this.txtAñoEdicion = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.cmbSello = new System.Windows.Forms.ComboBox();
@@ -47,7 +46,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,15 +94,15 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Cantidad";
             // 
-            // btnCargar
+            // btnAceptar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(396, 282);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 6;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.btnAceptar.Location = new System.Drawing.Point(247, 282);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // label7
             // 
@@ -136,17 +134,9 @@
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 14;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(396, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(381, 152);
-            this.dataGridView1.TabIndex = 15;
-            // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(702, 282);
+            this.btnSalir.Location = new System.Drawing.Point(328, 282);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 33;
@@ -201,19 +191,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 320);
+            this.ClientSize = new System.Drawing.Size(418, 312);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.cmbInterprete);
             this.Controls.Add(this.cmbSello);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtAñoEdicion);
             this.Controls.Add(this.txtNombreAlbum);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -222,7 +211,6 @@
             this.Name = "AgregarDisco";
             this.Text = "Agregar Disco";
             this.Load += new System.EventHandler(this.AgregarDisco_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,12 +223,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNombreAlbum;
         private System.Windows.Forms.TextBox txtAñoEdicion;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ComboBox cmbGenero;
         private System.Windows.Forms.ComboBox cmbSello;

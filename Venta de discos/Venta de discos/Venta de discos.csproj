@@ -46,46 +46,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="acceso_BD.cs" />
-    <Compile Include="AgregarCliente.cs">
+    <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarCliente.Designer.cs">
-      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    <Compile Include="Formularios\Discos\ModificarDisco.Designer.cs">
+      <DependentUpon>ModificarDisco.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarDisco.cs">
+    <Compile Include="Formularios\Mantenimiento\ModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarDisco.Designer.cs">
-      <DependentUpon>AgregarDisco.cs</DependentUpon>
+    <Compile Include="Formularios\Mantenimiento\ModificarCliente.Designer.cs">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="buscarCliente.cs">
+    <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buscarCliente.Designer.cs">
-      <DependentUpon>buscarCliente.cs</DependentUpon>
+    <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuscarDisco.cs">
+    <Compile Include="Helpers\acceso_BD.cs" />
+    <Compile Include="Formularios\Mantenimiento\NuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuscarDisco.Designer.cs">
-      <DependentUpon>BuscarDisco.cs</DependentUpon>
+    <Compile Include="Formularios\Mantenimiento\NuevoCliente.Designer.cs">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Disco.cs" />
-    <Compile Include="DiscosRepositorio.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Formularios\Discos\NuevoDisco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\Discos\NuevoDisco.Designer.cs">
+      <DependentUpon>NuevoDisco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informes.cs">
+    <Compile Include="Formularios\Mantenimiento\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Informes.Designer.cs">
-      <DependentUpon>Informes.cs</DependentUpon>
+    <Compile Include="Formularios\Mantenimiento\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Discos\Discos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Discos\Discos.Designer.cs">
+      <DependentUpon>Discos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Disco.cs" />
+    <Compile Include="MenuMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMantenimiento.Designer.cs">
+      <DependentUpon>MenuMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositorios\DiscosRepositorio.cs" />
     <Compile Include="MenuGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,34 +105,37 @@
       <DependentUpon>MenuGestion.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentaDeDiscos.cs">
+    <Compile Include="Formularios\Nueva Venta\GenerarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentaDeDiscos.Designer.cs">
-      <DependentUpon>VentaDeDiscos.cs</DependentUpon>
+    <Compile Include="Formularios\Nueva Venta\GenerarVenta.Designer.cs">
+      <DependentUpon>GenerarVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgregarCliente.resx">
-      <DependentUpon>AgregarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoCliente.resx">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarDisco.resx">
-      <DependentUpon>AgregarDisco.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Discos\NuevoDisco.resx">
+      <DependentUpon>NuevoDisco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="buscarCliente.resx">
-      <DependentUpon>buscarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Mantenimiento\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuscarDisco.resx">
-      <DependentUpon>BuscarDisco.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Discos\Discos.resx">
+      <DependentUpon>Discos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informes.resx">
-      <DependentUpon>Informes.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuGestion.resx">
       <DependentUpon>MenuGestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentaDeDiscos.resx">
-      <DependentUpon>VentaDeDiscos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Nueva Venta\GenerarVenta.resx">
+      <DependentUpon>GenerarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMantenimiento.resx">
+      <DependentUpon>MenuMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -144,5 +159,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

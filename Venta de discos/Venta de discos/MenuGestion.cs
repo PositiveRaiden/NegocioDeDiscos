@@ -24,14 +24,13 @@ namespace Venta_de_discos
 
         private void btnBuscarDisco_Click(object sender, EventArgs e)
         {
-            BuscarDisco frmBuscar = new BuscarDisco();
-            frmBuscar.ShowDialog();
+
 
         }
 
         private void btnVentaDeDiscos_Click(object sender, EventArgs e)
         {
-            VentaDeDiscos frmVentas = new VentaDeDiscos();
+            GenerarVenta frmVentas = new GenerarVenta();
             frmVentas.ShowDialog();
 
         }
@@ -39,6 +38,12 @@ namespace Venta_de_discos
         private void frmMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscarDisco_Click_1(object sender, EventArgs e)
+        {
+            BuscarDisco frm = new BuscarDisco();
+            frm.ShowDialog();
         }
     }
 }

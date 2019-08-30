@@ -1,6 +1,6 @@
 ﻿namespace Venta_de_discos
 {
-    partial class buscarCliente
+    partial class Clientes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAñadirCliente = new System.Windows.Forms.Button();
             this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.lblNumeroDocumento = new System.Windows.Forms.Label();
             this.lblNombreCliente = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAñadirDisco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +57,6 @@
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnAñadirCliente
-            // 
-            this.btnAñadirCliente.Location = new System.Drawing.Point(21, 399);
-            this.btnAñadirCliente.Name = "btnAñadirCliente";
-            this.btnAñadirCliente.Size = new System.Drawing.Size(120, 23);
-            this.btnAñadirCliente.TabIndex = 9;
-            this.btnAñadirCliente.Text = "Añadir Nuevo Cliente";
-            this.btnAñadirCliente.UseVisualStyleBackColor = true;
             // 
             // cmbTipoDocumento
             // 
@@ -105,15 +97,6 @@
             this.lblNombreCliente.Text = "Tipo Documento";
             this.lblNombreCliente.Click += new System.EventHandler(this.lblNombreCliente_Click);
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(548, 399);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 14;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(269, 25);
@@ -123,21 +106,49 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // buscarCliente
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(621, 54);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 22;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(540, 54);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 21;
+            this.btnModificar.Text = "Modificar Disco";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnAñadirDisco
+            // 
+            this.btnAñadirDisco.Location = new System.Drawing.Point(459, 54);
+            this.btnAñadirDisco.Name = "btnAñadirDisco";
+            this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
+            this.btnAñadirDisco.TabIndex = 20;
+            this.btnAñadirDisco.Text = "Nuevo";
+            this.btnAñadirDisco.UseVisualStyleBackColor = true;
+            // 
+            // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnAñadirDisco);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cmbTipoDocumento);
             this.Controls.Add(this.txtNumeroDocumento);
             this.Controls.Add(this.lblNumeroDocumento);
             this.Controls.Add(this.lblNombreCliente);
-            this.Controls.Add(this.btnAñadirCliente);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "buscarCliente";
+            this.Name = "Clientes";
             this.Text = "Buscar Cliente";
             this.Load += new System.EventHandler(this.buscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -149,12 +160,13 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnAñadirCliente;
         private System.Windows.Forms.ComboBox cmbTipoDocumento;
         private System.Windows.Forms.TextBox txtNumeroDocumento;
         private System.Windows.Forms.Label lblNumeroDocumento;
         private System.Windows.Forms.Label lblNombreCliente;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnAñadirDisco;
     }
 }

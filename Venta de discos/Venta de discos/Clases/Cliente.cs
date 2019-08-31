@@ -9,13 +9,13 @@ namespace Venta_de_discos
     class Cliente
     {
 
-        public string tipoDoc { get; set; }
-        public int numDoc { get; set; }
-        public string nombre { get; set; }
-        public string apellido { get; set; }
-        public string direccion { get; set; }
-        public int telefono { get; set; }
-        public string email { get; set; }
+        public string TipoDoc { get; set; }
+        public int NumDoc { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public int Telefono { get; set; }
+        public string Email { get; set; }
 
         public Cliente()
         {

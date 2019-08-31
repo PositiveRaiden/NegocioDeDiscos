@@ -67,6 +67,24 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             datosInterprete.Nombre = txtNombre.Text;
             datosInterprete.Id_Pais = cmbPais.SelectedValue.ToString();
             datosInterprete.Id = _id;
+
+
+            if (!datosInterprete.NombreValido())
+            {
+                MessageBox.Show("Nombre Invalido!");
+                txtNombre.Text = " ";
+                txtNombre.Focus();
+                return;
+            }
+            if (cmbPais.SelectedIndex == -1)
+            {
+
+                MessageBox.Show("Pais Invalido!");
+                cmbPais.Focus();
+                return;
+
+            }
+
             if (interpretesRepositorio.Editar(datosInterprete))
             {
                 MessageBox.Show("La edicion ha finalizado correctamente");

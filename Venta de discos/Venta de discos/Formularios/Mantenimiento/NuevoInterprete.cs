@@ -65,8 +65,16 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 txtNombre.Focus();
                 return;
             }
+            if (cmbPais.SelectedIndex == -1)
+            {
 
-            if(interpretesRepositorio.Guardar(interprete))
+                MessageBox.Show("Pais Invalido!");
+                cmbPais.Focus();
+                return;
+
+            }
+
+            if (interpretesRepositorio.Guardar(interprete))
             {
                 MessageBox.Show("Se agrego interprete con exito!");
                 this.Dispose();

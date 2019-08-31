@@ -68,7 +68,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
             if(interpretesRepositorio.Guardar(interprete))
             {
-                MessageBox.Show("Se agrego director con exito!");
+                MessageBox.Show("Se agrego interprete con exito!");
                 this.Dispose();
             }
 

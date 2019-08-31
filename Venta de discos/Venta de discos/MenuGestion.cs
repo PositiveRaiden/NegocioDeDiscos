@@ -15,6 +15,8 @@ namespace Venta_de_discos
         public frmMenu()
         {
             InitializeComponent();
+            this.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,6 +52,8 @@ namespace Venta_de_discos
         {
             MenuMantenimiento frm = new MenuMantenimiento();
             frm.ShowDialog();
+            
+
         }
     }
 }

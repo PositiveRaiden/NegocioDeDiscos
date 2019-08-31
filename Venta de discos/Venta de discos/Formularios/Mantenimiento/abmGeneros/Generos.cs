@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios.Mantenimiento.abmGeneros;
 using Venta_de_discos.Repositorios;
 
 namespace Venta_de_discos.Formularios.Mantenimiento.Generos
@@ -27,7 +28,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Generos
             dgvGeneros.DataSource = generos;
         }
 
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,6 +44,24 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Generos
         private void Genero_Load(object sender, EventArgs e)
         {
             actualizarGeneros();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            var seleccionados = dgvGeneros.SelectedRows;
+            if (seleccionados.Count == 0 || seleccionados.Count > 1)
+            {
+                MessageBox.Show("Debe seleccionar una fila!");
+                return;
+
+            }
+            foreach (DataGridViewRow fila in seleccionados)
+            {
+                var id = fila.Cells[0].Value;
+                var ventana = new ModificarGenero(id.ToString());
+                ventana.ShowDialog();
+                actualizarGeneros();
+            }
         }
     }
 }

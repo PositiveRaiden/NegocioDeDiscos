@@ -22,6 +22,29 @@ namespace Venta_de_discos.Repositorios
             return _BD.consulta(sqltxt);
         }
 
+        public Genero ObtenerGenero (string generoId)
+        {
+            string sqltxt = $"SELECT * FROM [dbo].[Genero] WHERE id = {generoId}";
+            var tablaTemporal = _BD.consulta(sqltxt);
+
+            if (tablaTemporal.Rows.Count == 0)
+                return null;
+
+            var genero = new Genero();
+
+            foreach (DataRow fila in tablaTemporal.Rows)
+            {
+                if (fila.HasErrors)
+                    continue; // no corto el ciclo
+
+                genero.Id = fila.ItemArray[0].ToString(); // Codigo
+                genero.Nombre = fila.ItemArray[1].ToString(); // Nombre
+                genero.Descripcion = fila.ItemArray[2].ToString(); // Descripcion
+            }
+
+            return genero;
+        }
+
         public bool Guardar(Genero genero)
         {
             string sqltxt = $"INSERT[dbo].[Genero]([Nombre],[Descripcion])" +
@@ -37,5 +60,14 @@ namespace Venta_de_discos.Repositorios
             return _BD.EjecutarSQL(sqltxt);
         }
 
+        public bool Editar(Genero genero)
+        {
+            string sqltxt = $"UPDATE [dbo].[genero] SET nombre =' { genero.Nombre } '" +
+                $", descripcion= { genero.Descripcion}" +
+                $"WHERE id= {genero.Id}";
+            return _BD.EjecutarSQL(sqltxt);
+
+        }
     }
 }
+

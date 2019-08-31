@@ -54,13 +54,14 @@
             this.btnSalirMenu.TabIndex = 10;
             this.btnSalirMenu.Text = "Salir";
             this.btnSalirMenu.UseVisualStyleBackColor = true;
+            this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
             // 
             // btnInformes
             // 
             this.btnInformes.Location = new System.Drawing.Point(15, 148);
             this.btnInformes.Name = "btnInformes";
             this.btnInformes.Size = new System.Drawing.Size(134, 24);
-            this.btnInformes.TabIndex = 9;
+            this.btnInformes.TabIndex = 2;
             this.btnInformes.Text = "Nacionalidad";
             this.btnInformes.UseVisualStyleBackColor = true;
             // 
@@ -69,7 +70,7 @@
             this.btnVentaDeDiscos.Location = new System.Drawing.Point(15, 119);
             this.btnVentaDeDiscos.Name = "btnVentaDeDiscos";
             this.btnVentaDeDiscos.Size = new System.Drawing.Size(134, 23);
-            this.btnVentaDeDiscos.TabIndex = 8;
+            this.btnVentaDeDiscos.TabIndex = 1;
             this.btnVentaDeDiscos.Text = "Intérprete";
             this.btnVentaDeDiscos.UseVisualStyleBackColor = true;
             this.btnVentaDeDiscos.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
@@ -79,7 +80,7 @@
             this.btnGeneros.Location = new System.Drawing.Point(15, 90);
             this.btnGeneros.Name = "btnGeneros";
             this.btnGeneros.Size = new System.Drawing.Size(134, 23);
-            this.btnGeneros.TabIndex = 11;
+            this.btnGeneros.TabIndex = 0;
             this.btnGeneros.Text = "Género ";
             this.btnGeneros.UseVisualStyleBackColor = true;
             this.btnGeneros.Click += new System.EventHandler(this.btnGeneros_Click_1);

@@ -8,6 +8,7 @@ namespace Venta_de_discos.Clases
 {
     class Genero
     {
+        public string Id { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
@@ -18,5 +19,11 @@ namespace Venta_de_discos.Clases
             return false;
         }
 
+        public bool DescripcionValida()
+        {
+            if (!string.IsNullOrEmpty(Descripcion) && Descripcion.Length < 51)
+                return true;
+            return false;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Venta_de_discos.Formularios.Mantenimiento.Generos
 {
-    partial class Genero
+    partial class Generos
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar Disco";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -62,6 +63,7 @@
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnSalir
             // 
@@ -82,7 +84,7 @@
             this.dgvGeneros.Size = new System.Drawing.Size(319, 198);
             this.dgvGeneros.TabIndex = 3;
             // 
-            // Genero
+            // Generos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,8 +94,9 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvGeneros);
-            this.Name = "Genero";
+            this.Name = "Generos";
             this.Text = "Géneros";
+            this.Load += new System.EventHandler(this.Genero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
             this.ResumeLayout(false);
 

@@ -39,9 +39,15 @@ namespace Venta_de_discos
 
         private void btnGeneros_Click_1(object sender, EventArgs e)
         {
-            Genero frm = new Genero();
-            frm.ShowDialog();
-            this.Hide();
+            Generos frm = new Generos();
+            frm.Show();
+            //this.Hide();
+        }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

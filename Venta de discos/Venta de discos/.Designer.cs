@@ -30,15 +30,15 @@
         {
             this.btnSalirMenu = new System.Windows.Forms.Button();
             this.lblOpciones = new System.Windows.Forms.Label();
-            this.btnInformes = new System.Windows.Forms.Button();
-            this.btnVentaDeDiscos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBuscarDisco = new System.Windows.Forms.Button();
+            this.btnMantenimiento = new System.Windows.Forms.Button();
+            this.btnNuevaVenta = new System.Windows.Forms.Button();
+            this.btnNuevoPedido = new System.Windows.Forms.Button();
+            this.btnDiscos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalirMenu
             // 
-            this.btnSalirMenu.Location = new System.Drawing.Point(297, 248);
+            this.btnSalirMenu.Location = new System.Drawing.Point(296, 222);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
             this.btnSalirMenu.TabIndex = 4;
@@ -56,58 +56,58 @@
             this.lblOpciones.Text = "Seleccione una opción:";
             this.lblOpciones.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnInformes
+            // btnMantenimiento
             // 
-            this.btnInformes.Location = new System.Drawing.Point(123, 182);
-            this.btnInformes.Name = "btnInformes";
-            this.btnInformes.Size = new System.Drawing.Size(134, 24);
-            this.btnInformes.TabIndex = 3;
-            this.btnInformes.Text = "Mantenimiento";
-            this.btnInformes.UseVisualStyleBackColor = true;
-            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
+            this.btnMantenimiento.Location = new System.Drawing.Point(123, 181);
+            this.btnMantenimiento.Name = "btnMantenimiento";
+            this.btnMantenimiento.Size = new System.Drawing.Size(134, 24);
+            this.btnMantenimiento.TabIndex = 3;
+            this.btnMantenimiento.Text = "Mantenimiento";
+            this.btnMantenimiento.UseVisualStyleBackColor = true;
+            this.btnMantenimiento.Click += new System.EventHandler(this.btnInformes_Click);
             // 
-            // btnVentaDeDiscos
+            // btnNuevaVenta
             // 
-            this.btnVentaDeDiscos.Location = new System.Drawing.Point(123, 144);
-            this.btnVentaDeDiscos.Name = "btnVentaDeDiscos";
-            this.btnVentaDeDiscos.Size = new System.Drawing.Size(134, 23);
-            this.btnVentaDeDiscos.TabIndex = 2;
-            this.btnVentaDeDiscos.Text = "Nueva Venta";
-            this.btnVentaDeDiscos.UseVisualStyleBackColor = true;
-            this.btnVentaDeDiscos.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(123, 142);
+            this.btnNuevaVenta.Name = "btnNuevaVenta";
+            this.btnNuevaVenta.Size = new System.Drawing.Size(134, 23);
+            this.btnNuevaVenta.TabIndex = 2;
+            this.btnNuevaVenta.Text = "Nueva Venta";
+            this.btnNuevaVenta.UseVisualStyleBackColor = true;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
             // 
-            // button1
+            // btnNuevoPedido
             // 
-            this.button1.Location = new System.Drawing.Point(123, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Nuevo Pedido";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNuevoPedido.Location = new System.Drawing.Point(123, 103);
+            this.btnNuevoPedido.Name = "btnNuevoPedido";
+            this.btnNuevoPedido.Size = new System.Drawing.Size(134, 23);
+            this.btnNuevoPedido.TabIndex = 1;
+            this.btnNuevoPedido.Text = "Nuevo Pedido";
+            this.btnNuevoPedido.UseVisualStyleBackColor = true;
             // 
-            // btnBuscarDisco
+            // btnDiscos
             // 
-            this.btnBuscarDisco.Location = new System.Drawing.Point(123, 64);
-            this.btnBuscarDisco.Name = "btnBuscarDisco";
-            this.btnBuscarDisco.Size = new System.Drawing.Size(134, 23);
-            this.btnBuscarDisco.TabIndex = 7;
-            this.btnBuscarDisco.Text = "Discos";
-            this.btnBuscarDisco.UseVisualStyleBackColor = true;
-            this.btnBuscarDisco.Click += new System.EventHandler(this.btnBuscarDisco_Click_1);
+            this.btnDiscos.Location = new System.Drawing.Point(123, 64);
+            this.btnDiscos.Name = "btnDiscos";
+            this.btnDiscos.Size = new System.Drawing.Size(134, 23);
+            this.btnDiscos.TabIndex = 0;
+            this.btnDiscos.Text = "Discos";
+            this.btnDiscos.UseVisualStyleBackColor = true;
+            this.btnDiscos.Click += new System.EventHandler(this.btnBuscarDisco_Click_1);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 283);
-            this.Controls.Add(this.btnBuscarDisco);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnVentaDeDiscos);
-            this.Controls.Add(this.btnInformes);
+            this.ClientSize = new System.Drawing.Size(394, 255);
+            this.Controls.Add(this.btnDiscos);
+            this.Controls.Add(this.btnNuevoPedido);
+            this.Controls.Add(this.btnNuevaVenta);
+            this.Controls.Add(this.btnMantenimiento);
             this.Controls.Add(this.lblOpciones);
             this.Controls.Add(this.btnSalirMenu);
             this.Name = "frmMenu";
-            this.Text = "n";
+            this.Text = "Negocio Venta de Discos";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,10 +118,10 @@
 
         private System.Windows.Forms.Button btnSalirMenu;
         private System.Windows.Forms.Label lblOpciones;
-        private System.Windows.Forms.Button btnInformes;
-        private System.Windows.Forms.Button btnVentaDeDiscos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnBuscarDisco;
+        private System.Windows.Forms.Button btnMantenimiento;
+        private System.Windows.Forms.Button btnNuevaVenta;
+        private System.Windows.Forms.Button btnNuevoPedido;
+        private System.Windows.Forms.Button btnDiscos;
     }
 }
 

@@ -18,5 +18,11 @@ namespace Venta_de_discos.Clases
             return false;
         }
 
+        public bool DescripcionValida()
+        {
+            if (!string.IsNullOrEmpty(Descripcion) && Descripcion.Length < 51)
+                return true;
+            return false;
+        }
     }
 }

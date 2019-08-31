@@ -1,6 +1,6 @@
 ﻿namespace Venta_de_discos.Formularios.Mantenimiento.Generos
 {
-    partial class Genero
+    partial class Generos
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnSalir
             // 
@@ -94,6 +95,7 @@
             this.Controls.Add(this.dgvGeneros);
             this.Name = "Genero";
             this.Text = "Géneros";
+            this.Load += new System.EventHandler(this.Genero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
             this.ResumeLayout(false);
 

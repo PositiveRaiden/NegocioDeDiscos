@@ -72,6 +72,7 @@
             this.btnVentaDeDiscos.TabIndex = 8;
             this.btnVentaDeDiscos.Text = "Interprete";
             this.btnVentaDeDiscos.UseVisualStyleBackColor = true;
+            this.btnVentaDeDiscos.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
             // 
             // button1
             // 

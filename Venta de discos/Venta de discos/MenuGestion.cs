@@ -45,5 +45,11 @@ namespace Venta_de_discos
             BuscarDisco frm = new BuscarDisco();
             frm.ShowDialog();
         }
+
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+            MenuMantenimiento frm = new MenuMantenimiento();
+            frm.ShowDialog();
+        }
     }
 }

@@ -33,7 +33,7 @@
             this.btnBuscarDisco = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.cmbInterprete = new System.Windows.Forms.ComboBox();
-            this.btnAñadirDisco = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,16 +84,17 @@
             this.cmbInterprete.Name = "cmbInterprete";
             this.cmbInterprete.Size = new System.Drawing.Size(103, 21);
             this.cmbInterprete.TabIndex = 17;
+            this.cmbInterprete.SelectedIndexChanged += new System.EventHandler(this.cmbInterprete_SelectedIndexChanged);
             // 
-            // btnAñadirDisco
+            // btnNuevo
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(508, 32);
-            this.btnAñadirDisco.Name = "btnAñadirDisco";
-            this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
-            this.btnAñadirDisco.TabIndex = 5;
-            this.btnAñadirDisco.Text = "Nuevo";
-            this.btnAñadirDisco.UseVisualStyleBackColor = true;
-            this.btnAñadirDisco.Click += new System.EventHandler(this.btnAñadirDisco_Click);
+            this.btnNuevo.Location = new System.Drawing.Point(508, 32);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 5;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnAñadirDisco_Click);
             // 
             // btnModificar
             // 
@@ -121,7 +122,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.cmbInterprete);
-            this.Controls.Add(this.btnAñadirDisco);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnBuscarDisco);
             this.Controls.Add(this.lblIntrprete);
@@ -142,7 +143,7 @@
         private System.Windows.Forms.Button btnBuscarDisco;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ComboBox cmbInterprete;
-        private System.Windows.Forms.Button btnAñadirDisco;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
     }

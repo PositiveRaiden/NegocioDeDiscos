@@ -37,7 +37,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.btnAñadirDisco = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,14 +124,14 @@
             this.btnModificar.Text = "Modificar Disco";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
-            // btnAñadirDisco
+            // btnNuevo
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(459, 54);
-            this.btnAñadirDisco.Name = "btnAñadirDisco";
-            this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
-            this.btnAñadirDisco.TabIndex = 20;
-            this.btnAñadirDisco.Text = "Nuevo";
-            this.btnAñadirDisco.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(459, 54);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 20;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // Clientes
             // 
@@ -140,7 +140,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnAñadirDisco);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cmbTipoDocumento);
             this.Controls.Add(this.txtNumeroDocumento);
@@ -167,6 +167,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnAñadirDisco;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

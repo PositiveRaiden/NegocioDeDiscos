@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios.Mantenimiento;
 
 namespace Venta_de_discos
 {
@@ -26,5 +27,14 @@ namespace Venta_de_discos
         {
 
         }
+
+        private void btnVentaDeDiscos_Click(object sender, EventArgs e)
+        {
+            Interpretes frm = new Interpretes();
+            frm.ShowDialog();
+            this.Hide();
+        }
+
+
     }
 }

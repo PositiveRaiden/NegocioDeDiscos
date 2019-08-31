@@ -46,17 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Interprete.cs" />
+    <Compile Include="Clases\Pais.cs" />
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Discos\ModificarDisco.Designer.cs">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\Interpretes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\Interpretes.Designer.cs">
+      <DependentUpon>Interpretes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mantenimiento\ModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Mantenimiento\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\NuevoInterprete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\NuevoInterprete.Designer.cs">
+      <DependentUpon>NuevoInterprete.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
@@ -113,6 +127,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\InterpretesRepositorio.cs" />
+    <Compile Include="Repositorios\PaisRepositorio.cs" />
+    <EmbeddedResource Include="Formularios\Mantenimiento\Interpretes.resx">
+      <DependentUpon>Interpretes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Discos\Discos.resx">
       <DependentUpon>Discos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoInterprete.resx">
+      <DependentUpon>NuevoInterprete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

@@ -64,6 +64,7 @@
             this.btnInformes.TabIndex = 3;
             this.btnInformes.Text = "Mantenimiento";
             this.btnInformes.UseVisualStyleBackColor = true;
+            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
             // 
             // btnVentaDeDiscos
             // 

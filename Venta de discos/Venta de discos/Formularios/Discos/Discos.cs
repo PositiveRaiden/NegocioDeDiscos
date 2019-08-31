@@ -91,5 +91,10 @@ namespace Venta_de_discos
             ventana.ShowDialog();
             
         }
+
+        private void cmbInterprete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

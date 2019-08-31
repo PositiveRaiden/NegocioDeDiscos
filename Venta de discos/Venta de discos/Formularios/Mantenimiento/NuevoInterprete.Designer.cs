@@ -89,6 +89,7 @@
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(200, 21);
             this.cmbPais.TabIndex = 13;
+            this.cmbPais.SelectedIndexChanged += new System.EventHandler(this.cmbPais_SelectedIndexChanged);
             // 
             // NuevoInterprete
             // 

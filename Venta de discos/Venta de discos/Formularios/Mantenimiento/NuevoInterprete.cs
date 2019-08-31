@@ -41,13 +41,13 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             cmbPais.DisplayMember = "nombre";
             cmbPais.DataSource = paises;
 
-            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            foreach (DataRow row in paises.Rows)
-            {
-                collection.Add(Convert.ToString(row["nombre"]));
-            }
+            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            //foreach (DataRow row in paises.Rows)
+            //{
+            //    collection.Add(Convert.ToString(row["nombre"]));
+            //}
 
-            cmbPais.AutoCompleteCustomSource = collection;
+            //cmbPais.AutoCompleteCustomSource = collection;
             cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
@@ -84,6 +84,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
 
 
+
+        }
+
+        private void cmbPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

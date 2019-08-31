@@ -25,7 +25,7 @@ namespace Venta_de_discos
 
         public DataTable ObtenerDiscos()
         {
-            string sqltxt = "SELECT * FROM Disco";
+            string sqltxt = "SELECT D.nombre_Album,D.cantidad,D.precio,D.año_edicion,G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id";
             return _BD.consulta(sqltxt);
         }
         public DataTable ObtenerDiscosPorFiltroInterprete(string interpreteId)

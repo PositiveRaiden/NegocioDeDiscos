@@ -18,7 +18,7 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerInterpretes()
         {
-            string sqltxt = "SELECT * FROM Interprete";
+            string sqltxt = "SELECT I.id,I.nombre, P.nombre as 'Pais' FROM Interprete I, Pais P where I.id_pais=P.id";
             return _BD.consulta(sqltxt);
         }
 

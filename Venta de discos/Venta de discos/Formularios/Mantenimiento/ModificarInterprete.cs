@@ -51,8 +51,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             //}
 
             //cmbPais.AutoCompleteCustomSource = collection;
-            cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

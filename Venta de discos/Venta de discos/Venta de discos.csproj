@@ -66,6 +66,12 @@
     <Compile Include="Formularios\Mantenimiento\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\ModificarInterprete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\ModificarInterprete.Designer.cs">
+      <DependentUpon>ModificarInterprete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mantenimiento\NuevoInterprete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="Repositorios\PaisRepositorio.cs" />
     <EmbeddedResource Include="Formularios\Mantenimiento\Interpretes.resx">
       <DependentUpon>Interpretes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\ModificarInterprete.resx">
+      <DependentUpon>ModificarInterprete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>

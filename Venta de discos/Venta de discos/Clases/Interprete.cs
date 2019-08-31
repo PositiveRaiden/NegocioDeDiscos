@@ -8,6 +8,7 @@ namespace Venta_de_discos.Clases
 {
     class Interprete
     {
+        public string Id { get; set; }
         public string Nombre { get; set; }
         public string Id_Pais { get; set; }
 

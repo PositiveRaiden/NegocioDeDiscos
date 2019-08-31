@@ -26,7 +26,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         private void actualizarInterpretes()
         {
 
-            var interpretes = interpretesRepositorio.ObtenerInterprete();
+            var interpretes = interpretesRepositorio.ObtenerInterpretes();
             dataGridView1.DataSource = interpretes;
         }
 
@@ -79,7 +79,21 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            var seleccionados = dataGridView1.SelectedRows;
+            if (seleccionados.Count == 0 || seleccionados.Count > 1)
+            {
+                MessageBox.Show("Deberia seleccionar una fila");
+                return;
 
+            }
+            foreach (DataGridViewRow fila in seleccionados)
+            {
+                var id = fila.Cells[0].Value;
+
+                var ventana = new ModificarInterprete(id.ToString());
+                ventana.ShowDialog();
+                actualizarInterpretes();
+            }
         }
     }
 }

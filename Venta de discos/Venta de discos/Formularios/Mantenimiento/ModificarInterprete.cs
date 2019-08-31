@@ -43,6 +43,16 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             cmbPais.ValueMember = "Id";
             cmbPais.DisplayMember = "nombre";
             cmbPais.DataSource = paises;
+
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in paises.Rows)
+            {
+                collection.Add(Convert.ToString(row["nombre"]));
+            }
+
+            cmbPais.AutoCompleteCustomSource = collection;
+            cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

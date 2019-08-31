@@ -32,7 +32,7 @@
             this.btnSalirMenu = new System.Windows.Forms.Button();
             this.btnInformes = new System.Windows.Forms.Button();
             this.btnVentaDeDiscos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGeneros = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             // 
             // btnInformes
             // 
-            this.btnInformes.Location = new System.Drawing.Point(12, 138);
+            this.btnInformes.Location = new System.Drawing.Point(15, 148);
             this.btnInformes.Name = "btnInformes";
             this.btnInformes.Size = new System.Drawing.Size(134, 24);
             this.btnInformes.TabIndex = 9;
@@ -66,31 +66,32 @@
             // 
             // btnVentaDeDiscos
             // 
-            this.btnVentaDeDiscos.Location = new System.Drawing.Point(12, 109);
+            this.btnVentaDeDiscos.Location = new System.Drawing.Point(15, 119);
             this.btnVentaDeDiscos.Name = "btnVentaDeDiscos";
             this.btnVentaDeDiscos.Size = new System.Drawing.Size(134, 23);
             this.btnVentaDeDiscos.TabIndex = 8;
-            this.btnVentaDeDiscos.Text = "Interprete";
+            this.btnVentaDeDiscos.Text = "Intérprete";
             this.btnVentaDeDiscos.UseVisualStyleBackColor = true;
             this.btnVentaDeDiscos.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
             // 
-            // button1
+            // btnGeneros
             // 
-            this.button1.Location = new System.Drawing.Point(12, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Genero ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGeneros.Location = new System.Drawing.Point(15, 90);
+            this.btnGeneros.Name = "btnGeneros";
+            this.btnGeneros.Size = new System.Drawing.Size(134, 23);
+            this.btnGeneros.TabIndex = 11;
+            this.btnGeneros.Text = "Género ";
+            this.btnGeneros.UseVisualStyleBackColor = true;
+            this.btnGeneros.Click += new System.EventHandler(this.btnGeneros_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 49);
+            this.label1.Location = new System.Drawing.Point(12, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(161, 13);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Discos";
+            this.label1.Text = "Seleccione que desea modificar:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MenuMantenimiento
@@ -99,13 +100,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 283);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGeneros);
             this.Controls.Add(this.btnVentaDeDiscos);
             this.Controls.Add(this.btnInformes);
             this.Controls.Add(this.lblOpciones);
             this.Controls.Add(this.btnSalirMenu);
             this.Name = "MenuMantenimiento";
-            this.Text = "MenuMantenimiento";
+            this.Text = "Menu Mantenimiento";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,7 +117,7 @@
         private System.Windows.Forms.Button btnSalirMenu;
         private System.Windows.Forms.Button btnInformes;
         private System.Windows.Forms.Button btnVentaDeDiscos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGeneros;
         private System.Windows.Forms.Label label1;
     }
 }

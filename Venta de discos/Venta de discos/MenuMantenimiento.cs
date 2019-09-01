@@ -49,5 +49,12 @@ namespace Venta_de_discos
             this.Close();
 
         }
+
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+            Paises frm = new Paises();
+            frm.ShowDialog();
+            this.Hide();
+        }
     }
 }

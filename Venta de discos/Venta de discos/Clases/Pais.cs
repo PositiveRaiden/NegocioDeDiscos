@@ -8,7 +8,8 @@ namespace Venta_de_discos.Clases
 {
     class Pais
     {
-        public string nombre;
+        public string Id { get; set; }
+        public string Nombre { get; set; }
     }
 }
 

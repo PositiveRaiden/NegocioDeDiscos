@@ -61,10 +61,16 @@
     <Compile Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.Designer.cs">
       <DependentUpon>ModificarGenero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmGeneros\NuevoGenero.cs">
+    <Compile Include="Formularios\Mantenimiento\ModificarPais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmGeneros\NuevoGenero.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\ModificarPais.Designer.cs">
+      <DependentUpon>ModificarPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\NuevoGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\NuevoGenero.Designer.cs">
       <DependentUpon>NuevoGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimiento\abmGeneros\Generos.cs">
@@ -96,6 +102,18 @@
     </Compile>
     <Compile Include="Formularios\Mantenimiento\NuevoInterprete.Designer.cs">
       <DependentUpon>NuevoInterprete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\NuevoPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\NuevoPais.Designer.cs">
+      <DependentUpon>NuevoPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\Paises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\Paises.Designer.cs">
+      <DependentUpon>Paises.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
@@ -161,7 +179,10 @@
     <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\Generos.resx">
       <DependentUpon>Generos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\NuevoGenero.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\ModificarPais.resx">
+      <DependentUpon>ModificarPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoGenero.resx">
       <DependentUpon>NuevoGenero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\Interpretes.resx">
@@ -184,6 +205,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\NuevoInterprete.resx">
       <DependentUpon>NuevoInterprete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoPais.resx">
+      <DependentUpon>NuevoPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\Paises.resx">
+      <DependentUpon>Paises.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

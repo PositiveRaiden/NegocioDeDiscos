@@ -64,6 +64,7 @@
             this.btnInformes.TabIndex = 2;
             this.btnInformes.Text = "Nacionalidad";
             this.btnInformes.UseVisualStyleBackColor = true;
+            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
             // 
             // btnVentaDeDiscos
             // 

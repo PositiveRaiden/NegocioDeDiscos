@@ -41,8 +41,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             var datosGenero = new Genero();
-            datosGenero.Nombre = txtNombre.Text;
-            datosGenero.Descripcion = txtDescripcion.Text;
+            datosGenero.Nombre = txtNombre.Text.Trim();
+            datosGenero.Descripcion = txtDescripcion.Text.Trim();
             datosGenero.Id = _id;
             if (generosRepositorio.Editar(datosGenero))
             {

@@ -31,7 +31,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         private void btnAceptarNuevoPais_Click(object sender, EventArgs e)
         {
             var pais = new Pais();
-            pais.Nombre = txtNuevoPais.Text;
+            pais.Nombre = txtNuevoPais.Text.Trim();
 
             if (!pais.NombreValido())
             {

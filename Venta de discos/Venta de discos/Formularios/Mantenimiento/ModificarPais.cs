@@ -35,7 +35,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             var datosPais = new Pais();
-            datosPais.Nombre = txtNombrePais.Text;
+            datosPais.Nombre = txtNombrePais.Text.Trim();
             datosPais.Id = _id;
 
 

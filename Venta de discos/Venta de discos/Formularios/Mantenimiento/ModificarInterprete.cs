@@ -64,7 +64,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         {
 
             var datosInterprete = new Interprete();
-            datosInterprete.Nombre = txtNombre.Text;
+            datosInterprete.Nombre = txtNombre.Text.Trim();
             datosInterprete.Id_Pais = cmbPais.SelectedValue.ToString();
             datosInterprete.Id = _id;
 

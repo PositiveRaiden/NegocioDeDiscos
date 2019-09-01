@@ -36,8 +36,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Generos
         {
 
             var genero =  new Genero();
-            genero.Nombre = txtNombre.Text;
-            genero.Descripcion = txtDescripcion.Text;
+            genero.Nombre = txtNombre.Text.Trim();
+            genero.Descripcion = txtDescripcion.Text.Trim();
 
             if (!genero.NombreValido())
             {

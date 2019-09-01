@@ -55,7 +55,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             var interprete = new Interprete();
-            interprete.Nombre = txtNombre.Text;
+            interprete.Nombre = txtNombre.Text.Trim();
             interprete.Id_Pais = cmbPais.SelectedValue.ToString();
 
             if (!interprete.NombreValido())

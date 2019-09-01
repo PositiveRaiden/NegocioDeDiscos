@@ -10,6 +10,13 @@ namespace Venta_de_discos.Clases
     {
         public string Id { get; set; }
         public string Nombre { get; set; }
+
+        public bool NombreValido()
+        {
+            if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 51)
+                return true;
+            return false;
+        }
     }
 }
 

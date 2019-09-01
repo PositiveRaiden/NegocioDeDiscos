@@ -33,11 +33,24 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             var pais = new Pais();
             pais.Nombre = txtNuevoPais.Text;
 
+            if (!pais.NombreValido())
+            {
+                MessageBox.Show("Nombre Pais Invalido!");
+                txtNuevoPais.Text = " ";
+                txtNuevoPais.Focus();
+                return;
+            }
+
             if (paisRepositorio.Guardar(pais))
             {
-                MessageBox.Show("Se agrego interprete con exito!");
+                MessageBox.Show("Se agrego pais con exito!");
                 this.Dispose();
             }
+        }
+
+        private void NuevoPais_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

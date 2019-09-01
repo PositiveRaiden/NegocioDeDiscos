@@ -86,9 +86,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             {
                 var id = fila.Cells[0].Value;
 
-                var ventana = new Modifi(id.ToString());
+                var ventana = new ModificarPais(id.ToString());
                 ventana.ShowDialog();
                 actualizarPaises();
             }
+        }
     }
 }

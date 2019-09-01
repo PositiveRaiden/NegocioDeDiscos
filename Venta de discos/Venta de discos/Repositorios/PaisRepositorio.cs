@@ -63,7 +63,7 @@ namespace Venta_de_discos.Repositorios
 
         public bool Editar(Pais pais)
         {
-            string sqltxt = $"UPDATE [dbo].[pais] SET nombre =' { pais.Nombre} '";
+            string sqltxt = $"UPDATE [dbo].[pais] SET nombre =' { pais.Nombre} '"+ $"WHERE id= {pais.Id}"; ;
 
             return _BD.EjecutarSQL(sqltxt);
         }

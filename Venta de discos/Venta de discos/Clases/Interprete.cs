@@ -19,7 +19,15 @@ namespace Venta_de_discos.Clases
             return false;
         }
 
+        public bool IdValido()
+        {
+            if (!string.IsNullOrEmpty(Id_Pais) && int.Parse(Id_Pais) >= 1)
+                return true;
+            return false;
+        }
 
-        
+
+
+
     }
 }

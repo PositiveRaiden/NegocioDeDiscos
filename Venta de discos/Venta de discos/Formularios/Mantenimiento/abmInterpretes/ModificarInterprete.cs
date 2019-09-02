@@ -76,7 +76,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 txtNombre.Focus();
                 return;
             }
-            if (cmbPais.SelectedIndex == -1)
+            if (!datosInterprete.IdValido())
             {
 
                 MessageBox.Show("Pais Invalido!");

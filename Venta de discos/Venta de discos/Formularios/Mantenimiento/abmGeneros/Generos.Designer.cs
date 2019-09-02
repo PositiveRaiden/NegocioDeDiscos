@@ -44,6 +44,7 @@
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -83,6 +84,7 @@
             this.dgvGeneros.ReadOnly = true;
             this.dgvGeneros.Size = new System.Drawing.Size(319, 198);
             this.dgvGeneros.TabIndex = 3;
+            this.dgvGeneros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellContentClick);
             // 
             // Generos
             // 

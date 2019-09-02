@@ -63,7 +63,7 @@ namespace Venta_de_discos.Repositorios
         public bool Editar(Genero genero)
         {
             string sqltxt = $"UPDATE [dbo].[genero] SET nombre =' { genero.Nombre } '" +
-                $", descripcion= { genero.Descripcion}" +
+                $", descripcion=' { genero.Descripcion}' " +
                 $"WHERE id= {genero.Id}";
             return _BD.EjecutarSQL(sqltxt);
 

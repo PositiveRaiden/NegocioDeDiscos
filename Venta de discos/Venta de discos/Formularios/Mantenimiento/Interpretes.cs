@@ -62,7 +62,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 var id = fila.Cells[0].Value;
 
                 var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar a {nombre}?",
-                    "Confirmar operacio",
+                    "Confirmar operacion",
                     MessageBoxButtons.YesNo);
 
                 if (confirmacion.Equals(DialogResult.No))

@@ -28,9 +28,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
 
         private void ModificarGenero_Load(object sender, EventArgs e)
         {
-            txtNombre.Text = genero.Nombre;
-            txtDescripcion.Text = genero.Descripcion;
-            _id = genero.Id;
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -44,6 +42,23 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
             datosGenero.Nombre = txtNombre.Text.Trim();
             datosGenero.Descripcion = txtDescripcion.Text.Trim();
             datosGenero.Id = _id;
+
+            if (!genero.NombreValido())
+            {
+                MessageBox.Show("Nombre Inválido!");
+                txtNombre.Text = " ";
+                txtNombre.Focus();
+                return;
+            }
+            if (!genero.DescripcionValida())
+            {
+                MessageBox.Show("Descripción Inválida!");
+                txtDescripcion.Text = " ";
+                txtDescripcion.Focus();
+                return;
+            }
+
+
             if (generosRepositorio.Editar(datosGenero))
             {
                 MessageBox.Show("La edicion ha finalizado correctamente.");
@@ -53,7 +68,9 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
 
         private void ModificarGenero_Load_1(object sender, EventArgs e)
         {
-
+            txtNombre.Text = genero.Nombre;
+            txtDescripcion.Text = genero.Descripcion;
+            _id = genero.Id;
         }
     }
 }

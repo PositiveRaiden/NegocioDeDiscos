@@ -61,16 +61,16 @@
     <Compile Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.Designer.cs">
       <DependentUpon>ModificarGenero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\ModificarPais.cs">
+    <Compile Include="Formularios\Mantenimiento\abmPaises\ModificarPais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\ModificarPais.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmPaises\ModificarPais.Designer.cs">
       <DependentUpon>ModificarPais.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoGenero.cs">
+    <Compile Include="Formularios\Mantenimiento\abmGeneros\NuevoGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoGenero.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmGeneros\NuevoGenero.Designer.cs">
       <DependentUpon>NuevoGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimiento\abmGeneros\Generos.cs">
@@ -79,40 +79,40 @@
     <Compile Include="Formularios\Mantenimiento\abmGeneros\Generos.Designer.cs">
       <DependentUpon>Generos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\Interpretes.cs">
+    <Compile Include="Formularios\Mantenimiento\abmInterpretes\Interpretes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\Interpretes.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmInterpretes\Interpretes.Designer.cs">
       <DependentUpon>Interpretes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\ModificarCliente.cs">
+    <Compile Include="Formularios\Mantenimiento\abmCliente\ModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\ModificarCliente.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmCliente\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\ModificarInterprete.cs">
+    <Compile Include="Formularios\Mantenimiento\abmInterpretes\ModificarInterprete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\ModificarInterprete.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmInterpretes\ModificarInterprete.Designer.cs">
       <DependentUpon>ModificarInterprete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoInterprete.cs">
+    <Compile Include="Formularios\Mantenimiento\abmInterpretes\NuevoInterprete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoInterprete.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmInterpretes\NuevoInterprete.Designer.cs">
       <DependentUpon>NuevoInterprete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoPais.cs">
+    <Compile Include="Formularios\Mantenimiento\abmPaises\NuevoPais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoPais.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmPaises\NuevoPais.Designer.cs">
       <DependentUpon>NuevoPais.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\Paises.cs">
+    <Compile Include="Formularios\Mantenimiento\abmPaises\Paises.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\Paises.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmPaises\Paises.Designer.cs">
       <DependentUpon>Paises.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
@@ -122,10 +122,10 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\acceso_BD.cs" />
-    <Compile Include="Formularios\Mantenimiento\NuevoCliente.cs">
+    <Compile Include="Formularios\Mantenimiento\abmCliente\NuevoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\NuevoCliente.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmCliente\NuevoCliente.Designer.cs">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Discos\NuevoDisco.cs">
@@ -134,10 +134,10 @@
     <Compile Include="Formularios\Discos\NuevoDisco.Designer.cs">
       <DependentUpon>NuevoDisco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\Clientes.cs">
+    <Compile Include="Formularios\Mantenimiento\abmCliente\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Mantenimiento\Clientes.Designer.cs">
+    <Compile Include="Formularios\Mantenimiento\abmCliente\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Discos\Discos.cs">
@@ -179,37 +179,37 @@
     <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\Generos.resx">
       <DependentUpon>Generos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\ModificarPais.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmPaises\ModificarPais.resx">
       <DependentUpon>ModificarPais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoGenero.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\NuevoGenero.resx">
       <DependentUpon>NuevoGenero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\Interpretes.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmInterpretes\Interpretes.resx">
       <DependentUpon>Interpretes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\ModificarInterprete.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmInterpretes\ModificarInterprete.resx">
       <DependentUpon>ModificarInterprete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoCliente.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmCliente\NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Discos\NuevoDisco.resx">
       <DependentUpon>NuevoDisco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\Clientes.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmCliente\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Discos\Discos.resx">
       <DependentUpon>Discos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoInterprete.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmInterpretes\NuevoInterprete.resx">
       <DependentUpon>NuevoInterprete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\NuevoPais.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmPaises\NuevoPais.resx">
       <DependentUpon>NuevoPais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\Paises.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmPaises\Paises.resx">
       <DependentUpon>Paises.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">

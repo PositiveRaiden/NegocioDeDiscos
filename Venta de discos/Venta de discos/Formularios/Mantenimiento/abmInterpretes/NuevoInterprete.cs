@@ -41,22 +41,32 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             cmbPais.DisplayMember = "nombre";
             cmbPais.DataSource = paises;
 
-            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            //foreach (DataRow row in paises.Rows)
-            //{
-            //    collection.Add(Convert.ToString(row["nombre"]));
-            //}
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in paises.Rows)
+            {
+                collection.Add(Convert.ToString(row["nombre"]));
+            }
 
-            //cmbPais.AutoCompleteCustomSource = collection;
-            //cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            //cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cmbPais.AutoCompleteCustomSource = collection;
+            cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             var interprete = new Interprete();
             interprete.Nombre = txtNombre.Text.Trim();
-            interprete.Id_Pais = cmbPais.SelectedValue.ToString();
+            if (cmbPais.SelectedValue is null)
+            {
+                MessageBox.Show("Nombre de pais no existe!");
+                cmbPais.Focus();
+                return;
+            }
+            else
+            {
+                interprete.Id_Pais = cmbPais.SelectedValue.ToString();
+            }
+
 
             if (!interprete.NombreValido())
             {
@@ -79,7 +89,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 MessageBox.Show("Pais Invalido!");
                 cmbPais.Focus();
                 return;
-
             }
 
             if (interpretesRepositorio.Guardar(interprete))

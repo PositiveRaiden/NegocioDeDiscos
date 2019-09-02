@@ -55,13 +55,13 @@ namespace Venta_de_discos.Repositorios
 
         public bool Eliminar(string interpreteId)
         {
-            string sqltxt = $"DELETE FROM [dbo].[Interprete] WHERE id = {interpreteId}";
+            string sqltxt = $"DELETE FROM [dbo].[Interprete] WHERE id ={interpreteId}";
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public bool Editar(Interprete interprete)
         {
-            string sqltxt = $"UPDATE [dbo].[interprete] SET nombre =' { interprete.Nombre } '" +
+            string sqltxt = $"UPDATE [dbo].[interprete] SET nombre ='{ interprete.Nombre }'" +
                 $", id_pais= { interprete.Id_Pais }"  +
                 $"WHERE id= {interprete.Id}";
 

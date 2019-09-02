@@ -44,15 +44,15 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             cmbPais.DisplayMember = "nombre";
             cmbPais.DataSource = paises;
 
-            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            //foreach (DataRow row in paises.Rows)
-            //{
-            //    collection.Add(Convert.ToString(row["nombre"]));
-            //}
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in paises.Rows)
+            {
+                collection.Add(Convert.ToString(row["nombre"]));
+            }
 
-            //cmbPais.AutoCompleteCustomSource = collection;
-            //cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            //cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cmbPais.AutoCompleteCustomSource = collection;
+            cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -65,7 +65,17 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
             var datosInterprete = new Interprete();
             datosInterprete.Nombre = txtNombre.Text.Trim();
-            datosInterprete.Id_Pais = cmbPais.SelectedValue.ToString();
+
+            if (cmbPais.SelectedValue is null)
+            {
+                MessageBox.Show("Nombre de pais no existe!");
+                cmbPais.Focus();
+                return;
+            }
+            else
+            {
+                datosInterprete.Id_Pais = cmbPais.SelectedValue.ToString();
+            }
             datosInterprete.Id = _id;
 
 
@@ -76,7 +86,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 txtNombre.Focus();
                 return;
             }
-            if (interprete.NombreRepetido(interprete.Nombre))
+            if (datosInterprete.NombreRepetido(datosInterprete.Nombre))
             {
                 MessageBox.Show("Nombre ya existe!");
                 txtNombre.Text = "";

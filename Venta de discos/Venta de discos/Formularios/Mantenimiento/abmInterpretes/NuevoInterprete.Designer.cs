@@ -84,7 +84,6 @@
             // cmbPais
             // 
             this.cmbPais.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cmbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPais.FormattingEnabled = true;
             this.cmbPais.Location = new System.Drawing.Point(137, 71);
             this.cmbPais.Name = "cmbPais";

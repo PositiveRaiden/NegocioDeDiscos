@@ -36,7 +36,14 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             if (!pais.NombreValido())
             {
                 MessageBox.Show("Nombre Pais Invalido!");
-                txtNuevoPais.Text = " ";
+                txtNuevoPais.Text = "";
+                txtNuevoPais.Focus();
+                return;
+            }
+            if (pais.NombreRepetido(pais.Nombre))
+            {
+                MessageBox.Show("Nombre ya existe!");
+                txtNuevoPais.Text = "";
                 txtNuevoPais.Focus();
                 return;
             }

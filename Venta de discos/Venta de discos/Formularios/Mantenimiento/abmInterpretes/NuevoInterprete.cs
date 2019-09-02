@@ -61,7 +61,15 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             if (!interprete.NombreValido())
             {
                 MessageBox.Show("Nombre Invalido!");
-                txtNombre.Text = " ";
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return;
+            }
+
+            if(interprete.NombreRepetido(interprete.Nombre))
+            {
+                MessageBox.Show("Nombre ya existe!");
+                txtNombre.Text = "";
                 txtNombre.Focus();
                 return;
             }

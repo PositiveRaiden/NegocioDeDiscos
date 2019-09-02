@@ -46,14 +46,21 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
             if (!genero.NombreValido())
             {
                 MessageBox.Show("Nombre Inválido!");
-                txtNombre.Text = " ";
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return;
+            }
+            if (genero.NombreRepetido(genero.Nombre))
+            {
+                MessageBox.Show("Nombre ya existe!");
+                txtNombre.Text = "";
                 txtNombre.Focus();
                 return;
             }
             if (!genero.DescripcionValida())
             {
                 MessageBox.Show("Descripción Inválida!");
-                txtDescripcion.Text = " ";
+                txtDescripcion.Text = "";
                 txtDescripcion.Focus();
                 return;
             }

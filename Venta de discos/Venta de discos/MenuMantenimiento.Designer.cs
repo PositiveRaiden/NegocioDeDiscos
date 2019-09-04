@@ -34,6 +34,7 @@
             this.btnVentaDeDiscos = new System.Windows.Forms.Button();
             this.btnGeneros = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBarrio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOpciones
@@ -96,11 +97,22 @@
             this.label1.Text = "Seleccione que desea modificar:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnBarrio
+            // 
+            this.btnBarrio.Location = new System.Drawing.Point(15, 178);
+            this.btnBarrio.Name = "btnBarrio";
+            this.btnBarrio.Size = new System.Drawing.Size(134, 23);
+            this.btnBarrio.TabIndex = 13;
+            this.btnBarrio.Text = "Barrio";
+            this.btnBarrio.UseVisualStyleBackColor = true;
+            this.btnBarrio.Click += new System.EventHandler(this.btnBarrio_Click);
+            // 
             // MenuMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 283);
+            this.Controls.Add(this.btnBarrio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGeneros);
             this.Controls.Add(this.btnVentaDeDiscos);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btnVentaDeDiscos;
         private System.Windows.Forms.Button btnGeneros;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBarrio;
     }
 }

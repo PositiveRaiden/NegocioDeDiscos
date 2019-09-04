@@ -56,5 +56,11 @@ namespace Venta_de_discos
             frm.ShowDialog();
             this.Hide();
         }
+
+        private void btnBarrio_Click(object sender, EventArgs e)
+        {
+            Barrios frm = new Barrios();
+            frm.Show();
+        }
     }
 }

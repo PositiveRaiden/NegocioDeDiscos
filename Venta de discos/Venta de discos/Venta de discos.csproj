@@ -115,6 +115,12 @@
     <Compile Include="Formularios\Mantenimiento\abmPaises\Paises.Designer.cs">
       <DependentUpon>Paises.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmBarrios\Barrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmBarrios\Barrios.Designer.cs">
+      <DependentUpon>Barrios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmPaises\Paises.resx">
       <DependentUpon>Paises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmBarrios\Barrios.resx">
+      <DependentUpon>Barrios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

@@ -16,5 +16,22 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevoBarrio frm = new NuevoBarrio();
+            frm.Show();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarBarrio frm = new ModificarBarrio();
+            frm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

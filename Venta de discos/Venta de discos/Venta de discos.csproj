@@ -121,6 +121,18 @@
     <Compile Include="Formularios\Mantenimiento\abmBarrios\Barrios.Designer.cs">
       <DependentUpon>Barrios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmBarrios\NuevoBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmBarrios\NuevoBarrio.Designer.cs">
+      <DependentUpon>NuevoBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmBarrios\ModificarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmBarrios\ModificarBarrio.Designer.cs">
+      <DependentUpon>ModificarBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmBarrios\Barrios.resx">
       <DependentUpon>Barrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmBarrios\NuevoBarrio.resx">
+      <DependentUpon>NuevoBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmBarrios\ModificarBarrio.resx">
+      <DependentUpon>ModificarBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

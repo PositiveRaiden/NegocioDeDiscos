@@ -57,7 +57,12 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void Barrios_Load(object sender, EventArgs e)
+        {
+            actualizarBarrios();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             var seleccionados = dgvBarrios.SelectedRows;
             if (seleccionados.Count == 0 || seleccionados.Count > 1)
@@ -84,11 +89,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
                 }
 
             }
-        }
 
-        private void Barrios_Load(object sender, EventArgs e)
-        {
-            actualizarBarrios();
         }
     }
 }

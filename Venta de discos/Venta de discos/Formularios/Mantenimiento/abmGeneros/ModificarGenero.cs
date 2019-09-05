@@ -64,8 +64,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
                 txtDescripcion.Focus();
                 return;
             }
-
-
             if (generosRepositorio.Editar(datosGenero))
             {
                 MessageBox.Show("La edicion ha finalizado correctamente.");

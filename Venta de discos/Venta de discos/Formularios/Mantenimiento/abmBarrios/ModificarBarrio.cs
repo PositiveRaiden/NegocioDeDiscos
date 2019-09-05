@@ -30,7 +30,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
             this.Close();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btnAceptar_Click_1(object sender, EventArgs e)
         {
             var datosBarrio = new Barrio();
             datosBarrio.Nombre = txtBarrio.Text.Trim();
@@ -58,25 +58,19 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
                 txtLocalidad.Focus();
                 return;
             }
-
-
             if (barriosRepositorio.Editar(datosBarrio))
             {
                 MessageBox.Show("La edicion ha finalizado correctamente.");
                 this.Dispose();
             }
+
         }
 
-        private void ModificarBarrio_Load_1(object sender, EventArgs e)
+        private void ModificarBarrio_Load(object sender, EventArgs e)
         {
             txtBarrio.Text = barrio.Nombre;
             txtLocalidad.Text = barrio.Localidad;
             _id = barrio.Id;
-        }
-
-        private void btnAceptar_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

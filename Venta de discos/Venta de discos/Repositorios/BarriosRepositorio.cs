@@ -49,7 +49,7 @@ namespace Venta_de_discos.Repositorios
         public bool Guardar(Barrio barrio)
         {//ver aca nombre descripcion
             string sqltxt = $"INSERT[dbo].[Barrio]([Nombre],[Localidad])" +
-                $"VALUES " +
+                $"VALUES " + 
                 $"('{barrio.Nombre}', " +
                 $"'{barrio.Localidad}')";
             return _BD.EjecutarSQL(sqltxt);

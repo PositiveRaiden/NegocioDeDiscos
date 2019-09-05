@@ -41,7 +41,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(180, 113);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 26;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -51,7 +51,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(80, 113);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 25;
+            this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
@@ -61,7 +61,7 @@
             this.txtBarrio.Location = new System.Drawing.Point(80, 23);
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(200, 20);
-            this.txtBarrio.TabIndex = 23;
+            this.txtBarrio.TabIndex = 0;
             // 
             // lblBarrio
             // 
@@ -86,7 +86,7 @@
             this.txtLocalidad.Location = new System.Drawing.Point(80, 69);
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(200, 20);
-            this.txtLocalidad.TabIndex = 28;
+            this.txtLocalidad.TabIndex = 1;
             // 
             // ModificarBarrio
             // 
@@ -101,6 +101,7 @@
             this.Controls.Add(this.lblBarrio);
             this.Name = "ModificarBarrio";
             this.Text = "ModificarBarrio";
+            this.Load += new System.EventHandler(this.ModificarBarrio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

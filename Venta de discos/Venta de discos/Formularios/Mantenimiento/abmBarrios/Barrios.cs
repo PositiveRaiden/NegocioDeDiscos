@@ -39,11 +39,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
             actualizarBarrios();
         }
 
-        private void Barrio_Load(object sender, EventArgs e)
-        {
-            actualizarBarrios();
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             var seleccionados = dgvBarrios.SelectedRows;
@@ -89,6 +84,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
                 }
 
             }
-        }      
+        }
+
+        private void Barrios_Load(object sender, EventArgs e)
+        {
+            actualizarBarrios();
+        }
     }
 }

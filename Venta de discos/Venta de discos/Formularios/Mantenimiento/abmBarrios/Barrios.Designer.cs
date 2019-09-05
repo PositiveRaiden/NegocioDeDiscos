@@ -96,6 +96,7 @@
             this.Controls.Add(this.dgvBarrios);
             this.Name = "Barrios";
             this.Text = "Barrios";
+            this.Load += new System.EventHandler(this.Barrios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).EndInit();
             this.ResumeLayout(false);
 

@@ -41,7 +41,7 @@
             this.btnSalir.Location = new System.Drawing.Point(158, 78);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 7;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalirNuevoPais_Click);
@@ -51,7 +51,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(65, 78);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
@@ -61,7 +61,7 @@
             this.txtBarrio.Location = new System.Drawing.Point(81, 19);
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(100, 20);
-            this.txtBarrio.TabIndex = 5;
+            this.txtBarrio.TabIndex = 0;
             // 
             // lblNuevoPais
             // 
@@ -77,7 +77,7 @@
             this.txtLocalidad.Location = new System.Drawing.Point(81, 45);
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(100, 20);
-            this.txtLocalidad.TabIndex = 8;
+            this.txtLocalidad.TabIndex = 1;
             // 
             // label1
             // 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Venta_de_discos.Formularios.Mantenimiento;
 using Venta_de_discos.Formularios.Mantenimiento.Generos;
+using Venta_de_discos.Formularios.Mantenimiento.Barrios;
 
 namespace Venta_de_discos
 {

@@ -1,4 +1,4 @@
-﻿namespace Venta_de_discos.Formularios.Mantenimiento
+﻿namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
 {
     partial class ModificarBarrio
     {
@@ -30,8 +30,10 @@
         {
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txtNombrePais = new System.Windows.Forms.TextBox();
-            this.lblNombrePais = new System.Windows.Forms.Label();
+            this.txtBarrio = new System.Windows.Forms.TextBox();
+            this.lblBarrio = new System.Windows.Forms.Label();
+            this.lblLocalidad = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -52,32 +54,51 @@
             this.btnAceptar.TabIndex = 25;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
-            // txtNombrePais
+            // txtBarrio
             // 
-            this.txtNombrePais.Location = new System.Drawing.Point(80, 23);
-            this.txtNombrePais.Name = "txtNombrePais";
-            this.txtNombrePais.Size = new System.Drawing.Size(200, 20);
-            this.txtNombrePais.TabIndex = 23;
+            this.txtBarrio.Location = new System.Drawing.Point(80, 23);
+            this.txtBarrio.Name = "txtBarrio";
+            this.txtBarrio.Size = new System.Drawing.Size(200, 20);
+            this.txtBarrio.TabIndex = 23;
             // 
-            // lblNombrePais
+            // lblBarrio
             // 
-            this.lblNombrePais.AutoSize = true;
-            this.lblNombrePais.Location = new System.Drawing.Point(12, 26);
-            this.lblNombrePais.Name = "lblNombrePais";
-            this.lblNombrePais.Size = new System.Drawing.Size(44, 13);
-            this.lblNombrePais.TabIndex = 24;
-            this.lblNombrePais.Text = "Nombre";
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Location = new System.Drawing.Point(12, 26);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(37, 13);
+            this.lblBarrio.TabIndex = 24;
+            this.lblBarrio.Text = "Barrio:";
+            // 
+            // lblLocalidad
+            // 
+            this.lblLocalidad.AutoSize = true;
+            this.lblLocalidad.Location = new System.Drawing.Point(12, 72);
+            this.lblLocalidad.Name = "lblLocalidad";
+            this.lblLocalidad.Size = new System.Drawing.Size(56, 13);
+            this.lblLocalidad.TabIndex = 27;
+            this.lblLocalidad.Text = "Localidad:";
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(80, 69);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(200, 20);
+            this.txtLocalidad.TabIndex = 28;
             // 
             // ModificarBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(301, 167);
+            this.Controls.Add(this.txtLocalidad);
+            this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtNombrePais);
-            this.Controls.Add(this.lblNombrePais);
+            this.Controls.Add(this.txtBarrio);
+            this.Controls.Add(this.lblBarrio);
             this.Name = "ModificarBarrio";
             this.Text = "ModificarBarrio";
             this.ResumeLayout(false);
@@ -89,7 +110,9 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.TextBox txtNombrePais;
-        private System.Windows.Forms.Label lblNombrePais;
+        private System.Windows.Forms.TextBox txtBarrio;
+        private System.Windows.Forms.Label lblBarrio;
+        private System.Windows.Forms.Label lblLocalidad;
+        private System.Windows.Forms.TextBox txtLocalidad;
     }
 }

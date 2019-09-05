@@ -1,4 +1,4 @@
-﻿namespace Venta_de_discos.Formularios.Mantenimiento
+﻿namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
 {
     partial class Barrios
     {
@@ -32,8 +32,8 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.dgvGeneros = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
+            this.dgvBarrios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -75,14 +75,14 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // dgvGeneros
+            // dgvBarrios
             // 
-            this.dgvGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGeneros.Location = new System.Drawing.Point(28, 73);
-            this.dgvGeneros.Name = "dgvGeneros";
-            this.dgvGeneros.ReadOnly = true;
-            this.dgvGeneros.Size = new System.Drawing.Size(319, 198);
-            this.dgvGeneros.TabIndex = 8;
+            this.dgvBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBarrios.Location = new System.Drawing.Point(28, 73);
+            this.dgvBarrios.Name = "dgvBarrios";
+            this.dgvBarrios.ReadOnly = true;
+            this.dgvBarrios.Size = new System.Drawing.Size(319, 198);
+            this.dgvBarrios.TabIndex = 8;
             // 
             // Barrios
             // 
@@ -93,10 +93,10 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.dgvGeneros);
+            this.Controls.Add(this.dgvBarrios);
             this.Name = "Barrios";
             this.Text = "Barrios";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,6 +107,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DataGridView dgvGeneros;
+        private System.Windows.Forms.DataGridView dgvBarrios;
     }
 }

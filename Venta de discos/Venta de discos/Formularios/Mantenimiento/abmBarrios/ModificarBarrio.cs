@@ -7,19 +7,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Clases;
+using Venta_de_discos.Repositorios;
 
-namespace Venta_de_discos.Formularios.Mantenimiento
+namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
 {
     public partial class ModificarBarrio : Form
     {
-        public ModificarBarrio()
+        BarriosRepositorio barriosRepositorio;
+        Barrio barrio;
+        string _id;
+
+        public ModificarBarrio(string barrioId)
         {
             InitializeComponent();
+            barriosRepositorio = new BarriosRepositorio();
+            barrio = barriosRepositorio.ObtenerBarrio(barrioId);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            var datosBarrio = new Barrio();
+            datosBarrio.Nombre = txtBarrio.Text.Trim();
+            datosBarrio.Localidad = txtLocalidad.Text.Trim();
+            datosBarrio.Id = _id;
+
+            if (!datosBarrio.NombreValido())
+            {
+                MessageBox.Show("Nombre Inválido!");
+                txtBarrio.Text = "";
+                txtBarrio.Focus();
+                return;
+            }
+            if (datosBarrio.NombreRepetido(datosBarrio.Nombre))
+            {
+                MessageBox.Show("Nombre ya existe!");
+                txtBarrio.Text = "";
+                txtBarrio.Focus();
+                return;
+            }
+            if (!datosBarrio.LocalidadValida())
+            {
+                MessageBox.Show("Localidad Inválida!");
+                txtLocalidad.Text = "";
+                txtLocalidad.Focus();
+                return;
+            }
+
+
+            if (barriosRepositorio.Editar(datosBarrio))
+            {
+                MessageBox.Show("La edicion ha finalizado correctamente.");
+                this.Dispose();
+            }
+        }
+
+        private void ModificarBarrio_Load_1(object sender, EventArgs e)
+        {
+            txtBarrio.Text = barrio.Nombre;
+            txtLocalidad.Text = barrio.Localidad;
+            _id = barrio.Id;
+        }
+
+        private void btnAceptar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

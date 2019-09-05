@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\Genero.cs" />
     <Compile Include="Clases\Interprete.cs" />
     <Compile Include="Clases\Pais.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="MenuMantenimiento.Designer.cs">
       <DependentUpon>MenuMantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositorios\BarriosRepositorio.cs" />
     <Compile Include="Repositorios\DiscosRepositorio.cs" />
     <Compile Include="MenuGestion.cs">
       <SubType>Form</SubType>

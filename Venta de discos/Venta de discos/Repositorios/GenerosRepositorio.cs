@@ -18,13 +18,13 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerGenero()
         {
-            string sqltxt = "SELECT * FROM Genero";
+            string sqltxt = "SELECT Nombre, Descripcion FROM Genero";
             return _BD.consulta(sqltxt);
         }
 
         public Genero ObtenerGenero (string generoId)
         {
-            string sqltxt = $"SELECT * FROM [dbo].[Genero] WHERE id = {generoId}";
+            string sqltxt = $"SELECT Nombre, Descripcion FROM [dbo].[Genero] WHERE id = {generoId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)

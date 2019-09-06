@@ -19,13 +19,13 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerBarrio()
         {
-            string sqltxt = "SELECT * FROM Barrio";
+            string sqltxt = "SELECT Nombre , Localidad FROM Barrio";
             return _BD.consulta(sqltxt);
         }
 
         public Barrio ObtenerBarrio(string barrioId)
         {
-            string sqltxt = $"SELECT * FROM [dbo].[Barrio] WHERE id = {barrioId}";
+            string sqltxt = $"SELECT Nombre, Localidad FROM [dbo].[Barrio] WHERE id = {barrioId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)

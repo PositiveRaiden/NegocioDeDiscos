@@ -18,13 +18,13 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerInterpretes()
         {
-            string sqltxt = "SELECT I.Id,I.Nombre, P.nombre as 'Pais' FROM Interprete I, Pais P where I.id_pais=P.id";
+            string sqltxt = "SELECT I.Nombre, P.nombre as 'Pais' FROM Interprete I, Pais P where I.id_pais=P.id";
             return _BD.consulta(sqltxt);
         }
 
         public Interprete ObtenerInterprete(string interpreteId)
         {
-            string sqltxt = $"SELECT * FROM [dbo].[Interprete] WHERE id = {interpreteId}";
+            string sqltxt = $"SELECT I.Nombre , I.Id_pais FROM [dbo].[Interprete] I WHERE id = {interpreteId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)

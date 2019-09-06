@@ -19,13 +19,13 @@ namespace Venta_de_discos.Repositorios
         }
         public DataTable ObtenerPais()
         {
-            string sqltxt = "SELECT P.id,P.nombre FROM Pais P";
+            string sqltxt = "SELECT P.Nombre FROM Pais P";
             return _BD.consulta(sqltxt);
         }
 
         public Pais ObtenerPais(string paisId)
         {
-            string sqltxt = $"SELECT * FROM [dbo].[Pais] WHERE id = {paisId}";
+            string sqltxt = $"SELECT P.Nombre FROM [dbo].[Pais] P WHERE id = {paisId}";
 
             var tablaTemporal = _BD.consulta(sqltxt);
 

@@ -18,7 +18,7 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerGenero()
         {
-            string sqltxt = "SELECT * FROM Genero";
+            string sqltxt = "SELECT Id,Nombre,Descripcion FROM Genero";
             return _BD.consulta(sqltxt);
         }
 

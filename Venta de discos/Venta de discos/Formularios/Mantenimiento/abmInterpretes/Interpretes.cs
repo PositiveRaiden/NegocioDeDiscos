@@ -28,6 +28,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
             var interpretes = interpretesRepositorio.ObtenerInterpretes();
             dataGridView1.DataSource = interpretes;
+            this.dataGridView1.Columns["id"].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

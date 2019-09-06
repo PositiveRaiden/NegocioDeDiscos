@@ -19,7 +19,7 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerBarrio()
         {
-            string sqltxt = "SELECT * FROM Barrio";
+            string sqltxt = "SELECT Id,Nombre,Localidad FROM Barrio";
             return _BD.consulta(sqltxt);
         }
 

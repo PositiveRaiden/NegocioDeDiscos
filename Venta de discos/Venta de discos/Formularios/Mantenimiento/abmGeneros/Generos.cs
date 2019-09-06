@@ -26,6 +26,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Generos
         {
             var generos = generosRepositorio.ObtenerGenero();
             dgvGeneros.DataSource = generos;
+            this.dgvGeneros.Columns["id"].Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

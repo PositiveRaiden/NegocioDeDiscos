@@ -34,7 +34,6 @@ namespace Venta_de_discos
         {
             Interpretes frm = new Interpretes();
             frm.ShowDialog();
-            this.Hide();
         }
 
 
@@ -55,7 +54,6 @@ namespace Venta_de_discos
         {
             Paises frm = new Paises();
             frm.ShowDialog();
-            this.Hide();
         }
 
         private void btnBarrio_Click(object sender, EventArgs e)

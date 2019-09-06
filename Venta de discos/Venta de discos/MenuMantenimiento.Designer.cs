@@ -52,7 +52,7 @@
             this.btnSalirMenu.Location = new System.Drawing.Point(305, 238);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnSalirMenu.TabIndex = 10;
+            this.btnSalirMenu.TabIndex = 4;
             this.btnSalirMenu.Text = "Salir";
             this.btnSalirMenu.UseVisualStyleBackColor = true;
             this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
@@ -102,7 +102,7 @@
             this.btnBarrio.Location = new System.Drawing.Point(15, 178);
             this.btnBarrio.Name = "btnBarrio";
             this.btnBarrio.Size = new System.Drawing.Size(134, 23);
-            this.btnBarrio.TabIndex = 13;
+            this.btnBarrio.TabIndex = 3;
             this.btnBarrio.Text = "Barrio";
             this.btnBarrio.UseVisualStyleBackColor = true;
             this.btnBarrio.Click += new System.EventHandler(this.btnBarrio_Click);

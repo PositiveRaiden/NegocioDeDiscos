@@ -19,7 +19,7 @@ namespace Venta_de_discos.Repositorios
         }
         public DataTable ObtenerPais()
         {
-            string sqltxt = "SELECT P.id,P.nombre FROM Pais P";
+            string sqltxt = "SELECT P.id,P.Nombre FROM Pais P";
             return _BD.consulta(sqltxt);
         }
 

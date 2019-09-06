@@ -25,6 +25,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
         {
             var barrios = barriosRepositorio.ObtenerBarrio();
             dgvBarrios.DataSource = barrios;
+            this.dgvBarrios.Columns["id"].Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

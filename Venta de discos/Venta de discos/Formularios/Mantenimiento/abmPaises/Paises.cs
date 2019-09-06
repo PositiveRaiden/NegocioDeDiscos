@@ -26,6 +26,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
             var paises = paisRepositorio.ObtenerPais();
             dataGridView1.DataSource = paises;
+            this.dataGridView1.Columns["id"].Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

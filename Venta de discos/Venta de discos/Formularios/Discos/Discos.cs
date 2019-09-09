@@ -12,6 +12,7 @@ namespace Venta_de_discos
 {
     public partial class BuscarDisco : Form
     {
+        //agrego discos que no existen en el pedido que acabo de recibir
         DiscosRepositorio disc; 
 
         public BuscarDisco()
@@ -49,6 +50,7 @@ namespace Venta_de_discos
             //dataGridView1.Rows.Clear();
             var discos = disc.ObtenerDiscos();
             dataGridView1.DataSource = discos;
+            this.dataGridView1.Columns["id"].Visible = false;
             //var discos = disc.ObtenerDiscos().Rows;
             //foreach (DataRow disco in discos)
             //{
@@ -82,6 +84,7 @@ namespace Venta_de_discos
             var valor = cmbInterprete.SelectedValue;
             var discos = disc.ObtenerDiscosPorFiltroInterprete(valor.ToString());
             dataGridView1.DataSource = discos;
+            this.dataGridView1.Columns["id"].Visible = false;
 
         }
 
@@ -89,6 +92,7 @@ namespace Venta_de_discos
         {
             var ventana = new AgregarDisco();
             ventana.ShowDialog();
+            CargarDiscos();
             
         }
 

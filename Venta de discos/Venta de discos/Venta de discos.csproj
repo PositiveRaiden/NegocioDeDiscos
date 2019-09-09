@@ -50,6 +50,7 @@
     <Compile Include="Clases\Genero.cs" />
     <Compile Include="Clases\Interprete.cs" />
     <Compile Include="Clases\Pais.cs" />
+    <Compile Include="Clases\SelloDiscografico.cs" />
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +194,7 @@
     <Compile Include="Repositorios\GenerosRepositorio.cs" />
     <Compile Include="Repositorios\InterpretesRepositorio.cs" />
     <Compile Include="Repositorios\PaisRepositorio.cs" />
+    <Compile Include="Repositorios\SelloRepositorio.cs" />
     <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.resx">
       <DependentUpon>ModificarGenero.cs</DependentUpon>
     </EmbeddedResource>

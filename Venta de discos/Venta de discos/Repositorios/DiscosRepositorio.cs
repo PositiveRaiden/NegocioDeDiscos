@@ -25,12 +25,12 @@ namespace Venta_de_discos
 
         public DataTable ObtenerDiscos()
         {
-            string sqltxt = "SELECT D.Nombre_Album,D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id";
+            string sqltxt = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id";
             return _BD.consulta(sqltxt);
         }
         public DataTable ObtenerDiscosPorFiltroInterprete(string interpreteId)
         {
-            string sqltxt = "SELECT * FROM Disco where id_interprete="+ interpreteId;
+            string sqltxt = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id AND id_interprete=" + interpreteId;
             return _BD.consulta(sqltxt);
         }
     }

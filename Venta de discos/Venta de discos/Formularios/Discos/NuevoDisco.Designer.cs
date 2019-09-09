@@ -142,9 +142,11 @@
             this.btnSalir.TabIndex = 33;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // cmbGenero
             // 
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(187, 134);
             this.cmbGenero.Name = "cmbGenero";
@@ -153,6 +155,7 @@
             // 
             // cmbSello
             // 
+            this.cmbSello.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSello.FormattingEnabled = true;
             this.cmbSello.Location = new System.Drawing.Point(187, 161);
             this.cmbSello.Name = "cmbSello";
@@ -161,6 +164,7 @@
             // 
             // cmbInterprete
             // 
+            this.cmbInterprete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInterprete.FormattingEnabled = true;
             this.cmbInterprete.Location = new System.Drawing.Point(187, 107);
             this.cmbInterprete.Name = "cmbInterprete";

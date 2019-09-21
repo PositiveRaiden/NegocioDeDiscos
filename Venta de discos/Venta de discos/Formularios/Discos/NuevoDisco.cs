@@ -17,13 +17,15 @@ namespace Venta_de_discos
         InterpretesRepositorio interpretesRepositorio;
         GenerosRepositorio generosRepositorio;
         SelloRepositorio selloRepositorio;
-        //FALTA CARGAR COMBO SELLOS
+        DiscosRepositorio discosRepositorio;
+
         public AgregarDisco()
         {
             InitializeComponent();
             interpretesRepositorio = new InterpretesRepositorio();
             generosRepositorio = new GenerosRepositorio();
             selloRepositorio = new SelloRepositorio();
+            discosRepositorio = new DiscosRepositorio();
         }
 
         private void AgregarDisco_Load(object sender, EventArgs e)
@@ -40,26 +42,51 @@ namespace Venta_de_discos
         {
             Disco disc = new Disco();
 
-            disc.nombreAlbum  = txtNombreAlbum.Text;
-            disc.interprete = cmbInterprete.SelectedValue.ToString();
-            disc.genero = cmbGenero.SelectedValue.ToString();
-            disc.selloDiscografico = cmbSello.SelectedValue.ToString();
-            disc.añoEdicion = int.Parse(txtAñoEdicion.Text);
-            disc.precio = int.Parse(txtPrecio.Text);
-            disc.cantidad = int.Parse(txtCantidad.Text);
+            disc.nombreAlbum  = txtNombreAlbum.Text.Trim();
+            disc.id_interprete = cmbInterprete.SelectedValue.ToString();
+            disc.id_genero = cmbGenero.SelectedValue.ToString();
+            disc.id_selloDiscografico = cmbSello.SelectedValue.ToString();
+            disc.añoEdicion = txtAñoEdicion.Text;
+            disc.precio = txtPrecio.Text;
+            disc.cantidad = "0";
 
-            Disco disco = new Disco();
-            disco.nombreAlbum = txtNombreAlbum.Text;
-
-            if(!disco.NombreAlbumValido())
+            if(!disc.NombreAlbumValido())
             {
-                errorProvider1.SetError(txtNombreAlbum, "Error");
+                MessageBox.Show("Nombre Invalido!");
+                //errorProvider1.SetError(txtNombreAlbum, "Error");
+                txtNombreAlbum.Text = "";
+                txtNombreAlbum.Focus();
+                return;
+            }
+
+            if (disc.NombreRepetido(disc.nombreAlbum))
+            {
+                MessageBox.Show("Nombre ya existe!");
                 txtNombreAlbum.Text = "";
                 txtNombreAlbum.Focus();
                 return;
             }
 
 
+            if(!disc.AñoValido(disc.añoEdicion))
+            {
+                MessageBox.Show("Año invalido!");
+                txtAñoEdicion.Text = "";
+                txtAñoEdicion.Focus();
+                return;
+            }
+            if (!disc.PrecioValido(disc.precio))
+            {
+                MessageBox.Show("Precio invalido!");
+                txtPrecio.Text = "";
+                txtPrecio.Focus();
+                return;
+            }
+            if (discosRepositorio.Guardar(disc))
+            {
+                MessageBox.Show("Se agrego Disco con exito!");
+                this.Dispose();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

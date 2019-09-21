@@ -65,6 +65,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
             var datosInterprete = new Interprete();
             datosInterprete.Nombre = txtNombre.Text.Trim();
+            datosInterprete.Id = _id;
 
             if (cmbPais.SelectedValue is null)
             {
@@ -76,7 +77,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             {
                 datosInterprete.Id_Pais = cmbPais.SelectedValue.ToString();
             }
-            datosInterprete.Id = _id;
+
+
 
 
             if (!datosInterprete.NombreValido())

@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios.Discos;
 
 namespace Venta_de_discos
 {
     public partial class BuscarDisco : Form
     {
         //agrego discos que no existen en el pedido que acabo de recibir
-        DiscosRepositorio disc; 
+        DiscosRepositorio disc;
 
         public BuscarDisco()
         {
@@ -93,12 +94,60 @@ namespace Venta_de_discos
             var ventana = new AgregarDisco();
             ventana.ShowDialog();
             CargarDiscos();
-            
+
         }
 
         private void cmbInterprete_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var seleccionados = dataGridView1.SelectedRows;
+            if (seleccionados.Count == 0 || seleccionados.Count > 1)
+            {
+                MessageBox.Show("Deberia seleccionar una fila");
+                return;
+            }
+            foreach (DataGridViewRow fila in seleccionados)
+            {
+                var nombre = fila.Cells[1].Value;
+                var id = fila.Cells[0].Value;
+
+                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar a {nombre}?",
+                    "Confirmar operacion",
+                    MessageBoxButtons.YesNo);
+
+                if (confirmacion.Equals(DialogResult.No))
+                    return;
+
+                if (disc.Eliminar(id.ToString()))
+                {
+                    MessageBox.Show($"Usted Elimino a {nombre}");
+                    CargarDiscos();
+                }
+
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            var seleccionados = dataGridView1.SelectedRows;
+            if (seleccionados.Count == 0 || seleccionados.Count > 1)
+            {
+                MessageBox.Show("Deberia seleccionar una fila");
+                return;
+
+            }
+            foreach (DataGridViewRow fila in seleccionados)
+            {
+                var id = fila.Cells[0].Value;
+
+                var ventana = new ModificarDisco(id.ToString());
+                ventana.ShowDialog();
+                CargarDiscos();
+            }
         }
     }
 }

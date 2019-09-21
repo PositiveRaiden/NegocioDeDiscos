@@ -129,6 +129,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(187, 214);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);

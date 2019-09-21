@@ -195,6 +195,9 @@
     <Compile Include="Repositorios\InterpretesRepositorio.cs" />
     <Compile Include="Repositorios\PaisRepositorio.cs" />
     <Compile Include="Repositorios\SelloRepositorio.cs" />
+    <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
+      <DependentUpon>ModificarDisco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.resx">
       <DependentUpon>ModificarGenero.cs</DependentUpon>
     </EmbeddedResource>

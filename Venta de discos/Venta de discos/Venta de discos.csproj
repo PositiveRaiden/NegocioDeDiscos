@@ -135,6 +135,24 @@
     <Compile Include="Formularios\Mantenimiento\abmBarrios\ModificarBarrio.Designer.cs">
       <DependentUpon>ModificarBarrio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmSellos\ModificarSello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmSellos\ModificarSello.Designer.cs">
+      <DependentUpon>ModificarSello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmSellos\NuevoSello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmSellos\NuevoSello.Designer.cs">
+      <DependentUpon>NuevoSello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmSellos\Sellos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmSellos\Sellos.Designer.cs">
+      <DependentUpon>Sellos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +263,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmBarrios\ModificarBarrio.resx">
       <DependentUpon>ModificarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmSellos\ModificarSello.resx">
+      <DependentUpon>ModificarSello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmSellos\NuevoSello.resx">
+      <DependentUpon>NuevoSello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmSellos\Sellos.resx">
+      <DependentUpon>Sellos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

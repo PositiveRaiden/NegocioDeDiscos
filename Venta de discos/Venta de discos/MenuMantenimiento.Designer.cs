@@ -35,6 +35,7 @@
             this.btnGeneros = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBarrio = new System.Windows.Forms.Button();
+            this.btnSello = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOpciones
@@ -52,7 +53,7 @@
             this.btnSalirMenu.Location = new System.Drawing.Point(305, 238);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnSalirMenu.TabIndex = 4;
+            this.btnSalirMenu.TabIndex = 5;
             this.btnSalirMenu.Text = "Salir";
             this.btnSalirMenu.UseVisualStyleBackColor = true;
             this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
@@ -107,11 +108,22 @@
             this.btnBarrio.UseVisualStyleBackColor = true;
             this.btnBarrio.Click += new System.EventHandler(this.btnBarrio_Click);
             // 
+            // btnSello
+            // 
+            this.btnSello.Location = new System.Drawing.Point(15, 207);
+            this.btnSello.Name = "btnSello";
+            this.btnSello.Size = new System.Drawing.Size(134, 23);
+            this.btnSello.TabIndex = 4;
+            this.btnSello.Text = "Sello Discografico";
+            this.btnSello.UseVisualStyleBackColor = true;
+            this.btnSello.Click += new System.EventHandler(this.btnSello_Click);
+            // 
             // MenuMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 283);
+            this.Controls.Add(this.btnSello);
             this.Controls.Add(this.btnBarrio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGeneros);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button btnGeneros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBarrio;
+        private System.Windows.Forms.Button btnSello;
     }
 }

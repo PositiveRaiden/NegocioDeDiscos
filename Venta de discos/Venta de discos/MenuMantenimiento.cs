@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Venta_de_discos.Formularios.Mantenimiento;
 using Venta_de_discos.Formularios.Mantenimiento.Generos;
 using Venta_de_discos.Formularios.Mantenimiento.Barrios;
+using Venta_de_discos.Formularios.Mantenimiento.abmSellos;
 
 namespace Venta_de_discos
 {
@@ -59,6 +60,12 @@ namespace Venta_de_discos
         private void btnBarrio_Click(object sender, EventArgs e)
         {
             Barrios frm = new Barrios();
+            frm.Show();
+        }
+
+        private void btnSello_Click(object sender, EventArgs e)
+        {
+            Sellos frm = new Sellos();
             frm.Show();
         }
     }

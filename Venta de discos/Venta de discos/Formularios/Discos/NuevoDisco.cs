@@ -112,7 +112,7 @@ namespace Venta_de_discos
         }
         private void ActualizarComboSello()
         {
-            var sellos = selloRepositorio.ObtenerSellos();
+            var sellos = selloRepositorio.ObtenerSello();
 
             cmbSello.DisplayMember = "nombre";
             cmbSello.ValueMember = "id";

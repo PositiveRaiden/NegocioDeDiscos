@@ -74,5 +74,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
                 this.Dispose();
             }
         }
+
+        private void NuevoBarrio_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

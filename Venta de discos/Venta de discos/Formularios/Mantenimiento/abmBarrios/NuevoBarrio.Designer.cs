@@ -101,6 +101,7 @@
             this.Controls.Add(this.lblNuevoPais);
             this.Name = "NuevoBarrio";
             this.Text = "NuevoBarrio";
+            this.Load += new System.EventHandler(this.NuevoBarrio_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

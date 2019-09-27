@@ -46,13 +46,17 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 txtNombrePais.Focus();
                 return;
             }
-            if (datosPais.NombreRepetido(datosPais.Nombre))
+            if (datosPais.Nombre != pais.Nombre)
             {
-                MessageBox.Show("Nombre ya existe!");
-                txtNombrePais.Text = "";
-                txtNombrePais.Focus();
-                return;
+                if (datosPais.NombreRepetido(datosPais.Nombre))
+                {
+                    MessageBox.Show("Nombre ya existe!");
+                    txtNombrePais.Text = "";
+                    txtNombrePais.Focus();
+                    return;
+                }
             }
+
 
             if (paisRepositorio.Editar(datosPais))
             {

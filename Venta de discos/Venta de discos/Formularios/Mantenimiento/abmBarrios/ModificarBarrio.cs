@@ -44,13 +44,17 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
                 txtBarrio.Focus();
                 return;
             }
-            if (datosBarrio.NombreRepetido(datosBarrio.Nombre))
+            if (datosBarrio.Nombre != barrio.Nombre)
             {
-                MessageBox.Show("Nombre ya existe!");
-                txtBarrio.Text = "";
-                txtBarrio.Focus();
-                return;
+                if (datosBarrio.NombreRepetido(datosBarrio.Nombre))
+                {
+                    MessageBox.Show("Nombre ya existe!");
+                    txtBarrio.Text = "";
+                    txtBarrio.Focus();
+                    return;
+                }
             }
+
             if (!datosBarrio.LocalidadValida())
             {
                 MessageBox.Show("Localidad Inválida!");

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios.Nueva_Venta;
 
 namespace Venta_de_discos
 {
@@ -20,19 +21,20 @@ namespace Venta_de_discos
 
         private void VentaDeDiscos_Load(object sender, EventArgs e)
         {
-            ArrayList tiposDocumentos = new ArrayList();
-            tiposDocumentos.Add("DNI");
-            tiposDocumentos.Add("Pasaporte");
-            tiposDocumentos.Add("Libreta Cívica");
-            tiposDocumentos.Add("Libreta de Enrolamiento");
-            cmbTipoDocumento.DataSource = tiposDocumentos;
-            lblFecha.Text = "Fecha Actual: " + DateTime.Now.ToString("G");
+            
 
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            NuevaVenta frm = new NuevaVenta();
+            frm.ShowDialog();
+           
         }
     }
 }

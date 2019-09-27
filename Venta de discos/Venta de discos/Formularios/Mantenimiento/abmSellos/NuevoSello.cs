@@ -63,7 +63,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmSellos
                 return;
             }
 
-            if (!sello.EmailValido())
+            if (!sello.EmailValido(sello.Email))
             {
                 MessageBox.Show("Email Inválido!");
                 txtEmail.Text = "";
@@ -74,7 +74,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmSellos
             if (sellosRepositorios.Guardar(sello))
             {
                 MessageBox.Show("Se agrego sello discografico con exito!");
-
                 this.Dispose();
             }
         }

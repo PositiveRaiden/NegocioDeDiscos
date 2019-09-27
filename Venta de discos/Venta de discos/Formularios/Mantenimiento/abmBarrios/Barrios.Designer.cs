@@ -82,6 +82,7 @@
             this.dgvBarrios.Location = new System.Drawing.Point(28, 73);
             this.dgvBarrios.Name = "dgvBarrios";
             this.dgvBarrios.ReadOnly = true;
+            this.dgvBarrios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBarrios.Size = new System.Drawing.Size(319, 198);
             this.dgvBarrios.TabIndex = 8;
             // 

@@ -25,8 +25,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         {
 
             var paises = paisRepositorio.ObtenerPais();
-            dataGridView1.DataSource = paises;
-            this.dataGridView1.Columns["id"].Visible = false;
+            dgvPais.DataSource = paises;
+            this.dgvPais.Columns["id"].Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            var seleccionados = dataGridView1.SelectedRows;
+            var seleccionados = dgvPais.SelectedRows;
             if (seleccionados.Count == 0 || seleccionados.Count > 1)
             {
                 MessageBox.Show("Deberia seleccionar una fila");
@@ -76,7 +76,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            var seleccionados = dataGridView1.SelectedRows;
+            var seleccionados = dgvPais.SelectedRows;
             if (seleccionados.Count == 0 || seleccionados.Count > 1)
             {
                 MessageBox.Show("Deberia seleccionar una fila");

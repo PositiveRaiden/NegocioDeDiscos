@@ -45,12 +45,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(75, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(677, 249);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 3;
             // 
             // lblIntrprete
             // 
             this.lblIntrprete.AutoSize = true;
-            this.lblIntrprete.Location = new System.Drawing.Point(72, 27);
+            this.lblIntrprete.Location = new System.Drawing.Point(73, 37);
             this.lblIntrprete.Name = "lblIntrprete";
             this.lblIntrprete.Size = new System.Drawing.Size(52, 13);
             this.lblIntrprete.TabIndex = 1;
@@ -59,10 +59,10 @@
             // 
             // btnBuscarDisco
             // 
-            this.btnBuscarDisco.Location = new System.Drawing.Point(236, 22);
+            this.btnBuscarDisco.Location = new System.Drawing.Point(237, 32);
             this.btnBuscarDisco.Name = "btnBuscarDisco";
             this.btnBuscarDisco.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarDisco.TabIndex = 3;
+            this.btnBuscarDisco.TabIndex = 2;
             this.btnBuscarDisco.Text = "Buscar";
             this.btnBuscarDisco.UseVisualStyleBackColor = true;
             this.btnBuscarDisco.Click += new System.EventHandler(this.btnBuscarDisco_Click);
@@ -72,7 +72,7 @@
             this.btnSalir.Location = new System.Drawing.Point(677, 328);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 4;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -80,10 +80,10 @@
             // cmbInterprete
             // 
             this.cmbInterprete.FormattingEnabled = true;
-            this.cmbInterprete.Location = new System.Drawing.Point(127, 22);
+            this.cmbInterprete.Location = new System.Drawing.Point(128, 32);
             this.cmbInterprete.Name = "cmbInterprete";
             this.cmbInterprete.Size = new System.Drawing.Size(103, 21);
-            this.cmbInterprete.TabIndex = 17;
+            this.cmbInterprete.TabIndex = 1;
             this.cmbInterprete.SelectedIndexChanged += new System.EventHandler(this.cmbInterprete_SelectedIndexChanged);
             // 
             // btnNuevo
@@ -91,7 +91,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(508, 32);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 5;
+            this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnAñadirDisco_Click);
@@ -101,7 +101,7 @@
             this.btnModificar.Location = new System.Drawing.Point(589, 32);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 18;
+            this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar Disco";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -111,7 +111,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(670, 32);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 19;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);

@@ -56,7 +56,7 @@
             this.btnAceptarNuevoPais.Name = "btnAceptarNuevoPais";
             this.btnAceptarNuevoPais.Size = new System.Drawing.Size(75, 23);
             this.btnAceptarNuevoPais.TabIndex = 2;
-            this.btnAceptarNuevoPais.Text = "Guardar";
+            this.btnAceptarNuevoPais.Text = "Aceptar";
             this.btnAceptarNuevoPais.UseVisualStyleBackColor = true;
             this.btnAceptarNuevoPais.Click += new System.EventHandler(this.btnAceptarNuevoPais_Click);
             // 

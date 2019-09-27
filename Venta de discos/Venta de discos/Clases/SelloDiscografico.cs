@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Venta_de_discos.Repositorios;
 using System.Collections;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace Venta_de_discos.Clases
 {
@@ -41,16 +42,30 @@ namespace Venta_de_discos.Clases
 
         public bool TelefonoValido()
         {
-            if (Telefono.Length < 51)
+            if (Telefono.Length > 6 && Telefono.Length < 11)
                 return true;
             return false;
         }
 
-        public bool EmailValido()
+        public bool EmailValido(string email)
         {
-            if (Email.Length < 51)
-                return true;
-            return false;
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 

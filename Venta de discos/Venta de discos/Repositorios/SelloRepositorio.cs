@@ -51,10 +51,10 @@ namespace Venta_de_discos.Repositorios
 
         public bool Guardar(SelloDiscografico sello)
         {//ver aca nombre descripcion
-            string sqltxt = $"INSERT[dbo].[Sello_Discografico]([Nombre],[Telefono],[Emai])" +
+            string sqltxt = $"INSERT[dbo].[Sello_Discografico]([Nombre],[Telefono],[Email])" +
                 $"VALUES " +
                 $"('{sello.Nombre}', " +
-                $"'{sello.Telefono}'), " +
+                $"'{sello.Telefono}', " +
                 $"'{sello.Email}')";
             return _BD.EjecutarSQL(sqltxt);
         }

@@ -100,14 +100,17 @@ namespace Venta_de_discos.Formularios.Discos
                 txtNombreAlbum.Focus();
                 return;
             }
-
-            if (datosDisco.NombreRepetido(datosDisco.nombreAlbum))
+            if (datosDisco.nombreAlbum != disc.nombreAlbum)
             {
-                MessageBox.Show("Nombre ya existe!");
-                txtNombreAlbum.Text = "";
-                txtNombreAlbum.Focus();
-                return;
+                if (datosDisco.NombreRepetido(datosDisco.nombreAlbum))
+                {
+                    MessageBox.Show("Nombre ya existe!");
+                    txtNombreAlbum.Text = "";
+                    txtNombreAlbum.Focus();
+                    return;
+                }
             }
+
 
 
             if (!datosDisco.AñoValido(datosDisco.añoEdicion))

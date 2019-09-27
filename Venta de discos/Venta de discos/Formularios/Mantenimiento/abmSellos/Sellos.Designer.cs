@@ -74,6 +74,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // dgvSellos
             // 
@@ -81,6 +82,7 @@
             this.dgvSellos.Location = new System.Drawing.Point(36, 67);
             this.dgvSellos.Name = "dgvSellos";
             this.dgvSellos.ReadOnly = true;
+            this.dgvSellos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSellos.Size = new System.Drawing.Size(319, 198);
             this.dgvSellos.TabIndex = 3;
             // 

@@ -92,5 +92,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmSellos
 
             }
         }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void NuevaVenta_Load(object sender, EventArgs e)
         {
 
         }

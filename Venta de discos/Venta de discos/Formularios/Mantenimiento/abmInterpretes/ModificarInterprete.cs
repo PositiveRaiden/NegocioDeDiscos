@@ -88,13 +88,17 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 txtNombre.Focus();
                 return;
             }
-            if (datosInterprete.NombreRepetido(datosInterprete.Nombre))
+            if (datosInterprete.Nombre != interprete.Nombre)
             {
-                MessageBox.Show("Nombre ya existe!");
-                txtNombre.Text = "";
-                txtNombre.Focus();
-                return;
+                if (datosInterprete.NombreRepetido(datosInterprete.Nombre))
+                {
+                    MessageBox.Show("Nombre ya existe!");
+                    txtNombre.Text = "";
+                    txtNombre.Focus();
+                    return;
+                }
             }
+
             if (!datosInterprete.IdValido())
             {
 

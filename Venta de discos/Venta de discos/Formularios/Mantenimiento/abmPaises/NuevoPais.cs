@@ -40,6 +40,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 txtNuevoPais.Focus();
                 return;
             }
+            
             if (pais.NombreRepetido(pais.Nombre))
             {
                 MessageBox.Show("Nombre ya existe!");

@@ -82,6 +82,7 @@
             this.dgvGeneros.Location = new System.Drawing.Point(28, 72);
             this.dgvGeneros.Name = "dgvGeneros";
             this.dgvGeneros.ReadOnly = true;
+            this.dgvGeneros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGeneros.Size = new System.Drawing.Size(319, 198);
             this.dgvGeneros.TabIndex = 3;
             this.dgvGeneros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGeneros_CellContentClick);

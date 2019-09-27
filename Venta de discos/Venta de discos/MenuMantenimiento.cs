@@ -41,7 +41,7 @@ namespace Venta_de_discos
         private void btnGeneros_Click_1(object sender, EventArgs e)
         {
             Generos frm = new Generos();
-            frm.Show();
+            frm.ShowDialog();
             //this.Hide();
         }
 
@@ -60,13 +60,13 @@ namespace Venta_de_discos
         private void btnBarrio_Click(object sender, EventArgs e)
         {
             Barrios frm = new Barrios();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnSello_Click(object sender, EventArgs e)
         {
             Sellos frm = new Sellos();
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

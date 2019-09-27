@@ -37,6 +37,7 @@ namespace Venta_de_discos
 
             CargarComboInterprete();
             CargarDiscos();
+            cmbInterprete.Focus();
         }
 
         private void CargarComboInterprete()

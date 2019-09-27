@@ -54,13 +54,17 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmSellos
                 txtSello.Focus();
                 return;
             }
-            if (datosSello.NombreRepetido(datosSello.Nombre))
+            if (datosSello.Nombre != sello.Nombre)
             {
-                MessageBox.Show("Nombre ya existente!");
-                txtSello.Text = "";
-                txtSello.Focus();
-                return;
+                if (datosSello.NombreRepetido(datosSello.Nombre))
+                {
+                    MessageBox.Show("Nombre ya existente!");
+                    txtSello.Text = "";
+                    txtSello.Focus();
+                    return;
+                }
             }
+
             if (!datosSello.TelefonoValido())
             {
                 MessageBox.Show("Telefono Inválido!");
@@ -68,7 +72,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmSellos
                 txtTelefono.Focus();
                 return;
             }
-            if (!datosSello.EmailValido())
+            if (!datosSello.EmailValido(datosSello.Email))
             {
                 MessageBox.Show("Email Inválido!");
                 txtEmail.Text = "";

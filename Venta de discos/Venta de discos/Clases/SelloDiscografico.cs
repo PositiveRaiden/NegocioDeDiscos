@@ -40,11 +40,18 @@ namespace Venta_de_discos.Clases
             return false;
         }
 
-        public bool TelefonoValido()
+        public bool TelefonoValido(string telefono)
         {
-            if (Telefono.Length > 6 && Telefono.Length < 11)
+            int number;
+            int.TryParse(telefono, out number);
+            if (number > 6 && number < 11)
+            {
                 return true;
-            return false;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool EmailValido(string email)

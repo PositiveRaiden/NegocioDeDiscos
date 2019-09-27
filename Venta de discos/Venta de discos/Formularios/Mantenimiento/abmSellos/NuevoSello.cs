@@ -55,7 +55,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmSellos
                 return;
             }
 
-            if (!sello.TelefonoValido())
+            if (!sello.TelefonoValido(sello.Telefono))
             {
                 MessageBox.Show("Telefono Inválido!");
                 txtTelefono.Text = "";

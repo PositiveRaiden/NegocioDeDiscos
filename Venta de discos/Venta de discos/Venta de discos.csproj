@@ -57,6 +57,24 @@
     <Compile Include="Formularios\Discos\ModificarDisco.Designer.cs">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmClientes\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmClientes\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmClientes\ModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmClientes\ModificarCliente.Designer.cs">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmClientes\NuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\abmClientes\NuevoCliente.Designer.cs">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,12 +104,6 @@
     </Compile>
     <Compile Include="Formularios\Mantenimiento\abmInterpretes\Interpretes.Designer.cs">
       <DependentUpon>Interpretes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmCliente\ModificarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmCliente\ModificarCliente.Designer.cs">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimiento\abmInterpretes\ModificarInterprete.cs">
       <SubType>Form</SubType>
@@ -166,23 +178,11 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\acceso_BD.cs" />
-    <Compile Include="Formularios\Mantenimiento\abmCliente\NuevoCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmCliente\NuevoCliente.Designer.cs">
-      <DependentUpon>NuevoCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Discos\NuevoDisco.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Discos\NuevoDisco.Designer.cs">
       <DependentUpon>NuevoDisco.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmCliente\Clientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Mantenimiento\abmCliente\Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Discos\Discos.cs">
       <SubType>Form</SubType>
@@ -199,6 +199,7 @@
       <DependentUpon>MenuMantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositorios\BarriosRepositorio.cs" />
+    <Compile Include="Repositorios\ClientesRepositorio.cs" />
     <Compile Include="Repositorios\DiscosRepositorio.cs" />
     <Compile Include="MenuGestion.cs">
       <SubType>Form</SubType>
@@ -222,8 +223,14 @@
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\abmCliente\ModificarCliente.resx">
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmClientes\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmClientes\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmClientes\NuevoCliente.resx">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.resx">
       <DependentUpon>ModificarGenero.cs</DependentUpon>
@@ -243,14 +250,8 @@
     <EmbeddedResource Include="Formularios\Mantenimiento\abmInterpretes\ModificarInterprete.resx">
       <DependentUpon>ModificarInterprete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\abmCliente\NuevoCliente.resx">
-      <DependentUpon>NuevoCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Discos\NuevoDisco.resx">
       <DependentUpon>NuevoDisco.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Mantenimiento\abmCliente\Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Discos\Discos.resx">
       <DependentUpon>Discos.cs</DependentUpon>

@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnBarrio = new System.Windows.Forms.Button();
             this.btnSello = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOpciones
@@ -118,11 +119,22 @@
             this.btnSello.UseVisualStyleBackColor = true;
             this.btnSello.Click += new System.EventHandler(this.btnSello_Click);
             // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(15, 236);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(134, 23);
+            this.btnCliente.TabIndex = 13;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
             // MenuMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 283);
+            this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnSello);
             this.Controls.Add(this.btnBarrio);
             this.Controls.Add(this.label1);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBarrio;
         private System.Windows.Forms.Button btnSello;
+        private System.Windows.Forms.Button btnCliente;
     }
 }

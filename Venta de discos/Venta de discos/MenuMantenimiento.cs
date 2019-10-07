@@ -68,5 +68,11 @@ namespace Venta_de_discos
             Sellos frm = new Sellos();
             frm.ShowDialog();
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            Clientes frm = new Clientes();
+            frm.ShowDialog();
+        }
     }
 }

@@ -222,6 +222,9 @@
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\abmCliente\ModificarCliente.resx">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmGeneros\ModificarGenero.resx">
       <DependentUpon>ModificarGenero.cs</DependentUpon>
     </EmbeddedResource>

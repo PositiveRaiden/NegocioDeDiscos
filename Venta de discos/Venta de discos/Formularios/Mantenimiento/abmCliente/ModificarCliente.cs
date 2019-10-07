@@ -16,5 +16,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         {
             InitializeComponent();
         }
+
+        private void ModificarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

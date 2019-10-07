@@ -41,5 +41,17 @@ namespace Venta_de_discos
         {
 
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevoCliente frm = new NuevoCliente();
+            frm.ShowDialog();
+            //actualizarClientes();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtnNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblCalle = new System.Windows.Forms.Label();
@@ -60,12 +60,12 @@
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 27;
             // 
-            // txtnNombre
+            // txtNombre
             // 
-            this.txtnNombre.Location = new System.Drawing.Point(156, 111);
-            this.txtnNombre.Name = "txtnNombre";
-            this.txtnNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtnNombre.TabIndex = 26;
+            this.txtNombre.Location = new System.Drawing.Point(156, 112);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 26;
             // 
             // txtNumDoc
             // 
@@ -180,7 +180,7 @@
             this.txtLocalidad.Size = new System.Drawing.Size(100, 20);
             this.txtLocalidad.TabIndex = 37;
             // 
-            // AgregarCliente
+            // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,7 +193,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtnNombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtNumDoc);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblCalle);
@@ -201,8 +201,8 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblNumeroDoc);
             this.Controls.Add(this.lblTipoDoc);
-            this.Name = "AgregarCliente";
-            this.Text = "Agregar Cliente";
+            this.Name = "NuevoCliente";
+            this.Text = "NuevoCliente";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,7 +211,7 @@
         #endregion
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtnNombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtNumDoc;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblCalle;

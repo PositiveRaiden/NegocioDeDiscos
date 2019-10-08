@@ -8,8 +8,8 @@ namespace Venta_de_discos.Clases
 {
     class Pedido
     {
-        public string id { get; set; }
-        public string fechaPedido { get; set; }
-        
+        public int id { get; set; }
+        public DateTime fechaPedido { get; set; }
+        public IList<DetallePedido> detallePedidos { get; set; }
     }
 }

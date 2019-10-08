@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Clases;
+using Venta_de_discos.Repositorios;
 
 namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 {
     public partial class NuevoPedido : Form
     {
+        PedidosRepositorio pedidosRepositorio = new PedidosRepositorio();
         DiscosRepositorio discosRepositorio = new DiscosRepositorio();
         public NuevoPedido()
         {
@@ -80,5 +83,50 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
             dataGridView2.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var a = new Pedido()
+                {
+
+                    fechaPedido = DateTime.Today,
+                    detallePedidos = PreparaDetalles()
+
+                };
+                pedidosRepositorio.Guardar(a); 
+                MessageBox.Show("La operación se realizó con exito");
+                this.Dispose();
+            }
+            catch (ApplicationException aex)
+            {
+                MessageBox.Show(aex.Message);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un error inesperado");
+            }
+        }
+
+        private List<DetallePedido> PreparaDetalles()
+        {
+            var detalles = new List<DetallePedido>();
+
+            var filas = dataGridView2.Rows;
+
+            foreach (DataGridViewRow fila in filas)
+            {
+                var detalle = new DetallePedido()
+                {
+                    idDisco = fila.Cells["id"].Value?.ToString(),
+                    cantidad = fila.Cells["Cantidad"].Value?.ToString()
+                };
+                detalles.Add(detalle);
+            }
+            return detalles;
+        }
+    
     }
 }

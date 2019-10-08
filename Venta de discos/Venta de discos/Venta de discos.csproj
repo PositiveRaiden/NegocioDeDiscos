@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Disco.cs" />
+    <Compile Include="Helpers\UtilsDB.cs" />
     <Compile Include="MenuMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>

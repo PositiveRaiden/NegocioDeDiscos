@@ -11,7 +11,7 @@ namespace Venta_de_discos.Clases
         public string id { get; set; }
         public string idDisco { get; set; }
         public string cantidad { get; set; }
-        public string idPedido { get; set; }
+        //public string idPedido { get; set; }
 
     }
 }

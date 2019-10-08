@@ -61,6 +61,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             cliente.Apellido = txtApellido.Text.Trim();
             cliente.Calle = txtCalle.Text.Trim();
             cliente.NumDoc = txtNumDoc.Text.Trim();
+            cliente.Id_TipoDoc = cmbTipoDoc.SelectedValue.ToString();
 
             if (clientesRepositorios.Guardar(cliente))
             {

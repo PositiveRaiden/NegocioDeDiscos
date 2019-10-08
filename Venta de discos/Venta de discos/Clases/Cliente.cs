@@ -18,6 +18,7 @@ namespace Venta_de_discos.Clases
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Calle { get; set; }
+        public string TipoDoc { get; set; }
 
 
         public Cliente()

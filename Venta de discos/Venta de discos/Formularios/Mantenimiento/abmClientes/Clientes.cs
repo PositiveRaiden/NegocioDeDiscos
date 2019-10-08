@@ -27,6 +27,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             var clientes = clientesRepositorio.ObtenerCliente();
             dgvClientes.DataSource = clientes;
             this.dgvClientes.Columns["id"].Visible = false;
+            //this.dgvClientes.Columns["id_TipoDocumento"].Visible = false;
         }
 
         private void Clientes_Load(object sender, EventArgs e)

@@ -22,7 +22,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             InitializeComponent();
         }
 
-        //aca
         private void actualizarClientes()
         {
             var clientes = clientesRepositorio.ObtenerCliente();

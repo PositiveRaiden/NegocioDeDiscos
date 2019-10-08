@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.lblBarrio = new System.Windows.Forms.Label();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
@@ -46,28 +44,10 @@
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtLocalidad
-            // 
-            this.txtLocalidad.Location = new System.Drawing.Point(122, 166);
-            this.txtLocalidad.MaxLength = 10;
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.ReadOnly = true;
-            this.txtLocalidad.Size = new System.Drawing.Size(100, 20);
-            this.txtLocalidad.TabIndex = 53;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Localidad:";
-            // 
             // cmbBarrio
             // 
             this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(122, 135);
+            this.cmbBarrio.Location = new System.Drawing.Point(104, 132);
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
             this.cmbBarrio.TabIndex = 51;
@@ -84,14 +64,14 @@
             // cmbTipoDoc
             // 
             this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(122, 9);
+            this.cmbTipoDoc.Location = new System.Drawing.Point(104, 56);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(100, 21);
             this.cmbTipoDoc.TabIndex = 49;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(280, 212);
+            this.btnSalir.Location = new System.Drawing.Point(104, 159);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 48;
@@ -99,37 +79,37 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txtDireccion
+            // txtCalle
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(122, 110);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
-            this.txtDireccion.TabIndex = 47;
+            this.txtCalle.Location = new System.Drawing.Point(104, 107);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(100, 20);
+            this.txtCalle.TabIndex = 47;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(122, 85);
+            this.txtApellido.Location = new System.Drawing.Point(104, 30);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 46;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(122, 61);
+            this.txtNombre.Location = new System.Drawing.Point(104, 6);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 45;
             // 
             // txtNumDoc
             // 
-            this.txtNumDoc.Location = new System.Drawing.Point(122, 35);
+            this.txtNumDoc.Location = new System.Drawing.Point(104, 82);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumDoc.TabIndex = 44;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(199, 212);
+            this.btnAceptar.Location = new System.Drawing.Point(23, 159);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 43;
@@ -149,7 +129,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(12, 87);
+            this.lblApellido.Location = new System.Drawing.Point(12, 35);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 41;
@@ -158,7 +138,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 61);
+            this.lblNombre.Location = new System.Drawing.Point(12, 9);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 40;
@@ -167,7 +147,7 @@
             // lblNumeroDoc
             // 
             this.lblNumeroDoc.AutoSize = true;
-            this.lblNumeroDoc.Location = new System.Drawing.Point(12, 35);
+            this.lblNumeroDoc.Location = new System.Drawing.Point(12, 85);
             this.lblNumeroDoc.Name = "lblNumeroDoc";
             this.lblNumeroDoc.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroDoc.TabIndex = 39;
@@ -176,7 +156,7 @@
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(12, 9);
+            this.lblTipoDoc.Location = new System.Drawing.Point(12, 59);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(86, 13);
             this.lblTipoDoc.TabIndex = 38;
@@ -186,14 +166,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 242);
-            this.Controls.Add(this.txtLocalidad);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(218, 188);
             this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.lblBarrio);
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtNumDoc);
@@ -212,14 +190,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtLocalidad;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbBarrio;
         private System.Windows.Forms.Label lblBarrio;
         private System.Windows.Forms.ComboBox cmbTipoDoc;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtNumDoc;

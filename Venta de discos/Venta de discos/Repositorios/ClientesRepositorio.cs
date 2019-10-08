@@ -37,7 +37,7 @@ namespace Venta_de_discos.Repositorios
             foreach (DataRow fila in tablaTemporal.Rows)
             {
                 if (fila.HasErrors)
-                    continue; // no corto el ciclo
+                    continue; 
 
                 cliente.Id = fila.ItemArray[0].ToString();
                 cliente.Nombre = fila.ItemArray[1].ToString();
@@ -71,6 +71,8 @@ namespace Venta_de_discos.Repositorios
         {
             string sqltxt = $"UPDATE [dbo].[cliente] SET nombre ='{ cliente.Nombre }'" +
                 $", apellido='{ cliente.Apellido}' " +
+                $", calle='{ cliente.Calle}' " +
+                $", numDoc='{ cliente.NumDoc}' " +
                 $"WHERE id= {cliente.Id}";
             return _BD.EjecutarSQL(sqltxt);
 

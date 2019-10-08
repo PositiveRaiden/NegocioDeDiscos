@@ -29,6 +29,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
         {
             txtNombre.Text = cliente.Nombre;
             txtApellido.Text = cliente.Apellido;
+            txtCalle.Text = cliente.NumDoc;//leer comentario de abajo
+            txtNumDoc.Text = cliente.Calle;//estos estan invertidos y no se por que pasa eso!!
             _id = cliente.Id;
         }
 
@@ -42,6 +44,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             var datosCliente = new Cliente();
             datosCliente.Nombre = txtNombre.Text.Trim();
             datosCliente.Apellido = txtApellido.Text.Trim();
+            datosCliente.Calle = txtCalle.Text.Trim();
+            datosCliente.NumDoc = txtNumDoc.Text.Trim();
             datosCliente.Id = _id;
 
             if (clientesRepositorio.Editar(datosCliente))

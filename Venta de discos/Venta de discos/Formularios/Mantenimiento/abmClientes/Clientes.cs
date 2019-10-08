@@ -74,10 +74,12 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             }
             foreach (DataGridViewRow fila in seleccionados)
             {
-                var nombre = fila.Cells[1].Value;
                 var id = fila.Cells[0].Value;
+                var nombre = fila.Cells[1].Value;
+                var apellido = fila.Cells[2].Value;
+                
 
-                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar a {nombre}?",
+                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar a {nombre} {apellido}?",
                     "Confirmar operacion",
                     MessageBoxButtons.YesNo);
 
@@ -86,7 +88,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
 
                 if (clientesRepositorio.Eliminar(id.ToString()))
                 {
-                    MessageBox.Show($"Usted Elimino a {nombre}");
+                    MessageBox.Show($"{nombre} {apellido} ha sido eliminado!");
                     actualizarClientes();
                 }
 

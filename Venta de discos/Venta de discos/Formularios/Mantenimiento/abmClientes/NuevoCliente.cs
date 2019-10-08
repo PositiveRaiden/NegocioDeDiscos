@@ -39,6 +39,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             cliente.Nombre = txtNombre.Text.Trim();
             cliente.Apellido = txtApellido.Text.Trim();
             cliente.Calle = txtCalle.Text.Trim();
+            cliente.NumDoc = txtNumDoc.Text.Trim();
 
             if (clientesRepositorios.Guardar(cliente))
             {

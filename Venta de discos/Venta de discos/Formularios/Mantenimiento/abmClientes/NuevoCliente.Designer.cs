@@ -50,16 +50,16 @@
             this.cmbBarrio.Location = new System.Drawing.Point(104, 132);
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
-            this.cmbBarrio.TabIndex = 51;
+            this.cmbBarrio.TabIndex = 6;
             // 
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(12, 138);
+            this.lblBarrio.Location = new System.Drawing.Point(12, 135);
             this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(34, 13);
+            this.lblBarrio.Size = new System.Drawing.Size(37, 13);
             this.lblBarrio.TabIndex = 50;
-            this.lblBarrio.Text = "Barrio";
+            this.lblBarrio.Text = "Barrio:";
             // 
             // cmbTipoDoc
             // 
@@ -67,14 +67,14 @@
             this.cmbTipoDoc.Location = new System.Drawing.Point(104, 56);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(100, 21);
-            this.cmbTipoDoc.TabIndex = 49;
+            this.cmbTipoDoc.TabIndex = 3;
             // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(104, 159);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 48;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -84,35 +84,35 @@
             this.txtCalle.Location = new System.Drawing.Point(104, 107);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 20);
-            this.txtCalle.TabIndex = 47;
+            this.txtCalle.TabIndex = 5;
             // 
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(104, 30);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtApellido.TabIndex = 46;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(104, 6);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 45;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtNumDoc
             // 
             this.txtNumDoc.Location = new System.Drawing.Point(104, 82);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(100, 20);
-            this.txtNumDoc.TabIndex = 44;
+            this.txtNumDoc.TabIndex = 4;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(23, 159);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 43;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -120,47 +120,47 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(12, 113);
+            this.lblCalle.Location = new System.Drawing.Point(12, 110);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(30, 13);
+            this.lblCalle.Size = new System.Drawing.Size(33, 13);
             this.lblCalle.TabIndex = 42;
-            this.lblCalle.Text = "Calle";
+            this.lblCalle.Text = "Calle:";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Location = new System.Drawing.Point(12, 35);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.Size = new System.Drawing.Size(47, 13);
             this.lblApellido.TabIndex = 41;
-            this.lblApellido.Text = "Apellido";
+            this.lblApellido.Text = "Apellido:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(12, 9);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 40;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre:";
             // 
             // lblNumeroDoc
             // 
             this.lblNumeroDoc.AutoSize = true;
             this.lblNumeroDoc.Location = new System.Drawing.Point(12, 85);
             this.lblNumeroDoc.Name = "lblNumeroDoc";
-            this.lblNumeroDoc.Size = new System.Drawing.Size(44, 13);
+            this.lblNumeroDoc.Size = new System.Drawing.Size(70, 13);
             this.lblNumeroDoc.TabIndex = 39;
-            this.lblNumeroDoc.Text = "Número";
+            this.lblNumeroDoc.Text = "Número Doc:";
             // 
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
             this.lblTipoDoc.Location = new System.Drawing.Point(12, 59);
             this.lblTipoDoc.Name = "lblTipoDoc";
-            this.lblTipoDoc.Size = new System.Drawing.Size(86, 13);
+            this.lblTipoDoc.Size = new System.Drawing.Size(89, 13);
             this.lblTipoDoc.TabIndex = 38;
-            this.lblTipoDoc.Text = "Tipo Documento";
+            this.lblTipoDoc.Text = "Tipo Documento:";
             // 
             // NuevoCliente
             // 

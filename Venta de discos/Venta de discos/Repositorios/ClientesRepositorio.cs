@@ -19,7 +19,7 @@ namespace Venta_de_discos.Repositorios
         //aca
         public DataTable ObtenerCliente()
         {
-            string sqltxt = "SELECT Id,Nombre,Apellido,Calle FROM Cliente";
+            string sqltxt = "SELECT Id,Nombre,Apellido,Calle,NumDoc FROM Cliente";
             return _BD.consulta(sqltxt);
         }
 
@@ -43,6 +43,7 @@ namespace Venta_de_discos.Repositorios
                 cliente.Nombre = fila.ItemArray[1].ToString();
                 cliente.Apellido = fila.ItemArray[2].ToString();
                 cliente.Calle = fila.ItemArray[3].ToString();
+                cliente.NumDoc = fila.ItemArray[4].ToString();
             }
 
             return cliente;
@@ -51,11 +52,12 @@ namespace Venta_de_discos.Repositorios
         //aca
         public bool Guardar(Cliente cliente)
         {
-            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Calle])" +
+            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Calle],[NumDoc])" +
                 $"VALUES " +
                 $"('{cliente.Nombre}', " +
                 $"'{cliente.Apellido}'," +
-                $"'{cliente.Calle}')";
+                $"'{cliente.Calle}'," +
+                $"'{cliente.NumDoc}')";
             return _BD.EjecutarSQL(sqltxt);
         }
 

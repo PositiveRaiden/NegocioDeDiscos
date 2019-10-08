@@ -8,7 +8,7 @@ using Venta_de_discos.Clases;
 
 namespace Venta_de_discos.Repositorios
 {
-    // HACER!!!
+
     class SelloRepositorio
     {
 

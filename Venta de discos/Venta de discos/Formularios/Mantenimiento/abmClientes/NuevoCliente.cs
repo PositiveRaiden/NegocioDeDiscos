@@ -38,10 +38,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             var cliente = new Cliente();
             cliente.Nombre = txtNombre.Text.Trim();
             cliente.Apellido = txtApellido.Text.Trim();
+            cliente.Direccion = txtDireccion.Text.Trim();
 
             if (clientesRepositorios.Guardar(cliente))
             {
-                MessageBox.Show("Se agrego barrio con exito!");
+                MessageBox.Show("Se agrego cliente con exito!");
 
                 this.Dispose();
             }

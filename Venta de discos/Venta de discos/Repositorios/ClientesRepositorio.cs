@@ -19,7 +19,7 @@ namespace Venta_de_discos.Repositorios
         //aca
         public DataTable ObtenerCliente()
         {
-            string sqltxt = "SELECT Id,Nombre,Apellido FROM Cliente";
+            string sqltxt = "SELECT Id,Nombre,Apellido,Direccion FROM Cliente";
             return _BD.consulta(sqltxt);
         }
 
@@ -41,7 +41,8 @@ namespace Venta_de_discos.Repositorios
 
                 cliente.Id = fila.ItemArray[0].ToString();
                 cliente.Nombre = fila.ItemArray[1].ToString();
-                cliente.Apellido = fila.ItemArray[2].ToString(); 
+                cliente.Apellido = fila.ItemArray[2].ToString();
+                cliente.Direccion = fila.ItemArray[3].ToString();
             }
 
             return cliente;
@@ -50,10 +51,11 @@ namespace Venta_de_discos.Repositorios
         //aca
         public bool Guardar(Cliente cliente)
         {//De aca sale el error. Como generar id diferentes? en base a que los genero
-            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido])" +
+            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Direccion])" +
                 $"VALUES " +
                 $"('{cliente.Nombre}', " +
-                $"'{cliente.Apellido}')";
+                $"'{cliente.Apellido}')" +
+                $"'{cliente.Direccion}')";
             return _BD.EjecutarSQL(sqltxt);
         }
 

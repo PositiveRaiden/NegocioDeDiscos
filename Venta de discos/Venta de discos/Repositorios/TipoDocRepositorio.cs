@@ -11,6 +11,7 @@ namespace Venta_de_discos.Repositorios
     class TipoDocRepositorio
     {
         private acceso_BD _BD;
+
         public TipoDocRepositorio()
         {
             _BD = new acceso_BD();
@@ -18,7 +19,7 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerTipoDoc()
         {
-            string sqltxt = "SELECT Id,Nombre FROM TipoDoc";
+            string sqltxt = "SELECT id,nombre FROM TipoDoc";
             return _BD.consulta(sqltxt);
         }
 

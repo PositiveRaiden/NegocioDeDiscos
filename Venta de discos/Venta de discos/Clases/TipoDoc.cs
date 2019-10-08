@@ -10,7 +10,7 @@ namespace Venta_de_discos.Clases
 {
     class TipoDoc
     {
-        BarriosRepositorio barriosRepositorio = new BarriosRepositorio();
+        TipoDocRepositorio tiposDocRepositorio = new TipoDocRepositorio();
         public string Id { get; set; }
         public string Nombre { get; set; }
     }

@@ -16,6 +16,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
     {
         PaisRepositorio paisRepositorio;
         InterpretesRepositorio interpretesRepositorio;
+
         public NuevoInterprete()
         {
             InitializeComponent();
@@ -27,11 +28,6 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         {
             txtNombre.Focus();
             ActualizarComboPais();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void ActualizarComboPais()
@@ -50,6 +46,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento
             cmbPais.AutoCompleteCustomSource = collection;
             cmbPais.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmbPais.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

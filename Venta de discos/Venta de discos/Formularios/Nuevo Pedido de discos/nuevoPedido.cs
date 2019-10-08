@@ -33,6 +33,9 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             dataGridView1.DataSource = discos;
             this.dataGridView1.Columns["id"].Visible = false;
             this.dataGridView1.Columns["cantidad"].Visible = false;
+            this.dataGridView1.Columns["precio"].Visible = false;
+            this.dataGridView1.Columns["genero"].Visible = false;
+            this.dataGridView1.Columns["año edicion"].Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

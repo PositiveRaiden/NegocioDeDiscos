@@ -38,9 +38,9 @@ namespace Venta_de_discos.Repositorios
 
                     foreach (var d in p.detallePedidos)
                     {
-                        sqltxt = $"INSERT [dbo].[Detalle_Pedido] " +
+                        sqltxt = $"INSERT [dbo].[Detalle_Pedido]" +
                             $"([id_Pedido], [Cantidad], [id_Disco]) " +
-                            $"VALUES ({p.id}, {d.cantidad}, {d.idDisco}')";
+                            $"VALUES ('{p.id}', '{d.cantidad}', '{d.idDisco}')";
                         _BD.EjecutarTransaccion(sqltxt);
 
                         sqltxt = $"SELECT cantidad FROM Disco WHERE id={d.idDisco}";
@@ -48,7 +48,14 @@ namespace Venta_de_discos.Repositorios
                         var stock =
                             int.Parse(_BD.ConsultaDuranteTransaccion(sqltxt).Rows[0]["cantidad"].ToString());
 
-                        sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{stock + Convert.ToInt16(d.cantidad)}' WHERE id={d.idDisco}"; //solo se alquila de a una pelicula
+                        int number;
+                        if(!int.TryParse(d.cantidad, out number))
+                        {
+                            throw new ApplicationException();
+                        }
+                        int nuevoStock = stock + number;
+
+                        sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{nuevoStock}' WHERE id={d.idDisco}"; 
                         _BD.EjecutarTransaccion(sqltxt);
                     }
 

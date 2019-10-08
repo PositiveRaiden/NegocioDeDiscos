@@ -81,7 +81,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            dataGridView2.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            dataGridView2.Rows.RemoveAt(dataGridView2.CurrentRow.Index);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

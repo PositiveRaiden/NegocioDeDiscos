@@ -55,13 +55,14 @@ namespace Venta_de_discos.Repositorios
         //aca
         public bool Guardar(Cliente cliente)
         {
-            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Calle],[NumDoc],[id_TipoDocumento])" +
+            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Calle],[NumDoc],[id_TipoDocumento],[id_Barrio])" +
                 $"VALUES " +
                 $"('{cliente.Nombre}', " +
                 $"'{cliente.Apellido}'," +
                 $"'{cliente.Calle}'," +
                 $"'{cliente.NumDoc}'," +
-                $"'{cliente.Id_TipoDoc}')";
+                $"'{cliente.Id_TipoDoc}'," +
+                $"'{cliente.Id_Barrio}')";
             return _BD.EjecutarSQL(sqltxt);
         }
 

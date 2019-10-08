@@ -16,11 +16,13 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
     {
         ClientesRepositorio clientesRepositorios;
         TipoDocRepositorio tipoDocRepositorio;
+        BarriosRepositorio barriosRepositorio;
 
         public NuevoCliente()
         {
             InitializeComponent();
             tipoDocRepositorio = new TipoDocRepositorio();
+            barriosRepositorio = new BarriosRepositorio();
             clientesRepositorios = new ClientesRepositorio();
         }
 
@@ -28,6 +30,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
         {
             txtNombre.Focus();
             ActualizarComboTipoDoc();
+            ActualizarComboBarrios();
         }
 
         private void ActualizarComboTipoDoc()
@@ -48,6 +51,24 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             cmbTipoDoc.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
+        private void ActualizarComboBarrios()
+        {
+            var barrios = barriosRepositorio.ObtenerBarrio();
+            cmbBarrio.ValueMember = "Id";
+            cmbBarrio.DisplayMember = "nombre";
+            cmbBarrio.DataSource = barrios;
+
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in barrios.Rows)
+            {
+                collection.Add(Convert.ToString(row["nombre"]));
+            }
+
+            cmbBarrio.AutoCompleteCustomSource = collection;
+            cmbBarrio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbBarrio.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -62,6 +83,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             cliente.Calle = txtCalle.Text.Trim();
             cliente.NumDoc = txtNumDoc.Text.Trim();
             cliente.Id_TipoDoc = cmbTipoDoc.SelectedValue.ToString();
+            cliente.Id_Barrio = cmbBarrio.SelectedValue.ToString();
 
             if (clientesRepositorios.Guardar(cliente))
             {

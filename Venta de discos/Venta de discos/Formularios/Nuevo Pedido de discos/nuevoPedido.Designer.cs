@@ -124,6 +124,7 @@
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "-";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dataGridView1
             // 

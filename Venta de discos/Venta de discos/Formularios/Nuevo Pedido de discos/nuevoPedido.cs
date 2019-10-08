@@ -75,5 +75,10 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             if (MessageBox.Show("Está seguro que desea salir?", "Salir", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 Dispose();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+        }
     }
 }

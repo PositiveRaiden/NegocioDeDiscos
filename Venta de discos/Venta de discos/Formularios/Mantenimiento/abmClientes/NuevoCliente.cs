@@ -32,6 +32,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             this.Close();
         }
 
+        //aca
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             var cliente = new Cliente();

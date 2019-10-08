@@ -22,10 +22,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             InitializeComponent();
         }
 
+        //aca
         private void actualizarClientes()
         {
-            var barrios = clientesRepositorio.ObtenerCliente();
-            dgvClientes.DataSource = barrios;
+            var clientes = clientesRepositorio.ObtenerCliente();
+            dgvClientes.DataSource = clientes;
             this.dgvClientes.Columns["id"].Visible = false;
         }
 

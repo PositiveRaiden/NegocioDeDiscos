@@ -16,12 +16,14 @@ namespace Venta_de_discos.Repositorios
             _BD = new acceso_BD();
         }
 
+        //aca
         public DataTable ObtenerCliente()
         {
             string sqltxt = "SELECT Id,Nombre,Apellido FROM Cliente";
             return _BD.consulta(sqltxt);
         }
 
+        //aca
         public Cliente ObtenerCliente(string clienteId)
         {
             string sqltxt = $"SELECT * FROM [dbo].[Cliente] WHERE id = {clienteId}";
@@ -45,6 +47,7 @@ namespace Venta_de_discos.Repositorios
             return cliente;
         }
 
+        //aca
         public bool Guardar(Cliente cliente)
         {//De aca sale el error. Como generar id diferentes? en base a que los genero
             string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido])" +

@@ -40,5 +40,15 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
             this.Close();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Te la creiste");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Te la creiste");
+        }
     }
 }

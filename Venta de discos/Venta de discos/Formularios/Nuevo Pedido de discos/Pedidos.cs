@@ -27,7 +27,6 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
             var pedidos = pedidosRepositorio.ObtenerPedidos();
             dataGridView1.DataSource = pedidos;
-            this.dataGridView1.Columns["id"].Visible = false;
         }
 
         private void btnAñadirDisco_Click(object sender, EventArgs e)

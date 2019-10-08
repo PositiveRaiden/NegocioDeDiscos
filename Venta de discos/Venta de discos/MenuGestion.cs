@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios.Nuevo_Pedido_de_discos;
 
 namespace Venta_de_discos
 {
@@ -54,6 +55,12 @@ namespace Venta_de_discos
             frm.ShowDialog();
             
 
+        }
+
+        private void btnNuevoPedido_Click(object sender, EventArgs e)
+        {
+            Pedidos frm = new Pedidos();
+            frm.ShowDialog();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerPedidos()
         {
-            string sqltxt = "SELECT id,fechaPedido FROM Pedido";
+            string sqltxt = "SELECT id as 'Numero de pedido',fechaPedido FROM Pedido";
             return _BD.consulta(sqltxt);
         }
 

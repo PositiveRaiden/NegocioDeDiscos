@@ -38,7 +38,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(658, 71);
+            this.btnEliminar.Location = new System.Drawing.Point(194, 62);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 27;
@@ -47,7 +47,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(577, 71);
+            this.btnModificar.Location = new System.Drawing.Point(113, 62);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 26;
@@ -56,7 +56,7 @@
             // 
             // btnAñadirDisco
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(496, 71);
+            this.btnAñadirDisco.Location = new System.Drawing.Point(32, 62);
             this.btnAñadirDisco.Name = "btnAñadirDisco";
             this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
             this.btnAñadirDisco.TabIndex = 24;
@@ -66,7 +66,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(665, 367);
+            this.btnSalir.Location = new System.Drawing.Point(194, 341);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 23;
@@ -76,16 +76,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 100);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(677, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(237, 217);
             this.dataGridView1.TabIndex = 20;
             // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(306, 376);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAñadirDisco);

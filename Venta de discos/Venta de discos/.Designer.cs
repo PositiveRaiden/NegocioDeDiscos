@@ -84,6 +84,7 @@
             this.btnNuevoPedido.TabIndex = 1;
             this.btnNuevoPedido.Text = "Nuevo Pedido";
             this.btnNuevoPedido.UseVisualStyleBackColor = true;
+            this.btnNuevoPedido.Click += new System.EventHandler(this.btnNuevoPedido_Click);
             // 
             // btnDiscos
             // 

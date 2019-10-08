@@ -20,7 +20,7 @@ namespace Venta_de_discos.Repositorios
         public DataTable ObtenerCliente()
         {
             //string sqltxt = "SELECT Id,Nombre,Apellido,Calle,NumDoc,id_TipoDocumento FROM Cliente";
-            string sqltxt = "SELECT Cliente.Id,Cliente.Nombre,Cliente.Apellido,Cliente.Calle,Cliente.NumDoc,TipoDoc.nombre FROM Cliente, TipoDoc WHERE Cliente.id_TipoDocumento=TipoDoc.id";
+            string sqltxt = "SELECT C.Id,C.Nombre,C.Apellido,C.Calle,C.NumDoc,T.nombre,B.nombre FROM Cliente C, TipoDoc T, Barrio B WHERE C.id_TipoDocumento=T.id AND C.id_Barrio=B.id";
             return _BD.consulta(sqltxt);
         }
 
@@ -45,7 +45,8 @@ namespace Venta_de_discos.Repositorios
                 cliente.Apellido = fila.ItemArray[2].ToString();
                 cliente.Calle = fila.ItemArray[3].ToString();
                 cliente.NumDoc = fila.ItemArray[4].ToString();
-                cliente.Id_TipoDoc = fila.ItemArray[5].ToString();
+                cliente.TipoDoc = fila.ItemArray[5].ToString();
+                cliente.Barrio = fila.ItemArray[6].ToString();
                 //cliente.TipoDoc = fila.ItemArray[5].ToString();
             }
 
@@ -55,13 +56,14 @@ namespace Venta_de_discos.Repositorios
         //aca
         public bool Guardar(Cliente cliente)
         {
-            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Calle],[NumDoc],[id_TipoDocumento])" +
+            string sqltxt = $"INSERT[dbo].[Cliente]([Nombre],[Apellido],[Calle],[NumDoc],[id_TipoDocumento],[id_Barrio])" +
                 $"VALUES " +
                 $"('{cliente.Nombre}', " +
                 $"'{cliente.Apellido}'," +
                 $"'{cliente.Calle}'," +
                 $"'{cliente.NumDoc}'," +
-                $"'{cliente.Id_TipoDoc}')";
+                $"'{cliente.Id_TipoDoc}'," +
+                $"'{cliente.Id_Barrio}')";
             return _BD.EjecutarSQL(sqltxt);
         }
 

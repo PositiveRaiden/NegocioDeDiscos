@@ -13,7 +13,7 @@ namespace Venta_de_discos.Clases
     {
         ClientesRepositorio clientesRepositorio = new ClientesRepositorio();
         public string Id { get; set; }
-        public string TipoDoc { get; set; }
+        public string Id_TipoDoc { get; set; }
         public string NumDoc { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }

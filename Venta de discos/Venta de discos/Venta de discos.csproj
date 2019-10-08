@@ -53,6 +53,7 @@
     <Compile Include="Clases\Pais.cs" />
     <Compile Include="Clases\Pedido.cs" />
     <Compile Include="Clases\SelloDiscografico.cs" />
+    <Compile Include="Clases\TipoDoc.cs" />
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +231,7 @@
     <Compile Include="Repositorios\PaisRepositorio.cs" />
     <Compile Include="Repositorios\PedidosRepositorio.cs" />
     <Compile Include="Repositorios\SelloRepositorio.cs" />
+    <Compile Include="Repositorios\TipoDocRepositorio.cs" />
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </EmbeddedResource>

@@ -84,12 +84,12 @@
             this.dataGridView2.Location = new System.Drawing.Point(432, 58);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(346, 331);
+            this.dataGridView2.Size = new System.Drawing.Size(245, 331);
             this.dataGridView2.TabIndex = 37;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(622, 406);
+            this.btnGuardar.Location = new System.Drawing.Point(521, 406);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 38;
@@ -99,7 +99,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(703, 406);
+            this.btnCancelar.Location = new System.Drawing.Point(602, 406);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 39;
@@ -132,9 +132,11 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 58);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(346, 331);
             this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // id
             // 
@@ -146,6 +148,7 @@
             // 
             this.NombreAlbum.HeaderText = "Nombre Album";
             this.NombreAlbum.Name = "NombreAlbum";
+            this.NombreAlbum.ReadOnly = true;
             // 
             // Cantidad
             // 
@@ -156,32 +159,42 @@
             // 
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Visible = false;
             // 
             // AñoEdicion
             // 
             this.AñoEdicion.HeaderText = "Año Edicion";
             this.AñoEdicion.Name = "AñoEdicion";
+            this.AñoEdicion.ReadOnly = true;
+            this.AñoEdicion.Visible = false;
             // 
             // Genero
             // 
             this.Genero.HeaderText = "Genero";
             this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Visible = false;
             // 
             // SelloDiscografico
             // 
             this.SelloDiscografico.HeaderText = "Sello Discografico";
             this.SelloDiscografico.Name = "SelloDiscografico";
+            this.SelloDiscografico.ReadOnly = true;
+            this.SelloDiscografico.Visible = false;
             // 
             // Interprete
             // 
             this.Interprete.HeaderText = "Interprete";
             this.Interprete.Name = "Interprete";
+            this.Interprete.ReadOnly = true;
+            this.Interprete.Visible = false;
             // 
             // NuevoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(691, 437);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);

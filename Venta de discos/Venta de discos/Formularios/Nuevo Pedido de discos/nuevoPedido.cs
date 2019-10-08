@@ -32,6 +32,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             var discos = discosRepositorio.ObtenerDiscos();
             dataGridView1.DataSource = discos;
             this.dataGridView1.Columns["id"].Visible = false;
+            this.dataGridView1.Columns["cantidad"].Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -58,7 +59,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
                     var fila = new string[] {
                     seleccionada.Cells["id"].Value?.ToString(),
                     seleccionada.Cells["Nombre Album"].Value?.ToString() ,
-                    seleccionada.Cells["Cantidad"].Value?.ToString(),
+                    "0",
                     seleccionada.Cells["Precio"].Value?.ToString(),
                     seleccionada.Cells["Año Edicion"].Value?.ToString(),
                     seleccionada.Cells["Genero"].Value?.ToString(),
@@ -127,6 +128,10 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             }
             return detalles;
         }
-    
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

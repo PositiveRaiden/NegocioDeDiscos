@@ -35,5 +35,10 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             frm.ShowDialog();
             cargarPedidos();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

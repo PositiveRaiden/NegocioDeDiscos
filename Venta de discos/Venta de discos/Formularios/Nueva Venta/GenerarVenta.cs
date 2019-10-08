@@ -32,9 +32,18 @@ namespace Venta_de_discos
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
             NuevaVenta frm = new NuevaVenta();
             frm.ShowDialog();
-           
         }
     }
 }

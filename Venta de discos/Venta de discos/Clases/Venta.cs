@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Venta_de_discos.Clases
+{
+    class Venta
+    {
+        public int id { get; set; }
+
+        public DateTime fecha { get; set; }
+
+        public decimal importe_total { get; set; }
+
+        //public string Cliente { get; set; }
+
+        //public IList<DetalleVenta> detalleVentas { get; set; }
+
+        public int descuento { get; set; }
+    }
+}

@@ -48,12 +48,14 @@
   <ItemGroup>
     <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\DetallePedido.cs" />
+    <Compile Include="Clases\DetalleVenta.cs" />
     <Compile Include="Clases\Genero.cs" />
     <Compile Include="Clases\Interprete.cs" />
     <Compile Include="Clases\Pais.cs" />
     <Compile Include="Clases\Pedido.cs" />
     <Compile Include="Clases\SelloDiscografico.cs" />
     <Compile Include="Clases\TipoDoc.cs" />
+    <Compile Include="Clases\Venta.cs" />
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>

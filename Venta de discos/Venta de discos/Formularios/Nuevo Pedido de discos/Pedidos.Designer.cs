@@ -33,8 +33,6 @@
             this.btnAñadirDisco = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnBuscarDisco = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +62,7 @@
             this.btnAñadirDisco.TabIndex = 24;
             this.btnAñadirDisco.Text = "Nuevo";
             this.btnAñadirDisco.UseVisualStyleBackColor = true;
+            this.btnAñadirDisco.Click += new System.EventHandler(this.btnAñadirDisco_Click);
             // 
             // btnSalir
             // 
@@ -82,36 +81,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(677, 249);
             this.dataGridView1.TabIndex = 20;
             // 
-            // btnBuscarDisco
-            // 
-            this.btnBuscarDisco.Location = new System.Drawing.Point(282, 61);
-            this.btnBuscarDisco.Name = "btnBuscarDisco";
-            this.btnBuscarDisco.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarDisco.TabIndex = 22;
-            this.btnBuscarDisco.Text = "Buscar";
-            this.btnBuscarDisco.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(63, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 28;
-            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAñadirDisco);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnBuscarDisco);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Pedidos";
             this.Text = "Pedidos";
+            this.Load += new System.EventHandler(this.Pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -124,7 +106,5 @@
         private System.Windows.Forms.Button btnAñadirDisco;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnBuscarDisco;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

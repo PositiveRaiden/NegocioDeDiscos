@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Barrio.cs" />
+    <Compile Include="Clases\DetallePedido.cs" />
     <Compile Include="Clases\Genero.cs" />
     <Compile Include="Clases\Interprete.cs" />
     <Compile Include="Clases\Pais.cs" />
+    <Compile Include="Clases\Pedido.cs" />
     <Compile Include="Clases\SelloDiscografico.cs" />
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
@@ -171,6 +173,12 @@
     <Compile Include="Formularios\Nueva Venta\NuevaVenta.Designer.cs">
       <DependentUpon>NuevaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Nuevo Pedido de discos\NuevoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nuevo Pedido de discos\NuevoPedido.Designer.cs">
+      <DependentUpon>NuevoPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +227,7 @@
     <Compile Include="Repositorios\GenerosRepositorio.cs" />
     <Compile Include="Repositorios\InterpretesRepositorio.cs" />
     <Compile Include="Repositorios\PaisRepositorio.cs" />
+    <Compile Include="Repositorios\PedidosRepositorio.cs" />
     <Compile Include="Repositorios\SelloRepositorio.cs" />
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
@@ -285,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nueva Venta\NuevaVenta.resx">
       <DependentUpon>NuevaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\NuevoPedido.resx">
+      <DependentUpon>NuevoPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

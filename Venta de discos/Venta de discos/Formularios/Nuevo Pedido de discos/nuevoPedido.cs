@@ -27,6 +27,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             ActualizarGrilla();
             LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
+
         private void ActualizarGrilla()
         {
             var discos = discosRepositorio.ObtenerDiscos();

@@ -15,7 +15,7 @@ namespace Venta_de_discos
 {
     public partial class GenerarVenta : Form
     {
-        VentasRepositorio VentasRepositorio = new VentasRepositorio();
+        VentasRepositorio ventasRepositorio = new VentasRepositorio();
         public GenerarVenta()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Venta_de_discos
 
         public void cargarVentas()
         {
-            var ventas = VentasRepositorio.ObtenerVentas();
+            var ventas = ventasRepositorio.ObtenerVentas();
             dgvVentas.DataSource = ventas;
         }
 
@@ -51,6 +51,7 @@ namespace Venta_de_discos
         {
             NuevaVenta frm = new NuevaVenta();
             frm.ShowDialog();
+            cargarVentas();
         }
     }
 }

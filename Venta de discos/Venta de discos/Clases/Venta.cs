@@ -18,7 +18,7 @@ namespace Venta_de_discos.Clases
 
         public int descuento { get; set; }        
 
-        public IList<DetalleVenta> detalleVenta { get; set; }
+        public IList<DetalleVenta> detalleVentas { get; set; }
 
     }
 }

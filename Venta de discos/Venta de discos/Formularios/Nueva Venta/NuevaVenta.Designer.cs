@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.lblImporteTotal = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +49,6 @@
             this.SelloDiscografico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Interprete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
             this.SuspendLayout();
@@ -175,6 +175,14 @@
             this.lblImporteTotal.Text = "Importe total: ";
             this.lblImporteTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(84, 417);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 53;
+            // 
             // id
             // 
             this.id.HeaderText = "id";
@@ -231,14 +239,6 @@
             this.subtotal.HeaderText = "SubTotal";
             this.subtotal.Name = "subtotal";
             // 
-            // txtTotal
-            // 
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(84, 417);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 53;
-            // 
             // NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +279,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label lblImporteTotal;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
@@ -288,6 +289,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SelloDiscografico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.TextBox txtTotal;
     }
 }

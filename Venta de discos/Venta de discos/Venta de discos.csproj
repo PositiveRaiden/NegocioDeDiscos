@@ -220,11 +220,11 @@
       <DependentUpon>MenuGestion.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Nueva Venta\Ventas.cs">
+    <Compile Include="Formularios\Nueva Venta\GenerarVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Nueva Venta\Ventas.Designer.cs">
-      <DependentUpon>Ventas.cs</DependentUpon>
+    <Compile Include="Formularios\Nueva Venta\GenerarVentas.Designer.cs">
+      <DependentUpon>GenerarVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -310,8 +310,8 @@
     <EmbeddedResource Include="MenuGestion.resx">
       <DependentUpon>MenuGestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Nueva Venta\Ventas.resx">
-      <DependentUpon>Ventas.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Nueva Venta\GenerarVentas.resx">
+      <DependentUpon>GenerarVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuMantenimiento.resx">
       <DependentUpon>MenuMantenimiento.cs</DependentUpon>

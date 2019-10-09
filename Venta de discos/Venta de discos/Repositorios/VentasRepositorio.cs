@@ -21,7 +21,7 @@ namespace Venta_de_discos.Repositorios
         {
             string sqltxt = "SELECT v.id as 'Numero de Venta', v.fecha, " +
                 "v.id_Cliente as 'Número de Cliente', c.Nombre, v.importe_Total as 'Importe Total' FROM Venta v, " +
-                "Cliente c WHERE v.id_Cliente = C.id";
+                "Cliente c WHERE v.id_Cliente = c.id";
             return _BD.consulta(sqltxt);
         }
 
@@ -37,12 +37,13 @@ namespace Venta_de_discos.Repositorios
                     if (v.id == 0)
                         throw new ApplicationException();
 
-                    foreach (var d in v.detalleVenta)
+                    foreach (var d in v.detalleVentas)
                     {
                         sqltxt = $"INSERT [dbo].[Detalle_Venta]" +
-                            $"([id_Venta], [id_Disco]), [Cantidad], [Precio]" +
-                            //$"VALUES ('{v.id_Venta}', '{v.id_disco}','{v.cantidad}', '{v.precio}')";
+                            $"([id_Venta], [id_disco]), [cantidad], [precio]" +
+                            $"VALUES ('{v.id}','{d.id_Venta}','{d.id_disco}','{d.cantidad}','{d.precio}')";
                         _BD.EjecutarTransaccion(sqltxt);
+
 
                         sqltxt = $"SELECT cantidad FROM Disco WHERE id={d.id_disco}";
 

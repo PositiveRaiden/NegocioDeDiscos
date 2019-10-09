@@ -14,7 +14,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
 {
     public partial class NuevaVenta : Form
     {
-        VentasRepositorio VentasRepositorio = new VentasRepositorio();
+        VentasRepositorio ventasRepositorio = new VentasRepositorio();
         DiscosRepositorio discosRepositorio = new DiscosRepositorio();
         ClientesRepositorio clientesRepositorio = new ClientesRepositorio();
 
@@ -56,8 +56,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             var discos = discosRepositorio.ObtenerDiscos();
             dgvDiscos.DataSource = discos;
             this.dgvDiscos.Columns["id"].Visible = false;
-            this.dgvDiscos.Columns["cantidad"].Visible = true;
-            this.dgvDiscos.Columns["precio"].Visible = true;
+            this.dgvDiscos.Columns["cantidad"].Visible = false;
+            this.dgvDiscos.Columns["precio"].Visible = false;
             this.dgvDiscos.Columns["genero"].Visible = false;
             this.dgvDiscos.Columns["año edicion"].Visible = false;
         }
@@ -123,6 +123,21 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             ActualizarTotal();
             return;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void ActualizarTotal()
         {
             var filas = dgvVentas.Rows;
@@ -155,7 +170,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            var discosAgregados = dgvVentas.Rows;
+            var discosAgregados = dgvVentas.Rows;//ventas es el 2, discos 1
             var seleccionadas = dgvDiscos.SelectedRows;
             bool existe = false;
             foreach (DataGridViewRow seleccionada in seleccionadas)
@@ -201,12 +216,12 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             {
                 var a = new Venta()
                 {
-                    id_Cliente = TxtCliente.Text,
-                    fecha = DateTime(ToString),
-                    detalleVenta = PreparaDetalles(),
+                    //id_Cliente = TxtCliente.Text,
+                    //fecha = DateTime(ToString),
+                    detalleVentas = PreparaDetalles(),
                     importe_Total = string.IsNullOrEmpty(txtTotal.Text) ? 0 : decimal.Parse(txtTotal.Text)
                 };
-                VentasRepositorio.Guardar(a);
+                ventasRepositorio.Guardar(a);
                 MessageBox.Show("La operación se realizó con exito");
                 this.Dispose();
             }

@@ -40,15 +40,16 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             cmbCliente.DisplayMember = "numDoc";
             cmbCliente.DataSource = clientes;
 
-            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            foreach (DataRow row in clientes.Rows)
-            {
-                collection.Add(Convert.ToString(row["numDoc"]));
-            }
 
-            cmbCliente.AutoCompleteCustomSource = collection;
-            cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbCliente.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            //foreach (DataRow row in clientes.Rows)
+            //{
+            //    collection.Add(Convert.ToString(row["numDoc"]));
+            //}
+
+            //cmbCliente.AutoCompleteCustomSource = collection;
+            //cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //cmbCliente.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void ActualizarGrilla()
@@ -253,6 +254,16 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 detalles.Add(detalle);
             }
             return detalles;
+        }
+
+        private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var index = cmbCliente.SelectedValue.ToString();
+            Cliente cliente = clientesRepositorio.ObtenerCliente(index);
+            textBox1.Text = cliente.Nombre.ToString();
+            textBox2.Text = cliente.Apellido.ToString();
+
+
         }
     }
     }

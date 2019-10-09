@@ -201,10 +201,10 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             {
                 var a = new Venta()
                 {
-
-                    fecha = DateTime.Today,
-                    detalleVenta = PreparaDetalles()
-
+                    id_Cliente = TxtCliente.Text,
+                    fecha = DateTime(ToString),
+                    detalleVenta = PreparaDetalles(),
+                    importe_Total = string.IsNullOrEmpty(txtTotal.Text) ? 0 : decimal.Parse(txtTotal.Text)
                 };
                 VentasRepositorio.Guardar(a);
                 MessageBox.Show("La operación se realizó con exito");

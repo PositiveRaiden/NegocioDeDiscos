@@ -28,6 +28,9 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             dgvClientes.DataSource = clientes;
             this.dgvClientes.Columns["id"].Visible = false;
             //this.dgvClientes.Columns["id_TipoDocumento"].Visible = false;
+            dgvClientes.Columns[4].HeaderText = "Numero de Documento"; //este anda bien pero queda mejor asi
+            dgvClientes.Columns[5].HeaderText = "Tipo Documento"; // Mismo eror que el de abajo
+            dgvClientes.Columns[6].HeaderText = "Barrio"; // SOLUCION TEMPORAL, VER DESPUES POR QUE SE PONE "NOMBRE1"
         }
 
         private void Clientes_Load(object sender, EventArgs e)
@@ -94,6 +97,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
                 }
 
             }
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

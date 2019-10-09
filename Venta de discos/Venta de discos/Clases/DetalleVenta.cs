@@ -10,11 +10,15 @@ namespace Venta_de_discos.Clases
     {
         public string id { get; set; }
 
-        public string id_Disco { get; set; }
+        public string id_Venta { get; set; }
+
+        public string id_disco { get; set; }
 
         public string cantidad { get; set; }
 
         public string precio { get; set; }
+
+
 
     }
 }

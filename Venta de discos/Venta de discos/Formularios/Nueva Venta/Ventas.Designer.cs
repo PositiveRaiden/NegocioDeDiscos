@@ -1,4 +1,7 @@
-﻿namespace Venta_de_discos
+﻿using System;
+using System.Windows.Forms;
+
+namespace Venta_de_discos
 {
     partial class GenerarVenta
     {
@@ -71,6 +74,7 @@
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.Size = new System.Drawing.Size(523, 213);
             this.dgvVentas.TabIndex = 4;
+            this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             // 
             // GenerarVenta
             // 
@@ -87,6 +91,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

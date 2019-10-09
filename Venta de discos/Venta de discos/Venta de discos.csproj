@@ -234,6 +234,7 @@
     <Compile Include="Repositorios\PedidosRepositorio.cs" />
     <Compile Include="Repositorios\SelloRepositorio.cs" />
     <Compile Include="Repositorios\TipoDocRepositorio.cs" />
+    <Compile Include="Repositorios\VentasRepositorio.cs" />
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </EmbeddedResource>

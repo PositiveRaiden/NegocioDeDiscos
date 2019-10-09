@@ -69,6 +69,7 @@
             this.btnAgregar.TabIndex = 48;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // btnCancelar
             // 

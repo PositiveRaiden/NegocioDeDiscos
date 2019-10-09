@@ -12,12 +12,13 @@ namespace Venta_de_discos.Clases
 
         public DateTime fecha { get; set; }
 
-        public decimal importe_total { get; set; }
+        public decimal importe_Total { get; set; }
 
-        //public string Cliente { get; set; }
+        public string id_Cliente { get; set; } //combo
 
-        //public IList<DetalleVenta> detalleVentas { get; set; }
+        public int descuento { get; set; }        
 
-        public int descuento { get; set; }
+        public IList<DetalleVenta> detalleVenta { get; set; }
+
     }
 }

@@ -32,7 +32,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,15 +41,15 @@
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SelloDiscografico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Interprete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDiscos = new System.Windows.Forms.DataGridView();
             this.LblFechaHoy = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -89,12 +89,12 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvVentas
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVentas.AllowUserToAddRows = false;
+            this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.NombreAlbum,
             this.Cantidad,
@@ -103,10 +103,10 @@
             this.Genero,
             this.SelloDiscografico,
             this.Interprete});
-            this.dataGridView2.Location = new System.Drawing.Point(432, 72);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(245, 331);
-            this.dataGridView2.TabIndex = 45;
+            this.dgvVentas.Location = new System.Drawing.Point(432, 72);
+            this.dgvVentas.Name = "dgvVentas";
+            this.dgvVentas.Size = new System.Drawing.Size(245, 331);
+            this.dgvVentas.TabIndex = 45;
             // 
             // id
             // 
@@ -160,15 +160,15 @@
             this.Interprete.ReadOnly = true;
             this.Interprete.Visible = false;
             // 
-            // dataGridView1
+            // dgvDiscos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(346, 331);
-            this.dataGridView1.TabIndex = 44;
+            this.dgvDiscos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiscos.Location = new System.Drawing.Point(12, 72);
+            this.dgvDiscos.Name = "dgvDiscos";
+            this.dgvDiscos.ReadOnly = true;
+            this.dgvDiscos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiscos.Size = new System.Drawing.Size(346, 331);
+            this.dgvDiscos.TabIndex = 44;
             // 
             // LblFechaHoy
             // 
@@ -245,15 +245,15 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVentas);
+            this.Controls.Add(this.dgvDiscos);
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
             this.Name = "NuevaVenta";
             this.Text = "Nueva Venta";
             this.Load += new System.EventHandler(this.NuevaVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -274,7 +274,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn SelloDiscografico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDiscos;
         private System.Windows.Forms.Label LblFechaHoy;
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Label label1;

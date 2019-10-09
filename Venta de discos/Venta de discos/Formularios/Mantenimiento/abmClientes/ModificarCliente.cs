@@ -16,12 +16,16 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
     {
         ClientesRepositorio clientesRepositorio;
         Cliente cliente;
+        BarriosRepositorio barrioRepositorio;
+        TipoDocRepositorio tipoDocRepositorio;
         string _id;
 
         public ModificarCliente(string clienteId)
         {
             InitializeComponent();
             clientesRepositorio = new ClientesRepositorio();
+            barrioRepositorio = new BarriosRepositorio();
+            tipoDocRepositorio = new TipoDocRepositorio();
             cliente = clientesRepositorio.ObtenerCliente(clienteId);
         }
 
@@ -31,7 +35,47 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             txtApellido.Text = cliente.Apellido;
             txtCalle.Text = cliente.NumDoc;//leer comentario de abajo
             txtNumDoc.Text = cliente.Calle;//estos estan invertidos y no se por que pasa eso!!
+            cmbBarrio.SelectedValue = cliente.Id_Barrio;
+            ActualizarComboBarrio();
+            cmbTipoDoc.SelectedValue = cliente.Id_TipoDoc;
+            ActualizarComboTipoDoc();
             _id = cliente.Id;
+        }
+
+        private void ActualizarComboBarrio()
+        {
+            var barrios = barrioRepositorio.ObtenerBarrio();
+            cmbBarrio.ValueMember = "Id";
+            cmbBarrio.DisplayMember = "nombre";
+            cmbBarrio.DataSource = barrios;
+
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in barrios.Rows)
+            {
+                collection.Add(Convert.ToString(row["nombre"]));
+            }
+
+            cmbBarrio.AutoCompleteCustomSource = collection;
+            cmbBarrio.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbBarrio.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+        private void ActualizarComboTipoDoc()
+        {
+            var tipoDoc = tipoDocRepositorio.ObtenerTipoDoc();
+            cmbTipoDoc.ValueMember = "Id";
+            cmbTipoDoc.DisplayMember = "nombre";
+            cmbTipoDoc.DataSource = tipoDoc;
+
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in tipoDoc.Rows)
+            {
+                collection.Add(Convert.ToString(row["nombre"]));
+            }
+
+            cmbTipoDoc.AutoCompleteCustomSource = collection;
+            cmbTipoDoc.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbTipoDoc.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

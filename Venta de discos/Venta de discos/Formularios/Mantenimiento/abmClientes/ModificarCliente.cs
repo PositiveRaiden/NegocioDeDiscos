@@ -33,8 +33,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
         {
             txtNombre.Text = cliente.Nombre;
             txtApellido.Text = cliente.Apellido;
-            txtCalle.Text = cliente.NumDoc;//leer comentario de abajo
-            txtNumDoc.Text = cliente.Calle;//estos estan invertidos y no se por que pasa eso!!
+            txtCalle.Text = cliente.Calle;//leer comentario de abajo
+            txtNumDoc.Text = cliente.NumDoc;//estos estan invertidos y no se por que pasa eso!!
             cmbBarrio.SelectedValue = cliente.Id_Barrio;
             ActualizarComboBarrio();
             cmbTipoDoc.SelectedValue = cliente.Id_TipoDoc;
@@ -90,6 +90,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             datosCliente.Apellido = txtApellido.Text.Trim();
             datosCliente.Calle = txtCalle.Text.Trim();
             datosCliente.NumDoc = txtNumDoc.Text.Trim();
+            datosCliente.Id_TipoDoc = cmbTipoDoc.SelectedValue.ToString();
+            datosCliente.Id_Barrio = cmbBarrio.SelectedValue.ToString();
             datosCliente.Id = _id;
 
             if (clientesRepositorio.Editar(datosCliente))

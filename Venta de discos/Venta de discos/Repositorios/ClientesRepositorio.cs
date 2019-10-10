@@ -79,6 +79,8 @@ namespace Venta_de_discos.Repositorios
                 $", apellido='{ cliente.Apellido}' " +
                 $", calle='{ cliente.Calle}' " +
                 $", numDoc='{ cliente.NumDoc}' " +
+                $", id_Barrio='{ cliente.Id_Barrio}' " +
+                $", id_TipoDocumento='{ cliente.Id_TipoDoc}' " +
                 $"WHERE id= {cliente.Id}";
             return _BD.EjecutarSQL(sqltxt);
 

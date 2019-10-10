@@ -63,45 +63,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.dgvDiscos.Columns["año edicion"].Visible = false;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            var discosAgregados = dgvVentas.Rows;
-            var seleccionadas = dgvDiscos.SelectedRows;
-            bool existe = false;
-            foreach (DataGridViewRow seleccionada in seleccionadas)
-            {
-                var codigo = seleccionada.Cells["Id"].Value?.ToString();
-                foreach (DataGridViewRow agregada in discosAgregados)
-                {
-                    if (agregada.Cells["id"].Value?.ToString() == codigo)
-                    {
-                        MessageBox.Show("Disco ya agregado");
-                        existe = true;
-                        break;
-                    }
-
-                }
-
-                if (existe == false)
-                {
-                    var fila = new string[] {
-                    seleccionada.Cells["id"].Value?.ToString(),
-                    seleccionada.Cells["Nombre Album"].Value?.ToString() ,
-                    "0",
-                    seleccionada.Cells["Precio"].Value?.ToString(),
-                    seleccionada.Cells["Año Edicion"].Value?.ToString(),
-                    seleccionada.Cells["Genero"].Value?.ToString(),
-                    seleccionada.Cells["Sello Discografico"].Value?.ToString(),
-                    seleccionada.Cells["Interprete"].Value.ToString()
-                    };
-
-                    dgvVentas.Rows.Add(fila);
-                }
-
-            }
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             
@@ -195,9 +156,10 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                     seleccionada.Cells["Nombre Album"].Value?.ToString() ,                    
                     seleccionada.Cells["Precio"].Value?.ToString(),
                     seleccionada.Cells["Año Edicion"].Value?.ToString(),
+                    "0",
                     seleccionada.Cells["Genero"].Value?.ToString(),
                     seleccionada.Cells["Sello Discografico"].Value?.ToString(),
-                    seleccionada.Cells["Interprete"].Value.ToString()
+                    seleccionada.Cells["Interprete"].Value.ToString(),
                     };
 
                     dgvVentas.Rows.Add(fila);

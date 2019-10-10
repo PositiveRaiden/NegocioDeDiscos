@@ -35,15 +35,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AñoEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelloDiscografico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Interprete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiscos = new System.Windows.Forms.DataGridView();
             this.LblFechaHoy = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
@@ -55,6 +46,15 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AñoEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SelloDiscografico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interprete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
             this.SuspendLayout();
@@ -108,8 +108,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.id,
             this.NombreAlbum,
             this.Precio,
-            this.Cantidad,
             this.AñoEdicion,
+            this.Cantidad,
             this.Genero,
             this.SelloDiscografico,
             this.Interprete,
@@ -119,62 +119,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.dgvVentas.Size = new System.Drawing.Size(418, 331);
             this.dgvVentas.TabIndex = 45;
             this.dgvVentas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellEndEdit);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // NombreAlbum
-            // 
-            this.NombreAlbum.HeaderText = "Nombre Album";
-            this.NombreAlbum.Name = "NombreAlbum";
-            this.NombreAlbum.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // AñoEdicion
-            // 
-            this.AñoEdicion.HeaderText = "Año Edicion";
-            this.AñoEdicion.Name = "AñoEdicion";
-            this.AñoEdicion.ReadOnly = true;
-            this.AñoEdicion.Visible = false;
-            // 
-            // Genero
-            // 
-            this.Genero.HeaderText = "Genero";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            this.Genero.Visible = false;
-            // 
-            // SelloDiscografico
-            // 
-            this.SelloDiscografico.HeaderText = "Sello Discografico";
-            this.SelloDiscografico.Name = "SelloDiscografico";
-            this.SelloDiscografico.ReadOnly = true;
-            this.SelloDiscografico.Visible = false;
-            // 
-            // Interprete
-            // 
-            this.Interprete.HeaderText = "Interprete";
-            this.Interprete.Name = "Interprete";
-            this.Interprete.ReadOnly = true;
-            this.Interprete.Visible = false;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "SubTotal";
-            this.subtotal.Name = "subtotal";
             // 
             // dgvDiscos
             // 
@@ -281,6 +225,62 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 57;
             // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // NombreAlbum
+            // 
+            this.NombreAlbum.HeaderText = "Nombre Album";
+            this.NombreAlbum.Name = "NombreAlbum";
+            this.NombreAlbum.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // AñoEdicion
+            // 
+            this.AñoEdicion.HeaderText = "Año Edicion";
+            this.AñoEdicion.Name = "AñoEdicion";
+            this.AñoEdicion.ReadOnly = true;
+            this.AñoEdicion.Visible = false;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Visible = false;
+            // 
+            // SelloDiscografico
+            // 
+            this.SelloDiscografico.HeaderText = "Sello Discografico";
+            this.SelloDiscografico.Name = "SelloDiscografico";
+            this.SelloDiscografico.ReadOnly = true;
+            this.SelloDiscografico.Visible = false;
+            // 
+            // Interprete
+            // 
+            this.Interprete.HeaderText = "Interprete";
+            this.Interprete.Name = "Interprete";
+            this.Interprete.ReadOnly = true;
+            this.Interprete.Visible = false;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "SubTotal";
+            this.subtotal.Name = "subtotal";
+            // 
             // NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,18 +331,18 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.Label lblImporteTotal;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreAlbum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AñoEdicion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SelloDiscografico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreAlbum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AñoEdicion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SelloDiscografico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
     }
 }

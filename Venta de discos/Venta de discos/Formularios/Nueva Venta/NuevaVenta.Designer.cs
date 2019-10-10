@@ -1,4 +1,6 @@
-﻿namespace Venta_de_discos.Formularios.Nueva_Venta
+﻿using System;
+
+namespace Venta_de_discos.Formularios.Nueva_Venta
 {
     partial class NuevaVenta
     {
@@ -308,6 +310,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

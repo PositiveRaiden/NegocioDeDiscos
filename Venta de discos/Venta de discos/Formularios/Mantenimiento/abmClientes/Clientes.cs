@@ -16,7 +16,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
     {
 
         ClientesRepositorio clientesRepositorio = new ClientesRepositorio();
-
+        TipoDocRepositorio tipoDocRepositorio = new TipoDocRepositorio();
         public Clientes()
         {
             InitializeComponent();
@@ -36,8 +36,16 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
         private void Clientes_Load(object sender, EventArgs e)
         {
             actualizarClientes();
-        }
+            ActualizarComboTipoDoc();
 
+        }
+        private void ActualizarComboTipoDoc()
+        {
+            var tiposDoc = tipoDocRepositorio.ObtenerTipoDoc();
+            cmbTipoDocumento.ValueMember = "Id";
+            cmbTipoDocumento.DisplayMember = "nombre";
+            cmbTipoDocumento.DataSource = tiposDoc;
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -103,5 +111,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //ActualizarClientesSegunFiltro(); FALTA ESTO
+        }
+
     }
 }

@@ -51,9 +51,15 @@ namespace Venta_de_discos.Repositorios
                         int number;
                         if(!int.TryParse(d.cantidad, out number))
                         {
+
+                            throw new ApplicationException();
+                        }
+                        if (number <= 0)
+                        {
                             throw new ApplicationException();
                         }
                         int nuevoStock = stock + number;
+
 
                         sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{nuevoStock}' WHERE id={d.idDisco}"; 
                         _BD.EjecutarTransaccion(sqltxt);

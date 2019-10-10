@@ -27,7 +27,7 @@ namespace Venta_de_discos.Repositorios
         //aca
         public Cliente ObtenerCliente(string clienteId)
         {
-            string sqltxt = $"SELECT * FROM [dbo].[Cliente] WHERE id = {clienteId}";
+            string sqltxt = $"SELECT C.Id,C.Nombre,C.Apellido,C.Calle,C.NumDoc,T.nombre,B.nombre FROM Cliente C, TipoDoc T, Barrio B WHERE C.id_TipoDocumento=T.id AND C.id_Barrio=B.id AND C.id = {clienteId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)

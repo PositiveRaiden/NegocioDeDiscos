@@ -211,32 +211,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             dgvVentas.Rows.RemoveAt(dgvVentas.CurrentRow.Index);
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var a = new Venta()
-                {
-                    //id_Cliente = TxtCliente.Text,
-                    //fecha = DateTime(ToString),
-                    detalleVentas = PreparaDetalles(),
-                    importe_Total = string.IsNullOrEmpty(txtTotal.Text) ? 0 : decimal.Parse(txtTotal.Text)
-                };
-                ventasRepositorio.Guardar(a);
-                MessageBox.Show("La operación se realizó con exito");
-                this.Dispose();
-            }
-            catch (ApplicationException aex)
-            {
-                MessageBox.Show(aex.Message);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Ocurrio un error inesperado");
-            }
-        }
-
         private List<DetalleVenta> PreparaDetalles()
         {
             var detalles = new List<DetalleVenta>();

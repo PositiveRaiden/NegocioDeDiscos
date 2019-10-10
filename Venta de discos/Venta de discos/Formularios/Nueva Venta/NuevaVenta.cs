@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Venta_de_discos.Clases;
+using Venta_de_discos.Formularios.Mantenimiento.abmCliente;
 using Venta_de_discos.Repositorios;
 
 namespace Venta_de_discos.Formularios.Nueva_Venta
@@ -41,15 +42,15 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             cmbCliente.DataSource = clientes;
 
 
-            //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            //foreach (DataRow row in clientes.Rows)
-            //{
-            //    collection.Add(Convert.ToString(row["numDoc"]));
-            //}
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            foreach (DataRow row in clientes.Rows)
+            {
+                collection.Add(Convert.ToString(row["numDoc"]));
+            }
 
-            //cmbCliente.AutoCompleteCustomSource = collection;
-            //cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            //cmbCliente.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cmbCliente.AutoCompleteCustomSource = collection;
+            cmbCliente.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbCliente.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void ActualizarGrilla()
@@ -193,8 +194,15 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         {
             try
             {
+                if (cmbCliente.SelectedValue is null)
+                {
+                    MessageBox.Show("Numero de documento inexistente!");
+                    cmbCliente.Focus();
+                    return;
+                }
                 var a = new Venta()
                 {
+
                     id_Cliente = cmbCliente.SelectedValue.ToString(),
                     fecha = DateTime.Today,
                     detalleVentas = PreparaDetalles(),
@@ -214,7 +222,13 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 MessageBox.Show("Ocurrio un error inesperado");
             }
         }
-    
+
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            NuevoCliente frm = new NuevoCliente();
+            frm.ShowDialog();
+            ActualizarComboCliente();
+        }
     }
 }
 

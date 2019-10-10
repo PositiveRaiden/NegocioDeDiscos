@@ -55,6 +55,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnNuevoCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
             this.SuspendLayout();
@@ -210,7 +211,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // cmbCliente
             // 
-            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(52, 35);
             this.cmbCliente.Name = "cmbCliente";
@@ -281,11 +281,22 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnNuevoCliente
+            // 
+            this.btnNuevoCliente.Location = new System.Drawing.Point(177, 86);
+            this.btnNuevoCliente.Name = "btnNuevoCliente";
+            this.btnNuevoCliente.Size = new System.Drawing.Size(94, 22);
+            this.btnNuevoCliente.TabIndex = 59;
+            this.btnNuevoCliente.Text = "Nuevo Cliente";
+            this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
+            // 
             // NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 504);
+            this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -344,5 +355,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNuevoCliente;
     }
 }

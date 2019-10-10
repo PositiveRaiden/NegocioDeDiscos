@@ -87,19 +87,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void ActualizarTotal()
         {
             var filas = dgvVentas.Rows;
@@ -185,7 +172,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 {
                     id_disco = fila.Cells["id"].Value?.ToString(),
                     cantidad = fila.Cells["Cantidad"].Value?.ToString(),
-                    precio = fila.Cells["costo"].Value?.ToString()
+                    precio = fila.Cells["precio"].Value?.ToString()
                 };
                 detalles.Add(detalle);
             }
@@ -208,8 +195,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             {
                 var a = new Venta()
                 {
-                    //id_Cliente = TxtCliente.Text,
-                    //fecha = DateTime(ToString),
+                    id_Cliente = cmbCliente.SelectedValue.ToString(),
+                    fecha = DateTime.Today,
                     detalleVentas = PreparaDetalles(),
                     importe_Total = string.IsNullOrEmpty(txtTotal.Text) ? 0 : decimal.Parse(txtTotal.Text)
                 };

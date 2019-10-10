@@ -31,17 +31,17 @@ namespace Venta_de_discos.Repositorios
             {
                 try
                 {
-                    string sqltxt = $"INSERT [dbo].[Venta] ([fecha])" +
-                        $" VALUES ('{UtilsDB.GetFecha(v.fecha)}')";
+                    string sqltxt = $"INSERT [dbo].[Venta] ([fecha],[id_Cliente],[importe_Total])" +
+                        $" VALUES ('{UtilsDB.GetFecha(v.fecha)}','{v.id_Cliente}','{v.importe_Total}')";
                     v.id = _BD.EjecutarTransaccion(sqltxt);
                     if (v.id == 0)
                         throw new ApplicationException();
 
                     foreach (var d in v.detalleVentas)
                     {
-                        sqltxt = $"INSERT [dbo].[Detalle_Venta]" +
-                            $"([id_Venta], [id_disco]), [cantidad], [precio]" +
-                            $"VALUES ('{v.id}','{d.id_Venta}','{d.id_disco}','{d.cantidad}','{d.precio}')";
+                         sqltxt = $"INSERT [dbo].[Detalle_Venta] " +
+                            $"([id_Venta], [id_disco], [cantidad], [precio])" +
+                            $" VALUES ('{v.id}','{d.id_disco}','{d.cantidad}','{d.precio}')";
                         _BD.EjecutarTransaccion(sqltxt);
 
 

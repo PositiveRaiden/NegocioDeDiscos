@@ -16,8 +16,6 @@ namespace Venta_de_discos.Clases
 
         public string id_Cliente { get; set; } //combo
 
-        public int descuento { get; set; }        
-
         public IList<DetalleVenta> detalleVentas { get; set; }
 
     }

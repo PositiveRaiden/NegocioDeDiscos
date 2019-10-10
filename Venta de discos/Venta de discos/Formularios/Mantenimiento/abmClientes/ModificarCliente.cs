@@ -90,9 +90,95 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             datosCliente.Apellido = txtApellido.Text.Trim();
             datosCliente.Calle = txtCalle.Text.Trim();
             datosCliente.NumDoc = txtNumDoc.Text.Trim();
-            datosCliente.Id_TipoDoc = cmbTipoDoc.SelectedValue.ToString();
-            datosCliente.Id_Barrio = cmbBarrio.SelectedValue.ToString();
+            if (cmbTipoDoc.SelectedValue is null)
+            {
+                MessageBox.Show("Tipo Documento no existe!");
+                cmbTipoDoc.Focus();
+                return;
+            }
+            else
+            {
+                datosCliente.Id_TipoDoc = cmbTipoDoc.SelectedValue.ToString();
+            }
+            if (cmbBarrio.SelectedValue is null)
+            {
+                MessageBox.Show("Barrio no existe!");
+                cmbBarrio.Focus();
+                return;
+            }
+            else
+            {
+                datosCliente.Id_Barrio = cmbBarrio.SelectedValue.ToString();
+            }
             datosCliente.Id = _id;
+
+            if (!datosCliente.NombreValido())
+            {
+                MessageBox.Show("Nombre Invalido!");
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return;
+            }
+            if (!datosCliente.ApellidoValido())
+            {
+                MessageBox.Show("Apellido Invalido!");
+                txtApellido.Text = "";
+                txtApellido.Focus();
+                return;
+            }
+
+
+
+            if (cmbTipoDoc.SelectedValue.ToString() == "1")
+            {
+                if (!datosCliente.DNIValido())
+                {
+                    MessageBox.Show("DNI Invalido!");
+                    txtNumDoc.Text = "";
+                    txtNumDoc.Focus();
+                    return;
+                }
+            }
+            if (cmbTipoDoc.SelectedValue.ToString() == "2")
+            {
+                if (!datosCliente.LCValido())
+                {
+                    MessageBox.Show("LC Invalido!");
+                    txtNumDoc.Text = "";
+                    txtNumDoc.Focus();
+                    return;
+                }
+            }
+            if (cmbTipoDoc.SelectedValue.ToString() == "3")
+            {
+                if (!datosCliente.PasaporteValido())
+                {
+                    MessageBox.Show("Pasaporte Invalido!");
+                    txtNumDoc.Text = "";
+                    txtNumDoc.Focus();
+                    return;
+                }
+            }
+
+            if (datosCliente.NumDoc != cliente.NumDoc)
+            {
+
+                if (datosCliente.numDocRepetido(cliente.NumDoc))
+                {
+                    MessageBox.Show("Numero de documento ya existe!");
+                    txtNumDoc.Text = "";
+                    txtNumDoc.Focus();
+                    return;
+                }
+            }
+
+            if (!datosCliente.CalleValida())
+            {
+                MessageBox.Show("Calle Invalida!");
+                txtCalle.Text = "";
+                txtCalle.Focus();
+                return;
+            }
 
             if (clientesRepositorio.Editar(datosCliente))
             {

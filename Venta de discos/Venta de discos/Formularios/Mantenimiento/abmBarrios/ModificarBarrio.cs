@@ -39,7 +39,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
 
             if (!datosBarrio.NombreValido())
             {
-                MessageBox.Show("Nombre Inválido!");
+                MessageBox.Show("Nombre inválido!");
                 txtBarrio.Text = "";
                 txtBarrio.Focus();
                 return;
@@ -48,7 +48,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
             {
                 if (datosBarrio.NombreRepetido(datosBarrio.Nombre))
                 {
-                    MessageBox.Show("Nombre ya existe!");
+                    MessageBox.Show("Nombre ya existente!");
                     txtBarrio.Text = "";
                     txtBarrio.Focus();
                     return;
@@ -57,14 +57,14 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
 
             if (!datosBarrio.LocalidadValida())
             {
-                MessageBox.Show("Localidad Inválida!");
+                MessageBox.Show("Localidad inválida!");
                 txtLocalidad.Text = "";
                 txtLocalidad.Focus();
                 return;
             }
             if (barriosRepositorio.Editar(datosBarrio))
             {
-                MessageBox.Show("La edicion ha finalizado correctamente.");
+                MessageBox.Show("La edición ha finalizado correctamente.");
                 this.Dispose();
             }
 

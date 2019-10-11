@@ -43,40 +43,40 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(619, 32);
+            this.btnEliminar.Location = new System.Drawing.Point(619, 21);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 32;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(538, 32);
+            this.btnModificar.Location = new System.Drawing.Point(538, 21);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 31;
+            this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar Disco";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(457, 32);
+            this.btnNuevo.Location = new System.Drawing.Point(457, 21);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 30;
+            this.btnNuevo.TabIndex = 5;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(263, 6);
+            this.btnBuscar.Location = new System.Drawing.Point(263, 18);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 29;
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -85,23 +85,23 @@
             // 
             this.cmbTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoDocumento.FormattingEnabled = true;
-            this.cmbTipoDocumento.Location = new System.Drawing.Point(109, 6);
+            this.cmbTipoDocumento.Location = new System.Drawing.Point(109, 18);
             this.cmbTipoDocumento.Name = "cmbTipoDocumento";
             this.cmbTipoDocumento.Size = new System.Drawing.Size(122, 21);
-            this.cmbTipoDocumento.TabIndex = 25;
+            this.cmbTipoDocumento.TabIndex = 1;
             // 
             // txtNumeroDocumento
             // 
-            this.txtNumeroDocumento.Location = new System.Drawing.Point(109, 32);
+            this.txtNumeroDocumento.Location = new System.Drawing.Point(109, 44);
             this.txtNumeroDocumento.MaxLength = 10;
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(122, 20);
-            this.txtNumeroDocumento.TabIndex = 27;
+            this.txtNumeroDocumento.TabIndex = 2;
             // 
             // lblNumeroDocumento
             // 
             this.lblNumeroDocumento.AutoSize = true;
-            this.lblNumeroDocumento.Location = new System.Drawing.Point(54, 35);
+            this.lblNumeroDocumento.Location = new System.Drawing.Point(54, 47);
             this.lblNumeroDocumento.Name = "lblNumeroDocumento";
             this.lblNumeroDocumento.Size = new System.Drawing.Size(44, 13);
             this.lblNumeroDocumento.TabIndex = 28;
@@ -110,7 +110,7 @@
             // lblNombreCliente
             // 
             this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(12, 9);
+            this.lblNombreCliente.Location = new System.Drawing.Point(12, 21);
             this.lblNombreCliente.Name = "lblNombreCliente";
             this.lblNombreCliente.Size = new System.Drawing.Size(86, 13);
             this.lblNombreCliente.TabIndex = 26;
@@ -121,7 +121,7 @@
             this.btnSalir.Location = new System.Drawing.Point(619, 380);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 24;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -133,7 +133,7 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(679, 295);
-            this.dgvClientes.TabIndex = 23;
+            this.dgvClientes.TabIndex = 4;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // Clientes

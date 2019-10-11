@@ -51,40 +51,40 @@
             // 
             // btnSalirMenu
             // 
-            this.btnSalirMenu.Location = new System.Drawing.Point(305, 238);
+            this.btnSalirMenu.Location = new System.Drawing.Point(270, 220);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnSalirMenu.TabIndex = 5;
+            this.btnSalirMenu.TabIndex = 7;
             this.btnSalirMenu.Text = "Salir";
             this.btnSalirMenu.UseVisualStyleBackColor = true;
             this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
             // 
             // btnInformes
             // 
-            this.btnInformes.Location = new System.Drawing.Point(15, 148);
+            this.btnInformes.Location = new System.Drawing.Point(12, 189);
             this.btnInformes.Name = "btnInformes";
             this.btnInformes.Size = new System.Drawing.Size(134, 24);
-            this.btnInformes.TabIndex = 2;
+            this.btnInformes.TabIndex = 5;
             this.btnInformes.Text = "Nacionalidad";
             this.btnInformes.UseVisualStyleBackColor = true;
             this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
             // 
             // btnVentaDeDiscos
             // 
-            this.btnVentaDeDiscos.Location = new System.Drawing.Point(15, 119);
+            this.btnVentaDeDiscos.Location = new System.Drawing.Point(12, 159);
             this.btnVentaDeDiscos.Name = "btnVentaDeDiscos";
             this.btnVentaDeDiscos.Size = new System.Drawing.Size(134, 23);
-            this.btnVentaDeDiscos.TabIndex = 1;
+            this.btnVentaDeDiscos.TabIndex = 4;
             this.btnVentaDeDiscos.Text = "Intérprete";
             this.btnVentaDeDiscos.UseVisualStyleBackColor = true;
             this.btnVentaDeDiscos.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
             // 
             // btnGeneros
             // 
-            this.btnGeneros.Location = new System.Drawing.Point(15, 90);
+            this.btnGeneros.Location = new System.Drawing.Point(12, 130);
             this.btnGeneros.Name = "btnGeneros";
             this.btnGeneros.Size = new System.Drawing.Size(134, 23);
-            this.btnGeneros.TabIndex = 0;
+            this.btnGeneros.TabIndex = 3;
             this.btnGeneros.Text = "Género ";
             this.btnGeneros.UseVisualStyleBackColor = true;
             this.btnGeneros.Click += new System.EventHandler(this.btnGeneros_Click_1);
@@ -92,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 62);
+            this.label1.Location = new System.Drawing.Point(9, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 13);
             this.label1.TabIndex = 12;
@@ -101,30 +101,30 @@
             // 
             // btnBarrio
             // 
-            this.btnBarrio.Location = new System.Drawing.Point(15, 178);
+            this.btnBarrio.Location = new System.Drawing.Point(12, 72);
             this.btnBarrio.Name = "btnBarrio";
             this.btnBarrio.Size = new System.Drawing.Size(134, 23);
-            this.btnBarrio.TabIndex = 3;
+            this.btnBarrio.TabIndex = 1;
             this.btnBarrio.Text = "Barrio";
             this.btnBarrio.UseVisualStyleBackColor = true;
             this.btnBarrio.Click += new System.EventHandler(this.btnBarrio_Click);
             // 
             // btnSello
             // 
-            this.btnSello.Location = new System.Drawing.Point(15, 207);
+            this.btnSello.Location = new System.Drawing.Point(12, 220);
             this.btnSello.Name = "btnSello";
             this.btnSello.Size = new System.Drawing.Size(134, 23);
-            this.btnSello.TabIndex = 4;
+            this.btnSello.TabIndex = 6;
             this.btnSello.Text = "Sello Discografico";
             this.btnSello.UseVisualStyleBackColor = true;
             this.btnSello.Click += new System.EventHandler(this.btnSello_Click);
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(15, 236);
+            this.btnCliente.Location = new System.Drawing.Point(12, 101);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(134, 23);
-            this.btnCliente.TabIndex = 13;
+            this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 283);
+            this.ClientSize = new System.Drawing.Size(395, 256);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnSello);
             this.Controls.Add(this.btnBarrio);

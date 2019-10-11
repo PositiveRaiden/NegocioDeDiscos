@@ -45,7 +45,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
 
             if (!datosGenero.NombreValido())
             {
-                MessageBox.Show("Nombre Inválido!");
+                MessageBox.Show("Nombre inválido!");
                 txtNombre.Text = "";
                 txtNombre.Focus();
                 return;
@@ -54,7 +54,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
             {
                 if (datosGenero.NombreRepetido(datosGenero.Nombre))
                 {
-                    MessageBox.Show("Nombre ya existe!");
+                    MessageBox.Show("Nombre ya existente!");
                     txtNombre.Text = "";
                     txtNombre.Focus();
                     return;
@@ -70,7 +70,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmGeneros
             }
             if (generosRepositorio.Editar(datosGenero))
             {
-                MessageBox.Show("La edicion ha finalizado correctamente.");
+                MessageBox.Show("La edición ha finalizado correctamente.");
                 this.Dispose();
             }
         }

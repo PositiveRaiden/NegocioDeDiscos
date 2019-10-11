@@ -68,7 +68,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
             var seleccionados = dgvBarrios.SelectedRows;
             if (seleccionados.Count == 0 || seleccionados.Count > 1)
             {
-                MessageBox.Show("Deberia seleccionar una fila");
+                MessageBox.Show("Primero seleccione una fila!");
                 return;
             }
             foreach (DataGridViewRow fila in seleccionados)
@@ -76,8 +76,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
                 var nombre = fila.Cells[1].Value;
                 var id = fila.Cells[0].Value;
 
-                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar a {nombre}?",
-                    "Confirmar operacion",
+                var confirmacion = MessageBox.Show($"¿Está seguro/a de eliminar a {nombre}?",
+                    "Confirmar operación",
                     MessageBoxButtons.YesNo);
 
                 if (confirmacion.Equals(DialogResult.No))
@@ -85,7 +85,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.Barrios
 
                 if (barriosRepositorio.Eliminar(id.ToString()))
                 {
-                    MessageBox.Show($"Usted Elimino a {nombre}");
+                    MessageBox.Show($"Usted eliminó a {nombre}.");
                     actualizarBarrios();
                 }
 

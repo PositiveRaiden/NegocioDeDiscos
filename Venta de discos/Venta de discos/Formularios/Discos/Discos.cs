@@ -47,7 +47,7 @@ namespace Venta_de_discos
             DataRow row = interpretes.NewRow();
             row["nombre"] = "Todos";
             row["Id"] = 0;
-            interpretes.Rows.Add(row);
+            interpretes.Rows.InsertAt(row, 0);
 
             cmbInterprete.DataSource = interpretes;
             cmbInterprete.ValueMember = "id";

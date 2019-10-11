@@ -38,7 +38,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(158, 78);
+            this.btnSalir.Location = new System.Drawing.Point(186, 90);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 3;
@@ -48,7 +48,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(65, 78);
+            this.btnAceptar.Location = new System.Drawing.Point(93, 90);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 125);
+            this.ClientSize = new System.Drawing.Size(278, 125);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.btnSalir);

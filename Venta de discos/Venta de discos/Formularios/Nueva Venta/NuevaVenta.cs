@@ -58,7 +58,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             var discos = discosRepositorio.ObtenerDiscos();
             dgvDiscos.DataSource = discos;
             this.dgvDiscos.Columns["id"].Visible = false;
-            this.dgvDiscos.Columns["cantidad"].Visible = false;
+            this.dgvDiscos.Columns["cantidad"].Visible = true;
             this.dgvDiscos.Columns["precio"].Visible = false;
             this.dgvDiscos.Columns["genero"].Visible = false;
             this.dgvDiscos.Columns["año edicion"].Visible = false;
@@ -130,7 +130,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 {
                     if (agregada.Cells["id"].Value?.ToString() == codigo)
                     {
-                        MessageBox.Show("Disco ya agregado");
+                        MessageBox.Show("Disco ya agregado.");
                         existe = true;
                         break;
                     }
@@ -196,7 +196,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             {
                 if (cmbCliente.SelectedValue is null)
                 {
-                    MessageBox.Show("Numero de documento inexistente!");
+                    MessageBox.Show("Número de documento inexistente!");
                     cmbCliente.Focus();
                     return;
                 }
@@ -209,7 +209,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                     importe_Total = string.IsNullOrEmpty(txtTotal.Text) ? 0 : decimal.Parse(txtTotal.Text)
                 };
                 ventasRepositorio.Guardar(a);
-                MessageBox.Show("La operación se realizó con exito");
+                MessageBox.Show("La operación se realizó con éxito.");
                 this.Dispose();
             }
             catch (ApplicationException aex)
@@ -219,7 +219,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             catch (Exception ex)
             {
 
-                MessageBox.Show("Ocurrio un error inesperado");
+                MessageBox.Show("Ocurrió un error inesperado.");
             }
         }
 

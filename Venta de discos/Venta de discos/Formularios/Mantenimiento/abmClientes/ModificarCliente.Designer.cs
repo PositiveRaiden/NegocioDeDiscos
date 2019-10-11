@@ -47,7 +47,7 @@
             // cmbBarrio
             // 
             this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(104, 137);
+            this.cmbBarrio.Location = new System.Drawing.Point(104, 153);
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
             this.cmbBarrio.TabIndex = 6;
@@ -55,7 +55,7 @@
             // lblBarrio
             // 
             this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(12, 140);
+            this.lblBarrio.Location = new System.Drawing.Point(12, 157);
             this.lblBarrio.Name = "lblBarrio";
             this.lblBarrio.Size = new System.Drawing.Size(37, 13);
             this.lblBarrio.TabIndex = 56;
@@ -63,7 +63,7 @@
             // 
             // txtCalle
             // 
-            this.txtCalle.Location = new System.Drawing.Point(104, 111);
+            this.txtCalle.Location = new System.Drawing.Point(104, 127);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 20);
             this.txtCalle.TabIndex = 5;
@@ -71,7 +71,7 @@
             // lblCalle
             // 
             this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(12, 114);
+            this.lblCalle.Location = new System.Drawing.Point(12, 131);
             this.lblCalle.Name = "lblCalle";
             this.lblCalle.Size = new System.Drawing.Size(33, 13);
             this.lblCalle.TabIndex = 54;
@@ -80,14 +80,14 @@
             // cmbTipoDoc
             // 
             this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(104, 58);
+            this.cmbTipoDoc.Location = new System.Drawing.Point(104, 74);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(100, 21);
             this.cmbTipoDoc.TabIndex = 3;
             // 
             // txtNumDoc
             // 
-            this.txtNumDoc.Location = new System.Drawing.Point(104, 85);
+            this.txtNumDoc.Location = new System.Drawing.Point(104, 101);
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumDoc.TabIndex = 4;
@@ -95,7 +95,7 @@
             // lblNumeroDoc
             // 
             this.lblNumeroDoc.AutoSize = true;
-            this.lblNumeroDoc.Location = new System.Drawing.Point(12, 88);
+            this.lblNumeroDoc.Location = new System.Drawing.Point(12, 105);
             this.lblNumeroDoc.Name = "lblNumeroDoc";
             this.lblNumeroDoc.Size = new System.Drawing.Size(70, 13);
             this.lblNumeroDoc.TabIndex = 51;
@@ -104,7 +104,7 @@
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
-            this.lblTipoDoc.Location = new System.Drawing.Point(12, 61);
+            this.lblTipoDoc.Location = new System.Drawing.Point(12, 78);
             this.lblTipoDoc.Name = "lblTipoDoc";
             this.lblTipoDoc.Size = new System.Drawing.Size(89, 13);
             this.lblTipoDoc.TabIndex = 50;
@@ -112,7 +112,7 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(104, 32);
+            this.txtApellido.Location = new System.Drawing.Point(104, 48);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 2;
@@ -120,7 +120,7 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(12, 35);
+            this.lblApellido.Location = new System.Drawing.Point(12, 52);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(47, 13);
             this.lblApellido.TabIndex = 49;
@@ -128,7 +128,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(104, 164);
+            this.btnCancelar.Location = new System.Drawing.Point(129, 193);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -138,7 +138,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(23, 164);
+            this.btnAceptar.Location = new System.Drawing.Point(48, 193);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 7;
@@ -148,7 +148,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(104, 6);
+            this.txtNombre.Location = new System.Drawing.Point(104, 22);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
@@ -156,7 +156,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 9);
+            this.lblNombre.Location = new System.Drawing.Point(12, 26);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 48;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(214, 202);
+            this.ClientSize = new System.Drawing.Size(235, 228);
             this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.lblBarrio);
             this.Controls.Add(this.txtCalle);
@@ -182,7 +182,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Name = "ModificarCliente";
-            this.Text = "ModificarCliente";
+            this.Text = "Modificar Cliente";
             this.Load += new System.EventHandler(this.ModificarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -47,9 +47,9 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             var tiposDoc = tipoDocRepositorio.ObtenerTipoDoc();
 
             DataRow row = tiposDoc.NewRow();
-            row["nombre"] = "Todos";
+            row["nombre"] = "TODOS";
             row["Id"] = 0;
-            tiposDoc.Rows.Add(row);
+            tiposDoc.Rows.InsertAt(row, 0);
 
 
             cmbTipoDocumento.ValueMember = "Id";
@@ -91,7 +91,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
             var seleccionados = dgvClientes.SelectedRows;
             if (seleccionados.Count == 0 || seleccionados.Count > 1)
             {
-                MessageBox.Show("Deberia seleccionar una fila");
+                MessageBox.Show("Debe seleccionar una fila");
                 return;
             }
             foreach (DataGridViewRow fila in seleccionados)
@@ -101,8 +101,8 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
                 var apellido = fila.Cells[2].Value;
                 
 
-                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar a {nombre} {apellido}?",
-                    "Confirmar operacion",
+                var confirmacion = MessageBox.Show($"¿Está seguro/a de eliminar a {nombre} {apellido}?",
+                    "Confirmar operación",
                     MessageBoxButtons.YesNo);
 
                 if (confirmacion.Equals(DialogResult.No))
@@ -144,7 +144,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
                 }
                 else
                 {
-                    MessageBox.Show("DNI Invalido!");
+                    MessageBox.Show("DNI Inválido!");
                     txtNumeroDocumento.Text = "";
                     txtNumeroDocumento.Focus();
                     return;
@@ -161,7 +161,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
                 }
                 else
                 {
-                    MessageBox.Show("LC Invalido!");
+                    MessageBox.Show("LC Inválido!");
                     txtNumeroDocumento.Text = "";
                     txtNumeroDocumento.Focus();
                     return;
@@ -179,7 +179,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
                     }
                     else
                     {
-                        MessageBox.Show("Pasaporte Invalido!");
+                        MessageBox.Show("Pasaporte Inválido!");
                         txtNumeroDocumento.Text = "";
                         txtNumeroDocumento.Focus();
                         return;
@@ -187,7 +187,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
                 }
                 else
                 {
-                    MessageBox.Show("Pasaporte Invalido!");
+                    MessageBox.Show("Pasaporte Inválido!");
                     txtNumeroDocumento.Text = "";
                     txtNumeroDocumento.Focus();
                     return;

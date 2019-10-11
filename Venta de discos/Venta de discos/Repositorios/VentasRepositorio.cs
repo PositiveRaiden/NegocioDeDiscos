@@ -19,7 +19,7 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerVentas()
         {
-            string sqltxt = "SELECT v.id as 'Numero de Venta', v.fecha, " +
+            string sqltxt = "SELECT v.id as 'Numero de Venta', v.fecha as 'Fecha', " +
                 "v.id_Cliente as 'Número de Cliente', c.Nombre, v.importe_Total as 'Importe Total' FROM Venta v, " +
                 "Cliente c WHERE v.id_Cliente = c.id";
             return _BD.consulta(sqltxt);

@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Clases;
 using Venta_de_discos.Formularios.Mantenimiento.abmCliente;
 using Venta_de_discos.Repositorios;
 
@@ -42,7 +43,15 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
         }
         private void ActualizarComboTipoDoc()
         {
+
             var tiposDoc = tipoDocRepositorio.ObtenerTipoDoc();
+
+            DataRow row = tiposDoc.NewRow();
+            row["nombre"] = "Todos";
+            row["Id"] = 0;
+            tiposDoc.Rows.Add(row);
+
+
             cmbTipoDocumento.ValueMember = "Id";
             cmbTipoDocumento.DisplayMember = "nombre";
             cmbTipoDocumento.DataSource = tiposDoc;
@@ -115,6 +124,11 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (cmbTipoDocumento.SelectedValue.ToString() == "0")
+            {
+                actualizarClientes();
+                return;
+            }
             ActualizarClientesSegunFiltro();
         }
         private void ActualizarClientesSegunFiltro()

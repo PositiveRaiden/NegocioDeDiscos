@@ -43,6 +43,12 @@ namespace Venta_de_discos
         private void CargarComboInterprete()
         {
             var interpretes = disc.ObtenerInterprete();
+
+            DataRow row = interpretes.NewRow();
+            row["nombre"] = "Todos";
+            row["Id"] = 0;
+            interpretes.Rows.Add(row);
+
             cmbInterprete.DataSource = interpretes;
             cmbInterprete.ValueMember = "id";
             cmbInterprete.DisplayMember = "nombre";
@@ -76,7 +82,11 @@ namespace Venta_de_discos
 
         private void btnBuscarDisco_Click(object sender, EventArgs e)
         {
-
+            if (cmbInterprete.SelectedValue.ToString() == "0")
+            {
+                CargarDiscos();
+                return;
+            }
             ActualizarDiscosSegunFiltroInterprete();
         }
 

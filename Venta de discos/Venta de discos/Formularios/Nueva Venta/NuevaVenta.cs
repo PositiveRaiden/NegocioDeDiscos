@@ -126,6 +126,13 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             foreach (DataGridViewRow seleccionada in seleccionadas)
             {
                 var codigo = seleccionada.Cells["Id"].Value?.ToString();
+
+                if (seleccionada.Cells["Cantidad"].Value?.ToString() == "0")
+                {
+                    MessageBox.Show("Disco sin stock para venta");
+                    existe = true;
+                    break;
+                }
                 foreach (DataGridViewRow agregada in discosAgregados)
                 {
                     if (agregada.Cells["id"].Value?.ToString() == codigo)
@@ -135,10 +142,13 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                         break;
                     }
 
+
                 }
+
 
                 if (existe == false)
                 {
+
                     var fila = new string[] {
                     seleccionada.Cells["id"].Value?.ToString(),
                     seleccionada.Cells["Nombre Album"].Value?.ToString() ,                    
@@ -218,7 +228,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Ocurrió un error inesperado.");
             }
         }

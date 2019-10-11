@@ -116,6 +116,7 @@
             // txtNombreAlbum
             // 
             this.txtNombreAlbum.Location = new System.Drawing.Point(187, 81);
+            this.txtNombreAlbum.MaxLength = 30;
             this.txtNombreAlbum.Name = "txtNombreAlbum";
             this.txtNombreAlbum.Size = new System.Drawing.Size(100, 20);
             this.txtNombreAlbum.TabIndex = 10;
@@ -123,6 +124,7 @@
             // txtAñoEdicion
             // 
             this.txtAñoEdicion.Location = new System.Drawing.Point(187, 188);
+            this.txtAñoEdicion.MaxLength = 4;
             this.txtAñoEdicion.Name = "txtAñoEdicion";
             this.txtAñoEdicion.Size = new System.Drawing.Size(100, 20);
             this.txtAñoEdicion.TabIndex = 13;
@@ -131,6 +133,7 @@
             // 
             this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(187, 214);
+            this.txtCantidad.MaxLength = 4;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 14;
@@ -184,6 +187,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(187, 240);
+            this.txtPrecio.MaxLength = 10;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 38;

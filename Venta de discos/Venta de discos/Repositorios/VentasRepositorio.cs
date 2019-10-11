@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Venta_de_discos.Clases;
 using Venta_de_discos.Helpers;
 
@@ -57,12 +58,12 @@ namespace Venta_de_discos.Repositorios
                         }
                         if (number <= 0)
                         {
-                            throw new ApplicationException();
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
                         }
                         int nuevoStock = stock - number;
                         if(nuevoStock < 0)
                         {
-                            throw new ApplicationException();
+                            throw new ApplicationException("No hay stock suficiente.");
                         }
 
                         sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{nuevoStock}' WHERE id={d.id_disco}";
@@ -71,14 +72,19 @@ namespace Venta_de_discos.Repositorios
 
                     tx.Commit();
                 }
+                catch (ApplicationException aex)
+                {
+                    throw aex;
+                }
                 catch (Exception ex)
                 {
                     tx.Rollback();
-                    throw new ApplicationException("No se pudo realizar la operación.");
+                    throw new Exception("No se pudo realizar la operación.");
                 }
+
                 finally
                 {
-                    //_BD.cerrar();
+                    _BD.cerrar();
                 }
             }
 

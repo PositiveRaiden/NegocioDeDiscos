@@ -52,11 +52,11 @@ namespace Venta_de_discos.Repositorios
                         if(!int.TryParse(d.cantidad, out number))
                         {
 
-                            throw new ApplicationException();
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
                         }
                         if (number <= 0)
                         {
-                            throw new ApplicationException();
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
                         }
                         int nuevoStock = stock + number;
 
@@ -67,14 +67,18 @@ namespace Venta_de_discos.Repositorios
 
                     tx.Commit();
                 }
+                catch (ApplicationException aex)
+                {
+                    throw aex;
+                }
                 catch (Exception ex)
                 {
                     tx.Rollback();
-                    throw new ApplicationException("No se pudo realizar la operación.");
+                    throw new Exception("No se pudo realizar la operación.");
                 }
                 finally
                 {
-                    //_BD.cerrar();
+                    _BD.cerrar();
                 }
             }
 

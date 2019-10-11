@@ -37,7 +37,7 @@ namespace Venta_de_discos
             cmd.CommandType = CommandType.Text;
         }
         //procedimiento privado <cerrar> que finaliza la conexión con la base de datos
-        private void cerrar()
+        public void cerrar()
         {
             //cierra la conexión con la base de datos
             conexion.Close();

@@ -46,6 +46,7 @@
             // txtNuevoPais
             // 
             this.txtNuevoPais.Location = new System.Drawing.Point(90, 31);
+            this.txtNuevoPais.MaxLength = 30;
             this.txtNuevoPais.Name = "txtNuevoPais";
             this.txtNuevoPais.Size = new System.Drawing.Size(200, 20);
             this.txtNuevoPais.TabIndex = 1;

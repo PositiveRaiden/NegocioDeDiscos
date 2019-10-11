@@ -78,6 +78,8 @@
             // 
             // dgvBarrios
             // 
+            this.dgvBarrios.AllowUserToAddRows = false;
+            this.dgvBarrios.AllowUserToDeleteRows = false;
             this.dgvBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBarrios.Location = new System.Drawing.Point(28, 73);
             this.dgvBarrios.Name = "dgvBarrios";

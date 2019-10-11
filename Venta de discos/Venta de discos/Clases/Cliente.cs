@@ -31,19 +31,19 @@ namespace Venta_de_discos.Clases
 
         public bool NombreValido()
         {
-            if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 51)
+            if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 25)
                 return true;
             return false;
         }
         public bool ApellidoValido()
         {
-            if (!string.IsNullOrEmpty(Apellido) && Apellido.Length < 51)
+            if (!string.IsNullOrEmpty(Apellido) && Apellido.Length < 25)
                 return true;
             return false;
         }
         public bool CalleValida()
         {
-            if (!string.IsNullOrEmpty(Calle) && Calle.Length < 51)
+            if (!string.IsNullOrEmpty(Calle) && Calle.Length < 30)
                 return true;
             return false;
         }

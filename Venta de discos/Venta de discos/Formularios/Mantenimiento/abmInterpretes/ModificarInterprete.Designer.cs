@@ -40,6 +40,7 @@
             // 
             this.cmbPais.FormattingEnabled = true;
             this.cmbPais.Location = new System.Drawing.Point(89, 71);
+            this.cmbPais.MaxLength = 30;
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(200, 21);
             this.cmbPais.TabIndex = 19;
@@ -67,6 +68,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(89, 25);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 14;

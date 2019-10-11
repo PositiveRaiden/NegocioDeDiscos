@@ -41,9 +41,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(75, 73);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(677, 249);
             this.dataGridView1.TabIndex = 3;
             // 
@@ -81,6 +84,7 @@
             // 
             this.cmbInterprete.FormattingEnabled = true;
             this.cmbInterprete.Location = new System.Drawing.Point(128, 32);
+            this.cmbInterprete.MaxLength = 30;
             this.cmbInterprete.Name = "cmbInterprete";
             this.cmbInterprete.Size = new System.Drawing.Size(103, 21);
             this.cmbInterprete.TabIndex = 1;

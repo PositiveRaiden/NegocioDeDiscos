@@ -39,6 +39,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(142, 80);
+            this.txtDescripcion.MaxLength = 51;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(200, 20);
             this.txtDescripcion.TabIndex = 25;
@@ -66,6 +67,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(142, 35);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 20;

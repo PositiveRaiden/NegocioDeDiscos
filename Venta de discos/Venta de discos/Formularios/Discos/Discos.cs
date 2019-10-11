@@ -82,11 +82,20 @@ namespace Venta_de_discos
 
         private void btnBuscarDisco_Click(object sender, EventArgs e)
         {
+            if (cmbInterprete.SelectedValue is null)
+            {
+                MessageBox.Show("Interprete no existe!");
+                cmbInterprete.Focus();
+                return;
+            }
+
             if (cmbInterprete.SelectedValue.ToString() == "0")
             {
                 CargarDiscos();
                 return;
             }
+
+
             ActualizarDiscosSegunFiltroInterprete();
         }
 

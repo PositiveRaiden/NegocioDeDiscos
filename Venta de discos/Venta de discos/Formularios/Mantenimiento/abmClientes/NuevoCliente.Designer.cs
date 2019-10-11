@@ -48,6 +48,7 @@
             // 
             this.cmbBarrio.FormattingEnabled = true;
             this.cmbBarrio.Location = new System.Drawing.Point(104, 148);
+            this.cmbBarrio.MaxLength = 30;
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
             this.cmbBarrio.TabIndex = 6;
@@ -65,6 +66,7 @@
             // 
             this.cmbTipoDoc.FormattingEnabled = true;
             this.cmbTipoDoc.Location = new System.Drawing.Point(104, 72);
+            this.cmbTipoDoc.MaxLength = 10;
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(100, 21);
             this.cmbTipoDoc.TabIndex = 3;
@@ -82,6 +84,7 @@
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(104, 123);
+            this.txtCalle.MaxLength = 30;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(100, 20);
             this.txtCalle.TabIndex = 5;
@@ -89,6 +92,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(104, 48);
+            this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 2;
@@ -96,6 +100,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(104, 22);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
@@ -103,6 +108,7 @@
             // txtNumDoc
             // 
             this.txtNumDoc.Location = new System.Drawing.Point(104, 98);
+            this.txtNumDoc.MaxLength = 15;
             this.txtNumDoc.Name = "txtNumDoc";
             this.txtNumDoc.Size = new System.Drawing.Size(100, 20);
             this.txtNumDoc.TabIndex = 4;

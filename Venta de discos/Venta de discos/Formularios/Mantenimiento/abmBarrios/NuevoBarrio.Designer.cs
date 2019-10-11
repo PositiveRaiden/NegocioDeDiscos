@@ -59,6 +59,7 @@
             // txtBarrio
             // 
             this.txtBarrio.Location = new System.Drawing.Point(81, 19);
+            this.txtBarrio.MaxLength = 30;
             this.txtBarrio.Name = "txtBarrio";
             this.txtBarrio.Size = new System.Drawing.Size(100, 20);
             this.txtBarrio.TabIndex = 0;
@@ -75,6 +76,7 @@
             // txtLocalidad
             // 
             this.txtLocalidad.Location = new System.Drawing.Point(81, 45);
+            this.txtLocalidad.MaxLength = 30;
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(100, 20);
             this.txtLocalidad.TabIndex = 1;

@@ -59,6 +59,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(81, 19);
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 5;
@@ -86,6 +87,7 @@
             this.cmbPais.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbPais.FormattingEnabled = true;
             this.cmbPais.Location = new System.Drawing.Point(81, 63);
+            this.cmbPais.MaxLength = 30;
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(200, 21);
             this.cmbPais.TabIndex = 13;

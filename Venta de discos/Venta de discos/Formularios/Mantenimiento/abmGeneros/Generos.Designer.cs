@@ -78,6 +78,8 @@
             // 
             // dgvGeneros
             // 
+            this.dgvGeneros.AllowUserToAddRows = false;
+            this.dgvGeneros.AllowUserToDeleteRows = false;
             this.dgvGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGeneros.Location = new System.Drawing.Point(28, 72);
             this.dgvGeneros.Name = "dgvGeneros";

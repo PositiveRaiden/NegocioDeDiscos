@@ -29,7 +29,7 @@ namespace Venta_de_discos
 
         public bool NombreAlbumValido()
         {
-            if (!string.IsNullOrEmpty(nombreAlbum) && nombreAlbum.Length < 51)
+            if (!string.IsNullOrEmpty(nombreAlbum) && nombreAlbum.Length < 25)
                 return true;
             return false;
         }
@@ -53,7 +53,7 @@ namespace Venta_de_discos
         {
             int number;
             int.TryParse(año, out number);
-            if (number>1800 && number<2019)
+            if (number>1500 && number<= DateTime.Today.Year)
             {
                 return true;
             }

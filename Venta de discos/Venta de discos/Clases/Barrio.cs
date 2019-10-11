@@ -39,7 +39,7 @@ namespace Venta_de_discos.Clases
 
         public bool LocalidadValida()
         {
-            if (Localidad.Length < 51)
+            if (Localidad.Length < 25)
                 return true;
             return false;
         }

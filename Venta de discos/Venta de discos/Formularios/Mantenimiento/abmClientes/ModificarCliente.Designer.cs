@@ -48,6 +48,7 @@
             // 
             this.cmbBarrio.FormattingEnabled = true;
             this.cmbBarrio.Location = new System.Drawing.Point(104, 153);
+            this.cmbBarrio.MaxLength = 30;
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(100, 21);
             this.cmbBarrio.TabIndex = 6;
@@ -81,6 +82,7 @@
             // 
             this.cmbTipoDoc.FormattingEnabled = true;
             this.cmbTipoDoc.Location = new System.Drawing.Point(104, 74);
+            this.cmbTipoDoc.MaxLength = 10;
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(100, 21);
             this.cmbTipoDoc.TabIndex = 3;

@@ -78,6 +78,8 @@
             // 
             // dgvSellos
             // 
+            this.dgvSellos.AllowUserToAddRows = false;
+            this.dgvSellos.AllowUserToDeleteRows = false;
             this.dgvSellos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSellos.Location = new System.Drawing.Point(36, 67);
             this.dgvSellos.Name = "dgvSellos";

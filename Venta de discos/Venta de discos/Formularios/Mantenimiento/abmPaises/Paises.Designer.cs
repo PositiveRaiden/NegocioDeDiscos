@@ -78,6 +78,8 @@
             // 
             // dgvPais
             // 
+            this.dgvPais.AllowUserToAddRows = false;
+            this.dgvPais.AllowUserToDeleteRows = false;
             this.dgvPais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPais.Location = new System.Drawing.Point(31, 51);
             this.dgvPais.Name = "dgvPais";

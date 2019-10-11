@@ -86,6 +86,11 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dataGridView2.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay filas para eliminar.");
+                return;
+            }
             dataGridView2.Rows.RemoveAt(dataGridView2.CurrentRow.Index);
         }
 

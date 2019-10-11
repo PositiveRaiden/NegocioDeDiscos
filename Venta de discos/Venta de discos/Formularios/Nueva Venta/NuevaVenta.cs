@@ -168,6 +168,11 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dgvVentas.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay filas para eliminar.");
+                return;
+            }
             dgvVentas.Rows.RemoveAt(dgvVentas.CurrentRow.Index);
         }
 

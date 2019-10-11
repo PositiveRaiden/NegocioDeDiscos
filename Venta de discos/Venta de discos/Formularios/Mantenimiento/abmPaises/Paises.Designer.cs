@@ -38,7 +38,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(312, 12);
+            this.btnEliminar.Location = new System.Drawing.Point(275, 22);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
@@ -48,7 +48,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(231, 12);
+            this.btnModificar.Location = new System.Drawing.Point(194, 22);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 2;
@@ -58,7 +58,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(150, 12);
+            this.btnNuevo.Location = new System.Drawing.Point(113, 22);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(312, 269);
+            this.btnSalir.Location = new System.Drawing.Point(275, 264);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
@@ -79,7 +79,7 @@
             // dgvPais
             // 
             this.dgvPais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPais.Location = new System.Drawing.Point(68, 56);
+            this.dgvPais.Location = new System.Drawing.Point(31, 51);
             this.dgvPais.Name = "dgvPais";
             this.dgvPais.ReadOnly = true;
             this.dgvPais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -90,14 +90,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 309);
+            this.ClientSize = new System.Drawing.Size(372, 309);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvPais);
             this.Name = "Paises";
-            this.Text = "Paises";
+            this.Text = "Países";
             this.Load += new System.EventHandler(this.Paises_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPais)).EndInit();
             this.ResumeLayout(false);

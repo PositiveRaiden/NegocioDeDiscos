@@ -37,7 +37,7 @@
             // lblNuevoPais
             // 
             this.lblNuevoPais.AutoSize = true;
-            this.lblNuevoPais.Location = new System.Drawing.Point(12, 26);
+            this.lblNuevoPais.Location = new System.Drawing.Point(25, 34);
             this.lblNuevoPais.Name = "lblNuevoPais";
             this.lblNuevoPais.Size = new System.Drawing.Size(47, 13);
             this.lblNuevoPais.TabIndex = 0;
@@ -45,14 +45,14 @@
             // 
             // txtNuevoPais
             // 
-            this.txtNuevoPais.Location = new System.Drawing.Point(65, 19);
+            this.txtNuevoPais.Location = new System.Drawing.Point(90, 31);
             this.txtNuevoPais.Name = "txtNuevoPais";
-            this.txtNuevoPais.Size = new System.Drawing.Size(100, 20);
+            this.txtNuevoPais.Size = new System.Drawing.Size(200, 20);
             this.txtNuevoPais.TabIndex = 1;
             // 
             // btnAceptarNuevoPais
             // 
-            this.btnAceptarNuevoPais.Location = new System.Drawing.Point(65, 78);
+            this.btnAceptarNuevoPais.Location = new System.Drawing.Point(123, 79);
             this.btnAceptarNuevoPais.Name = "btnAceptarNuevoPais";
             this.btnAceptarNuevoPais.Size = new System.Drawing.Size(75, 23);
             this.btnAceptarNuevoPais.TabIndex = 2;
@@ -62,7 +62,7 @@
             // 
             // btnSalirNuevoPais
             // 
-            this.btnSalirNuevoPais.Location = new System.Drawing.Point(158, 78);
+            this.btnSalirNuevoPais.Location = new System.Drawing.Point(216, 79);
             this.btnSalirNuevoPais.Name = "btnSalirNuevoPais";
             this.btnSalirNuevoPais.Size = new System.Drawing.Size(75, 23);
             this.btnSalirNuevoPais.TabIndex = 3;
@@ -74,13 +74,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 125);
+            this.ClientSize = new System.Drawing.Size(303, 116);
             this.Controls.Add(this.btnSalirNuevoPais);
             this.Controls.Add(this.btnAceptarNuevoPais);
             this.Controls.Add(this.txtNuevoPais);
             this.Controls.Add(this.lblNuevoPais);
             this.Name = "NuevoPais";
-            this.Text = "NuevoPais";
+            this.Text = "Nuevo País";
             this.Load += new System.EventHandler(this.NuevoPais_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

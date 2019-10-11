@@ -68,11 +68,11 @@
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTelefono.TabIndex = 42;
-            this.lblTelefono.Text = "Telefono:";
+            this.lblTelefono.Text = "Teléfono:";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(214, 170);
+            this.btnCancelar.Location = new System.Drawing.Point(216, 155);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 40;
@@ -82,7 +82,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(114, 170);
+            this.btnAceptar.Location = new System.Drawing.Point(135, 155);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 39;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 224);
+            this.ClientSize = new System.Drawing.Size(320, 190);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtTelefono);
@@ -120,7 +120,7 @@
             this.Controls.Add(this.txtSello);
             this.Controls.Add(this.lblSello);
             this.Name = "NuevoSello";
-            this.Text = "NuevoSello";
+            this.Text = "Nuevo Sello";
             this.Load += new System.EventHandler(this.NuevoSello_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

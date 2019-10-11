@@ -40,7 +40,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(98, 76);
+            this.txtTelefono.Location = new System.Drawing.Point(98, 60);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(200, 20);
             this.txtTelefono.TabIndex = 1;
@@ -48,15 +48,15 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(20, 79);
+            this.lblTelefono.Location = new System.Drawing.Point(20, 63);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTelefono.TabIndex = 33;
-            this.lblTelefono.Text = "Telefono:";
+            this.lblTelefono.Text = "Teléfono:";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(221, 182);
+            this.btnCancelar.Location = new System.Drawing.Point(223, 155);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 4;
@@ -66,7 +66,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(121, 182);
+            this.btnAceptar.Location = new System.Drawing.Point(142, 155);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 3;
@@ -76,7 +76,7 @@
             // 
             // txtSello
             // 
-            this.txtSello.Location = new System.Drawing.Point(98, 30);
+            this.txtSello.Location = new System.Drawing.Point(98, 14);
             this.txtSello.Name = "txtSello";
             this.txtSello.Size = new System.Drawing.Size(200, 20);
             this.txtSello.TabIndex = 0;
@@ -84,7 +84,7 @@
             // lblSello
             // 
             this.lblSello.AutoSize = true;
-            this.lblSello.Location = new System.Drawing.Point(39, 33);
+            this.lblSello.Location = new System.Drawing.Point(39, 17);
             this.lblSello.Name = "lblSello";
             this.lblSello.Size = new System.Drawing.Size(33, 13);
             this.lblSello.TabIndex = 32;
@@ -92,7 +92,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(98, 124);
+            this.txtEmail.Location = new System.Drawing.Point(98, 108);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
             this.txtEmail.TabIndex = 2;
@@ -100,7 +100,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(37, 127);
+            this.lblEmail.Location = new System.Drawing.Point(37, 111);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 35;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 261);
+            this.ClientSize = new System.Drawing.Size(320, 190);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtTelefono);
@@ -120,7 +120,7 @@
             this.Controls.Add(this.txtSello);
             this.Controls.Add(this.lblSello);
             this.Name = "ModificarSello";
-            this.Text = "ModificarSello";
+            this.Text = "Modificar Sello";
             this.Load += new System.EventHandler(this.ModificarSello_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -66,7 +66,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(89, 12);
+            this.txtNombre.Location = new System.Drawing.Point(89, 25);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 14;
@@ -83,7 +83,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(21, 15);
+            this.lblNombre.Location = new System.Drawing.Point(21, 28);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 15;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.lblNacionalidad);
             this.Controls.Add(this.lblNombre);
             this.Name = "ModificarInterprete";
-            this.Text = "ModificarInterprete";
+            this.Text = "Modificar Intérprete";
             this.Load += new System.EventHandler(this.ModificarInterprete_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

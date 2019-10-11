@@ -36,7 +36,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(183, 106);
+            this.btnCancelar.Location = new System.Drawing.Point(208, 78);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 22;
@@ -46,7 +46,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(83, 106);
+            this.btnAceptar.Location = new System.Drawing.Point(108, 78);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 21;
@@ -56,7 +56,7 @@
             // 
             // txtNombrePais
             // 
-            this.txtNombrePais.Location = new System.Drawing.Point(83, 16);
+            this.txtNombrePais.Location = new System.Drawing.Point(83, 28);
             this.txtNombrePais.Name = "txtNombrePais";
             this.txtNombrePais.Size = new System.Drawing.Size(200, 20);
             this.txtNombrePais.TabIndex = 19;
@@ -64,23 +64,23 @@
             // lblNombrePais
             // 
             this.lblNombrePais.AutoSize = true;
-            this.lblNombrePais.Location = new System.Drawing.Point(15, 19);
+            this.lblNombrePais.Location = new System.Drawing.Point(21, 31);
             this.lblNombrePais.Name = "lblNombrePais";
-            this.lblNombrePais.Size = new System.Drawing.Size(44, 13);
+            this.lblNombrePais.Size = new System.Drawing.Size(47, 13);
             this.lblNombrePais.TabIndex = 20;
-            this.lblNombrePais.Text = "Nombre";
+            this.lblNombrePais.Text = "Nombre:";
             // 
             // ModificarPais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 167);
+            this.ClientSize = new System.Drawing.Size(303, 116);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtNombrePais);
             this.Controls.Add(this.lblNombrePais);
             this.Name = "ModificarPais";
-            this.Text = "ModificarPais";
+            this.Text = "Modificar País";
             this.Load += new System.EventHandler(this.ModificarPais_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

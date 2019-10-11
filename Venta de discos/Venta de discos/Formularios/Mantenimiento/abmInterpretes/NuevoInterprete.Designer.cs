@@ -38,7 +38,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(262, 119);
+            this.btnCancelar.Location = new System.Drawing.Point(206, 114);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
@@ -48,7 +48,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(181, 119);
+            this.btnAceptar.Location = new System.Drawing.Point(125, 114);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 10;
@@ -58,7 +58,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(137, 12);
+            this.txtNombre.Location = new System.Drawing.Point(81, 19);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 5;
@@ -66,7 +66,7 @@
             // lblNacionalidad
             // 
             this.lblNacionalidad.AutoSize = true;
-            this.lblNacionalidad.Location = new System.Drawing.Point(86, 71);
+            this.lblNacionalidad.Location = new System.Drawing.Point(30, 63);
             this.lblNacionalidad.Name = "lblNacionalidad";
             this.lblNacionalidad.Size = new System.Drawing.Size(27, 13);
             this.lblNacionalidad.TabIndex = 8;
@@ -75,7 +75,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(69, 15);
+            this.lblNombre.Location = new System.Drawing.Point(30, 22);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 6;
@@ -85,7 +85,7 @@
             // 
             this.cmbPais.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbPais.FormattingEnabled = true;
-            this.cmbPais.Location = new System.Drawing.Point(137, 71);
+            this.cmbPais.Location = new System.Drawing.Point(81, 63);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(200, 21);
             this.cmbPais.TabIndex = 13;
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 162);
+            this.ClientSize = new System.Drawing.Size(305, 162);
             this.Controls.Add(this.cmbPais);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -103,7 +103,7 @@
             this.Controls.Add(this.lblNacionalidad);
             this.Controls.Add(this.lblNombre);
             this.Name = "NuevoInterprete";
-            this.Text = "NuevoInterprete";
+            this.Text = "Nuevo Intérprete";
             this.Load += new System.EventHandler(this.NuevoInterprete_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -25,6 +25,12 @@ namespace Venta_de_discos.Repositorios
         }
 
         //aca
+        public DataTable ObtenerClientePorDocumento(string documento)
+        {
+            string sqltxt = "SELECT C.Id,C.Nombre,C.Apellido,C.Calle,C.NumDoc,T.nombre,B.nombre FROM Cliente C, TipoDoc T, Barrio B WHERE C.id_TipoDocumento=T.id AND C.id_Barrio=B.id AND c.numDoc ="+ documento;
+            return _BD.consulta(sqltxt);
+        }
+
         public Cliente ObtenerCliente(string clienteId)
         {
             string sqltxt = $"SELECT C.Id,C.Nombre,C.Apellido,C.Calle,C.NumDoc,T.nombre,B.nombre FROM Cliente C, TipoDoc T, Barrio B WHERE C.id_TipoDocumento=T.id AND C.id_Barrio=B.id AND C.id = {clienteId}";

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Venta_de_discos.Formularios.Mantenimiento.abmCliente;
@@ -114,7 +115,74 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //ActualizarClientesSegunFiltro(); FALTA ESTO
+            ActualizarClientesSegunFiltro();
+        }
+        private void ActualizarClientesSegunFiltro()
+        {
+            var valor = txtNumeroDocumento.Text.Trim();
+
+            if (cmbTipoDocumento.SelectedValue.ToString() == "1")
+            {
+                int number;
+                if (!string.IsNullOrEmpty(valor) && valor.Length == 8 && int.TryParse(valor, out number))
+                {
+                    //NADA
+                }
+                else
+                {
+                    MessageBox.Show("DNI Invalido!");
+                    txtNumeroDocumento.Text = "";
+                    txtNumeroDocumento.Focus();
+                    return;
+                }
+
+
+            }
+            if (cmbTipoDocumento.SelectedValue.ToString() == "2")
+            {
+                int number;
+                if (!string.IsNullOrEmpty(valor) && valor.Length == 7 && int.TryParse(valor, out number))
+                {
+                    //NADA
+                }
+                else
+                {
+                    MessageBox.Show("LC Invalido!");
+                    txtNumeroDocumento.Text = "";
+                    txtNumeroDocumento.Focus();
+                    return;
+                }
+            }
+            if (cmbTipoDocumento.SelectedValue.ToString() == "3")
+            {
+                String expresion;
+                expresion = "^[a-z]{3}[0-9]{6}[a-z]{1}$";
+                if (Regex.IsMatch(valor, expresion))
+                {
+                    if (Regex.Replace(valor, expresion, String.Empty).Length == 0)
+                    {
+                        //NADA
+                    }
+                    else
+                    {
+                        MessageBox.Show("Pasaporte Invalido!");
+                        txtNumeroDocumento.Text = "";
+                        txtNumeroDocumento.Focus();
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pasaporte Invalido!");
+                    txtNumeroDocumento.Text = "";
+                    txtNumeroDocumento.Focus();
+                    return;
+                }
+            }
+
+            var clientes = clientesRepositorio.ObtenerClientePorDocumento(valor.ToString());
+            dgvClientes.DataSource = clientes;
+            this.dgvClientes.Columns["id"].Visible = false;
         }
 
     }

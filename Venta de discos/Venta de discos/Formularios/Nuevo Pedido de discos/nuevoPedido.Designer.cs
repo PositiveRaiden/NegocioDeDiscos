@@ -44,6 +44,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.filtroNombreAlbum = new System.Windows.Forms.TextBox();
+            this.filtroSello = new System.Windows.Forms.TextBox();
+            this.filtroInterprete = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +86,7 @@
             this.Genero,
             this.SelloDiscografico,
             this.Interprete});
-            this.dataGridView2.Location = new System.Drawing.Point(432, 58);
+            this.dataGridView2.Location = new System.Drawing.Point(432, 101);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(245, 331);
             this.dataGridView2.TabIndex = 37;
@@ -142,7 +145,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(521, 406);
+            this.btnGuardar.Location = new System.Drawing.Point(521, 449);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 38;
@@ -152,7 +155,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(602, 406);
+            this.btnCancelar.Location = new System.Drawing.Point(602, 449);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 39;
@@ -162,7 +165,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(373, 163);
+            this.btnAgregar.Location = new System.Drawing.Point(373, 206);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 37);
             this.btnAgregar.TabIndex = 40;
@@ -172,7 +175,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(373, 206);
+            this.btnEliminar.Location = new System.Drawing.Point(373, 249);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(43, 37);
             this.btnEliminar.TabIndex = 41;
@@ -185,7 +188,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 101);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -193,11 +196,38 @@
             this.dataGridView1.TabIndex = 36;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // filtroNombreAlbum
+            // 
+            this.filtroNombreAlbum.Location = new System.Drawing.Point(48, 75);
+            this.filtroNombreAlbum.Name = "filtroNombreAlbum";
+            this.filtroNombreAlbum.Size = new System.Drawing.Size(100, 20);
+            this.filtroNombreAlbum.TabIndex = 42;
+            this.filtroNombreAlbum.TextChanged += new System.EventHandler(this.filtroNombreAlbum_TextChanged);
+            // 
+            // filtroSello
+            // 
+            this.filtroSello.Location = new System.Drawing.Point(154, 75);
+            this.filtroSello.Name = "filtroSello";
+            this.filtroSello.Size = new System.Drawing.Size(100, 20);
+            this.filtroSello.TabIndex = 43;
+            this.filtroSello.TextChanged += new System.EventHandler(this.filtroSello_TextChanged);
+            // 
+            // filtroInterprete
+            // 
+            this.filtroInterprete.Location = new System.Drawing.Point(258, 75);
+            this.filtroInterprete.Name = "filtroInterprete";
+            this.filtroInterprete.Size = new System.Drawing.Size(100, 20);
+            this.filtroInterprete.TabIndex = 44;
+            this.filtroInterprete.TextChanged += new System.EventHandler(this.filtroInterprete_TextChanged);
+            // 
             // NuevoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 437);
+            this.ClientSize = new System.Drawing.Size(690, 483);
+            this.Controls.Add(this.filtroInterprete);
+            this.Controls.Add(this.filtroSello);
+            this.Controls.Add(this.filtroNombreAlbum);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
@@ -233,5 +263,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn SelloDiscografico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
+        private System.Windows.Forms.TextBox filtroNombreAlbum;
+        private System.Windows.Forms.TextBox filtroSello;
+        private System.Windows.Forms.TextBox filtroInterprete;
     }
 }

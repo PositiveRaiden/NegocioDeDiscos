@@ -25,7 +25,7 @@ namespace Venta_de_discos
         //string cadena_conexion = "Provider=SQLNCLI11;Data Source=maquis;Persist Security Info=True;User ID=avisuales1;Initial Catalog=pav1-db-peliculas;password=avisuales1"; //workstation id=pav1-db.mssql.somee.com;packet size=4096;user id=milizc_SQLLogin_1;pwd=2s9o1yeexo;data source=pav1-db.mssql.somee.com;persist security info=False;initial catalog=pav1-db
         string cadena_conexion = "Provider=SQLNCLI11;workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB";
         //procedimiento privado <conectar> que prepara la conexión con la base de dato
-        private void conectar()
+        public void conectar()
         {
             //asigan al objeto <conexion> la cadena de conexion
             conexion.ConnectionString = cadena_conexion;

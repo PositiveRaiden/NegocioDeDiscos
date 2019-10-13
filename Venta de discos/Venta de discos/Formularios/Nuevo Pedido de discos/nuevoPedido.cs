@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -141,6 +142,66 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void filtroNombreAlbum_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
+            {
+
+                string query = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id AND D.Nombre_Album LIKE @param + '%'";
+
+
+                SqlCommand cmd = new SqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@param", filtroNombreAlbum.Text.Trim());
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
+        }
+
+        private void filtroSello_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
+            {
+
+                string query = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id AND S.nombre LIKE @param + '%'";
+
+
+                SqlCommand cmd = new SqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@param", filtroSello.Text.Trim());
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
+        }
+
+        private void filtroInterprete_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
+            {
+
+                string query = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id AND I.nombre LIKE @param + '%'";
+
+
+                SqlCommand cmd = new SqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@param", filtroInterprete.Text.Trim());
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
         }
     }
 }

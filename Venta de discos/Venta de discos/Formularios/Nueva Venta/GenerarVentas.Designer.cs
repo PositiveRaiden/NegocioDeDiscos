@@ -97,7 +97,7 @@ namespace Venta_de_discos
 
         private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         #endregion

@@ -42,6 +42,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNumeroDoc = new System.Windows.Forms.Label();
             this.lblTipoDoc = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbBarrio
@@ -168,11 +169,22 @@
             this.lblTipoDoc.TabIndex = 38;
             this.lblTipoDoc.Text = "Tipo Documento:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(210, 148);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "NuevoBarrio";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 228);
+            this.ClientSize = new System.Drawing.Size(288, 232);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbBarrio);
             this.Controls.Add(this.lblBarrio);
             this.Controls.Add(this.cmbTipoDoc);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNumeroDoc;
         private System.Windows.Forms.Label lblTipoDoc;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -109,5 +109,12 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoPais frm = new NuevoPais();
+            frm.ShowDialog();
+            ActualizarComboPais();
+        }
     }
 }

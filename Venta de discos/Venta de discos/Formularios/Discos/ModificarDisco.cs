@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios.Mantenimiento;
+using Venta_de_discos.Formularios.Mantenimiento.abmSellos;
+using Venta_de_discos.Formularios.Mantenimiento.Generos;
 using Venta_de_discos.Repositorios;
 
 namespace Venta_de_discos.Formularios.Discos
@@ -133,6 +136,27 @@ namespace Venta_de_discos.Formularios.Discos
                 MessageBox.Show("La edicion ha finalizado correctamente");
                 this.Dispose();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoInterprete frm = new NuevoInterprete();
+            frm.ShowDialog();
+            ActualizarComboInterprete();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NuevoGenero frm = new NuevoGenero();
+            frm.ShowDialog();
+            ActualizarComboSello();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NuevoSello frm = new NuevoSello();
+            frm.ShowDialog();
+            ActualizarComboSello();
         }
     }
 }

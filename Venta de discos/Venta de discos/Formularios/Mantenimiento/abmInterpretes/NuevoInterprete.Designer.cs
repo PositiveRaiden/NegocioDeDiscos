@@ -34,6 +34,7 @@
             this.lblNacionalidad = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.cmbPais = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -93,11 +94,22 @@
             this.cmbPais.TabIndex = 13;
             this.cmbPais.SelectedIndexChanged += new System.EventHandler(this.cmbPais_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(287, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Nuevo Pais";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NuevoInterprete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 162);
+            this.ClientSize = new System.Drawing.Size(384, 160);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbPais);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Label lblNacionalidad;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.Button button1;
     }
 }

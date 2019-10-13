@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Venta_de_discos.Repositorios;
 using Venta_de_discos.Clases;
+using Venta_de_discos.Formularios.Mantenimiento.Barrios;
 
 namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
 {
@@ -179,6 +180,13 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmCliente
 
                 this.Dispose();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoBarrio frm = new NuevoBarrio();
+            frm.ShowDialog();
+            ActualizarComboBarrios();
         }
     }
 }

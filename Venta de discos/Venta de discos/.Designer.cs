@@ -72,7 +72,7 @@
             this.btnNuevaVenta.Name = "btnNuevaVenta";
             this.btnNuevaVenta.Size = new System.Drawing.Size(134, 23);
             this.btnNuevaVenta.TabIndex = 2;
-            this.btnNuevaVenta.Text = "Nueva Venta";
+            this.btnNuevaVenta.Text = "Venta";
             this.btnNuevaVenta.UseVisualStyleBackColor = true;
             this.btnNuevaVenta.Click += new System.EventHandler(this.btnVentaDeDiscos_Click);
             // 
@@ -82,7 +82,7 @@
             this.btnNuevoPedido.Name = "btnNuevoPedido";
             this.btnNuevoPedido.Size = new System.Drawing.Size(134, 23);
             this.btnNuevoPedido.TabIndex = 1;
-            this.btnNuevoPedido.Text = "Nuevo Pedido";
+            this.btnNuevoPedido.Text = "Pedido";
             this.btnNuevoPedido.UseVisualStyleBackColor = true;
             this.btnNuevoPedido.Click += new System.EventHandler(this.btnNuevoPedido_Click);
             // 

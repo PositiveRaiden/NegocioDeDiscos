@@ -39,7 +39,6 @@
             this.LblFecha = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_Disco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,23 +49,29 @@
             // filtroInterprete
             // 
             this.filtroInterprete.Location = new System.Drawing.Point(271, 71);
+            this.filtroInterprete.MaxLength = 30;
             this.filtroInterprete.Name = "filtroInterprete";
             this.filtroInterprete.Size = new System.Drawing.Size(100, 20);
             this.filtroInterprete.TabIndex = 53;
+            this.filtroInterprete.TextChanged += new System.EventHandler(this.filtroInterprete_TextChanged);
             // 
             // filtroSello
             // 
             this.filtroSello.Location = new System.Drawing.Point(167, 71);
+            this.filtroSello.MaxLength = 30;
             this.filtroSello.Name = "filtroSello";
             this.filtroSello.Size = new System.Drawing.Size(100, 20);
             this.filtroSello.TabIndex = 52;
+            this.filtroSello.TextChanged += new System.EventHandler(this.filtroSello_TextChanged);
             // 
             // filtroNombreAlbum
             // 
             this.filtroNombreAlbum.Location = new System.Drawing.Point(61, 71);
+            this.filtroNombreAlbum.MaxLength = 30;
             this.filtroNombreAlbum.Name = "filtroNombreAlbum";
             this.filtroNombreAlbum.Size = new System.Drawing.Size(100, 20);
             this.filtroNombreAlbum.TabIndex = 51;
+            this.filtroNombreAlbum.TextChanged += new System.EventHandler(this.filtroNombreAlbum_TextChanged);
             // 
             // btnEliminar
             // 
@@ -94,7 +99,6 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
             this.id_Disco,
             this.NombreAlbum,
             this.Cantidad});
@@ -145,6 +149,7 @@
             this.btnCancelar.TabIndex = 55;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -154,12 +159,7 @@
             this.btnGuardar.TabIndex = 54;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // id_Disco
             // 
@@ -215,7 +215,6 @@
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_Disco;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;

@@ -33,7 +33,7 @@ namespace Venta_de_discos.Repositorios
         public DataTable ObtenerDetallesPedidoParaModificar(string idPedido)
         {
             //uso para modificar
-            string sqltxt = $"SELECT  d.id,d.id_Disco,di.nombre_Album as 'Nombre album',d.cantidad as 'Cantidad Pedida' FROM Detalle_Pedido D, Disco Di WHERE d.id_Disco = Di.id AND D.id_pedido = {idPedido}";
+            string sqltxt = $"SELECT  d.id_Disco,di.nombre_Album as 'Nombre album',d.cantidad as 'Cantidad Pedida' FROM Detalle_Pedido D, Disco Di WHERE d.id_Disco = Di.id AND D.id_pedido = {idPedido}";
             return _BD.consulta(sqltxt);
         }
 
@@ -51,7 +51,80 @@ namespace Venta_de_discos.Repositorios
 
             string sqltxt = $"DELETE FROM [dbo].[Pedido] WHERE id ={pedidoId}";
             return _BD.EjecutarSQL(sqltxt);
+
+    }
+        public void Editar(string idPedido, Pedido p)
+        {
+            //BORRO CANTIDAD Y DETALLES ANTERIORES
+            //No anda borrar anterior
+            string sqltxt1 = $"SELECT D.cantidad, D.id_disco FROM Detalle_Pedido D WHERE id_Pedido = {idPedido}";
+            DataTable dt = _BD.consulta(sqltxt1);
+            foreach (DataRow fila in dt.Rows)
+            {
+                string idDisco = fila["id_Disco"].ToString();
+                string cantidadABorrar = fila["cantidad"].ToString();
+                sqltxt1 = $"UPDATE [dbo].[Disco] SET cantidad = cantidad - {cantidadABorrar} WHERE id={idDisco}";
+                _BD.EjecutarSQL(sqltxt1);
+            }
+
+            string sqltxt = $"DELETE FROM [dbo].[Detalle_Pedido] WHERE id_Pedido ={idPedido}";
+            _BD.EjecutarSQL(sqltxt);
+
+            using (var tx = _BD.IniciarTransaccion())
+            {
+                try
+                {
+
+                    foreach (var d in p.detallePedidos)
+                    {
+                        sqltxt = $"INSERT [dbo].[Detalle_Pedido]" +
+                            $"([id_Pedido], [Cantidad], [id_Disco]) " +
+                            $"VALUES ('{idPedido}', '{d.cantidad}', '{d.idDisco}')";
+                        _BD.EjecutarTransaccion(sqltxt);
+
+                        sqltxt = $"SELECT cantidad FROM Disco WHERE id={d.idDisco}";
+
+                        var stock =
+                            int.Parse(_BD.ConsultaDuranteTransaccion(sqltxt).Rows[0]["cantidad"].ToString());
+
+                        int number;
+                        if (!int.TryParse(d.cantidad, out number))
+                        {
+
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
+                        }
+                        if (number <= 0)
+                        {
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
+                        }
+                        int nuevoStock = stock + number;
+
+
+                        sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{nuevoStock}' WHERE id={d.idDisco}";
+                        _BD.EjecutarTransaccion(sqltxt);
+                    }
+
+                    tx.Commit();
+                }
+                catch (ApplicationException aex)
+                {
+                    throw aex;
+                }
+                catch (Exception ex)
+                {
+                    tx.Rollback();
+                    throw new Exception("No se pudo realizar la operación.");
+                }
+                finally
+                {
+                    _BD.cerrar();
+                }
+            }
         }
+
+
+
+
 
 
         public void Guardar(Pedido p)

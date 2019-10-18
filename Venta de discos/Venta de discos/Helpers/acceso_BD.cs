@@ -79,6 +79,16 @@ namespace Venta_de_discos
 
             return filasAfectadas > 0;
         }
+        public bool EjecutarSQLEnTransaccion(string comando)
+        {
+
+            cmd.CommandText = comando;
+
+            var filasAfectadas = cmd.ExecuteNonQuery(); //Cantidad de filas afectadas
+
+
+            return filasAfectadas > 0;
+        }
 
         public int EjecutarTransaccion(string comando)
         {

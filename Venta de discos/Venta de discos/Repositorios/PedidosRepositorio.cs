@@ -59,24 +59,24 @@ namespace Venta_de_discos.Repositorios
 
             using (var tx = _BD.IniciarTransaccion())
             {
-
-                //borro detalles viejos y vuelvo a stock anterior
-                string sqltxt1 = $"SELECT D.cantidad, D.id_disco FROM Detalle_Pedido D WHERE id_Pedido = {idPedido}";
-                DataTable dt = _BD.ConsultaDuranteTransaccion(sqltxt1);
-                foreach (DataRow fila in dt.Rows)
-                {
-                    string idDisco = fila["id_Disco"].ToString();
-                    string cantidadABorrar = fila["cantidad"].ToString();
-                    sqltxt1 = $"UPDATE [dbo].[Disco] SET cantidad = cantidad - {cantidadABorrar} WHERE id={idDisco}";
-                    _BD.EjecutarSQLEnTransaccion(sqltxt1);
-                }
-
-                string sqltxt = $"DELETE FROM [dbo].[Detalle_Pedido] WHERE id_Pedido ={idPedido}";
-                _BD.EjecutarSQLEnTransaccion(sqltxt);
-                //hasta aca
-
                 try
                 {
+                    //borro detalles viejos y vuelvo a stock anterior
+                    string sqltxt1 = $"SELECT D.cantidad, D.id_disco FROM Detalle_Pedido D WHERE id_Pedido = {idPedido}";
+                    DataTable dt = _BD.ConsultaDuranteTransaccion(sqltxt1);
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        string idDisco = fila["id_Disco"].ToString();
+                        string cantidadABorrar = fila["cantidad"].ToString();
+                        sqltxt1 = $"UPDATE [dbo].[Disco] SET cantidad = cantidad - {cantidadABorrar} WHERE id={idDisco}";
+                        _BD.EjecutarSQLEnTransaccion(sqltxt1);
+                    }
+
+                    string sqltxt = $"DELETE FROM [dbo].[Detalle_Pedido] WHERE id_Pedido ={idPedido}";
+                    _BD.EjecutarSQLEnTransaccion(sqltxt);
+                    //hasta aca
+
+
 
                     foreach (var d in p.detallePedidos)
                     {
@@ -124,11 +124,6 @@ namespace Venta_de_discos.Repositorios
                 }
             }
         }
-
-
-
-
-
 
         public void Guardar(Pedido p)
         {

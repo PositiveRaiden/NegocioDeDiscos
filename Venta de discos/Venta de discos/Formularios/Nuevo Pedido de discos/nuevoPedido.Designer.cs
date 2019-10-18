@@ -88,6 +88,7 @@
             this.Interprete});
             this.dataGridView2.Location = new System.Drawing.Point(432, 101);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView2.Size = new System.Drawing.Size(245, 331);
             this.dataGridView2.TabIndex = 37;
             // 
@@ -224,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 483);
+            this.ClientSize = new System.Drawing.Size(702, 485);
             this.Controls.Add(this.filtroInterprete);
             this.Controls.Add(this.filtroSello);
             this.Controls.Add(this.filtroNombreAlbum);

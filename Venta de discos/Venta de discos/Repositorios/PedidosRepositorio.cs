@@ -20,9 +20,39 @@ namespace Venta_de_discos.Repositorios
 
         public DataTable ObtenerPedidos()
         {
-            string sqltxt = "SELECT p.id as 'Numero de pedido', p.fechaPedido, di.nombre_Album as 'Disco', d.cantidad as 'Cantidad Pedida' FROM Pedido P, Detalle_Pedido D, Disco Di WHERE D.id_pedido = P.id AND d.id_Disco = Di.id";
+            //string sqltxt = "SELECT p.id as 'Numero de pedido', p.fechaPedido, di.nombre_Album as 'Disco', d.cantidad as 'Cantidad Pedida' FROM Pedido P, Detalle_Pedido D, Disco Di WHERE D.id_pedido = P.id AND d.id_Disco = Di.id";
+            string sqltxt = "SELECT id as 'Numero de pedido', fechaPedido FROM Pedido";
             return _BD.consulta(sqltxt);
         }
+        public DataTable ObtenerDetallesPedido(string idPedido)
+        {
+            //uso para pedidoForm 
+            string sqltxt = $"SELECT  di.nombre_Album as 'Nombre album', d.cantidad as 'Cantidad Pedida' FROM Detalle_Pedido D, Disco Di WHERE d.id_Disco = Di.id AND D.id_pedido = {idPedido}";
+            return _BD.consulta(sqltxt);
+        }
+        public DataTable ObtenerDetallesPedidoParaModificar(string idPedido)
+        {
+            //uso para modificar
+            string sqltxt = $"SELECT  d.id,d.id_Disco,di.nombre_Album as 'Nombre album',d.cantidad as 'Cantidad Pedida' FROM Detalle_Pedido D, Disco Di WHERE d.id_Disco = Di.id AND D.id_pedido = {idPedido}";
+            return _BD.consulta(sqltxt);
+        }
+
+        public DataTable ObtenerPedido(string id)
+        {
+            //string sqltxt = "SELECT p.id as 'Numero de pedido', p.fechaPedido, di.nombre_Album as 'Disco', d.cantidad as 'Cantidad Pedida' FROM Pedido P, Detalle_Pedido D, Disco Di WHERE D.id_pedido = P.id AND d.id_Disco = Di.id";
+            string sqltxt = $"SELECT id as 'Numero de pedido', fechaPedido FROM Pedido WHERE ID= {id}";
+            return _BD.consulta(sqltxt);
+        }
+        public bool Eliminar(string pedidoId)
+        {
+
+            string sqltxt1 = $"DELETE FROM [dbo].[Detalle_Pedido] WHERE id_Pedido ={pedidoId}";
+            _BD.EjecutarSQL(sqltxt1);
+
+            string sqltxt = $"DELETE FROM [dbo].[Pedido] WHERE id ={pedidoId}";
+            return _BD.EjecutarSQL(sqltxt);
+        }
+
 
         public void Guardar(Pedido p)
         {

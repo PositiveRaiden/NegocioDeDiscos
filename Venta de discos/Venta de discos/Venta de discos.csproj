@@ -176,6 +176,12 @@
     <Compile Include="Formularios\Nueva Venta\NuevaVenta.Designer.cs">
       <DependentUpon>NuevaVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Nuevo Pedido de discos\ModificarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nuevo Pedido de discos\ModificarPedido.Designer.cs">
+      <DependentUpon>ModificarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nuevo Pedido de discos\NuevoPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nueva Venta\NuevaVenta.resx">
       <DependentUpon>NuevaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\ModificarPedido.resx">
+      <DependentUpon>ModificarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\NuevoPedido.resx">
       <DependentUpon>NuevoPedido.cs</DependentUpon>

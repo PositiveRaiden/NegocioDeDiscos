@@ -31,6 +31,8 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
             cargarDiscos();
             cargarDetallePedido();
+
+            //LblFechaHoy.Text = cargarFechaDelPedidoSeleccionado
         }
 
         private void cargarDiscos()
@@ -189,6 +191,13 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
                 detalles.Add(detalle);
             }
             return detalles;
+        }
+
+        private void btnNuevoDisco_Click(object sender, EventArgs e)
+        {
+            AgregarDisco frm = new AgregarDisco();
+            frm.ShowDialog();
+            cargarDiscos();
         }
     }
 }

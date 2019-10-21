@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Venta_de_discos.Clases;
 using Venta_de_discos.Repositorios;
+using Venta_de_discos.Formularios.Discos;
 
 namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 {
@@ -178,6 +179,18 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
                 dataGridView1.DataSource = dt;
 
             }
+        }
+
+        private void btnNuevoDisco_Click(object sender, EventArgs e)
+        {
+            AgregarDisco frm = new AgregarDisco();
+            frm.ShowDialog();
+            ActualizarGrilla();
+        }
+
+        private void LblFecha_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

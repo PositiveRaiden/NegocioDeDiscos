@@ -39,6 +39,7 @@
             this.LblFecha = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevoDisco = new System.Windows.Forms.Button();
             this.id_Disco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -161,10 +162,21 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnNuevoDisco
+            // 
+            this.btnNuevoDisco.Location = new System.Drawing.Point(61, 42);
+            this.btnNuevoDisco.Name = "btnNuevoDisco";
+            this.btnNuevoDisco.Size = new System.Drawing.Size(82, 23);
+            this.btnNuevoDisco.TabIndex = 56;
+            this.btnNuevoDisco.Text = "Nuevo Disco";
+            this.btnNuevoDisco.UseVisualStyleBackColor = true;
+            this.btnNuevoDisco.Click += new System.EventHandler(this.btnNuevoDisco_Click);
+            // 
             // id_Disco
             // 
             this.id_Disco.HeaderText = "id_Disco";
             this.id_Disco.Name = "id_Disco";
+            this.id_Disco.Visible = false;
             // 
             // NombreAlbum
             // 
@@ -181,6 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 475);
+            this.Controls.Add(this.btnNuevoDisco);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.filtroInterprete);
@@ -215,6 +228,7 @@
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnNuevoDisco;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_Disco;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;

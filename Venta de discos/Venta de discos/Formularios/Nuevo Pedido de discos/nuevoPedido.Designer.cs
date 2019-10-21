@@ -47,6 +47,7 @@
             this.filtroNombreAlbum = new System.Windows.Forms.TextBox();
             this.filtroSello = new System.Windows.Forms.TextBox();
             this.filtroInterprete = new System.Windows.Forms.TextBox();
+            this.btnNuevoDisco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.LblFecha.TabIndex = 31;
             this.LblFecha.Text = "Fecha";
             this.LblFecha.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LblFecha.Click += new System.EventHandler(this.LblFecha_Click);
             // 
             // dataGridView2
             // 
@@ -221,11 +223,22 @@
             this.filtroInterprete.TabIndex = 44;
             this.filtroInterprete.TextChanged += new System.EventHandler(this.filtroInterprete_TextChanged);
             // 
+            // btnNuevoDisco
+            // 
+            this.btnNuevoDisco.Location = new System.Drawing.Point(48, 46);
+            this.btnNuevoDisco.Name = "btnNuevoDisco";
+            this.btnNuevoDisco.Size = new System.Drawing.Size(82, 23);
+            this.btnNuevoDisco.TabIndex = 45;
+            this.btnNuevoDisco.Text = "Nuevo Disco";
+            this.btnNuevoDisco.UseVisualStyleBackColor = true;
+            this.btnNuevoDisco.Click += new System.EventHandler(this.btnNuevoDisco_Click);
+            // 
             // NuevoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 485);
+            this.Controls.Add(this.btnNuevoDisco);
             this.Controls.Add(this.filtroInterprete);
             this.Controls.Add(this.filtroSello);
             this.Controls.Add(this.filtroNombreAlbum);
@@ -267,5 +280,6 @@
         private System.Windows.Forms.TextBox filtroNombreAlbum;
         private System.Windows.Forms.TextBox filtroSello;
         private System.Windows.Forms.TextBox filtroInterprete;
+        private System.Windows.Forms.Button btnNuevoDisco;
     }
 }

@@ -32,7 +32,12 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             cargarDiscos();
             cargarDetallePedido();
 
-            //LblFechaHoy.Text = cargarFechaDelPedidoSeleccionado
+            var pedido = pedidosRepositorio.ObtenerPedido(idPedido);
+            foreach (DataRow row in pedido.Rows)
+            {
+                LblFechaHoy.Text = row["fechaPedido"].ToString();
+            }
+            
         }
 
         private void cargarDiscos()

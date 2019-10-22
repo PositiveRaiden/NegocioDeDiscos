@@ -41,7 +41,7 @@ namespace Venta_de_discos
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(93, 38);
+            this.btnEliminar.Location = new System.Drawing.Point(93, 12);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
@@ -50,7 +50,7 @@ namespace Venta_de_discos
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(12, 38);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 12);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Venta_de_discos
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(460, 302);
+            this.btnSalir.Location = new System.Drawing.Point(498, 260);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
@@ -73,11 +73,11 @@ namespace Venta_de_discos
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(12, 67);
+            this.dgvVentas.Location = new System.Drawing.Point(12, 41);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(523, 213);
+            this.dgvVentas.Size = new System.Drawing.Size(561, 213);
             this.dgvVentas.TabIndex = 4;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             // 
@@ -85,7 +85,7 @@ namespace Venta_de_discos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 345);
+            this.ClientSize = new System.Drawing.Size(585, 290);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);

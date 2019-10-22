@@ -43,7 +43,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(619, 21);
+            this.btnEliminar.Location = new System.Drawing.Point(580, 18);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 7;
@@ -53,7 +53,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(538, 21);
+            this.btnModificar.Location = new System.Drawing.Point(499, 18);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 6;
@@ -63,7 +63,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(457, 21);
+            this.btnNuevo.Location = new System.Drawing.Point(418, 18);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 5;
@@ -118,7 +118,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(619, 380);
+            this.btnSalir.Location = new System.Drawing.Point(580, 380);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 8;
@@ -134,7 +134,7 @@
             this.dgvClientes.Location = new System.Drawing.Point(15, 79);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(679, 295);
+            this.dgvClientes.Size = new System.Drawing.Size(640, 295);
             this.dgvClientes.TabIndex = 4;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 412);
+            this.ClientSize = new System.Drawing.Size(667, 412);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);

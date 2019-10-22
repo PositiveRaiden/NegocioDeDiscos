@@ -34,15 +34,15 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.id_Disco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.LblFechaHoy = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevoDisco = new System.Windows.Forms.Button();
-            this.id_Disco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +109,22 @@
             this.dataGridView2.Size = new System.Drawing.Size(300, 331);
             this.dataGridView2.TabIndex = 48;
             // 
+            // id_Disco
+            // 
+            this.id_Disco.HeaderText = "id_Disco";
+            this.id_Disco.Name = "id_Disco";
+            this.id_Disco.Visible = false;
+            // 
+            // NombreAlbum
+            // 
+            this.NombreAlbum.HeaderText = "Nombre Album";
+            this.NombreAlbum.Name = "NombreAlbum";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -172,22 +188,6 @@
             this.btnNuevoDisco.UseVisualStyleBackColor = true;
             this.btnNuevoDisco.Click += new System.EventHandler(this.btnNuevoDisco_Click);
             // 
-            // id_Disco
-            // 
-            this.id_Disco.HeaderText = "id_Disco";
-            this.id_Disco.Name = "id_Disco";
-            this.id_Disco.Visible = false;
-            // 
-            // NombreAlbum
-            // 
-            this.NombreAlbum.HeaderText = "Nombre Album";
-            this.NombreAlbum.Name = "NombreAlbum";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
             // ModificarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +206,7 @@
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
             this.Name = "ModificarPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarPedido";
             this.Load += new System.EventHandler(this.ModificarPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

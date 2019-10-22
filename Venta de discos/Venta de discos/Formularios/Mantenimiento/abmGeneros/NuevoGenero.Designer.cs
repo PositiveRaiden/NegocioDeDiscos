@@ -102,6 +102,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Name = "NuevoGenero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Género";
             this.Load += new System.EventHandler(this.NuevoGenero_Load);
             this.ResumeLayout(false);

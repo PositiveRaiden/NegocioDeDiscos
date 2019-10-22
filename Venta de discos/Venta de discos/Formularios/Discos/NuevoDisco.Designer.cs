@@ -254,6 +254,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "AgregarDisco";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Disco";
             this.Load += new System.EventHandler(this.AgregarDisco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

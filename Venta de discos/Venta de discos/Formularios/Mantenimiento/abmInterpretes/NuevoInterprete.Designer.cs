@@ -117,6 +117,7 @@
             this.Controls.Add(this.lblNacionalidad);
             this.Controls.Add(this.lblNombre);
             this.Name = "NuevoInterprete";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Intérprete";
             this.Load += new System.EventHandler(this.NuevoInterprete_Load);
             this.ResumeLayout(false);

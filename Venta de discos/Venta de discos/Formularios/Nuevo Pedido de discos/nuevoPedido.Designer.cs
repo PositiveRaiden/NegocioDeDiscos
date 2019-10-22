@@ -251,6 +251,7 @@
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
             this.Name = "NuevoPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoPedido";
             this.Load += new System.EventHandler(this.NuevoPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

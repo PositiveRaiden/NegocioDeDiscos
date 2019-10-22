@@ -144,6 +144,7 @@
             this.Controls.Add(this.lblOpciones);
             this.Controls.Add(this.btnSalirMenu);
             this.Name = "MenuMantenimiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Mantenimiento";
             this.ResumeLayout(false);
             this.PerformLayout();

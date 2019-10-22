@@ -196,6 +196,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Name = "ModificarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Cliente";
             this.Load += new System.EventHandler(this.ModificarCliente_Load);
             this.ResumeLayout(false);

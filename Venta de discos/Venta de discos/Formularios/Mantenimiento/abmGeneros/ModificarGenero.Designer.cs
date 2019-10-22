@@ -102,6 +102,7 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Name = "ModificarGenero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Género";
             this.Load += new System.EventHandler(this.ModificarGenero_Load_1);
             this.ResumeLayout(false);

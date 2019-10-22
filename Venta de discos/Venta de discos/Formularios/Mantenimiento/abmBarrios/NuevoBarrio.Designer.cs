@@ -102,6 +102,7 @@
             this.Controls.Add(this.txtBarrio);
             this.Controls.Add(this.lblNuevoPais);
             this.Name = "NuevoBarrio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoBarrio";
             this.Load += new System.EventHandler(this.NuevoBarrio_Load_1);
             this.ResumeLayout(false);

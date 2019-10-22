@@ -358,6 +358,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
             this.Name = "NuevaVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Venta";
             this.Load += new System.EventHandler(this.NuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();

@@ -99,6 +99,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvPais);
             this.Name = "Paises";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Países";
             this.Load += new System.EventHandler(this.Paises_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPais)).EndInit();

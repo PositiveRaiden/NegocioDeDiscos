@@ -108,6 +108,7 @@
             this.Controls.Add(this.lblOpciones);
             this.Controls.Add(this.btnSalirMenu);
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Negocio Venta de Discos";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);

@@ -200,6 +200,7 @@
             this.Controls.Add(this.lblNumeroDoc);
             this.Controls.Add(this.lblTipoDoc);
             this.Name = "NuevoCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Cliente";
             this.Load += new System.EventHandler(this.NuevoCliente_Load);
             this.ResumeLayout(false);

@@ -27,7 +27,7 @@ namespace Venta_de_discos.Formularios.Mantenimiento
         private void NuevoInterprete_Load(object sender, EventArgs e)
         {
             txtNombre.Focus();
-            ActualizarComboPais();
+            ActualizarComboPais();//
         }
 
         private void ActualizarComboPais()

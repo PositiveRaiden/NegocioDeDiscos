@@ -99,6 +99,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvBarrios);
             this.Name = "Barrios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barrios";
             this.Load += new System.EventHandler(this.Barrios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).EndInit();

@@ -100,6 +100,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvGeneros);
             this.Name = "Generos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Géneros";
             this.Load += new System.EventHandler(this.Genero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();

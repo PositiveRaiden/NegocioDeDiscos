@@ -100,6 +100,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Interpretes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intérpretes";
             this.Load += new System.EventHandler(this.Interpretes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

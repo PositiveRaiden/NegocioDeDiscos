@@ -123,6 +123,7 @@
             this.Controls.Add(this.txtSello);
             this.Controls.Add(this.lblSello);
             this.Name = "NuevoSello";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Sello";
             this.Load += new System.EventHandler(this.NuevoSello_Load);
             this.ResumeLayout(false);

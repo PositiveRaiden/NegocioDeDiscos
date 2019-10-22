@@ -102,6 +102,7 @@
             this.Controls.Add(this.txtBarrio);
             this.Controls.Add(this.lblBarrio);
             this.Name = "ModificarBarrio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarBarrio";
             this.Load += new System.EventHandler(this.ModificarBarrio_Load);
             this.ResumeLayout(false);

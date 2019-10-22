@@ -91,6 +91,7 @@ namespace Venta_de_discos
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvVentas);
             this.Name = "GenerarVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.VentaDeDiscos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();

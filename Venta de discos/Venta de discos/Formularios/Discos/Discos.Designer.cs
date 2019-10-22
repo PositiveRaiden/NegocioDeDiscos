@@ -134,6 +134,7 @@
             this.Controls.Add(this.lblIntrprete);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BuscarDisco";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Discos ";
             this.Load += new System.EventHandler(this.BuscarDisco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

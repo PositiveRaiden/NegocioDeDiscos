@@ -81,6 +81,7 @@
             this.Controls.Add(this.txtNuevoPais);
             this.Controls.Add(this.lblNuevoPais);
             this.Name = "NuevoPais";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo País";
             this.Load += new System.EventHandler(this.NuevoPais_Load);
             this.ResumeLayout(false);

@@ -99,6 +99,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvSellos);
             this.Name = "Sellos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sellos";
             this.Load += new System.EventHandler(this.Sellos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSellos)).EndInit();

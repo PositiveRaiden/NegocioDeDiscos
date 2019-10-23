@@ -90,7 +90,26 @@ namespace Venta_de_discos.Repositorios
 
         }
 
+        public DataTable ObtenerDetallesVenta(string idVenta)
+        {
+            //uso para ventasForm 
+            string sqltxt = $"SELECT  di.nombre_Album as 'Nombre album', d.cantidad as 'Cantidad Vendida' FROM Detalle_Venta D, Disco Di WHERE d.id_disco = Di.id AND D.id_Venta = {idVenta}";
+            return _BD.consulta(sqltxt);
 
 
+        }
+
+        public bool Eliminar(string ventaId)
+        {
+
+            string sqltxt1 = $"DELETE FROM [dbo].[Detalle_Pedido] WHERE id_Pedido ={ventaId}";
+            _BD.EjecutarSQL(sqltxt1);
+
+            string sqltxt = $"DELETE FROM [dbo].[Pedido] WHERE id ={ventaId}";
+            return _BD.EjecutarSQL(sqltxt);
+
+
+
+        }
     }
 }

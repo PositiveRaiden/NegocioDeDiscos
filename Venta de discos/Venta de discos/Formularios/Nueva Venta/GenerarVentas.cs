@@ -53,5 +53,35 @@ namespace Venta_de_discos
             frm.ShowDialog();
             cargarVentas();
         }
+        public void cargarDetallesVenta(string idVenta)
+        {
+            var detalleVentas = ventasRepositorio.ObtenerDetallesVenta(idVenta);
+            dgvDetalles.DataSource = detalleVentas;
+        }
+
+        private void dgvVentas_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string idVenta = dgvVentas.SelectedCells[0].Value.ToString();
+                cargarDetallesVenta(idVenta);
+            }
+            catch
+            {
+                //Sin esto no anda nose porque. index null no controlada
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var seleccionados = dgvVentas.SelectedRows;
+            if (seleccionados.Count == 0 || seleccionados.Count > 1)
+            {
+                MessageBox.Show("Deberia seleccionar solo una fila");
+                return;
+            }
+           
+
+        }
     }
 }

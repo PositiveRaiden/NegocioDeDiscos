@@ -36,7 +36,6 @@ namespace Venta_de_discos.Repositorios
             string sqltxt = $"SELECT  d.id_Disco,di.nombre_Album as 'Nombre album',d.cantidad as 'Cantidad Pedida' FROM Detalle_Pedido D, Disco Di WHERE d.id_Disco = Di.id AND D.id_pedido = {idPedido}";
             return _BD.consulta(sqltxt);
         }
-
         public DataTable ObtenerPedido(string id)
         {
             //string sqltxt = "SELECT p.id as 'Numero de pedido', p.fechaPedido, di.nombre_Album as 'Disco', d.cantidad as 'Cantidad Pedida' FROM Pedido P, Detalle_Pedido D, Disco Di WHERE D.id_pedido = P.id AND d.id_Disco = Di.id";
@@ -52,7 +51,7 @@ namespace Venta_de_discos.Repositorios
             string sqltxt = $"DELETE FROM [dbo].[Pedido] WHERE id ={pedidoId}";
             return _BD.EjecutarSQL(sqltxt);
 
-    }
+        }       
         public void Editar(string idPedido, Pedido p)
         {
 

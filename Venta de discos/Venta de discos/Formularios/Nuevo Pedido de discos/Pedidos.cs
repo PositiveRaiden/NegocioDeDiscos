@@ -117,6 +117,9 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

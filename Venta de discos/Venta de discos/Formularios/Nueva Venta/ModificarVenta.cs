@@ -34,9 +34,10 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             foreach (DataRow row in pedido.Rows)
             {
                 LblFechaHoy.Text = row["fecha"].ToString();
+                //LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
             }
         }
-
+        
         private void cargarDiscos()
         {
             var discos = discosRepositorio.ObtenerDiscos();

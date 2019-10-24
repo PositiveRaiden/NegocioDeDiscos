@@ -39,13 +39,17 @@ namespace Venta_de_discos
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnMostrarTodas = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(174, 326);
+            this.btnEliminar.Location = new System.Drawing.Point(174, 404);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 3;
@@ -55,7 +59,7 @@ namespace Venta_de_discos
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(12, 326);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 404);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 1;
@@ -65,7 +69,7 @@ namespace Venta_de_discos
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(706, 326);
+            this.btnSalir.Location = new System.Drawing.Point(706, 404);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 5;
@@ -78,7 +82,7 @@ namespace Venta_de_discos
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(12, 25);
+            this.dgvVentas.Location = new System.Drawing.Point(12, 103);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -89,7 +93,7 @@ namespace Venta_de_discos
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(93, 326);
+            this.btnModificar.Location = new System.Drawing.Point(93, 404);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 6;
@@ -102,7 +106,7 @@ namespace Venta_de_discos
             this.dgvDetalles.AllowUserToAddRows = false;
             this.dgvDetalles.AllowUserToDeleteRows = false;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalles.Location = new System.Drawing.Point(545, 25);
+            this.dgvDetalles.Location = new System.Drawing.Point(545, 103);
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -112,7 +116,7 @@ namespace Venta_de_discos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 9);
+            this.label1.Location = new System.Drawing.Point(217, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
             this.label1.TabIndex = 8;
@@ -121,17 +125,59 @@ namespace Venta_de_discos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(590, 9);
+            this.label2.Location = new System.Drawing.Point(590, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Detalle de venta seleccionada";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Buscar venta por fecha:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(139, 16);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.Value = new System.DateTime(2019, 10, 24, 19, 35, 11, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // btnMostrarTodas
+            // 
+            this.btnMostrarTodas.Location = new System.Drawing.Point(12, 74);
+            this.btnMostrarTodas.Name = "btnMostrarTodas";
+            this.btnMostrarTodas.Size = new System.Drawing.Size(101, 23);
+            this.btnMostrarTodas.TabIndex = 12;
+            this.btnMostrarTodas.Text = "Mostrar todas";
+            this.btnMostrarTodas.UseVisualStyleBackColor = true;
+            this.btnMostrarTodas.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(345, 15);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(87, 23);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // GenerarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 356);
+            this.ClientSize = new System.Drawing.Size(796, 436);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnMostrarTodas);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDetalles);
@@ -166,5 +212,9 @@ namespace Venta_de_discos
         private DataGridView dgvDetalles;
         private Label label1;
         private Label label2;
+        private Label label3;
+        private DateTimePicker dateTimePicker1;
+        private Button btnMostrarTodas;
+        private Button btnBuscar;
     }
 }

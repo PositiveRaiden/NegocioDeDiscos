@@ -125,5 +125,30 @@ namespace Venta_de_discos
                 cargarVentas();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cargarVentas();
+        }
+
+        private void ActualizarVentasSegunFecha()
+        {
+            
+            var valor = dateTimePicker1.Value;
+            var ventas = ventasRepositorio.ObtenerVentasPorFecha(valor.ToString());
+            dgvVentas.DataSource = ventas;
+            
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ActualizarVentasSegunFecha();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

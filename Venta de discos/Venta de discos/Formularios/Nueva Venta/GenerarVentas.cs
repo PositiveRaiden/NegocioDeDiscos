@@ -80,7 +80,29 @@ namespace Venta_de_discos
                 MessageBox.Show("Deberia seleccionar solo una fila");
                 return;
             }
-           
+
+            //NO MODIFICO EL STOCK
+
+            foreach (DataGridViewRow fila in seleccionados)
+            {
+
+                var id = fila.Cells[0].Value;
+
+                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar la venta cuyo id es {id}?",
+                    "Confirmar operacion",
+                    MessageBoxButtons.YesNo);
+
+                if (confirmacion.Equals(DialogResult.No))
+                    return;
+
+                if (ventasRepositorio.Eliminar(id.ToString()))
+                {
+                    MessageBox.Show($"Usted Elimino la venta con id:{id}");
+                    cargarVentas();
+                }
+
+
+            }
 
         }
     }

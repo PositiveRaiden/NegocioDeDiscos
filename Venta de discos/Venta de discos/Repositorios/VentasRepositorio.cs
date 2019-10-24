@@ -102,10 +102,10 @@ namespace Venta_de_discos.Repositorios
         public bool Eliminar(string ventaId)
         {
 
-            string sqltxt1 = $"DELETE FROM [dbo].[Detalle_Pedido] WHERE id_Pedido ={ventaId}";
+            string sqltxt1 = $"DELETE FROM [dbo].[Detalle_Venta] WHERE id_Venta ={ventaId}";
             _BD.EjecutarSQL(sqltxt1);
 
-            string sqltxt = $"DELETE FROM [dbo].[Pedido] WHERE id ={ventaId}";
+            string sqltxt = $"DELETE FROM [dbo].[Venta] WHERE id ={ventaId}";
             return _BD.EjecutarSQL(sqltxt);
 
 

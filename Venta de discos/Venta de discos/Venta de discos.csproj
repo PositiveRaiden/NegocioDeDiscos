@@ -170,6 +170,12 @@
     <Compile Include="Formularios\Mantenimiento\abmSellos\Sellos.Designer.cs">
       <DependentUpon>Sellos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Nueva Venta\ModificarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Nueva Venta\ModificarVenta.Designer.cs">
+      <DependentUpon>ModificarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nueva Venta\NuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmSellos\Sellos.resx">
       <DependentUpon>Sellos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Nueva Venta\ModificarVenta.resx">
+      <DependentUpon>ModificarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nueva Venta\NuevaVenta.resx">
       <DependentUpon>NuevaVenta.cs</DependentUpon>

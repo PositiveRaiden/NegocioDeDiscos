@@ -40,9 +40,7 @@ namespace Venta_de_discos
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnMostrarTodas = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
@@ -140,43 +138,20 @@ namespace Venta_de_discos
             this.label3.TabIndex = 10;
             this.label3.Text = "Buscar venta por fecha:";
             // 
-            // dateTimePicker1
+            // txtFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(139, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 11;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 10, 24, 19, 35, 11, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // btnMostrarTodas
-            // 
-            this.btnMostrarTodas.Location = new System.Drawing.Point(12, 74);
-            this.btnMostrarTodas.Name = "btnMostrarTodas";
-            this.btnMostrarTodas.Size = new System.Drawing.Size(101, 23);
-            this.btnMostrarTodas.TabIndex = 12;
-            this.btnMostrarTodas.Text = "Mostrar todas";
-            this.btnMostrarTodas.UseVisualStyleBackColor = true;
-            this.btnMostrarTodas.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(345, 15);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(87, 23);
-            this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtFecha.Location = new System.Drawing.Point(139, 17);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(100, 20);
+            this.txtFecha.TabIndex = 11;
+            this.txtFecha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // GenerarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 436);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnMostrarTodas);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -213,8 +188,6 @@ namespace Venta_de_discos
         private Label label1;
         private Label label2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
-        private Button btnMostrarTodas;
-        private Button btnBuscar;
+        private TextBox txtFecha;
     }
 }

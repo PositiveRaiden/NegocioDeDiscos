@@ -36,13 +36,15 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(174, 301);
+            this.btnEliminar.Location = new System.Drawing.Point(171, 369);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 27;
@@ -52,7 +54,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(93, 301);
+            this.btnModificar.Location = new System.Drawing.Point(90, 369);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 26;
@@ -62,7 +64,7 @@
             // 
             // btnAñadirDisco
             // 
-            this.btnAñadirDisco.Location = new System.Drawing.Point(12, 301);
+            this.btnAñadirDisco.Location = new System.Drawing.Point(9, 369);
             this.btnAñadirDisco.Name = "btnAñadirDisco";
             this.btnAñadirDisco.Size = new System.Drawing.Size(75, 23);
             this.btnAñadirDisco.TabIndex = 24;
@@ -72,7 +74,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(507, 301);
+            this.btnSalir.Location = new System.Drawing.Point(504, 369);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 23;
@@ -85,7 +87,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -98,7 +100,7 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(299, 42);
+            this.dataGridView2.Location = new System.Drawing.Point(296, 110);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -109,7 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 26);
+            this.label1.Location = new System.Drawing.Point(120, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 29;
@@ -118,17 +120,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(365, 26);
+            this.label2.Location = new System.Drawing.Point(362, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 13);
             this.label2.TabIndex = 30;
             this.label2.Text = "Detalle del pedido seleccionado";
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(144, 26);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(119, 20);
+            this.txtFecha.TabIndex = 32;
+            this.txtFecha.TextChanged += new System.EventHandler(this.txtFecha_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 13);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Buscar pedido por fecha:";
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 337);
+            this.ClientSize = new System.Drawing.Size(609, 441);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView2);
@@ -158,5 +179,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.Label label3;
     }
 }

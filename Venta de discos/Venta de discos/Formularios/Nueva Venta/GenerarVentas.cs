@@ -10,6 +10,7 @@ using System.Collections;
 using System.Windows.Forms;
 using Venta_de_discos.Formularios.Nueva_Venta;
 using Venta_de_discos.Repositorios;
+using System.Data.SqlClient;
 
 namespace Venta_de_discos
 {
@@ -29,7 +30,9 @@ namespace Venta_de_discos
         public void cargarVentas()
         {
             var ventas = ventasRepositorio.ObtenerVentas();
+
             dgvVentas.DataSource = ventas;
+            dgvVentas.Columns["Fecha"].DefaultCellStyle.Format = "yyyy-MM-dd";
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -126,29 +129,51 @@ namespace Venta_de_discos
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            cargarVentas();
-        }
+
 
         private void ActualizarVentasSegunFecha()
         {
-            
-            var valor = dateTimePicker1.Value;
-            var ventas = ventasRepositorio.ObtenerVentasPorFecha(valor.ToString());
-            dgvVentas.DataSource = ventas;
-            
-
+     
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            ActualizarVentasSegunFecha();
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            filtrarVenta();
+            if (dgvVentas.RowCount == 0)
+            {
+                dgvDetalles.DataSource = null;
+            }
+        }
+        private void filtrarVenta()
+        {
+            using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
+            {
+
+                string query = "SELECT v.id as 'Numero de Venta', v.fecha as 'Fecha', " +
+                      "v.id_Cliente as 'Número de Cliente', c.Nombre, v.importe_Total as 'Importe Total' FROM Venta v, " +
+                       $"Cliente c WHERE v.id_Cliente = c.id AND v.fecha LIKE @param + '%'";
+
+                SqlCommand cmd = new SqlCommand(query, cnx);
+                cmd.Parameters.AddWithValue("@param", txtFecha.Text.Trim());
+
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                dgvVentas.DataSource = dt;
+
+            }
         }
     }
 }

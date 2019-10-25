@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
             var pedidos = pedidosRepositorio.ObtenerPedidos();
             dataGridView1.DataSource = pedidos;
+            dataGridView1.Columns["fechaPedido"].DefaultCellStyle.Format = "yyyy-MM-dd";
             //if (dataGridView1.Rows.Count > 0)
             //{
             //    dataGridView1.Rows[1].Selected = true;
@@ -120,6 +122,34 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtFecha_TextChanged(object sender, EventArgs e)
+        {
+            filtrarVenta();
+            if (dataGridView1.RowCount == 0)
+            {
+                dataGridView2.DataSource = null;
+            }
+        }
+
+        private void filtrarVenta()
+        {
+            using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
+            {
+                string sqltxt = "SELECT id as 'Numero de pedido', fechaPedido FROM Pedido WHERE fechapedido LIKE @param + '%' ";
+
+                SqlCommand cmd = new SqlCommand(sqltxt, cnx);
+                cmd.Parameters.AddWithValue("@param", txtFecha.Text.Trim());
+
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+
+            }
         }
     }
 }

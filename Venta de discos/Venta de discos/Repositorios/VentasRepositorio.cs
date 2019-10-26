@@ -135,7 +135,7 @@ namespace Venta_de_discos.Repositorios
 
             string sqltxt = $"SELECT d.id_Disco,di.nombre_Album as 'Nombre album',di.precio as 'Precio',"+
                 $"d.cantidad as 'Cantidad'" +
-                $"FROM Detalle_Venta d, Disco Di WHERE d.id_disco = Di.id AND D.id_Venta = {idVenta}";
+                $"FROM Detalle_Venta d, Disco di WHERE d.id_disco = di.id AND d.id_Venta = {idVenta}";
             return _BD.consulta(sqltxt);
         }
 

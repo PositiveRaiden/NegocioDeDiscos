@@ -26,7 +26,6 @@ namespace Venta_de_discos
 
         private void VentaDeDiscos_Load(object sender, EventArgs e)
         {
-           
             txtFecha.GotFocus += new EventHandler(this.TextGotFocus);
             txtFecha.LostFocus += new EventHandler(this.TextLostFocus);
             cargarVentas();

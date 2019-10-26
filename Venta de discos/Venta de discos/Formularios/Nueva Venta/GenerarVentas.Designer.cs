@@ -50,7 +50,7 @@ namespace Venta_de_discos
             this.btnEliminar.Location = new System.Drawing.Point(174, 404);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -60,7 +60,7 @@ namespace Venta_de_discos
             this.btnNuevo.Location = new System.Drawing.Point(12, 404);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -70,7 +70,7 @@ namespace Venta_de_discos
             this.btnSalir.Location = new System.Drawing.Point(706, 404);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
@@ -85,7 +85,7 @@ namespace Venta_de_discos
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(527, 295);
-            this.dgvVentas.TabIndex = 4;
+            this.dgvVentas.TabIndex = 2;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             this.dgvVentas.SelectionChanged += new System.EventHandler(this.dgvVentas_SelectionChanged);
             // 
@@ -94,7 +94,7 @@ namespace Venta_de_discos
             this.btnModificar.Location = new System.Drawing.Point(93, 404);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 6;
+            this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -109,7 +109,7 @@ namespace Venta_de_discos
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalles.Size = new System.Drawing.Size(236, 295);
-            this.dgvDetalles.TabIndex = 7;
+            this.dgvDetalles.TabIndex = 3;
             // 
             // label1
             // 
@@ -142,9 +142,11 @@ namespace Venta_de_discos
             // 
             this.txtFecha.Location = new System.Drawing.Point(139, 17);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(100, 20);
-            this.txtFecha.TabIndex = 11;
+            this.txtFecha.Size = new System.Drawing.Size(84, 20);
+            this.txtFecha.TabIndex = 1;
             this.txtFecha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtFecha.GotFocus += new System.EventHandler(this.OnGetFocus);
+            this.txtFecha.LostFocus += new System.EventHandler(this.OnLostFocus);
             // 
             // GenerarVenta
             // 

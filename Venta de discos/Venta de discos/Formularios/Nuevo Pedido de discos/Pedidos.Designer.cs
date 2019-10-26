@@ -1,4 +1,6 @@
-﻿namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
+﻿using System;
+
+namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 {
     partial class Pedidos
     {
@@ -106,7 +108,6 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(283, 253);
             this.dataGridView2.TabIndex = 28;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label1
             // 
@@ -130,9 +131,11 @@
             // 
             this.txtFecha.Location = new System.Drawing.Point(144, 26);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(119, 20);
+            this.txtFecha.Size = new System.Drawing.Size(84, 20);
             this.txtFecha.TabIndex = 32;
             this.txtFecha.TextChanged += new System.EventHandler(this.txtFecha_TextChanged);
+            this.txtFecha.GotFocus += new EventHandler(OnGetFocus);
+            this.txtFecha.LostFocus += new EventHandler(OnLostFocus);
             // 
             // label3
             // 

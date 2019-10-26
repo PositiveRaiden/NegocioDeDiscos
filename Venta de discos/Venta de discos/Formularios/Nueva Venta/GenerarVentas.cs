@@ -17,15 +17,29 @@ namespace Venta_de_discos
     public partial class GenerarVenta : Form
     {
         VentasRepositorio ventasRepositorio = new VentasRepositorio();
+
         public GenerarVenta()
         {
             InitializeComponent();
-        }
+            
+    }
 
         private void VentaDeDiscos_Load(object sender, EventArgs e)
         {            
             cargarVentas();
+            //Almacenamos en el Tag el texto por defecto
+            txtFecha.Tag = "aaaa-mm-dd";
+            //Ponemos el texto por defecto
+            txtFecha.Text = txtFecha.Tag.ToString();
+            //Ponemos el froecolor en gris
+            txtFecha.ForeColor = Color.Gray;
+
+            //lo de abajo va aen el designer
+            //txtFecha.GotFocus += new EventHandler(OnGetFocus);
+            //txtFecha.LostFocus += new EventHandler(OnLostFocus);
+
         }
+
 
         public void cargarVentas()
         {
@@ -56,6 +70,7 @@ namespace Venta_de_discos
             frm.ShowDialog();
             cargarVentas();
         }
+
         public void cargarDetallesVenta(string idVenta)
         {
             var detalleVentas = ventasRepositorio.ObtenerDetallesVenta(idVenta);
@@ -129,8 +144,6 @@ namespace Venta_de_discos
             }
         }
 
-
-
         private void ActualizarVentasSegunFecha()
         {
      
@@ -154,6 +167,7 @@ namespace Venta_de_discos
                 dgvDetalles.DataSource = null;
             }
         }
+
         private void filtrarVenta()
         {
             using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
@@ -175,5 +189,28 @@ namespace Venta_de_discos
 
             }
         }
+
+        public void OnGetFocus(object sender, EventArgs e)
+        {
+            //Comprobamos si el texto es el default, y si lo es lo borramos
+            if (txtFecha.Text.Contains(txtFecha.Tag.ToString()))
+                txtFecha.Text = "";
+            //Ponemos el color en negro
+            txtFecha.ForeColor = Color.Black;
+
+        }
+
+        public void OnLostFocus(object sender, EventArgs e)
+        {
+            //En caso de que no haya texto, añadimos el texto por defecto y ponemos el color en gris
+            if (String.IsNullOrWhiteSpace(txtFecha.Text))
+            {
+                txtFecha.Text = txtFecha.Tag.ToString();
+                txtFecha.ForeColor = Color.Gray;
+
+            }
+        }
+
+        
     }
 }

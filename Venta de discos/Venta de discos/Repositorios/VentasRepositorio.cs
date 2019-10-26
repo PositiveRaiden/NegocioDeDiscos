@@ -184,7 +184,7 @@ namespace Venta_de_discos.Repositorios
                         {
                             throw new ApplicationException("La cantidad ingresada no corresponde.");
                         }
-                        int nuevoStock = stock + number;
+                        int nuevoStock = stock - number;
                         
                         sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{nuevoStock}' WHERE id={d.id_disco}";
                         _BD.EjecutarTransaccion(sqltxt);

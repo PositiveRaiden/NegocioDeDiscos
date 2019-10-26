@@ -81,6 +81,7 @@ namespace Venta_de_discos
             this.dgvVentas.AllowUserToDeleteRows = false;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Location = new System.Drawing.Point(12, 103);
+            this.dgvVentas.MultiSelect = false;
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -105,6 +106,7 @@ namespace Venta_de_discos
             this.dgvDetalles.AllowUserToDeleteRows = false;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Location = new System.Drawing.Point(545, 103);
+            this.dgvDetalles.MultiSelect = false;
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
             this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -144,8 +146,8 @@ namespace Venta_de_discos
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(84, 20);
             this.txtFecha.TabIndex = 1;
+            this.txtFecha.Click += new System.EventHandler(this.txtFecha_Click);
             this.txtFecha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            
             // 
             // GenerarVenta
             // 

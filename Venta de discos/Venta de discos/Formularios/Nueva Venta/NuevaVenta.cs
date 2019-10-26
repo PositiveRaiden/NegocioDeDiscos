@@ -34,7 +34,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
             ActualizarComboCliente();
         }
-
         private void ActualizarComboCliente()
         {
             var clientes = clientesRepositorio.ObtenerCliente();
@@ -145,10 +144,10 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 {
                     var fila = new string[] {
                     seleccionada.Cells["id"].Value?.ToString(),
-                    seleccionada.Cells["Nombre Album"].Value?.ToString() ,                    
+                    seleccionada.Cells["Nombre Album"].Value?.ToString() ,
+                    seleccionada.Cells["Cantidad"].Value?.ToString(),
                     seleccionada.Cells["Precio"].Value?.ToString(),
                     seleccionada.Cells["Año Edicion"].Value?.ToString(),
-                    "0",
                     seleccionada.Cells["Genero"].Value?.ToString(),
                     seleccionada.Cells["Sello Discografico"].Value?.ToString(),
                     seleccionada.Cells["Interprete"].Value.ToString(),

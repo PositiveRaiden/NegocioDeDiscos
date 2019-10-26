@@ -11,7 +11,8 @@ using Venta_de_discos.Helpers;
 namespace Venta_de_discos.Repositorios
 {
     class VentasRepositorio
-    {
+    {   
+        public decimal importeTotal;
         private acceso_BD _BD;
 
         public VentasRepositorio()
@@ -140,36 +141,35 @@ namespace Venta_de_discos.Repositorios
 
         public void Editar(string idVenta, Venta v)
         {
-
-
+            
             using (var tx = _BD.IniciarTransaccion())
             {
                 try
                 {
+                    
                     //borro detalles viejos y vuelvo a stock anterior
                     string sqltxt1 = $"SELECT D.cantidad, D.id_disco FROM Detalle_Venta D WHERE id_Venta = {idVenta}";
                     DataTable dt = _BD.ConsultaDuranteTransaccion(sqltxt1);
                     foreach (DataRow fila in dt.Rows)
                     {
-                        string idDisco = fila["id_Disco"].ToString();
-                        string cantidadABorrar = fila["cantidad"].ToString();
-                        sqltxt1 = $"UPDATE [dbo].[Disco] SET cantidad = cantidad - {cantidadABorrar} WHERE id={idDisco}";
+                        string idDisco = fila["id_disco"].ToString();
+                        string cantidadASumar = fila["cantidad"].ToString();
+                        sqltxt1 = $"UPDATE [dbo].[Disco] SET cantidad = cantidad + {cantidadASumar} WHERE id={idDisco}";
                         _BD.EjecutarSQLEnTransaccion(sqltxt1);
                     }
 
                     string sqltxt = $"DELETE FROM [dbo].[Detalle_Venta] WHERE id_Venta ={idVenta}";
                     _BD.EjecutarSQLEnTransaccion(sqltxt);
                     //hasta aca
-
-
-
+               
                     foreach (var d in v.detalleVentas)
                     {
                         sqltxt = $"INSERT [dbo].[Detalle_Venta]" +
-                            $"([id_Venta], [Cantidad], [id_Disco]) " +
-                            $"VALUES ('{idVenta}', '{d.cantidad}', '{d.id_disco}')";
+                            $"([id_Venta], [id_disco], [cantidad], [precio]) " +
+                            $"VALUES ('{idVenta}', '{d.id_disco}','{d.cantidad}', '{d.precio}')";
                         _BD.EjecutarTransaccion(sqltxt);
 
+                        
                         sqltxt = $"SELECT cantidad FROM Disco WHERE id={d.id_disco}";
 
                         var stock =
@@ -178,7 +178,6 @@ namespace Venta_de_discos.Repositorios
                         int number;
                         if (!int.TryParse(d.cantidad, out number))
                         {
-
                             throw new ApplicationException("La cantidad ingresada no corresponde.");
                         }
                         if (number <= 0)
@@ -186,12 +185,25 @@ namespace Venta_de_discos.Repositorios
                             throw new ApplicationException("La cantidad ingresada no corresponde.");
                         }
                         int nuevoStock = stock + number;
-
-
+                        
                         sqltxt = $"UPDATE [dbo].[Disco] SET cantidad = '{nuevoStock}' WHERE id={d.id_disco}";
                         _BD.EjecutarTransaccion(sqltxt);
+
+                        int precio;
+                        if(!int.TryParse(d.precio, out precio ))
+                        {
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
+                        }
+                        if (precio <= 0)
+                        {
+                            throw new ApplicationException("La cantidad ingresada no corresponde.");
+
+                        }
+                        importeTotal = importeTotal + precio;
                     }
 
+                    string sqltxt3 = $"UPDATE [dbo].[Venta] SET importe_Total = '{importeTotal}' WHERE id={idVenta}";
+                    _BD.EjecutarTransaccion(sqltxt3);
                     tx.Commit();
                 }
                 catch (ApplicationException aex)

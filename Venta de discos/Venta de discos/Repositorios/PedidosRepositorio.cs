@@ -58,8 +58,6 @@ namespace Venta_de_discos.Repositorios
 
         public void Editar(string idPedido, Pedido p)
         {
-
-
             using (var tx = _BD.IniciarTransaccion())
             {
                 try

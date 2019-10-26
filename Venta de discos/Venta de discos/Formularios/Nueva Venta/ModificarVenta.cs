@@ -40,6 +40,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             }
             cargarDiscos();
             cargarDetalleVenta();
+            
         }
         
         private void cargarDiscos()
@@ -90,7 +91,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 }
                 foreach (DataGridViewRow agregada in discosAgregados)
                 {
-                    if (agregada.Cells["id_disco"].Value?.ToString() == codigo)
+                    if (agregada.Cells["id"].Value?.ToString() == codigo)
                     {
                         MessageBox.Show("Disco ya agregado.");
                         existe = true;

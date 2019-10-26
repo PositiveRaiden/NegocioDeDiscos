@@ -23,11 +23,11 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         private void Pedidos_Load(object sender, EventArgs e)
         {
             cargarPedidos();
-            txtFecha.Tag = "aaaa-mm-dd";
-            //Ponemos el texto por defecto
-            txtFecha.Text = txtFecha.Tag.ToString();
-            //Ponemos el froecolor en gris
-            txtFecha.ForeColor = Color.Gray;
+            //txtFecha.Tag = "aaaa-mm-dd";
+            ////Ponemos el texto por defecto
+            //txtFecha.Text = txtFecha.Tag.ToString();
+            ////Ponemos el froecolor en gris
+            //txtFecha.ForeColor = Color.Gray;
 
             //lo de abajo va aen el designer
             //txtFecha.GotFocus += new EventHandler(OnGetFocus);
@@ -162,22 +162,22 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         public void OnGetFocus(object sender, EventArgs e)
         {
             //Comprobamos si el texto es el default, y si lo es lo borramos
-            if (txtFecha.Text.Contains(txtFecha.Tag.ToString()))
-                txtFecha.Text = "";
-            //Ponemos el color en negro
-            txtFecha.ForeColor = Color.Black;
+            //if (txtFecha.Text.Contains(txtFecha.Tag.ToString()))
+            //    txtFecha.Text = "";
+            ////Ponemos el color en negro
+            //txtFecha.ForeColor = Color.Black;
 
         }
 
         public void OnLostFocus(object sender, EventArgs e)
         {
             //En caso de que no haya texto, añadimos el texto por defecto y ponemos el color en gris
-            if (String.IsNullOrWhiteSpace(txtFecha.Text))
-            {
-                txtFecha.Text = txtFecha.Tag.ToString();
-                txtFecha.ForeColor = Color.Gray;
+            //if (String.IsNullOrWhiteSpace(txtFecha.Text))
+            //{
+            //    txtFecha.Text = txtFecha.Tag.ToString();
+            //    txtFecha.ForeColor = Color.Gray;
 
-            }
+            //}
         }
     }
 }

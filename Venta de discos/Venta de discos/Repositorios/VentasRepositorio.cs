@@ -13,6 +13,7 @@ namespace Venta_de_discos.Repositorios
     class VentasRepositorio
     {
         private acceso_BD _BD;
+
         public VentasRepositorio()
         {
             _BD = new acceso_BD();
@@ -129,7 +130,11 @@ namespace Venta_de_discos.Repositorios
         public DataTable ObtenerDetallesVentaParaModificar(string idVenta)
         {
             //uso para modificar
-            string sqltxt = $"SELECT  d.id_Disco,di.nombre_Album as 'Nombre album',d.cantidad as 'Cantidad Vendida' FROM Detalle_Venta D, Disco Di WHERE d.id_Disco = Di.id AND D.id = {idVenta}";
+            //string sqltxt = $"SELECT  d.id_Disco,di.nombre_Album as 'Nombre album',d.cantidad as 'Cantidad Pedida' FROM Detalle_Pedido D, Disco Di WHERE d.id_Disco = Di.id AND D.id_pedido = {idPedido}";
+
+            string sqltxt = $"SELECT d.id_Disco,di.nombre_Album as 'Nombre album',di.precio as 'Precio',"+
+                $"d.cantidad as 'Cantidad'" +
+                $"FROM Detalle_Venta d, Disco Di WHERE d.id_disco = Di.id AND D.id_Venta = {idVenta}";
             return _BD.consulta(sqltxt);
         }
 
@@ -205,12 +210,6 @@ namespace Venta_de_discos.Repositorios
             }
         }
 
-        //public DataTable ObtenerVentasPorFecha(string fecha)
-        //{
-        //    string sqltxt = "SELECT v.id as 'Numero de Venta', v.fecha as 'Fecha', " +
-        //        "v.id_Cliente as 'Número de Cliente', c.Nombre, v.importe_Total as 'Importe Total' FROM Venta v, " +
-        //        $"Cliente c WHERE v.id_Cliente = c.id AND v.fecha = {fecha}";
-        //    return _BD.consulta(sqltxt);
-        //}
+        
     }
 }

@@ -50,6 +50,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             this.dataGridView1.Columns["genero"].Visible = false;
             this.dataGridView1.Columns["año edicion"].Visible = false;
         }
+
         private void cargarDetallePedido()
         {
             var detallesPedidoSeleccionado = pedidosRepositorio.ObtenerDetallesPedidoParaModificar(idPedido);
@@ -59,6 +60,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
                 dataGridView2.Rows.Add(DetalleATabla(row));
             }
         }
+
         private string[] DetalleATabla(DataRow Row)
         {
             var row = new string[] {
@@ -127,6 +129,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
             filtrarDisco();
         }
+
         private void filtrarDisco()
         {
             using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))
@@ -180,6 +183,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
                 MessageBox.Show("Ocurrio un error inesperado");
             }
         }
+
         private List<DetallePedido> PreparaDetalles()
         {
             var detalles = new List<DetallePedido>();

@@ -145,8 +145,7 @@ namespace Venta_de_discos
             this.txtFecha.Size = new System.Drawing.Size(84, 20);
             this.txtFecha.TabIndex = 1;
             this.txtFecha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtFecha.GotFocus += new System.EventHandler(this.OnGetFocus);
-            this.txtFecha.LostFocus += new System.EventHandler(this.OnLostFocus);
+            
             // 
             // GenerarVenta
             // 

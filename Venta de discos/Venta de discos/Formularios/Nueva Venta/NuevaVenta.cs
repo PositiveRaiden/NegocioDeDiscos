@@ -88,7 +88,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             return;
         }
 
-
         private void ActualizarTotal()
         {
             var filas = dgvVentas.Rows;
@@ -127,7 +126,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             foreach (DataGridViewRow seleccionada in seleccionadas)
             {
                 var codigo = seleccionada.Cells["Id"].Value?.ToString();
-
                 if (seleccionada.Cells["Cantidad"].Value?.ToString() == "0")
                 {
                     MessageBox.Show("Disco sin stock para venta");
@@ -142,14 +140,9 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                         existe = true;
                         break;
                     }
-
-
                 }
-
-
                 if (existe == false)
                 {
-
                     var fila = new string[] {
                     seleccionada.Cells["id"].Value?.ToString(),
                     seleccionada.Cells["Nombre Album"].Value?.ToString() ,                    
@@ -218,7 +211,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 }
                 var a = new Venta()
                 {
-
                     id_Cliente = cmbCliente.SelectedValue.ToString(),
                     fecha = DateTime.Today,
                     detalleVentas = PreparaDetalles(),
@@ -259,6 +251,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         {
             filtrarDiscos();
         }
+
         private void filtrarDiscos()
         {
             using (SqlConnection cnx = new SqlConnection("workstation id = GerardoDB.mssql.somee.com; packet size = 4096; user id = geraCrossfit_SQLLogin_1; pwd=otyvkmvxvm;data source = GerardoDB.mssql.somee.com; persist security info=False;initial catalog = GerardoDB"))

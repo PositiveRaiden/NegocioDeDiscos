@@ -16,26 +16,30 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
     public partial class ModificarVenta : Form
     {
         string idVenta;
+        string idCliente;
         VentasRepositorio ventasRepositorio = new VentasRepositorio();
         DiscosRepositorio discosRepositorio = new DiscosRepositorio();
+        ClientesRepositorio clienteRepositorio = new ClientesRepositorio();
 
-        public ModificarVenta(string id)
+        public ModificarVenta(string id,string idCli)
         {
             InitializeComponent();
             idVenta = id;
+            idCliente = idCli;
         }
 
         private void ModificarVenta_Load(object sender, EventArgs e)
         {
-            cargarDiscos();
-            cargarDetalleVenta();
-
-            var pedido = ventasRepositorio.ObtenerVenta(idVenta);
-            foreach (DataRow row in pedido.Rows)
+            var cliente = clienteRepositorio.ObtenerCliente(idCliente);
+            lblCliente.Text = "Cliente: " + cliente.Apellido + " " + cliente.Nombre;
+            var venta = ventasRepositorio.ObtenerVenta(idVenta);
+            foreach (DataRow row in venta.Rows)
             {
                 LblFechaHoy.Text = row["fecha"].ToString();
                 //LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
             }
+            cargarDiscos();
+            cargarDetalleVenta();
         }
         
         private void cargarDiscos()
@@ -43,7 +47,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             var discos = discosRepositorio.ObtenerDiscos();
             dataGridView1.DataSource = discos;
             this.dataGridView1.Columns["id"].Visible = false;
-            this.dataGridView1.Columns["cantidad"].Visible = false;
+            this.dataGridView1.Columns["cantidad"].Visible = true;
             this.dataGridView1.Columns["precio"].Visible = false;
             this.dataGridView1.Columns["genero"].Visible = false;
             this.dataGridView1.Columns["año edicion"].Visible = false;
@@ -55,7 +59,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
 
             foreach (DataRow row in detallesPedidoSeleccionado.Rows)
             {
-                dataGridView2.Rows.Add(DetalleATabla(row));
+                dgvVentas.Rows.Add(DetalleATabla(row));
             }
         }
 
@@ -64,53 +68,62 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             var row = new string[] {
                     Row["id_Disco"].ToString(),
                     Row["Nombre album"].ToString(),
-                    Row["Cantidad Pedida"].ToString()
-                };
+                    Row["Precio"].ToString(),
+                    Row["Cantidad"].ToString()
+            };
             return row;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            var discosAgregados = dataGridView2.Rows;
+            var discosAgregados = dgvVentas.Rows;
             var seleccionadas = dataGridView1.SelectedRows;
             bool existe = false;
             foreach (DataGridViewRow seleccionada in seleccionadas)
             {
                 var codigo = seleccionada.Cells["Id"].Value?.ToString();
+                if (seleccionada.Cells["Cantidad"].Value?.ToString() == "0")
+                {
+                    MessageBox.Show("Disco sin stock para venta.");
+                    existe = true;
+                    break;
+                }
                 foreach (DataGridViewRow agregada in discosAgregados)
                 {
-                    if (agregada.Cells["id_Disco"].Value?.ToString() == codigo)
+                    if (agregada.Cells["id_disco"].Value?.ToString() == codigo)
                     {
-                        MessageBox.Show("Disco ya agregado");
+                        MessageBox.Show("Disco ya agregado.");
                         existe = true;
                         break;
                     }
-
                 }
-
                 if (existe == false)
                 {
 
                     var fila = new string[] {
                     seleccionada.Cells["id"].Value?.ToString(),
-                    seleccionada.Cells["Nombre Album"].Value?.ToString(),
-                    "0"
+                    seleccionada.Cells["Nombre Album"].Value?.ToString(),                    
+                    seleccionada.Cells["Precio"].Value?.ToString(),
+                    seleccionada.Cells["Año Edicion"].Value?.ToString(),
+                    "0",
+                    seleccionada.Cells["Genero"].Value?.ToString(),
+                    seleccionada.Cells["Sello Discografico"].Value?.ToString(),
+                    seleccionada.Cells["Interprete"].Value.ToString(),
                     };
 
-                    dataGridView2.Rows.Add(fila);
+                    dgvVentas.Rows.Add(fila);
                 }
-
             };
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.Rows.Count == 0)
+            if (dgvVentas.Rows.Count == 0)
             {
                 MessageBox.Show("No hay filas para eliminar.");
                 return;
             }
-            dataGridView2.Rows.RemoveAt(dataGridView2.CurrentRow.Index);
+            dgvVentas.Rows.RemoveAt(dgvVentas.CurrentRow.Index);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -122,16 +135,14 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         {
             var a = new Venta()
             {
-
                 fecha = DateTime.Today,
-                detalleVentas = PreparaDetalles()
-
+                detalleVentas = PreparaDetalles(),
+                importe_Total = string.IsNullOrEmpty(txtTotal.Text) ? 0 : decimal.Parse(txtTotal.Text)
             };
-
             try
             {
                 ventasRepositorio.Editar(idVenta, a);
-                MessageBox.Show("La operación se realizó con exito");
+                MessageBox.Show("La operación se realizó con exito.");
                 this.Dispose();
             }
             catch (ApplicationException aex)
@@ -140,8 +151,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Ocurrio un error inesperado");
+                MessageBox.Show("Ocurrio un error inesperado.");
             }
         }
 
@@ -149,14 +159,15 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         {
             var detalles = new List<DetalleVenta>();
 
-            var filas = dataGridView2.Rows;
+            var filas = dgvVentas.Rows;
 
             foreach (DataGridViewRow fila in filas)
             {
                 var detalle = new DetalleVenta()
                 {
-                    id_disco = fila.Cells["id_Disco"].Value?.ToString(),
-                    cantidad = fila.Cells["Cantidad"].Value?.ToString()
+                    id_disco = fila.Cells["id"].Value?.ToString(),
+                    cantidad = fila.Cells["Cantidad"].Value?.ToString(),
+                    precio = fila.Cells["precio"].Value?.ToString()
                 };
                 detalles.Add(detalle);
             }
@@ -207,5 +218,42 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             }
         }
 
+        private void dgvVentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvVentas_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            var fila = dgvVentas.Rows[e.RowIndex];
+            int cantidad = 0;
+            if (!int.TryParse(fila.Cells["Cantidad"].Value?.ToString(), out cantidad))
+            {
+                fila.Cells["Cantidad"].Value = null;
+                fila.Cells["subtotal"].Value = null;
+                ActualizarTotal();
+                return;
+            }
+            var precioUnitario = decimal.Parse(fila.Cells["Precio"].Value.ToString());
+            var subtotal = cantidad * precioUnitario;
+            fila.Cells["subtotal"].Value = subtotal;
+            ActualizarTotal();
+            return;
+        }
+        private void ActualizarTotal()
+        {
+            var filas = dgvVentas.Rows;
+            decimal total = 0;
+            foreach (DataGridViewRow fila in filas)
+            {
+                if (fila.Cells["subtotal"].Value == null)
+                    continue;
+                total += decimal.Parse(fila.Cells["subtotal"].Value.ToString());
+            }
+            if (total != 0)
+                txtTotal.Text = total.ToString();
+            else
+                txtTotal.Text = null;
+        }
     }
 }

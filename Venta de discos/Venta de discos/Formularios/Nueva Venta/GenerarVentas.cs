@@ -26,7 +26,8 @@ namespace Venta_de_discos
 
         private void VentaDeDiscos_Load(object sender, EventArgs e)
         {
-           
+            txtFecha.Text = "aaaa-mm-dd";
+            txtFecha.ForeColor = Color.LightGray;
             txtFecha.GotFocus += new EventHandler(this.TextGotFocus);
             txtFecha.LostFocus += new EventHandler(this.TextLostFocus);
             cargarVentas();

@@ -145,7 +145,7 @@ namespace Venta_de_discos
             this.txtFecha.Location = new System.Drawing.Point(139, 17);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(84, 20);
-            this.txtFecha.TabIndex = 1;
+            this.txtFecha.TabIndex = 99;
             this.txtFecha.Click += new System.EventHandler(this.txtFecha_Click);
             this.txtFecha.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

@@ -40,7 +40,28 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             }
             cargarDiscos();
             cargarDetalleVenta();
+
+            cargarSubtotal();
             
+        }
+        private void cargarSubtotal()
+        {
+
+            int cantidad = 0;
+            foreach (DataGridViewRow fila in dgvVentas.Rows)
+            {
+            if (!int.TryParse(fila.Cells["Cantidad"].Value?.ToString(), out cantidad))
+            {
+                fila.Cells["Cantidad"].Value = null;
+                fila.Cells["subtotal"].Value = null;
+                ActualizarTotal();
+                return;
+            }
+            var precioUnitario = decimal.Parse(fila.Cells["Precio"].Value.ToString());
+            var subtotal = cantidad * precioUnitario;
+            fila.Cells["subtotal"].Value = subtotal;
+            ActualizarTotal();
+            }
         }
         
         private void cargarDiscos()
@@ -105,11 +126,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                     seleccionada.Cells["id"].Value?.ToString(),
                     seleccionada.Cells["Nombre Album"].Value?.ToString(),                    
                     seleccionada.Cells["Precio"].Value?.ToString(),
-                    seleccionada.Cells["Año Edicion"].Value?.ToString(),
-                    "0",
-                    seleccionada.Cells["Genero"].Value?.ToString(),
-                    seleccionada.Cells["Sello Discografico"].Value?.ToString(),
-                    seleccionada.Cells["Interprete"].Value.ToString(),
+                    "0"
                     };
 
                     dgvVentas.Rows.Add(fila);

@@ -144,7 +144,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 {
                     var fila = new string[] {
                     seleccionada.Cells["id"].Value?.ToString(),
-                    seleccionada.Cells["Nombre Album"].Value?.ToString() ,"0",
+                    seleccionada.Cells["Nombre Album"].Value?.ToString() ,
+                    "0",
                     seleccionada.Cells["Precio"].Value?.ToString(),
                     seleccionada.Cells["Año Edicion"].Value?.ToString(),
                     seleccionada.Cells["Genero"].Value?.ToString(),

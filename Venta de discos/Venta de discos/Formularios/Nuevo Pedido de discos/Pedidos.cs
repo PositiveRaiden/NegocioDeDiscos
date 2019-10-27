@@ -22,19 +22,36 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
         private void Pedidos_Load(object sender, EventArgs e)
         {
-            cargarPedidos();
-            //txtFecha.Tag = "aaaa-mm-dd";
-            ////Ponemos el texto por defecto
-            //txtFecha.Text = txtFecha.Tag.ToString();
-            ////Ponemos el froecolor en gris
-            //txtFecha.ForeColor = Color.Gray;
 
-            //lo de abajo va aen el designer
-            //txtFecha.GotFocus += new EventHandler(OnGetFocus);
-            //txtFecha.LostFocus += new EventHandler(OnLostFocus);
+            txtFecha.Text = "aaaa-mm-dd";
+            txtFecha.ForeColor = Color.LightGray;
+
+
+            txtFecha.GotFocus += new EventHandler(this.TextGotFocus);
+            txtFecha.LostFocus += new EventHandler(this.TextLostFocus);
+            cargarPedidos();
 
         }
+        public void TextGotFocus(object sender, EventArgs e)
+        {
+            if (txtFecha.Text == "aaaa-mm-dd")
+            {
+                txtFecha.Text = "";
+                txtFecha.ForeColor = Color.Black;
+            }
+            cargarPedidos();
+        }
 
+        public void TextLostFocus(object sender, EventArgs e)
+        {
+
+            if (txtFecha.Text == "")
+            {
+                txtFecha.Text = "aaaa-mm-dd";
+                txtFecha.ForeColor = Color.LightGray;
+            }
+            cargarPedidos();
+        }
         public void cargarPedidos()
         {
             var pedidos = pedidosRepositorio.ObtenerPedidos();

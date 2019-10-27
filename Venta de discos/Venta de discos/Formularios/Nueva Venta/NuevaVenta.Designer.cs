@@ -330,6 +330,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             this.subtotal.HeaderText = "Subtotal";
             this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // NuevaVenta
             // 

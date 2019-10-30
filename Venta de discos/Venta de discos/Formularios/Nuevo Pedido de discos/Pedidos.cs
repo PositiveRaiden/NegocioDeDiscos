@@ -125,7 +125,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
                 if (pedidosRepositorio.Eliminar(id.ToString()))
                 {
-                    MessageBox.Show($"Usted Elimino a {id}");
+                    MessageBox.Show($"Usted Elimino el pedido numero: {id}");
                     cargarPedidos();
                 }
 

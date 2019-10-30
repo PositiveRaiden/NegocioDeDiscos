@@ -180,7 +180,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             catch (Exception ex)
             {
 
-                MessageBox.Show("Ocurrio un error inesperado");
+                MessageBox.Show("Ocurrio un error inesperado, proba cargar solo cantidades en numeros.");
             }
         }
 

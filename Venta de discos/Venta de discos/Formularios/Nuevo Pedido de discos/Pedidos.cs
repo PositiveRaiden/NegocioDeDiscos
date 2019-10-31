@@ -116,7 +116,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
                 var id = fila.Cells[0].Value;
 
-                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar el pedido {id}?",
+                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar el pedido {id}?.\n Esta operacion no modificara el stock existente",
                     "Confirmar operacion",
                     MessageBoxButtons.YesNo);
 

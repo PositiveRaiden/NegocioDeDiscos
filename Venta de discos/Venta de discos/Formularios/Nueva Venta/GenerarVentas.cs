@@ -120,7 +120,7 @@ namespace Venta_de_discos
 
                 var id = fila.Cells[0].Value;
 
-                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar la venta cuyo id es {id}?",
+                var confirmacion = MessageBox.Show($"¿Esta seguro/a de eliminar la venta cuyo id es {id}?.\n Esta operacion no modificara el stock existente!",
                     "Confirmar operacion",
                     MessageBoxButtons.YesNo);
 

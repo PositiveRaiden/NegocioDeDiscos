@@ -66,7 +66,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(803, 442);
+            this.btnCancelar.Location = new System.Drawing.Point(895, 444);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 67;
@@ -76,7 +76,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(722, 442);
+            this.btnGuardar.Location = new System.Drawing.Point(814, 444);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 66;
@@ -86,19 +86,19 @@
             // 
             // filtroInterprete
             // 
-            this.filtroInterprete.Location = new System.Drawing.Point(260, 82);
+            this.filtroInterprete.Location = new System.Drawing.Point(366, 82);
             this.filtroInterprete.MaxLength = 30;
             this.filtroInterprete.Name = "filtroInterprete";
-            this.filtroInterprete.Size = new System.Drawing.Size(90, 20);
+            this.filtroInterprete.Size = new System.Drawing.Size(93, 20);
             this.filtroInterprete.TabIndex = 65;
             this.filtroInterprete.TextChanged += new System.EventHandler(this.filtroInterprete_TextChanged);
             // 
             // filtroSello
             // 
-            this.filtroSello.Location = new System.Drawing.Point(157, 82);
+            this.filtroSello.Location = new System.Drawing.Point(260, 82);
             this.filtroSello.MaxLength = 30;
             this.filtroSello.Name = "filtroSello";
-            this.filtroSello.Size = new System.Drawing.Size(108, 20);
+            this.filtroSello.Size = new System.Drawing.Size(100, 20);
             this.filtroSello.TabIndex = 64;
             this.filtroSello.TextChanged += new System.EventHandler(this.filtroSello_TextChanged);
             // 
@@ -113,7 +113,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(404, 252);
+            this.btnEliminar.Location = new System.Drawing.Point(477, 252);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(43, 37);
             this.btnEliminar.TabIndex = 62;
@@ -123,7 +123,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(404, 209);
+            this.btnAgregar.Location = new System.Drawing.Point(477, 209);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 37);
             this.btnAgregar.TabIndex = 61;
@@ -141,7 +141,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(381, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(454, 331);
             this.dataGridView1.TabIndex = 59;
             // 
             // LblFechaHoy
@@ -169,7 +169,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(450, 82);
+            this.label1.Location = new System.Drawing.Point(523, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 69;
@@ -198,7 +198,7 @@
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(526, 444);
+            this.txtTotal.Location = new System.Drawing.Point(613, 446);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 73;
@@ -206,7 +206,7 @@
             // lblImporteTotal
             // 
             this.lblImporteTotal.AutoSize = true;
-            this.lblImporteTotal.Location = new System.Drawing.Point(450, 447);
+            this.lblImporteTotal.Location = new System.Drawing.Point(537, 449);
             this.lblImporteTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImporteTotal.Name = "lblImporteTotal";
             this.lblImporteTotal.Size = new System.Drawing.Size(71, 13);
@@ -225,10 +225,10 @@
             this.Precio,
             this.Cantidad,
             this.subtotal});
-            this.dgvVentas.Location = new System.Drawing.Point(453, 101);
+            this.dgvVentas.Location = new System.Drawing.Point(526, 98);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(425, 331);
+            this.dgvVentas.Size = new System.Drawing.Size(444, 338);
             this.dgvVentas.TabIndex = 74;
             this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellContentClick);
             this.dgvVentas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellEndEdit);
@@ -266,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 490);
+            this.ClientSize = new System.Drawing.Size(989, 475);
             this.Controls.Add(this.dgvVentas);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblImporteTotal);

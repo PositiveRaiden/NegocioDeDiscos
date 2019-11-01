@@ -34,6 +34,15 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AñoEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SelloDiscografico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interprete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiscos = new System.Windows.Forms.DataGridView();
             this.LblFechaHoy = new System.Windows.Forms.Label();
             this.LblFecha = new System.Windows.Forms.Label();
@@ -51,15 +60,6 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.filtroSello = new System.Windows.Forms.TextBox();
             this.filtroNombreAlbum = new System.Windows.Forms.TextBox();
             this.filtroCantidad = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AñoEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelloDiscografico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Interprete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.btnEliminar.Location = new System.Drawing.Point(458, 301);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(43, 37);
-            this.btnEliminar.TabIndex = 49;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "-";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -79,7 +79,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.btnAgregar.Location = new System.Drawing.Point(458, 258);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 37);
-            this.btnAgregar.TabIndex = 48;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
@@ -89,7 +89,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.btnCancelar.Location = new System.Drawing.Point(869, 491);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -113,8 +113,65 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvVentas.Size = new System.Drawing.Size(425, 331);
-            this.dgvVentas.TabIndex = 45;
+            this.dgvVentas.TabIndex = 8;
             this.dgvVentas.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellEndEdit);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // NombreAlbum
+            // 
+            this.NombreAlbum.HeaderText = "Nombre Álbum";
+            this.NombreAlbum.Name = "NombreAlbum";
+            this.NombreAlbum.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // AñoEdicion
+            // 
+            this.AñoEdicion.HeaderText = "Año Edicion";
+            this.AñoEdicion.Name = "AñoEdicion";
+            this.AñoEdicion.ReadOnly = true;
+            this.AñoEdicion.Visible = false;
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Género";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Visible = false;
+            // 
+            // SelloDiscografico
+            // 
+            this.SelloDiscografico.HeaderText = "Sello Discográfico";
+            this.SelloDiscografico.Name = "SelloDiscografico";
+            this.SelloDiscografico.ReadOnly = true;
+            this.SelloDiscografico.Visible = false;
+            // 
+            // Interprete
+            // 
+            this.Interprete.HeaderText = "Intérprete";
+            this.Interprete.Name = "Interprete";
+            this.Interprete.ReadOnly = true;
+            this.Interprete.Visible = false;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // dgvDiscos
             // 
@@ -126,7 +183,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.dgvDiscos.ReadOnly = true;
             this.dgvDiscos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDiscos.Size = new System.Drawing.Size(438, 331);
-            this.dgvDiscos.TabIndex = 44;
+            this.dgvDiscos.TabIndex = 5;
             // 
             // LblFechaHoy
             // 
@@ -167,7 +224,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.cmbCliente.MaxLength = 30;
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(121, 21);
-            this.cmbCliente.TabIndex = 51;
+            this.cmbCliente.TabIndex = 1;
             this.cmbCliente.SelectedIndexChanged += new System.EventHandler(this.cmbCliente_SelectedIndexChanged);
             // 
             // lblImporteTotal
@@ -228,7 +285,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.button1.Location = new System.Drawing.Point(788, 491);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 58;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -238,7 +295,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.btnNuevoCliente.Location = new System.Drawing.Point(194, 35);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(94, 22);
-            this.btnNuevoCliente.TabIndex = 59;
+            this.btnNuevoCliente.TabIndex = 11;
             this.btnNuevoCliente.Text = "Nuevo Cliente";
             this.btnNuevoCliente.UseVisualStyleBackColor = true;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
@@ -248,7 +305,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.filtroInterprete.Location = new System.Drawing.Point(355, 123);
             this.filtroInterprete.Name = "filtroInterprete";
             this.filtroInterprete.Size = new System.Drawing.Size(95, 20);
-            this.filtroInterprete.TabIndex = 62;
+            this.filtroInterprete.TabIndex = 4;
             this.filtroInterprete.TextChanged += new System.EventHandler(this.filtroInterprete_TextChanged);
             // 
             // filtroSello
@@ -256,7 +313,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.filtroSello.Location = new System.Drawing.Point(254, 123);
             this.filtroSello.Name = "filtroSello";
             this.filtroSello.Size = new System.Drawing.Size(95, 20);
-            this.filtroSello.TabIndex = 61;
+            this.filtroSello.TabIndex = 3;
             this.filtroSello.TextChanged += new System.EventHandler(this.filtroSello_TextChanged);
             // 
             // filtroNombreAlbum
@@ -264,73 +321,17 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.filtroNombreAlbum.Location = new System.Drawing.Point(52, 123);
             this.filtroNombreAlbum.Name = "filtroNombreAlbum";
             this.filtroNombreAlbum.Size = new System.Drawing.Size(95, 20);
-            this.filtroNombreAlbum.TabIndex = 60;
+            this.filtroNombreAlbum.TabIndex = 2;
             this.filtroNombreAlbum.TextChanged += new System.EventHandler(this.filtroNombreAlbum_TextChanged);
             // 
             // filtroCantidad
             // 
+            this.filtroCantidad.Enabled = false;
             this.filtroCantidad.Location = new System.Drawing.Point(153, 123);
             this.filtroCantidad.Name = "filtroCantidad";
             this.filtroCantidad.ReadOnly = true;
             this.filtroCantidad.Size = new System.Drawing.Size(95, 20);
             this.filtroCantidad.TabIndex = 63;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // NombreAlbum
-            // 
-            this.NombreAlbum.HeaderText = "Nombre Álbum";
-            this.NombreAlbum.Name = "NombreAlbum";
-            this.NombreAlbum.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // AñoEdicion
-            // 
-            this.AñoEdicion.HeaderText = "Año Edicion";
-            this.AñoEdicion.Name = "AñoEdicion";
-            this.AñoEdicion.ReadOnly = true;
-            this.AñoEdicion.Visible = false;
-            // 
-            // Genero
-            // 
-            this.Genero.HeaderText = "Género";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            this.Genero.Visible = false;
-            // 
-            // SelloDiscografico
-            // 
-            this.SelloDiscografico.HeaderText = "Sello Discográfico";
-            this.SelloDiscografico.Name = "SelloDiscografico";
-            this.SelloDiscografico.ReadOnly = true;
-            this.SelloDiscografico.Visible = false;
-            // 
-            // Interprete
-            // 
-            this.Interprete.HeaderText = "Intérprete";
-            this.Interprete.Name = "Interprete";
-            this.Interprete.ReadOnly = true;
-            this.Interprete.Visible = false;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
             // 
             // NuevaVenta
             // 

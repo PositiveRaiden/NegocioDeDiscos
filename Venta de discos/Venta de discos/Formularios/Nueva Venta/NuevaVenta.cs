@@ -190,10 +190,12 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             var index = cmbCliente.SelectedValue.ToString();
             Cliente cliente = clientesRepositorio.ObtenerCliente(index);
             textBox1.Text = cliente.Nombre.ToString();
             textBox2.Text = cliente.Apellido.ToString();
+            
 
 
         }
@@ -205,6 +207,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
                 if (cmbCliente.SelectedValue is null)
                 {
                     MessageBox.Show("Número de documento inexistente!");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
                     cmbCliente.Focus();
                     return;
                 }

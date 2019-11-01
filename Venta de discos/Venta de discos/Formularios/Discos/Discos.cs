@@ -141,7 +141,7 @@ namespace Venta_de_discos
 
                 if (confirmacion.Equals(DialogResult.No))
                     return;
-
+                //AGREGAR METODO RECORRO VENTAS Y PEDIDOS Y REVISO QUE EL DISCO NO ESTE ASOCIADO
                 if (disc.Eliminar(id.ToString()))
                 {
                     MessageBox.Show($"Usted Elimino a {nombre}");

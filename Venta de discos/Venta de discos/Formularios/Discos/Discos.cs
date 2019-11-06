@@ -142,12 +142,21 @@ namespace Venta_de_discos
                 if (confirmacion.Equals(DialogResult.No))
                     return;
                 //AGREGAR METODO RECORRO VENTAS Y PEDIDOS Y REVISO QUE EL DISCO NO ESTE ASOCIADO
+
+                var intentos = disc.PodraEliminar(id.ToString());
+                var cant = intentos.Rows.Count;
+                if (cant >= 1)
+                {
+                    MessageBox.Show($"Usted no podra eliminar a {nombre}, ya que tiene " +
+                        $"ventas y/o pedidos asociados a el.");
+                    return;
+                }
                 if (disc.Eliminar(id.ToString()))
                 {
                     MessageBox.Show($"Usted Elimino a {nombre}");
                     CargarDiscos();
                 }
-
+                
             }
         }
 

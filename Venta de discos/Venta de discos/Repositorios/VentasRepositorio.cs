@@ -199,7 +199,7 @@ namespace Venta_de_discos.Repositorios
                             throw new ApplicationException("La cantidad ingresada no corresponde.");
 
                         }
-                        importeTotal = importeTotal + precio;
+                        importeTotal = importeTotal + (precio*number);
                     }
 
                     string sqltxt3 = $"UPDATE [dbo].[Venta] SET importe_Total = '{importeTotal}' WHERE id={idVenta}";

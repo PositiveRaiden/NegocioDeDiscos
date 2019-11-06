@@ -93,5 +93,13 @@ namespace Venta_de_discos
 
             return _BD.EjecutarSQL(sqltxt);
         }
+        public DataTable PodraEliminar(string idDisco)
+        {
+            //select V.id from Venta V JOIN Detalle_Venta De on v.id = De.id_Venta
+            string sqltxt = "SELECT V.id from Venta V JOIN Detalle_Venta De ON v.id = De.id_Venta" +
+                " JOIN Disco D ON De.id_Disco = D.id " +
+                $"WHERE d.Id = {idDisco}";
+            return _BD.consulta(sqltxt);
+        }
     }
 }

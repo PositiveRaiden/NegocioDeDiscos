@@ -34,11 +34,12 @@
             this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.btnDiscos = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSalirMenu
             // 
-            this.btnSalirMenu.Location = new System.Drawing.Point(296, 222);
+            this.btnSalirMenu.Location = new System.Drawing.Point(307, 229);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
             this.btnSalirMenu.TabIndex = 4;
@@ -96,11 +97,21 @@
             this.btnDiscos.UseVisualStyleBackColor = true;
             this.btnDiscos.Click += new System.EventHandler(this.btnBuscarDisco_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(123, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Reportes";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 255);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDiscos);
             this.Controls.Add(this.btnNuevoPedido);
             this.Controls.Add(this.btnNuevaVenta);
@@ -124,6 +135,7 @@
         private System.Windows.Forms.Button btnNuevaVenta;
         private System.Windows.Forms.Button btnNuevoPedido;
         private System.Windows.Forms.Button btnDiscos;
+        private System.Windows.Forms.Button button1;
     }
 }
 

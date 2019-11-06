@@ -62,5 +62,11 @@ namespace Venta_de_discos
             Pedidos frm = new Pedidos();
             frm.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmReportes frm = new frmReportes();
+            frm.ShowDialog();
+        }
     }
 }

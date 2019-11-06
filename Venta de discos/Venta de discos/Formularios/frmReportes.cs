@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Venta_de_discos.Formularios;
 
 namespace Venta_de_discos
 {
@@ -26,6 +27,12 @@ namespace Venta_de_discos
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmReporteDiscos frm = new frmReporteDiscos();
+            frm.ShowDialog();
         }
     }
 }

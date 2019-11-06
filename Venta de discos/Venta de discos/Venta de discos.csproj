@@ -82,11 +82,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetCompleto.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetTodo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DataSetDiscos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDiscos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Discos\ModificarDisco.Designer.cs">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmReporteDiscos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmReporteDiscos.Designer.cs">
+      <DependentUpon>frmReporteDiscos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimiento\abmClientes\Clientes.cs">
       <SubType>Form</SubType>
@@ -301,6 +317,9 @@
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmReporteDiscos.resx">
+      <DependentUpon>frmReporteDiscos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +404,7 @@
     <EmbeddedResource Include="Formularios\Nuevo Pedido de discos\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteDiscos.rdlc" />
     <EmbeddedResource Include="MenuGestion.resx">
       <DependentUpon>MenuGestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +448,28 @@
     </None>
     <None Include="DataSetCompleto.xss">
       <DependentUpon>DataSetCompleto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTodo.xsc">
+      <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTodo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTodo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetTodo.xss">
+      <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetDiscos.xsc">
+      <DependentUpon>DataSetDiscos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetDiscos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDiscos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSetDiscos.xss">
+      <DependentUpon>DataSetDiscos.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

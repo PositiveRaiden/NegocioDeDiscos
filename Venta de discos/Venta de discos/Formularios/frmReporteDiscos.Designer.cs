@@ -1,6 +1,6 @@
-﻿namespace Venta_de_discos
+﻿namespace Venta_de_discos.Formularios
 {
-    partial class Reporte1
+    partial class frmReporteDiscos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,51 +30,51 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetClientes = new Venta_de_discos.DataSetClientes();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataTable1TableAdapter = new Venta_de_discos.DataSetClientesTableAdapters.DataTable1TableAdapter();
+            this.DataSetDiscos = new Venta_de_discos.Formularios.DataSetDiscos();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1TableAdapter = new Venta_de_discos.Formularios.DataSetDiscosTableAdapters.DataTable1TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetDiscos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSetDiscos";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Venta_de_discos.Formularios.ReporteDiscos.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(725, 253);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // DataSetDiscos
+            // 
+            this.DataSetDiscos.DataSetName = "DataSetDiscos";
+            this.DataSetDiscos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DataTable1BindingSource
             // 
             this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.DataSetClientes;
-            // 
-            // DataSetClientes
-            // 
-            this.DataSetClientes.DataSetName = "DataSetClientes";
-            this.DataSetClientes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSetClientes";
-            reportDataSource1.Value = this.DataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Venta_de_discos.Reporte1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(2, 3);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(780, 276);
-            this.reportViewer1.TabIndex = 0;
+            this.DataTable1BindingSource.DataSource = this.DataSetDiscos;
             // 
             // DataTable1TableAdapter
             // 
             this.DataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // Reporte1
+            // frmReporteDiscos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 291);
+            this.ClientSize = new System.Drawing.Size(749, 277);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Reporte1";
-            this.Text = "Reporte1";
-            this.Load += new System.EventHandler(this.Reporte1_Load);
+            this.Name = "frmReporteDiscos";
+            this.Text = "frmReporteDiscos";
+            this.Load += new System.EventHandler(this.frmReporteDiscos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetDiscos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,7 +83,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
-        private DataSetClientes DataSetClientes;
-        private DataSetClientesTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private DataSetDiscos DataSetDiscos;
+        private DataSetDiscosTableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
     }
 }

@@ -52,6 +52,7 @@ namespace Venta_de_discos
             disc.añoEdicion = txtAñoEdicion.Text;
             disc.precio = txtPrecio.Text;
             disc.cantidad = "0";
+            disc.stock_minimo = txtStock.Text.Trim();
 
             if(!disc.NombreAlbumValido())
             {
@@ -70,7 +71,6 @@ namespace Venta_de_discos
                 return;
             }
 
-
             if(!disc.AñoValido(disc.añoEdicion))
             {
                 MessageBox.Show("Año invalido!");
@@ -78,6 +78,7 @@ namespace Venta_de_discos
                 txtAñoEdicion.Focus();
                 return;
             }
+
             if (!disc.PrecioValido(disc.precio))
             {
                 MessageBox.Show("Precio invalido!");
@@ -85,6 +86,15 @@ namespace Venta_de_discos
                 txtPrecio.Focus();
                 return;
             }
+
+            if (!disc.StockValido(disc.stock_minimo))
+            {
+                MessageBox.Show("Stock minimo invalido!");
+                txtStock.Text = "";
+                txtStock.Focus();
+                return;
+            }
+
             if (discosRepositorio.Guardar(disc))
             {
                 MessageBox.Show("Se agrego Disco con exito!");

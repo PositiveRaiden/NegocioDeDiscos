@@ -25,7 +25,10 @@ namespace Venta_de_discos
 
         public DataTable ObtenerDiscos()
         {
-            string sqltxt = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id";
+            string sqltxt = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion'," +
+                "G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete', D.stock_minimo as 'Stock Minimo'" +
+                " FROM Disco D, Genero G, Sello_Discografico S, Interprete I " +
+                "WHERE D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id";
             return _BD.consulta(sqltxt);
         }
         public Disco ObtenerDisco(string discoId)
@@ -50,6 +53,7 @@ namespace Venta_de_discos
                 disco.id_genero = fila.ItemArray[5].ToString();
                 disco.id_selloDiscografico = fila.ItemArray[6].ToString();
                 disco.id_interprete = fila.ItemArray[7].ToString();
+                disco.stock_minimo = fila.ItemArray[8].ToString();
             }
 
             return disco;
@@ -62,7 +66,7 @@ namespace Venta_de_discos
         }
         public bool Guardar(Disco disc)
         {
-            string sqltxt = $"INSERT[dbo].[Disco]([nombre_album],[cantidad],[precio],[año_edicion],[id_genero],[id_selloDiscografico],[id_interprete])" +
+            string sqltxt = $"INSERT[dbo].[Disco]([nombre_album],[cantidad],[precio],[año_edicion],[id_genero],[id_selloDiscografico],[id_interprete],[stock_minimo])" +
                 $"VALUES " +
                 $"('{disc.nombreAlbum}', " +
                 $"'{disc.cantidad}', " +
@@ -70,7 +74,8 @@ namespace Venta_de_discos
                 $"'{disc.añoEdicion}'," +
                 $"'{disc.id_genero}'," +
                 $"'{disc.id_selloDiscografico}'," +
-                $"'{disc.id_interprete}')";
+                $"'{disc.id_interprete}'," +
+                $"'{disc.stock_minimo}')";
             return _BD.EjecutarSQL(sqltxt);
         }
         public bool Eliminar(string discoId)
@@ -89,6 +94,7 @@ namespace Venta_de_discos
                 $", id_genero= { disco.id_genero }" +
                 $", id_selloDiscografico= { disco.id_selloDiscografico }" +
                 $", id_interprete= { disco.id_interprete }" +
+                $", stock_minimo= {disco.stock_minimo}"+
                 $" WHERE id= {disco.Id}";
 
             return _BD.EjecutarSQL(sqltxt);

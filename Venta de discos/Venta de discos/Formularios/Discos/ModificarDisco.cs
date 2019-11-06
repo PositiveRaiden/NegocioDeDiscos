@@ -44,7 +44,7 @@ namespace Venta_de_discos.Formularios.Discos
             txtPrecio.Text = disc.precio;
             txtCantidad.Text = disc.cantidad;
             txtAñoEdicion.Text = disc.añoEdicion;
-            
+            txtStock.Text = disc.stock_minimo;
             _id = disc.Id;
             ActualizarComboInterprete();
             ActualizarComboGenero();
@@ -68,6 +68,7 @@ namespace Venta_de_discos.Formularios.Discos
             cmbGenero.DataSource = generos;
 
         }
+
         private void ActualizarComboSello()
         {
             var sellos = selloRepositorio.ObtenerSello();
@@ -78,64 +79,73 @@ namespace Venta_de_discos.Formularios.Discos
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            var datosDisco = new Disco();
-            datosDisco.nombreAlbum = txtNombreAlbum.Text.Trim();
-            datosDisco.id_interprete = cmbInterprete.SelectedValue.ToString();
-            datosDisco.id_genero = cmbGenero.SelectedValue.ToString();
-            datosDisco.id_selloDiscografico = cmbSello.SelectedValue.ToString();
-            datosDisco.añoEdicion = txtAñoEdicion.Text;
-            datosDisco.precio = txtPrecio.Text;
-            datosDisco.cantidad = "0";
-            datosDisco.Id = _id;
-
-            if (!datosDisco.NombreAlbumValido())
-            {
-                MessageBox.Show("Nombre Invalido!");
-                //errorProvider1.SetError(txtNombreAlbum, "Error");
-                txtNombreAlbum.Text = "";
-                txtNombreAlbum.Focus();
-                return;
-            }
-            if (datosDisco.nombreAlbum != disc.nombreAlbum)
-            {
-                if (datosDisco.NombreRepetido(datosDisco.nombreAlbum))
-                {
-                    MessageBox.Show("Nombre ya existe!");
-                    txtNombreAlbum.Text = "";
-                    txtNombreAlbum.Focus();
-                    return;
-                }
-            }
+            //var datosDisco = new Disco();
+            //datosDisco.nombreAlbum = txtNombreAlbum.Text.Trim();
+            //datosDisco.id_interprete = cmbInterprete.SelectedValue.ToString();
+            //datosDisco.id_genero = cmbGenero.SelectedValue.ToString();
+            //datosDisco.id_selloDiscografico = cmbSello.SelectedValue.ToString();
+            //datosDisco.añoEdicion = txtAñoEdicion.Text;
+            //datosDisco.precio = txtPrecio.Text;
+            //datosDisco.cantidad = "0";
+            //datosDisco.stock_minimo = txtStock.Text.Trim();
+            //datosDisco.Id = _id;
 
 
+            //if (!datosDisco.NombreAlbumValido())
+            //{
+            //    MessageBox.Show("Nombre Invalido!");
+            //    //errorProvider1.SetError(txtNombreAlbum, "Error");
+            //    txtNombreAlbum.Text = "";
+            //    txtNombreAlbum.Focus();
+            //    return;
+            //}
+            //if (datosDisco.nombreAlbum != disc.nombreAlbum)
+            //{
+            //    if (datosDisco.NombreRepetido(datosDisco.nombreAlbum))
+            //    {
+            //        MessageBox.Show("Nombre ya existe!");
+            //        txtNombreAlbum.Text = "";
+            //        txtNombreAlbum.Focus();
+            //        return;
+            //    }
+            //}
 
-            if (!datosDisco.AñoValido(datosDisco.añoEdicion))
-            {
-                MessageBox.Show("Año invalido!");
-                txtAñoEdicion.Text = "";
-                txtAñoEdicion.Focus();
-                return;
-            }
-            if (!datosDisco.PrecioValido(datosDisco.precio))
-            {
-                MessageBox.Show("Precio invalido!");
-                txtPrecio.Text = "";
-                txtPrecio.Focus();
-                return;
-            }
+            //if (!datosDisco.AñoValido(datosDisco.añoEdicion))
+            //{
+            //    MessageBox.Show("Año invalido!");
+            //    txtAñoEdicion.Text = "";
+            //    txtAñoEdicion.Focus();
+            //    return;
+            //}
 
-            if (discosRepositorio.Editar(datosDisco))
-            {
-                MessageBox.Show("La edicion ha finalizado correctamente");
-                this.Dispose();
-            }
+            //if (!datosDisco.PrecioValido(datosDisco.precio))
+            //{
+            //    MessageBox.Show("Precio invalido!");
+            //    txtPrecio.Text = "";
+            //    txtPrecio.Focus();
+            //    return;
+            //}
+
+            //if (!disc.StockValido(disc.stock_minimo))
+            //{
+            //    MessageBox.Show("Stock minimo invalido!");
+            //    txtStock.Text = "";
+            //    txtStock.Focus();
+            //    return;
+            //}
+
+            //if (discosRepositorio.Editar(datosDisco))
+            //{
+            //    MessageBox.Show("La edicion ha finalizado correctamente.");
+            //    this.Dispose();
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -157,6 +167,75 @@ namespace Venta_de_discos.Formularios.Discos
             NuevoSello frm = new NuevoSello();
             frm.ShowDialog();
             ActualizarComboSello();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAceptar_Click_1(object sender, EventArgs e)
+        {
+            var datosDisco = new Disco();
+            datosDisco.nombreAlbum = txtNombreAlbum.Text.Trim();
+            datosDisco.id_interprete = cmbInterprete.SelectedValue.ToString();
+            datosDisco.id_genero = cmbGenero.SelectedValue.ToString();
+            datosDisco.id_selloDiscografico = cmbSello.SelectedValue.ToString();
+            datosDisco.añoEdicion = txtAñoEdicion.Text;
+            datosDisco.precio = txtPrecio.Text;
+            datosDisco.cantidad = "0";
+            datosDisco.stock_minimo = txtStock.Text.Trim();
+            datosDisco.Id = _id;
+
+
+            if (!datosDisco.NombreAlbumValido())
+            {
+                MessageBox.Show("Nombre Invalido!");
+                //errorProvider1.SetError(txtNombreAlbum, "Error");
+                txtNombreAlbum.Text = "";
+                txtNombreAlbum.Focus();
+                return;
+            }
+            if (datosDisco.nombreAlbum != disc.nombreAlbum)
+            {
+                if (datosDisco.NombreRepetido(datosDisco.nombreAlbum))
+                {
+                    MessageBox.Show("Nombre ya existe!");
+                    txtNombreAlbum.Text = "";
+                    txtNombreAlbum.Focus();
+                    return;
+                }
+            }
+
+            if (!datosDisco.AñoValido(datosDisco.añoEdicion))
+            {
+                MessageBox.Show("Año invalido!");
+                txtAñoEdicion.Text = "";
+                txtAñoEdicion.Focus();
+                return;
+            }
+
+            if (!datosDisco.PrecioValido(datosDisco.precio))
+            {
+                MessageBox.Show("Precio invalido!");
+                txtPrecio.Text = "";
+                txtPrecio.Focus();
+                return;
+            }
+
+            if (!disc.StockValido(datosDisco.stock_minimo))
+            {
+                MessageBox.Show("Stock minimo invalido!");
+                txtStock.Text = " ";
+                txtStock.Focus();
+                return;
+            }
+
+            if (discosRepositorio.Editar(datosDisco))
+            {
+                MessageBox.Show("La edicion ha finalizado correctamente.");
+                this.Dispose();
+            }
         }
     }
 }

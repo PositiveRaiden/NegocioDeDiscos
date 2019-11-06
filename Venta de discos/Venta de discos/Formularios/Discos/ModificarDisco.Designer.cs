@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblStockMinimo = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.cmbInterprete = new System.Windows.Forms.ComboBox();
@@ -44,61 +49,102 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // lblStockMinimo
+            // 
+            this.lblStockMinimo.AutoSize = true;
+            this.lblStockMinimo.Location = new System.Drawing.Point(31, 278);
+            this.lblStockMinimo.Name = "lblStockMinimo";
+            this.lblStockMinimo.Size = new System.Drawing.Size(71, 13);
+            this.lblStockMinimo.TabIndex = 64;
+            this.lblStockMinimo.Text = "Stock Minimo";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(131, 275);
+            this.txtStock.MaxLength = 10;
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.TabIndex = 63;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(249, 133);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 21);
+            this.button3.TabIndex = 62;
+            this.button3.Text = "Nuevo Sello";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(249, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 21);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Nuevo Genero";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(249, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 21);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Nuevo Interprete";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(145, 190);
+            this.txtPrecio.Location = new System.Drawing.Point(131, 240);
             this.txtPrecio.MaxLength = 10;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.TabIndex = 49;
+            this.txtPrecio.TabIndex = 59;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(47, 189);
+            this.lblPrecio.Location = new System.Drawing.Point(31, 243);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
-            this.lblPrecio.TabIndex = 53;
+            this.lblPrecio.TabIndex = 58;
             this.lblPrecio.Text = "Precio";
             // 
             // cmbInterprete
             // 
             this.cmbInterprete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInterprete.FormattingEnabled = true;
-            this.cmbInterprete.Location = new System.Drawing.Point(145, 57);
+            this.cmbInterprete.Location = new System.Drawing.Point(131, 60);
             this.cmbInterprete.Name = "cmbInterprete";
             this.cmbInterprete.Size = new System.Drawing.Size(100, 21);
-            this.cmbInterprete.TabIndex = 52;
+            this.cmbInterprete.TabIndex = 57;
             // 
             // cmbSello
             // 
             this.cmbSello.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSello.FormattingEnabled = true;
-            this.cmbSello.Location = new System.Drawing.Point(145, 111);
+            this.cmbSello.Location = new System.Drawing.Point(131, 133);
             this.cmbSello.Name = "cmbSello";
             this.cmbSello.Size = new System.Drawing.Size(100, 21);
-            this.cmbSello.TabIndex = 51;
+            this.cmbSello.TabIndex = 56;
             // 
             // cmbGenero
             // 
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(145, 84);
+            this.cmbGenero.Location = new System.Drawing.Point(131, 95);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(100, 21);
-            this.cmbGenero.TabIndex = 50;
+            this.cmbGenero.TabIndex = 55;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(286, 232);
+            this.btnSalir.Location = new System.Drawing.Point(318, 319);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 51;
+            this.btnSalir.TabIndex = 54;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -106,127 +152,99 @@
             // txtCantidad
             // 
             this.txtCantidad.Enabled = false;
-            this.txtCantidad.Location = new System.Drawing.Point(145, 164);
+            this.txtCantidad.Location = new System.Drawing.Point(131, 205);
             this.txtCantidad.MaxLength = 4;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 48;
+            this.txtCantidad.TabIndex = 53;
             // 
             // txtAñoEdicion
             // 
-            this.txtAñoEdicion.Location = new System.Drawing.Point(145, 138);
+            this.txtAñoEdicion.Location = new System.Drawing.Point(131, 170);
             this.txtAñoEdicion.MaxLength = 4;
             this.txtAñoEdicion.Name = "txtAñoEdicion";
             this.txtAñoEdicion.Size = new System.Drawing.Size(100, 20);
-            this.txtAñoEdicion.TabIndex = 47;
+            this.txtAñoEdicion.TabIndex = 52;
             // 
             // txtNombreAlbum
             // 
-            this.txtNombreAlbum.Location = new System.Drawing.Point(145, 31);
+            this.txtNombreAlbum.Location = new System.Drawing.Point(130, 27);
             this.txtNombreAlbum.MaxLength = 30;
             this.txtNombreAlbum.Name = "txtNombreAlbum";
             this.txtNombreAlbum.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreAlbum.TabIndex = 46;
+            this.txtNombreAlbum.TabIndex = 51;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 137);
+            this.label7.Location = new System.Drawing.Point(31, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 45;
+            this.label7.TabIndex = 50;
             this.label7.Text = "Año Edición";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(205, 232);
+            this.btnAceptar.Location = new System.Drawing.Point(237, 319);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 50;
+            this.btnAceptar.TabIndex = 49;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 163);
+            this.label6.Location = new System.Drawing.Point(31, 208);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 43;
+            this.label6.TabIndex = 48;
             this.label6.Text = "Cantidad";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 111);
+            this.label5.Location = new System.Drawing.Point(31, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 42;
+            this.label5.TabIndex = 47;
             this.label5.Text = "Sello Discográfico";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 85);
+            this.label4.Location = new System.Drawing.Point(31, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 41;
+            this.label4.TabIndex = 46;
             this.label4.Text = "Género";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 33);
+            this.label3.Location = new System.Drawing.Point(31, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 40;
+            this.label3.TabIndex = 45;
             this.label3.Text = "Nombre Álbum";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 59);
+            this.label2.Location = new System.Drawing.Point(31, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 39;
+            this.label2.TabIndex = 44;
             this.label2.Text = "Intérprete";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(263, 111);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 21);
-            this.button3.TabIndex = 56;
-            this.button3.Text = "Nuevo Sello";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(263, 84);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 21);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "Nuevo Genero";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(263, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 21);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Nuevo Interprete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ModificarDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 279);
+            this.ClientSize = new System.Drawing.Size(405, 354);
+            this.Controls.Add(this.lblStockMinimo);
+            this.Controls.Add(this.txtStock);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -257,6 +275,11 @@
 
         #endregion
 
+        private System.Windows.Forms.Label lblStockMinimo;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.ComboBox cmbInterprete;
@@ -273,8 +296,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
     }
 }

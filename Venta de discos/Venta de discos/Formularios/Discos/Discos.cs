@@ -53,6 +53,7 @@ namespace Venta_de_discos
             cmbInterprete.ValueMember = "id";
             cmbInterprete.DisplayMember = "nombre";
         }
+
         private void CargarDiscos()
         {
             //dataGridView1.Rows.Clear();
@@ -94,8 +95,7 @@ namespace Venta_de_discos
                 CargarDiscos();
                 return;
             }
-
-
+            
             ActualizarDiscosSegunFiltroInterprete();
         }
 
@@ -153,7 +153,7 @@ namespace Venta_de_discos
                 }
                 if (disc.Eliminar(id.ToString()))
                 {
-                    MessageBox.Show($"Usted Elimino a {nombre}");
+                    MessageBox.Show($"Usted Elimino al disco: {nombre}.");
                     CargarDiscos();
                 }
                 

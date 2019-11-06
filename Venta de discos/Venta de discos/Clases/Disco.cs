@@ -19,6 +19,7 @@ namespace Venta_de_discos
         public string añoEdicion { get; set; }
         public string precio { get; set; }
         public string cantidad { get; set; }
+        public string stock_minimo { get; set; }
         DiscosRepositorio discosRepositorio = new DiscosRepositorio();
 
  
@@ -78,11 +79,20 @@ namespace Venta_de_discos
             }
         }
 
+        public bool StockValido(string stock_minimo)
+        {
+            int number;
+            int.TryParse(stock_minimo, out number);
+            if (number > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-
-
-
-
-
+       
     }
 }

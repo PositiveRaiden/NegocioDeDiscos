@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\AjusteDisco.cs" />
     <Compile Include="Clases\Barrio.cs" />
     <Compile Include="Clases\DetallePedido.cs" />
     <Compile Include="Clases\DetalleVenta.cs" />
@@ -170,6 +171,18 @@
     <Compile Include="Formularios\Mantenimiento\abmSellos\Sellos.Designer.cs">
       <DependentUpon>Sellos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mantenimiento\ajusteDiscos\AjustesDiscos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\ajusteDiscos\AjustesDiscos.Designer.cs">
+      <DependentUpon>AjustesDiscos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\ajusteDiscos\ModificarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimiento\ajusteDiscos\ModificarStock.Designer.cs">
+      <DependentUpon>ModificarStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Nueva Venta\ModificarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +235,7 @@
     <Compile Include="MenuMantenimiento.Designer.cs">
       <DependentUpon>MenuMantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositorios\AjustesRepositorio.cs" />
     <Compile Include="Repositorios\BarriosRepositorio.cs" />
     <Compile Include="Repositorios\ClientesRepositorio.cs" />
     <Compile Include="Repositorios\DiscosRepositorio.cs" />
@@ -309,6 +323,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento\abmSellos\Sellos.resx">
       <DependentUpon>Sellos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\ajusteDiscos\AjustesDiscos.resx">
+      <DependentUpon>AjustesDiscos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimiento\ajusteDiscos\ModificarStock.resx">
+      <DependentUpon>ModificarStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Nueva Venta\ModificarVenta.resx">
       <DependentUpon>ModificarVenta.cs</DependentUpon>

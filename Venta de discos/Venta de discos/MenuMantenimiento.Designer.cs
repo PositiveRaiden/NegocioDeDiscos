@@ -37,6 +37,7 @@
             this.btnBarrio = new System.Windows.Forms.Button();
             this.btnSello = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.btnAjuste = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOpciones
@@ -45,13 +46,13 @@
             this.lblOpciones.Location = new System.Drawing.Point(128, 9);
             this.lblOpciones.Name = "lblOpciones";
             this.lblOpciones.Size = new System.Drawing.Size(131, 13);
-            this.lblOpciones.TabIndex = 7;
+            this.lblOpciones.TabIndex = 8;
             this.lblOpciones.Text = "Mantenimiento del sistema";
             this.lblOpciones.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnSalirMenu
             // 
-            this.btnSalirMenu.Location = new System.Drawing.Point(270, 220);
+            this.btnSalirMenu.Location = new System.Drawing.Point(308, 252);
             this.btnSalirMenu.Name = "btnSalirMenu";
             this.btnSalirMenu.Size = new System.Drawing.Size(75, 23);
             this.btnSalirMenu.TabIndex = 7;
@@ -61,7 +62,7 @@
             // 
             // btnInformes
             // 
-            this.btnInformes.Location = new System.Drawing.Point(12, 189);
+            this.btnInformes.Location = new System.Drawing.Point(12, 221);
             this.btnInformes.Name = "btnInformes";
             this.btnInformes.Size = new System.Drawing.Size(134, 24);
             this.btnInformes.TabIndex = 5;
@@ -71,7 +72,7 @@
             // 
             // btnVentaDeDiscos
             // 
-            this.btnVentaDeDiscos.Location = new System.Drawing.Point(12, 159);
+            this.btnVentaDeDiscos.Location = new System.Drawing.Point(12, 191);
             this.btnVentaDeDiscos.Name = "btnVentaDeDiscos";
             this.btnVentaDeDiscos.Size = new System.Drawing.Size(134, 23);
             this.btnVentaDeDiscos.TabIndex = 4;
@@ -81,7 +82,7 @@
             // 
             // btnGeneros
             // 
-            this.btnGeneros.Location = new System.Drawing.Point(12, 130);
+            this.btnGeneros.Location = new System.Drawing.Point(12, 162);
             this.btnGeneros.Name = "btnGeneros";
             this.btnGeneros.Size = new System.Drawing.Size(134, 23);
             this.btnGeneros.TabIndex = 3;
@@ -94,14 +95,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Seleccione que desea modificar:";
+            this.label1.Size = new System.Drawing.Size(142, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Seleccione opción deseada:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnBarrio
             // 
-            this.btnBarrio.Location = new System.Drawing.Point(12, 72);
+            this.btnBarrio.Location = new System.Drawing.Point(12, 104);
             this.btnBarrio.Name = "btnBarrio";
             this.btnBarrio.Size = new System.Drawing.Size(134, 23);
             this.btnBarrio.TabIndex = 1;
@@ -111,7 +112,7 @@
             // 
             // btnSello
             // 
-            this.btnSello.Location = new System.Drawing.Point(12, 220);
+            this.btnSello.Location = new System.Drawing.Point(12, 252);
             this.btnSello.Name = "btnSello";
             this.btnSello.Size = new System.Drawing.Size(134, 23);
             this.btnSello.TabIndex = 6;
@@ -121,7 +122,7 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.Location = new System.Drawing.Point(12, 101);
+            this.btnCliente.Location = new System.Drawing.Point(12, 133);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(134, 23);
             this.btnCliente.TabIndex = 2;
@@ -129,11 +130,22 @@
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
+            // btnAjuste
+            // 
+            this.btnAjuste.Location = new System.Drawing.Point(12, 75);
+            this.btnAjuste.Name = "btnAjuste";
+            this.btnAjuste.Size = new System.Drawing.Size(134, 23);
+            this.btnAjuste.TabIndex = 0;
+            this.btnAjuste.Text = "Ajuste Discos";
+            this.btnAjuste.UseVisualStyleBackColor = true;
+            this.btnAjuste.Click += new System.EventHandler(this.btnAjuste_Click);
+            // 
             // MenuMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 256);
+            this.ClientSize = new System.Drawing.Size(395, 286);
+            this.Controls.Add(this.btnAjuste);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnSello);
             this.Controls.Add(this.btnBarrio);
@@ -161,5 +173,6 @@
         private System.Windows.Forms.Button btnBarrio;
         private System.Windows.Forms.Button btnSello;
         private System.Windows.Forms.Button btnCliente;
+        private System.Windows.Forms.Button btnAjuste;
     }
 }

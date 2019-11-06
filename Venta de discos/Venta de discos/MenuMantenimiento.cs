@@ -12,6 +12,7 @@ using Venta_de_discos.Formularios.Mantenimiento.Generos;
 using Venta_de_discos.Formularios.Mantenimiento.Barrios;
 using Venta_de_discos.Formularios.Mantenimiento.abmCliente;
 using Venta_de_discos.Formularios.Mantenimiento.abmSellos;
+using Venta_de_discos.Formularios.Mantenimiento.ajusteDiscos;
 
 namespace Venta_de_discos
 {
@@ -73,6 +74,12 @@ namespace Venta_de_discos
         private void btnCliente_Click(object sender, EventArgs e)
         {
             Clientes frm = new Clientes();
+            frm.ShowDialog();
+        }
+
+        private void btnAjuste_Click(object sender, EventArgs e)
+        {
+            AjustesDiscos frm = new AjustesDiscos();
             frm.ShowDialog();
         }
     }

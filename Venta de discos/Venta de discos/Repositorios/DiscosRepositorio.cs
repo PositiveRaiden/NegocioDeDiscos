@@ -64,6 +64,7 @@ namespace Venta_de_discos
             string sqltxt = "SELECT D.id,D.Nombre_Album as 'Nombre Album',D.Cantidad,D.Precio,D.Año_edicion as 'Año edicion',G.nombre as 'Genero',S.nombre as 'Sello Discografico',I.nombre as 'Interprete'  FROM Disco D, Genero G, Sello_Discografico S, Interprete I where D.id_genero = G.id AND D.id_selloDiscografico = S.id AND D.id_interprete = I.id AND id_interprete=" + interpreteId;
             return _BD.consulta(sqltxt);
         }
+
         public bool Guardar(Disco disc)
         {
             string sqltxt = $"INSERT[dbo].[Disco]([nombre_album],[cantidad],[precio],[año_edicion],[id_genero],[id_selloDiscografico],[id_interprete],[stock_minimo])" +
@@ -78,6 +79,7 @@ namespace Venta_de_discos
                 $"'{disc.stock_minimo}')";
             return _BD.EjecutarSQL(sqltxt);
         }
+
         public bool Eliminar(string discoId)
         {
             string sqltxt = $"DELETE FROM [dbo].[Disco] WHERE id ={discoId}";

@@ -40,6 +40,7 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             this.label2 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -134,8 +135,8 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             this.txtFecha.Size = new System.Drawing.Size(84, 20);
             this.txtFecha.TabIndex = 32;
             this.txtFecha.TextChanged += new System.EventHandler(this.txtFecha_TextChanged);
-            this.txtFecha.GotFocus += new EventHandler(OnGetFocus);
-            this.txtFecha.LostFocus += new EventHandler(OnLostFocus);
+            this.txtFecha.GotFocus += new System.EventHandler(this.OnGetFocus);
+            this.txtFecha.LostFocus += new System.EventHandler(this.OnLostFocus);
             // 
             // label3
             // 
@@ -146,11 +147,22 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
             this.label3.TabIndex = 31;
             this.label3.Text = "Buscar pedido por fecha:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(346, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(233, 23);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Listado discos menor al stock necesario";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 441);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -184,5 +196,6 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

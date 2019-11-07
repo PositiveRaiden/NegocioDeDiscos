@@ -196,5 +196,11 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
 
             //}
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ReporteStockMinimo frm = new ReporteStockMinimo();
+            frm.ShowDialog();
+        }
     }
 }

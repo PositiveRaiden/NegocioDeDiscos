@@ -108,6 +108,7 @@
             this.button5.TabIndex = 6;
             this.button5.Text = "Pedidos";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -127,6 +128,7 @@
             this.button7.TabIndex = 8;
             this.button7.Text = "Discos más vendidos del mes";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

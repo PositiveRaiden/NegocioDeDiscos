@@ -100,6 +100,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\DataSetPedidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\DataSetVentas.cs">
       <DependentUpon>DataSetVentas.xsd</DependentUpon>
     </Compile>
@@ -276,6 +281,18 @@
     <Compile Include="Formularios\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ReporteEstadisticasAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteEstadisticasAlbum.Designer.cs">
+      <DependentUpon>ReporteEstadisticasAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReportePedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReportePedidos.Designer.cs">
+      <DependentUpon>ReportePedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ReporteStockMinimo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +450,13 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteDiscos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteEstadisticasAlbum.resx">
+      <DependentUpon>ReporteEstadisticasAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReportePedidos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReportePedidos.resx">
+      <DependentUpon>ReportePedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteStockMinimo.rdlc" />
     <EmbeddedResource Include="Formularios\ReporteStockMinimo.resx">
       <DependentUpon>ReporteStockMinimo.cs</DependentUpon>
@@ -517,6 +541,17 @@
     </None>
     <None Include="Formularios\DataSetDiscosMinimos.xss">
       <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetPedidos.xsc">
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetPedidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPedidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSetPedidos.xss">
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
     </None>
     <None Include="Formularios\DataSetVentas.xsc">
       <DependentUpon>DataSetVentas.xsd</DependentUpon>

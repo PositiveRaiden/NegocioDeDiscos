@@ -11,29 +11,24 @@ using System.Windows.Forms;
 
 namespace Venta_de_discos.Formularios
 {
-    public partial class ReporteEstadisticasAlbum : Form
+    public partial class ReporteEstadisticaCantanteAnual : Form
     {
-        public ReporteEstadisticasAlbum()
+        public ReporteEstadisticaCantanteAnual()
         {
             InitializeComponent();
         }
 
-        private void ReporteEstadisticasAlbum_Load(object sender, EventArgs e)
+        private void ReporteEstadisticaCantanteAnual_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'DataSetDiscosMinimos.DataTable1' Puede moverla o quitarla según sea necesario.
-            //this.DataTable1TableAdapter.Fill(this.DataSetDiscosMinimos.DataTable1);
-
-            //this.reportViewer1.RefreshReport();
-            //this.reportViewer1.RefreshReport();
             //this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
-            var adapter = new DataSetEstadisticaVentasTableAdapters.DataTable1TableAdapter();
-            var d = new DataSetEstadisticaVentas.DataTable1DataTable();
+            var adapter = new DataSetReporteEstadisticaCantanteAnualTableAdapters.InterpreteTableAdapter();
+            var d = new DataSetReporteEstadisticaCantanteAnual.InterpreteDataTable();
 
             adapter.Fill(d);
 
             ////// creo el parametro CantBicisPorCategoriaDS con el calor datos;
-            var ds = new ReportDataSource("DataSetEstadisticaVentaMes", (DataTable)d);
+            var ds = new ReportDataSource("DataSetReporteEstadisticasCantanteAnual", (DataTable)d);
 
 
             reportViewer1.LocalReport.DataSources.Clear();

@@ -100,10 +100,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\DataSetEstadisticaVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEstadisticaVentas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\DataSetPedidos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DataSetReporteEstadisticaCantanteAnual.cs">
+      <DependentUpon>DataSetReporteEstadisticaCantanteAnual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DataSetReporteEstadisticaCantanteAnual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReporteEstadisticaCantanteAnual.xsd</DependentUpon>
     </Compile>
     <Compile Include="Formularios\DataSetVentas.cs">
       <DependentUpon>DataSetVentas.xsd</DependentUpon>
@@ -281,6 +294,12 @@
     <Compile Include="Formularios\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ReporteEstadisticaCantanteAnual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteEstadisticaCantanteAnual.Designer.cs">
+      <DependentUpon>ReporteEstadisticaCantanteAnual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ReporteEstadisticasAlbum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,9 +469,14 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteDiscos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteEstadisticaCantanteAnual.resx">
+      <DependentUpon>ReporteEstadisticaCantanteAnual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteEstadisticasAlbum.resx">
       <DependentUpon>ReporteEstadisticasAlbum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteEstadisticasCantanteAnual.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteEstadisticaVentaMes.rdlc" />
     <EmbeddedResource Include="Formularios\ReportePedidos.rdlc" />
     <EmbeddedResource Include="Formularios\ReportePedidos.resx">
       <DependentUpon>ReportePedidos.cs</DependentUpon>
@@ -542,6 +566,17 @@
     <None Include="Formularios\DataSetDiscosMinimos.xss">
       <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
     </None>
+    <None Include="Formularios\DataSetEstadisticaVentas.xsc">
+      <DependentUpon>DataSetEstadisticaVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetEstadisticaVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEstadisticaVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSetEstadisticaVentas.xss">
+      <DependentUpon>DataSetEstadisticaVentas.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\DataSetPedidos.xsc">
       <DependentUpon>DataSetPedidos.xsd</DependentUpon>
     </None>
@@ -552,6 +587,17 @@
     </None>
     <None Include="Formularios\DataSetPedidos.xss">
       <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetReporteEstadisticaCantanteAnual.xsc">
+      <DependentUpon>DataSetReporteEstadisticaCantanteAnual.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetReporteEstadisticaCantanteAnual.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReporteEstadisticaCantanteAnual.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSetReporteEstadisticaCantanteAnual.xss">
+      <DependentUpon>DataSetReporteEstadisticaCantanteAnual.xsd</DependentUpon>
     </None>
     <None Include="Formularios\DataSetVentas.xsc">
       <DependentUpon>DataSetVentas.xsd</DependentUpon>

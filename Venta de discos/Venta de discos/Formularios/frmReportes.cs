@@ -58,5 +58,11 @@ namespace Venta_de_discos
             ReporteEstadisticasAlbum frm = new ReporteEstadisticasAlbum();
             frm.ShowDialog();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ReporteEstadisticaCantanteAnual frm = new ReporteEstadisticaCantanteAnual();
+            frm.ShowDialog();
+        }
     }
 }

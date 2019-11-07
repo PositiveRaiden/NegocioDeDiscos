@@ -98,6 +98,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Ventas";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -116,6 +117,7 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "Discos con menos del stock minimo";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 

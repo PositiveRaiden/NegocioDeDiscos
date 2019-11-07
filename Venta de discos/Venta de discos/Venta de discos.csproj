@@ -92,6 +92,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetDiscos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\DataSetDiscosMinimos.cs">
+      <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DataSetDiscosMinimos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DataSetVentas.cs">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DataSetVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Discos\ModificarDisco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +276,18 @@
     <Compile Include="Formularios\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ReporteStockMinimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteStockMinimo.Designer.cs">
+      <DependentUpon>ReporteStockMinimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteVentas.Designer.cs">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\acceso_BD.cs" />
     <Compile Include="Formularios\Discos\NuevoDisco.cs">
       <SubType>Form</SubType>
@@ -405,6 +433,14 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteDiscos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteStockMinimo.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteStockMinimo.resx">
+      <DependentUpon>ReporteStockMinimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteVentas.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuGestion.resx">
       <DependentUpon>MenuGestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,6 +506,28 @@
     </None>
     <None Include="Formularios\DataSetDiscos.xss">
       <DependentUpon>DataSetDiscos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetDiscosMinimos.xsc">
+      <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetDiscosMinimos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDiscosMinimos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSetDiscosMinimos.xss">
+      <DependentUpon>DataSetDiscosMinimos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetVentas.xsc">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSetVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSetVentas.xss">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

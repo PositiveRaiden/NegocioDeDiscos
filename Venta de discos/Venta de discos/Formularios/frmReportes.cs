@@ -34,5 +34,17 @@ namespace Venta_de_discos
             frmReporteDiscos frm = new frmReporteDiscos();
             frm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ReporteVentas frm = new ReporteVentas();
+            frm.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ReporteStockMinimo frm = new ReporteStockMinimo();
+            frm.ShowDialog();
+        }
     }
 }

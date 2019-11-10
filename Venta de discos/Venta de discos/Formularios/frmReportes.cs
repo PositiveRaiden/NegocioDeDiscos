@@ -26,7 +26,7 @@ namespace Venta_de_discos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,6 +63,11 @@ namespace Venta_de_discos
         {
             ReporteEstadisticaCantanteAnual frm = new ReporteEstadisticaCantanteAnual();
             frm.ShowDialog();
+        }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

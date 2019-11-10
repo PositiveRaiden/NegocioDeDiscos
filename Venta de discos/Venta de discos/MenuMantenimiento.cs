@@ -47,12 +47,6 @@ namespace Venta_de_discos
             //this.Hide();
         }
 
-        private void btnSalirMenu_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
         private void btnInformes_Click(object sender, EventArgs e)
         {
             Paises frm = new Paises();
@@ -81,6 +75,16 @@ namespace Venta_de_discos
         {
             AjustesDiscos frm = new AjustesDiscos();
             frm.ShowDialog();
+        }
+
+        private void botonSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

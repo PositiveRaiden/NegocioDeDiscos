@@ -50,12 +50,18 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelBarra = new System.Windows.Forms.Panel();
+            this.titulo = new System.Windows.Forms.Label();
+            this.btnSalirMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
+            this.panelBarra.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNuevoDisco
             // 
+            this.btnNuevoDisco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoDisco.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNuevoDisco.Location = new System.Drawing.Point(17, 442);
             this.btnNuevoDisco.Name = "btnNuevoDisco";
             this.btnNuevoDisco.Size = new System.Drawing.Size(82, 23);
@@ -66,6 +72,8 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.Location = new System.Drawing.Point(895, 444);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -76,6 +84,8 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.Location = new System.Drawing.Point(814, 444);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -113,6 +123,9 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.Location = new System.Drawing.Point(477, 252);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(43, 37);
@@ -123,6 +136,9 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAgregar.Location = new System.Drawing.Point(477, 209);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 37);
@@ -135,6 +151,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 105);
             this.dataGridView1.MultiSelect = false;
@@ -147,7 +164,8 @@
             // LblFechaHoy
             // 
             this.LblFechaHoy.AutoSize = true;
-            this.LblFechaHoy.Location = new System.Drawing.Point(54, 53);
+            this.LblFechaHoy.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblFechaHoy.Location = new System.Drawing.Point(54, 57);
             this.LblFechaHoy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblFechaHoy.Name = "LblFechaHoy";
             this.LblFechaHoy.Size = new System.Drawing.Size(74, 13);
@@ -158,7 +176,8 @@
             // LblFecha
             // 
             this.LblFecha.AutoSize = true;
-            this.LblFecha.Location = new System.Drawing.Point(11, 53);
+            this.LblFecha.ForeColor = System.Drawing.SystemColors.Control;
+            this.LblFecha.Location = new System.Drawing.Point(11, 57);
             this.LblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(40, 13);
@@ -169,6 +188,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(523, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
@@ -178,7 +198,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 85);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(11, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -189,7 +210,8 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(14, 22);
+            this.lblCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCliente.Location = new System.Drawing.Point(14, 33);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(45, 13);
             this.lblCliente.TabIndex = 71;
@@ -206,6 +228,7 @@
             // lblImporteTotal
             // 
             this.lblImporteTotal.AutoSize = true;
+            this.lblImporteTotal.ForeColor = System.Drawing.SystemColors.Control;
             this.lblImporteTotal.Location = new System.Drawing.Point(537, 449);
             this.lblImporteTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImporteTotal.Name = "lblImporteTotal";
@@ -218,6 +241,7 @@
             // 
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -262,11 +286,50 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             // 
+            // panelBarra
+            // 
+            this.panelBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelBarra.Controls.Add(this.titulo);
+            this.panelBarra.Controls.Add(this.btnSalirMenu);
+            this.panelBarra.Location = new System.Drawing.Point(0, 0);
+            this.panelBarra.Name = "panelBarra";
+            this.panelBarra.Size = new System.Drawing.Size(989, 20);
+            this.panelBarra.TabIndex = 75;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.SystemColors.Control;
+            this.titulo.Location = new System.Drawing.Point(14, 4);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(102, 13);
+            this.titulo.TabIndex = 5;
+            this.titulo.Text = "Modificar Ventas";
+            // 
+            // btnSalirMenu
+            // 
+            this.btnSalirMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalirMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalirMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalirMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalirMenu.Location = new System.Drawing.Point(969, 0);
+            this.btnSalirMenu.Name = "btnSalirMenu";
+            this.btnSalirMenu.Size = new System.Drawing.Size(20, 20);
+            this.btnSalirMenu.TabIndex = 4;
+            this.btnSalirMenu.Text = "X";
+            this.btnSalirMenu.UseVisualStyleBackColor = false;
+            this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
+            // 
             // ModificarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(989, 475);
+            this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.dgvVentas);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblImporteTotal);
@@ -284,12 +347,16 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModificarVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarVenta";
             this.Load += new System.EventHandler(this.ModificarVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
+            this.panelBarra.ResumeLayout(false);
+            this.panelBarra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +386,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Panel panelBarra;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button btnSalirMenu;
     }
 }

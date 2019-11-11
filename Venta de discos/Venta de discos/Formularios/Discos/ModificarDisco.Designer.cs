@@ -49,6 +49,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelBarra = new System.Windows.Forms.Panel();
+            this.titulo = new System.Windows.Forms.Label();
+            this.btnSalirMenu = new System.Windows.Forms.Button();
+            this.panelBarra.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStockMinimo
@@ -70,6 +74,7 @@
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(249, 133);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 21);
@@ -79,6 +84,7 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(249, 95);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 21);
@@ -88,6 +94,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(249, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 21);
@@ -114,6 +121,7 @@
             // 
             // cmbInterprete
             // 
+            this.cmbInterprete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbInterprete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInterprete.FormattingEnabled = true;
             this.cmbInterprete.Location = new System.Drawing.Point(131, 60);
@@ -123,6 +131,7 @@
             // 
             // cmbSello
             // 
+            this.cmbSello.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbSello.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSello.FormattingEnabled = true;
             this.cmbSello.Location = new System.Drawing.Point(131, 133);
@@ -132,6 +141,7 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(131, 95);
@@ -141,6 +151,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Location = new System.Drawing.Point(318, 319);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -185,6 +196,7 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Location = new System.Drawing.Point(237, 319);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
@@ -238,11 +250,49 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Intérprete";
             // 
+            // panelBarra
+            // 
+            this.panelBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelBarra.Controls.Add(this.titulo);
+            this.panelBarra.Controls.Add(this.btnSalirMenu);
+            this.panelBarra.Location = new System.Drawing.Point(0, 0);
+            this.panelBarra.Name = "panelBarra";
+            this.panelBarra.Size = new System.Drawing.Size(405, 20);
+            this.panelBarra.TabIndex = 65;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Location = new System.Drawing.Point(14, 4);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(157, 13);
+            this.titulo.TabIndex = 5;
+            this.titulo.Text = "Menu de Gestion de Dicos";
+            // 
+            // btnSalirMenu
+            // 
+            this.btnSalirMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalirMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalirMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalirMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalirMenu.Location = new System.Drawing.Point(385, 0);
+            this.btnSalirMenu.Name = "btnSalirMenu";
+            this.btnSalirMenu.Size = new System.Drawing.Size(20, 20);
+            this.btnSalirMenu.TabIndex = 4;
+            this.btnSalirMenu.Text = "X";
+            this.btnSalirMenu.UseVisualStyleBackColor = false;
+            this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
+            // 
             // ModificarDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(405, 354);
+            this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.lblStockMinimo);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.button3);
@@ -264,10 +314,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModificarDisco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarDisco";
             this.Load += new System.EventHandler(this.ModificarDisco_Load);
+            this.panelBarra.ResumeLayout(false);
+            this.panelBarra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +350,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelBarra;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button btnSalirMenu;
     }
 }

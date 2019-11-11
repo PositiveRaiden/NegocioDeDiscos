@@ -48,8 +48,12 @@
             this.filtroSello = new System.Windows.Forms.TextBox();
             this.filtroInterprete = new System.Windows.Forms.TextBox();
             this.btnNuevoDisco = new System.Windows.Forms.Button();
+            this.panelBarra = new System.Windows.Forms.Panel();
+            this.titulo = new System.Windows.Forms.Label();
+            this.btnSalirMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelBarra.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblFechaHoy
@@ -65,6 +69,7 @@
             // LblFecha
             // 
             this.LblFecha.AutoSize = true;
+            this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.LblFecha.Location = new System.Drawing.Point(45, 27);
             this.LblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblFecha.Name = "LblFecha";
@@ -78,6 +83,7 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -148,6 +154,8 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnGuardar.Location = new System.Drawing.Point(521, 449);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -158,6 +166,8 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancelar.Location = new System.Drawing.Point(602, 449);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -168,6 +178,9 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAgregar.Location = new System.Drawing.Point(373, 206);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 37);
@@ -178,6 +191,9 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEliminar.Location = new System.Drawing.Point(373, 249);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(43, 37);
@@ -190,6 +206,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 101);
             this.dataGridView1.Name = "dataGridView1";
@@ -225,6 +242,8 @@
             // 
             // btnNuevoDisco
             // 
+            this.btnNuevoDisco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoDisco.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNuevoDisco.Location = new System.Drawing.Point(48, 46);
             this.btnNuevoDisco.Name = "btnNuevoDisco";
             this.btnNuevoDisco.Size = new System.Drawing.Size(82, 23);
@@ -233,11 +252,50 @@
             this.btnNuevoDisco.UseVisualStyleBackColor = true;
             this.btnNuevoDisco.Click += new System.EventHandler(this.btnNuevoDisco_Click);
             // 
+            // panelBarra
+            // 
+            this.panelBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelBarra.Controls.Add(this.titulo);
+            this.panelBarra.Controls.Add(this.btnSalirMenu);
+            this.panelBarra.ForeColor = System.Drawing.SystemColors.Control;
+            this.panelBarra.Location = new System.Drawing.Point(0, 0);
+            this.panelBarra.Name = "panelBarra";
+            this.panelBarra.Size = new System.Drawing.Size(702, 20);
+            this.panelBarra.TabIndex = 46;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Location = new System.Drawing.Point(14, 4);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(100, 13);
+            this.titulo.TabIndex = 5;
+            this.titulo.Text = "Agregar Pedidos";
+            // 
+            // btnSalirMenu
+            // 
+            this.btnSalirMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalirMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalirMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalirMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalirMenu.Location = new System.Drawing.Point(682, 0);
+            this.btnSalirMenu.Name = "btnSalirMenu";
+            this.btnSalirMenu.Size = new System.Drawing.Size(20, 20);
+            this.btnSalirMenu.TabIndex = 4;
+            this.btnSalirMenu.Text = "X";
+            this.btnSalirMenu.UseVisualStyleBackColor = false;
+            this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
+            // 
             // NuevoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(702, 485);
+            this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.btnNuevoDisco);
             this.Controls.Add(this.filtroInterprete);
             this.Controls.Add(this.filtroSello);
@@ -250,12 +308,15 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevoPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NuevoPedido";
             this.Load += new System.EventHandler(this.NuevoPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelBarra.ResumeLayout(false);
+            this.panelBarra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +343,8 @@
         private System.Windows.Forms.TextBox filtroSello;
         private System.Windows.Forms.TextBox filtroInterprete;
         private System.Windows.Forms.Button btnNuevoDisco;
+        private System.Windows.Forms.Panel panelBarra;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button btnSalirMenu;
     }
 }

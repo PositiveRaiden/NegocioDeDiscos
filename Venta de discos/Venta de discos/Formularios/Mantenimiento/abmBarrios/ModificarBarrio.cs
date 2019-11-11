@@ -76,5 +76,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento.abmBarrios
             txtLocalidad.Text = barrio.Localidad;
             _id = barrio.Id;
         }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

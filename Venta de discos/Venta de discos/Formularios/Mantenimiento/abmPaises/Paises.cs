@@ -92,5 +92,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento
                 actualizarPaises();
             }
         }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -51,7 +51,7 @@
             this.lblOpciones.BackColor = System.Drawing.Color.Transparent;
             this.lblOpciones.Font = new System.Drawing.Font("Mistral", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOpciones.ForeColor = System.Drawing.Color.Transparent;
-            this.lblOpciones.Location = new System.Drawing.Point(30, 3);
+            this.lblOpciones.Location = new System.Drawing.Point(20, 3);
             this.lblOpciones.Name = "lblOpciones";
             this.lblOpciones.Size = new System.Drawing.Size(156, 33);
             this.lblOpciones.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.btnMantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMantenimiento.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMantenimiento.Location = new System.Drawing.Point(207, 44);
+            this.btnMantenimiento.Location = new System.Drawing.Point(198, 42);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Size = new System.Drawing.Size(90, 23);
             this.btnMantenimiento.TabIndex = 3;
@@ -84,7 +84,7 @@
             this.btnNuevaVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaVenta.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(207, 15);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(198, 13);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
             this.btnNuevaVenta.Size = new System.Drawing.Size(90, 23);
             this.btnNuevaVenta.TabIndex = 2;
@@ -101,7 +101,7 @@
             this.btnNuevoPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnNuevoPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoPedido.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnNuevoPedido.Location = new System.Drawing.Point(207, 103);
+            this.btnNuevoPedido.Location = new System.Drawing.Point(198, 101);
             this.btnNuevoPedido.Name = "btnNuevoPedido";
             this.btnNuevoPedido.Size = new System.Drawing.Size(90, 23);
             this.btnNuevoPedido.TabIndex = 1;
@@ -118,7 +118,7 @@
             this.btnDiscos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDiscos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiscos.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDiscos.Location = new System.Drawing.Point(207, 132);
+            this.btnDiscos.Location = new System.Drawing.Point(198, 130);
             this.btnDiscos.Name = "btnDiscos";
             this.btnDiscos.Size = new System.Drawing.Size(90, 23);
             this.btnDiscos.TabIndex = 0;
@@ -135,7 +135,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(207, 74);
+            this.button1.Location = new System.Drawing.Point(198, 72);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 23);
             this.button1.TabIndex = 5;
@@ -184,7 +184,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(189, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;

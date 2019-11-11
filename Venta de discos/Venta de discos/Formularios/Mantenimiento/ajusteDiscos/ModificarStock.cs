@@ -100,5 +100,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento.ajusteDiscos
                 return true;
             return false;
         }
+
+        private void botonSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

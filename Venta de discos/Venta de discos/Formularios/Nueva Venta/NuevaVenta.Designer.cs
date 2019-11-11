@@ -60,44 +60,60 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.filtroSello = new System.Windows.Forms.TextBox();
             this.filtroNombreAlbum = new System.Windows.Forms.TextBox();
             this.filtroCantidad = new System.Windows.Forms.TextBox();
+            this.panelBarra = new System.Windows.Forms.Panel();
+            this.titulo = new System.Windows.Forms.Label();
+            this.btnSalirMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
+            this.panelBarra.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(458, 301);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEliminar.Location = new System.Drawing.Point(460, 322);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(43, 37);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "-";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(458, 258);
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAgregar.Location = new System.Drawing.Point(460, 279);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(43, 37);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "+";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(869, 491);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelar.Location = new System.Drawing.Point(871, 512);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dgvVentas
             // 
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -109,7 +125,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.SelloDiscografico,
             this.Interprete,
             this.subtotal});
-            this.dgvVentas.Location = new System.Drawing.Point(519, 149);
+            this.dgvVentas.Location = new System.Drawing.Point(521, 170);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvVentas.Size = new System.Drawing.Size(425, 331);
@@ -177,8 +193,9 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             this.dgvDiscos.AllowUserToAddRows = false;
             this.dgvDiscos.AllowUserToDeleteRows = false;
+            this.dgvDiscos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgvDiscos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiscos.Location = new System.Drawing.Point(12, 149);
+            this.dgvDiscos.Location = new System.Drawing.Point(14, 170);
             this.dgvDiscos.Name = "dgvDiscos";
             this.dgvDiscos.ReadOnly = true;
             this.dgvDiscos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -188,7 +205,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // LblFechaHoy
             // 
             this.LblFechaHoy.AutoSize = true;
-            this.LblFechaHoy.Location = new System.Drawing.Point(106, 12);
+            this.LblFechaHoy.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblFechaHoy.Location = new System.Drawing.Point(108, 29);
             this.LblFechaHoy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblFechaHoy.Name = "LblFechaHoy";
             this.LblFechaHoy.Size = new System.Drawing.Size(0, 13);
@@ -198,7 +216,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // LblFecha
             // 
             this.LblFecha.AutoSize = true;
-            this.LblFecha.Location = new System.Drawing.Point(11, 12);
+            this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblFecha.Location = new System.Drawing.Point(13, 29);
             this.LblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(37, 13);
@@ -209,7 +228,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 38);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(13, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
@@ -220,7 +240,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(52, 35);
+            this.cmbCliente.Location = new System.Drawing.Point(54, 52);
             this.cmbCliente.MaxLength = 30;
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(121, 21);
@@ -230,7 +250,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // lblImporteTotal
             // 
             this.lblImporteTotal.AutoSize = true;
-            this.lblImporteTotal.Location = new System.Drawing.Point(515, 496);
+            this.lblImporteTotal.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblImporteTotal.Location = new System.Drawing.Point(517, 517);
             this.lblImporteTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImporteTotal.Name = "lblImporteTotal";
             this.lblImporteTotal.Size = new System.Drawing.Size(71, 13);
@@ -241,7 +262,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(591, 493);
+            this.txtTotal.Location = new System.Drawing.Point(593, 514);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
             this.txtTotal.TabIndex = 53;
@@ -249,7 +270,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 65);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(11, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 54;
@@ -257,7 +279,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 62);
+            this.textBox1.Location = new System.Drawing.Point(54, 79);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -266,7 +288,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 91);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(11, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 56;
@@ -274,7 +297,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(52, 88);
+            this.textBox2.Location = new System.Drawing.Point(54, 105);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 20);
@@ -282,17 +305,20 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(788, 491);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(790, 512);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevoCliente
             // 
-            this.btnNuevoCliente.Location = new System.Drawing.Point(194, 35);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(196, 52);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(94, 22);
             this.btnNuevoCliente.TabIndex = 11;
@@ -302,7 +328,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // filtroInterprete
             // 
-            this.filtroInterprete.Location = new System.Drawing.Point(355, 123);
+            this.filtroInterprete.Location = new System.Drawing.Point(357, 144);
             this.filtroInterprete.Name = "filtroInterprete";
             this.filtroInterprete.Size = new System.Drawing.Size(95, 20);
             this.filtroInterprete.TabIndex = 4;
@@ -310,7 +336,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // filtroSello
             // 
-            this.filtroSello.Location = new System.Drawing.Point(254, 123);
+            this.filtroSello.Location = new System.Drawing.Point(256, 144);
             this.filtroSello.Name = "filtroSello";
             this.filtroSello.Size = new System.Drawing.Size(95, 20);
             this.filtroSello.TabIndex = 3;
@@ -318,7 +344,7 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // 
             // filtroNombreAlbum
             // 
-            this.filtroNombreAlbum.Location = new System.Drawing.Point(52, 123);
+            this.filtroNombreAlbum.Location = new System.Drawing.Point(54, 144);
             this.filtroNombreAlbum.Name = "filtroNombreAlbum";
             this.filtroNombreAlbum.Size = new System.Drawing.Size(95, 20);
             this.filtroNombreAlbum.TabIndex = 2;
@@ -327,17 +353,56 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             // filtroCantidad
             // 
             this.filtroCantidad.Enabled = false;
-            this.filtroCantidad.Location = new System.Drawing.Point(153, 123);
+            this.filtroCantidad.Location = new System.Drawing.Point(155, 144);
             this.filtroCantidad.Name = "filtroCantidad";
             this.filtroCantidad.ReadOnly = true;
             this.filtroCantidad.Size = new System.Drawing.Size(95, 20);
             this.filtroCantidad.TabIndex = 63;
             // 
+            // panelBarra
+            // 
+            this.panelBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelBarra.Controls.Add(this.titulo);
+            this.panelBarra.Controls.Add(this.btnSalirMenu);
+            this.panelBarra.Location = new System.Drawing.Point(0, 0);
+            this.panelBarra.Name = "panelBarra";
+            this.panelBarra.Size = new System.Drawing.Size(963, 20);
+            this.panelBarra.TabIndex = 64;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.titulo.Location = new System.Drawing.Point(14, 4);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(81, 13);
+            this.titulo.TabIndex = 5;
+            this.titulo.Text = "Nueva Venta";
+            // 
+            // btnSalirMenu
+            // 
+            this.btnSalirMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalirMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalirMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalirMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalirMenu.Location = new System.Drawing.Point(943, 0);
+            this.btnSalirMenu.Name = "btnSalirMenu";
+            this.btnSalirMenu.Size = new System.Drawing.Size(20, 20);
+            this.btnSalirMenu.TabIndex = 4;
+            this.btnSalirMenu.Text = "X";
+            this.btnSalirMenu.UseVisualStyleBackColor = false;
+            this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
+            // 
             // NuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 524);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(963, 546);
+            this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.filtroCantidad);
             this.Controls.Add(this.filtroInterprete);
             this.Controls.Add(this.filtroSello);
@@ -359,12 +424,16 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
             this.Controls.Add(this.dgvDiscos);
             this.Controls.Add(this.LblFechaHoy);
             this.Controls.Add(this.LblFecha);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NuevaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva Venta";
             this.Load += new System.EventHandler(this.NuevaVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).EndInit();
+            this.panelBarra.ResumeLayout(false);
+            this.panelBarra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +476,8 @@ namespace Venta_de_discos.Formularios.Nueva_Venta
         private System.Windows.Forms.DataGridViewTextBoxColumn SelloDiscografico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Interprete;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.Panel panelBarra;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button btnSalirMenu;
     }
 }

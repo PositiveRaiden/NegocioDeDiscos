@@ -51,13 +51,17 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.lblStockMinimo = new System.Windows.Forms.Label();
+            this.panelBarra = new System.Windows.Forms.Panel();
+            this.titulo = new System.Windows.Forms.Label();
+            this.btnSalirMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panelBarra.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 59);
+            this.label2.Location = new System.Drawing.Point(44, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 26);
+            this.label3.Location = new System.Drawing.Point(44, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 2;
@@ -75,7 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 94);
+            this.label4.Location = new System.Drawing.Point(44, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 3;
@@ -84,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 132);
+            this.label5.Location = new System.Drawing.Point(44, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 4;
@@ -93,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 204);
+            this.label6.Location = new System.Drawing.Point(44, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 5;
@@ -101,6 +105,7 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Location = new System.Drawing.Point(250, 315);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
@@ -112,7 +117,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 169);
+            this.label7.Location = new System.Drawing.Point(44, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 7;
@@ -120,7 +125,7 @@
             // 
             // txtNombreAlbum
             // 
-            this.txtNombreAlbum.Location = new System.Drawing.Point(143, 23);
+            this.txtNombreAlbum.Location = new System.Drawing.Point(143, 34);
             this.txtNombreAlbum.MaxLength = 30;
             this.txtNombreAlbum.Name = "txtNombreAlbum";
             this.txtNombreAlbum.Size = new System.Drawing.Size(100, 20);
@@ -128,7 +133,7 @@
             // 
             // txtAñoEdicion
             // 
-            this.txtAñoEdicion.Location = new System.Drawing.Point(144, 166);
+            this.txtAñoEdicion.Location = new System.Drawing.Point(144, 177);
             this.txtAñoEdicion.MaxLength = 4;
             this.txtAñoEdicion.Name = "txtAñoEdicion";
             this.txtAñoEdicion.Size = new System.Drawing.Size(100, 20);
@@ -137,7 +142,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Enabled = false;
-            this.txtCantidad.Location = new System.Drawing.Point(144, 201);
+            this.txtCantidad.Location = new System.Drawing.Point(144, 212);
             this.txtCantidad.MaxLength = 4;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
@@ -145,6 +150,7 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Location = new System.Drawing.Point(331, 315);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -157,7 +163,7 @@
             // 
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(144, 91);
+            this.cmbGenero.Location = new System.Drawing.Point(144, 102);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(100, 21);
             this.cmbGenero.TabIndex = 34;
@@ -166,7 +172,7 @@
             // 
             this.cmbSello.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSello.FormattingEnabled = true;
-            this.cmbSello.Location = new System.Drawing.Point(144, 129);
+            this.cmbSello.Location = new System.Drawing.Point(144, 140);
             this.cmbSello.Name = "cmbSello";
             this.cmbSello.Size = new System.Drawing.Size(100, 21);
             this.cmbSello.TabIndex = 35;
@@ -175,7 +181,7 @@
             // 
             this.cmbInterprete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInterprete.FormattingEnabled = true;
-            this.cmbInterprete.Location = new System.Drawing.Point(144, 56);
+            this.cmbInterprete.Location = new System.Drawing.Point(144, 67);
             this.cmbInterprete.Name = "cmbInterprete";
             this.cmbInterprete.Size = new System.Drawing.Size(100, 21);
             this.cmbInterprete.TabIndex = 36;
@@ -183,7 +189,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(44, 239);
+            this.lblPrecio.Location = new System.Drawing.Point(44, 250);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblPrecio.TabIndex = 37;
@@ -191,7 +197,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(144, 236);
+            this.txtPrecio.Location = new System.Drawing.Point(144, 247);
             this.txtPrecio.MaxLength = 10;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
@@ -203,7 +209,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(262, 56);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(262, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 21);
             this.button1.TabIndex = 39;
@@ -213,7 +220,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(262, 91);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(262, 102);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 21);
             this.button2.TabIndex = 40;
@@ -223,7 +231,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(262, 129);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(262, 140);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 21);
             this.button3.TabIndex = 41;
@@ -233,7 +242,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(144, 271);
+            this.txtStock.Location = new System.Drawing.Point(144, 282);
             this.txtStock.MaxLength = 10;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
@@ -242,17 +251,55 @@
             // lblStockMinimo
             // 
             this.lblStockMinimo.AutoSize = true;
-            this.lblStockMinimo.Location = new System.Drawing.Point(44, 274);
+            this.lblStockMinimo.Location = new System.Drawing.Point(44, 285);
             this.lblStockMinimo.Name = "lblStockMinimo";
             this.lblStockMinimo.Size = new System.Drawing.Size(71, 13);
             this.lblStockMinimo.TabIndex = 43;
             this.lblStockMinimo.Text = "Stock Minimo";
             // 
+            // panelBarra
+            // 
+            this.panelBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelBarra.Controls.Add(this.titulo);
+            this.panelBarra.Controls.Add(this.btnSalirMenu);
+            this.panelBarra.Location = new System.Drawing.Point(0, 0);
+            this.panelBarra.Name = "panelBarra";
+            this.panelBarra.Size = new System.Drawing.Size(418, 20);
+            this.panelBarra.TabIndex = 44;
+            // 
+            // titulo
+            // 
+            this.titulo.AutoSize = true;
+            this.titulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo.Location = new System.Drawing.Point(14, 4);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(87, 13);
+            this.titulo.TabIndex = 5;
+            this.titulo.Text = "Agregar Disco";
+            // 
+            // btnSalirMenu
+            // 
+            this.btnSalirMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalirMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSalirMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalirMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalirMenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSalirMenu.Location = new System.Drawing.Point(398, 0);
+            this.btnSalirMenu.Name = "btnSalirMenu";
+            this.btnSalirMenu.Size = new System.Drawing.Size(20, 20);
+            this.btnSalirMenu.TabIndex = 4;
+            this.btnSalirMenu.Text = "X";
+            this.btnSalirMenu.UseVisualStyleBackColor = false;
+            this.btnSalirMenu.Click += new System.EventHandler(this.btnSalirMenu_Click);
+            // 
             // AgregarDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(418, 350);
+            this.Controls.Add(this.panelBarra);
             this.Controls.Add(this.lblStockMinimo);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.button3);
@@ -274,11 +321,15 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarDisco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Disco";
             this.Load += new System.EventHandler(this.AgregarDisco_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panelBarra.ResumeLayout(false);
+            this.panelBarra.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +358,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblStockMinimo;
         private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Panel panelBarra;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Button btnSalirMenu;
     }
 }

@@ -153,5 +153,10 @@ namespace Venta_de_discos
             frm.ShowDialog();
             ActualizarComboSello();
         }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

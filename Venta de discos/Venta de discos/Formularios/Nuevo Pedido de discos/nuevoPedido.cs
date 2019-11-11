@@ -192,5 +192,10 @@ namespace Venta_de_discos.Formularios.Nuevo_Pedido_de_discos
         {
 
         }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

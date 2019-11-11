@@ -62,5 +62,10 @@ namespace Venta_de_discos.Formularios.Mantenimiento.ajusteDiscos
         {
             this.Close();
         }
+
+        private void botonSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

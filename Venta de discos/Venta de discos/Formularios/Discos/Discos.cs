@@ -178,5 +178,10 @@ namespace Venta_de_discos
                 CargarDiscos();
             }
         }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

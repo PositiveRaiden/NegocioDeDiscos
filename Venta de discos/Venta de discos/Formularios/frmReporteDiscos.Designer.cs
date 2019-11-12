@@ -61,8 +61,9 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 21);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(780, 366);
+            this.reportViewer1.Size = new System.Drawing.Size(780, 369);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomPercent = 98;
             // 
             // DataTable1TableAdapter
             // 
@@ -115,6 +116,7 @@
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReporteDiscos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReporteDiscos";
             this.Load += new System.EventHandler(this.frmReporteDiscos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();

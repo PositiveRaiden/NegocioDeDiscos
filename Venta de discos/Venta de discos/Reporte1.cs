@@ -25,5 +25,15 @@ namespace Venta_de_discos
             //var adapter = new 
             this.reportViewer1.RefreshReport();
         }
+
+        private void titulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

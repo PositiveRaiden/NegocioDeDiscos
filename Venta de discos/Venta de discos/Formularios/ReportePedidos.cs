@@ -24,5 +24,10 @@ namespace Venta_de_discos.Formularios
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void btnSalirMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

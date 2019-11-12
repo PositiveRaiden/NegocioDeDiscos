@@ -161,7 +161,10 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbGenero.ForeColor = System.Drawing.SystemColors.Control;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(144, 102);
             this.cmbGenero.Name = "cmbGenero";
@@ -170,7 +173,10 @@
             // 
             // cmbSello
             // 
+            this.cmbSello.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbSello.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSello.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSello.ForeColor = System.Drawing.SystemColors.Control;
             this.cmbSello.FormattingEnabled = true;
             this.cmbSello.Location = new System.Drawing.Point(144, 140);
             this.cmbSello.Name = "cmbSello";
@@ -179,7 +185,10 @@
             // 
             // cmbInterprete
             // 
+            this.cmbInterprete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbInterprete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInterprete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbInterprete.ForeColor = System.Drawing.SystemColors.Control;
             this.cmbInterprete.FormattingEnabled = true;
             this.cmbInterprete.Location = new System.Drawing.Point(144, 67);
             this.cmbInterprete.Name = "cmbInterprete";

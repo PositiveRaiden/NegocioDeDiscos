@@ -87,6 +87,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetTodo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\DataSetDiscos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +136,18 @@
     </Compile>
     <Compile Include="Formularios\Discos\ModificarDisco.Designer.cs">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmListadoDeDiscosReal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmListadoDeDiscosReal.Designer.cs">
+      <DependentUpon>frmListadoDeDiscosReal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmListadoVentasAnual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmListadoVentasAnual.Designer.cs">
+      <DependentUpon>frmListadoVentasAnual.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmReporteDiscos.cs">
       <SubType>Form</SubType>
@@ -381,6 +398,12 @@
     <EmbeddedResource Include="Formularios\Discos\ModificarDisco.resx">
       <DependentUpon>ModificarDisco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmListadoDeDiscosReal.resx">
+      <DependentUpon>frmListadoDeDiscosReal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmListadoVentasAnual.resx">
+      <DependentUpon>frmListadoVentasAnual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmReporteDiscos.resx">
       <DependentUpon>frmReporteDiscos.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,6 +492,7 @@
       <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteDiscos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteDiscosVentaMes.rdlc" />
     <EmbeddedResource Include="Formularios\ReporteEstadisticaCantanteAnual.resx">
       <DependentUpon>ReporteEstadisticaCantanteAnual.cs</DependentUpon>
     </EmbeddedResource>
@@ -543,6 +567,17 @@
     </None>
     <None Include="DataSetTodo.xss">
       <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Formularios\DataSetDiscos.xsc">
       <DependentUpon>DataSetDiscos.xsd</DependentUpon>

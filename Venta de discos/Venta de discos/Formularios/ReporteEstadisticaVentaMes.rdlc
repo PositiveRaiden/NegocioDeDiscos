@@ -79,6 +79,8 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <ToolTip>#PERCENT</ToolTip>
                       <Style />
@@ -392,9 +394,9 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSetEstadisticaVentaMes</DataSetName>
-            <Top>1.45203cm</Top>
+            <Top>0.55245cm</Top>
             <Left>5.42078cm</Left>
-            <Height>5.3175cm</Height>
+            <Height>6.21708cm</Height>
             <Width>8.00333cm</Width>
             <Style>
               <Border>

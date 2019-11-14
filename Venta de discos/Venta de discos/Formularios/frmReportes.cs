@@ -31,7 +31,7 @@ namespace Venta_de_discos
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmReporteDiscos frm = new frmReporteDiscos();
+            frmListadoDeDiscosReal frm = new frmListadoDeDiscosReal();
             frm.ShowDialog();
         }
 

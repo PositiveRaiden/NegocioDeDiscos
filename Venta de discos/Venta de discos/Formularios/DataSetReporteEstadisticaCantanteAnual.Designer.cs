@@ -281,7 +281,7 @@ namespace Venta_de_discos.Formularios {
             
             private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnExpr1;
+            private global::System.Data.DataColumn columnVendidos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -326,9 +326,9 @@ namespace Venta_de_discos.Formularios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
+            public global::System.Data.DataColumn VendidosColumn {
                 get {
-                    return this.columnExpr1;
+                    return this.columnVendidos;
                 }
             }
             
@@ -369,11 +369,11 @@ namespace Venta_de_discos.Formularios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InterpreteRow AddInterpreteRow(string Nombre, int Expr1) {
+            public InterpreteRow AddInterpreteRow(string Nombre, int Vendidos) {
                 InterpreteRow rowInterpreteRow = ((InterpreteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
-                        Expr1};
+                        Vendidos};
                 rowInterpreteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInterpreteRow);
                 return rowInterpreteRow;
@@ -397,7 +397,7 @@ namespace Venta_de_discos.Formularios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnNombre = base.Columns["Nombre"];
-                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnVendidos = base.Columns["Vendidos"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -405,10 +405,10 @@ namespace Venta_de_discos.Formularios {
             private void InitClass() {
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
+                this.columnVendidos = new global::System.Data.DataColumn("Vendidos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVendidos);
                 this.columnNombre.MaxLength = 50;
-                this.columnExpr1.ReadOnly = true;
+                this.columnVendidos.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -567,17 +567,17 @@ namespace Venta_de_discos.Formularios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Expr1 {
+            public int Vendidos {
                 get {
                     try {
-                        return ((int)(this[this.tableInterprete.Expr1Column]));
+                        return ((int)(this[this.tableInterprete.VendidosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Expr1\' de la tabla \'Interprete\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Vendidos\' de la tabla \'Interprete\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableInterprete.Expr1Column] = value;
+                    this[this.tableInterprete.VendidosColumn] = value;
                 }
             }
             
@@ -595,14 +595,14 @@ namespace Venta_de_discos.Formularios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsExpr1Null() {
-                return this.IsNull(this.tableInterprete.Expr1Column);
+            public bool IsVendidosNull() {
+                return this.IsNull(this.tableInterprete.VendidosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetExpr1Null() {
-                this[this.tableInterprete.Expr1Column] = global::System.Convert.DBNull;
+            public void SetVendidosNull() {
+                this[this.tableInterprete.VendidosColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -766,7 +766,7 @@ namespace Venta_de_discos.Formularios.DataSetReporteEstadisticaCantanteAnualTabl
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Interprete";
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("Vendidos", "Vendidos");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -783,7 +783,7 @@ namespace Venta_de_discos.Formularios.DataSetReporteEstadisticaCantanteAnualTabl
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Interprete.Nombre, COUNT(Detalle_Venta.cantidad) AS Expr1
+            this._commandCollection[0].CommandText = @"SELECT        Interprete.Nombre, COUNT(Detalle_Venta.cantidad) AS Vendidos
 FROM            Detalle_Venta INNER JOIN
                          Disco ON Detalle_Venta.id_disco = Disco.id INNER JOIN
                          Interprete ON Disco.id_interprete = Interprete.Id INNER JOIN

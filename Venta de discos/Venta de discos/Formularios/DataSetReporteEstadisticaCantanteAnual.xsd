@@ -9,10 +9,10 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InterpreteTableAdapter" GeneratorDataComponentClassName="InterpreteTableAdapter" Name="Interprete" UserDataComponentName="InterpreteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="GerardoDB.dbo.Interprete" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="GerardoDB.dbo.Interprete" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Interprete.Nombre, COUNT(Detalle_Venta.cantidad) AS Expr1
+                    <CommandText>SELECT        Interprete.Nombre, COUNT(Detalle_Venta.cantidad) AS Vendidos
 FROM            Detalle_Venta INNER JOIN
                          Disco ON Detalle_Venta.id_disco = Disco.id INNER JOIN
                          Interprete ON Disco.id_interprete = Interprete.Id INNER JOIN
@@ -26,7 +26,7 @@ GROUP BY Interprete.Nombre</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
-              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Vendidos" DataSetColumn="Vendidos" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -38,7 +38,7 @@ GROUP BY Interprete.Nombre</CommandText>
   <xs:element name="DataSetReporteEstadisticaCantanteAnual" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReporteEstadisticaCantanteAnual" msprop:Generator_UserDSName="DataSetReporteEstadisticaCantanteAnual">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Interprete" msprop:Generator_TableClassName="InterpreteDataTable" msprop:Generator_TableVarName="tableInterprete" msprop:Generator_TablePropName="Interprete" msprop:Generator_RowDeletingName="InterpreteRowDeleting" msprop:Generator_RowChangingName="InterpreteRowChanging" msprop:Generator_RowEvHandlerName="InterpreteRowChangeEventHandler" msprop:Generator_RowDeletedName="InterpreteRowDeleted" msprop:Generator_UserTableName="Interprete" msprop:Generator_RowChangedName="InterpreteRowChanged" msprop:Generator_RowEvArgName="InterpreteRowChangeEvent" msprop:Generator_RowClassName="InterpreteRow">
+        <xs:element name="Interprete" msprop:Generator_TableClassName="InterpreteDataTable" msprop:Generator_TableVarName="tableInterprete" msprop:Generator_RowChangedName="InterpreteRowChanged" msprop:Generator_TablePropName="Interprete" msprop:Generator_RowDeletingName="InterpreteRowDeleting" msprop:Generator_RowChangingName="InterpreteRowChanging" msprop:Generator_RowEvHandlerName="InterpreteRowChangeEventHandler" msprop:Generator_RowDeletedName="InterpreteRowDeleted" msprop:Generator_RowClassName="InterpreteRow" msprop:Generator_UserTableName="Interprete" msprop:Generator_RowEvArgName="InterpreteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
@@ -48,7 +48,7 @@ GROUP BY Interprete.Nombre</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Expr1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+              <xs:element name="Vendidos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVendidos" msprop:Generator_ColumnPropNameInRow="Vendidos" msprop:Generator_ColumnPropNameInTable="VendidosColumn" msprop:Generator_UserColumnName="Vendidos" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

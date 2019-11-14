@@ -21,8 +21,8 @@
           <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Expr1">
-          <DataField>Expr1</DataField>
+        <Field Name="Vendidos">
+          <DataField>Vendidos</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
@@ -61,20 +61,22 @@
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Expr1</Label>
+                  <Label>Vendidos</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="DiscosVendidos">
+                <ChartSeries Name="Vendidos">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!Expr1.Value)</Y>
+                        <Y>=Sum(Fields!Vendidos.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
+                        <UseValueAsLabel>true</UseValueAsLabel>
+                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -342,7 +344,7 @@
                 </Style>
                 <Position>TopLeft</Position>
                 <ChartLegendTitle>
-                  <Caption>Discos Vendidos</Caption>
+                  <Caption />
                   <Style>
                     <FontSize>8pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -431,7 +433,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>3.186in</Height>
+        <Height>3.33184in</Height>
         <Style />
       </Body>
       <Width>8.02083in</Width>
